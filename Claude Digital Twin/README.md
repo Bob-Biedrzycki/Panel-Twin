@@ -14,7 +14,9 @@ A digital twin of panel **VFD 200**, the 480 V drive panel for the two CIP suppl
 
 ## Run it
 
-From this folder (`Project 2/Claude Digital Twin`):
+**Easiest:** double-click `Start SCADA Sim.cmd` in this folder. It starts the simulator and opens the SCADA screen and the 3D twin in your browser. Close its window to stop the simulator. If a simulator is already running, it just opens that one.
+
+Or from a terminal in this folder (`Project 2/Claude Digital Twin`; add `--open` to open the browser too):
 
 ```bash
 node scada-sim.mjs

@@ -17,6 +17,7 @@ import { createServer as createTcp } from 'node:net'
 import { readFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { spawn } from 'node:child_process'
 import { createPanel, snapshot, writeTag, TAGS, BAD } from './panel-model.mjs'
 
 const here = dirname(fileURLToPath(import.meta.url))
@@ -26,6 +27,13 @@ const HOST = opt('--host', '127.0.0.1')
 const PORT = Number(opt('--port', 8091))
 const MB_PORT = Number(opt('--modbus-port', 5021))
 const MODBUS = !a.includes('--no-modbus')
+// --open: open the SCADA screen and the twin in the default browser once the server is up (used by Start SCADA Sim.cmd)
+const OPEN = a.includes('--open')
+const browse = (url) => {
+  const [cmd, args] = process.platform === 'win32' ? ['cmd', ['/c', 'start', '', url]] : [process.platform === 'darwin' ? 'open' : 'xdg-open', [url]]
+  try { spawn(cmd, args, { stdio: 'ignore', detached: true }).unref() } catch {}
+}
+const openPages = () => { const h = HOST === '0.0.0.0' ? '127.0.0.1' : HOST; browse(`http://${h}:${PORT}/`); setTimeout(() => browse(`http://${h}:${PORT}/twin`), 800) }
 
 // ------------------------------------------------------------------ the simulated panel
 const panel = createPanel()
@@ -98,10 +106,20 @@ const http = createServer((req, res) => {
   }
   res.writeHead(404); res.end('not found')
 })
+http.on('error', (e) => {
+  if (e.code !== 'EADDRINUSE') throw e
+  // most likely a simulator is already running: show it rather than fail
+  console.log(`Port ${PORT} is already in use: a simulator is probably running already.`)
+  if (OPEN) { console.log('Opening the one that is running.'); openPages() }
+  else console.log('Open http://127.0.0.1:' + PORT + '/ to use it, or start this one with --port 8092.')
+  setTimeout(() => process.exit(0), 1500)
+})
 http.listen(PORT, HOST, () => {
   console.log('VFD 200 SCADA simulator')
   console.log(`  SCADA screen   http://${HOST}:${PORT}/`)
   console.log(`  3D twin        http://${HOST}:${PORT}/twin`)
+  console.log('  Close this window (or press Ctrl+C) to stop the simulator.')
+  if (OPEN) openPages()
 })
 
 // ------------------------------------------------------------------ Modbus TCP server
