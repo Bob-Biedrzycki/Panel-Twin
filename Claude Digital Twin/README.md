@@ -10,9 +10,11 @@ A digital twin of panel **VFD 200**, the 480 V drive panel for the two CIP suppl
 | `panel-model.mjs` | The one solver both of them run: feeder, drives, motors, pumps, 24 V channels, the CIP process, enclosure heat, alarms and the tag map. |
 | `build.mjs` | Pastes `panel-model.mjs` and the Machine Skill kit into `panel-twin.html`, and regenerates the Modbus map below. Run it after you edit the model. |
 | `out/panel-vfd200.mp4` | The 28 s film (silent). |
-| `Draft rev18.pdf` | The review set it was built from. |
+| `../Draft rev18.pdf` | The review set it was built from (one folder up, in Project 2). |
 
 ## Run it
+
+From this folder (`Project 2/Claude Digital Twin`):
 
 ```bash
 node scada-sim.mjs

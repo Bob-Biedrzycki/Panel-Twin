@@ -10,7 +10,7 @@ node scada-sim.mjs
 
 Then open http://127.0.0.1:8091/ for the SCADA screen and http://127.0.0.1:8091/twin for the 3D twin. A simulator is running now from this session, so those links work until you stop it. `panel-twin.html` also opens straight from disk and runs the solver on its own.
 
-## What's in Project 2
+## What's in Project 2/Claude Digital Twin
 
 * `panel-twin.html`: the 3D panel at real size, laid out from sheets 2 and 3. Doors open, cut-away and explode work, labels show live values, hovering a part shows its BOM line and review note, and the break button is "Fail the A/C".
 * `scada.html` and `scada-sim.mjs`: the SCADA screen and server. You get a CIP process screen with clickable valves, power one-line, 24 V breaker channels, drive faceplates, panel heat, trends, alarms and instructor faults, plus Modbus TCP on port 5021.
