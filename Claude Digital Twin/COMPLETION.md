@@ -44,6 +44,6 @@ At every step a 3D panel shows what is installed so far, with the new parts outl
    - There are 7 GLG isolators for 6 tags.
    - SCE-16P14 is a subpanel for a 16 × 14 in enclosure.
    - Sheet 3 cites 1494U-IN007, which is the 200 A edition.
-6. **Missing documents.** Ten documents should be requested in PartsLib: 787-1668, 800H, 2711P-UM007, 1769-IN062, FL SWITCH 1116N, NAT-102, VTUX, the enclosure drawing, the 100 A 1494U instruction and DN-ASB2-10.
+6. **Missing documents.** Nine are now requested in PartsLib (#10994-#11002); VTUX was already requested (#7460). The README lists them.
 
 Wire colours, door hinges and positions not drawn are assumptions; they are stated on the page and in the README.
