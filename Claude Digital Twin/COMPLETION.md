@@ -1,23 +1,49 @@
-# VFD 200 Digital Twin: Completion Description
+# VFD 200 Assembly Guide: Completion Description
 
-I've built a digital twin of panel VFD 200 from `Draft rev18.pdf` (the ABARTA Coca-Cola CIP double skid, two PowerFlex 525 drives on 15 HP pumps), wired to a SCADA simulator that runs the same solver. Twin and SCADA screen both drive one simulated panel live, and the Modbus TCP server answered reads and a speed-reference write correctly. The film came out clean (no bad frames).
+Second pass, 2026-11-04. The SCADA simulator and the live twin are dropped; this pass turns `Draft rev18.pdf` into a guide for the person building the panel.
 
-To run it, double-click `Start SCADA Sim.cmd` in this folder (it needs Node.js 18 or newer). It starts the simulator and opens the SCADA screen (http://127.0.0.1:8091/) and the 3D twin (http://127.0.0.1:8091/twin) in your browser; close its window to stop it. See `START HERE.txt` for the step-by-step. `panel-twin.html` also opens straight from disk and runs the solver on its own.
+**`VFD200 Assembly Guide.html`** (one file, about 1.6 MB) takes the builder through 21 steps in a logical shop order:
 
-## What's in Project 2/Claude Digital Twin
+1. Enclosure.
+2. Cutouts.
+3. Plate layout.
+4. Ducts, then rails.
+5. The plate-mounted power entry.
+6. Rail 1.
+7. Drives.
+8. T1.
+9. Rail 3.
+10. Rail 4.
+11. Subplate 2.
+12. Wiring by voltage: 480 V, 120 V, 24 V and safety, network and IO-Link, field terminals.
+13. Install the subplates.
+14. Door devices.
+15. A/C and handle.
+16. Covers and checks.
 
-* `panel-twin.html`: the 3D panel at real size, laid out from sheets 2 and 3. Doors open, cut-away and explode work, labels show live values, hovering a part shows its BOM line and review note, and the break button is "Fail the A/C".
-* `scada.html` and `scada-sim.mjs`: the SCADA screen and server. You get a CIP process screen with clickable valves, power one-line, 24 V breaker channels, drive faceplates, panel heat, trends, alarms and instructor faults, plus Modbus TCP on port 5021.
-* `panel-model.mjs`: the one solver both use. It computes pumps, motors, drive losses, breakers, E-stop, the 24 V channels, the process and enclosure heat.
-* `README.md`: the design review, how to run it, what the solver assumes, and the full Modbus map (155 tags).
-* `out/panel-vfd200.mp4`: the 28 s film, silent, because adding music means downloading a track. The README has the command to add one.
+At every step a 3D panel shows what is installed so far, with the new parts outlined and tagged.
 
-## Main review findings (all eleven are in the README)
+## How each goal was met
 
-1. **The A/C is undersized.** With both pumps at 60 Hz about 625 W of heat is released inside against a 1,000 BTU/h (293 W) A/C. The panel settles at 45 °C in a 30 °C room and 54 °C in a 40 °C room; the drives are rated 50 °C. Holding 35 °C inside a 40 °C room needs about 2,400 BTU/h.
-2. **An A/C failure would show up only as drive trips.** Without it the panel heads for 59–64 °C and both drives trip on heatsink temperature. The A/C alarm and door-switch contacts aren't wired and there's no panel temperature sensor, so SCADA would see two drive faults and nothing else.
-3. **The E-stop has no safety relay.** It feeds the safe-torque-off inputs of both drives directly, with no fault detection and no feedback to the PLC. Confirm the safety level the skid needs.
-4. **FM1 has no transmitter in the BOM.** The 8721 is a sensor only (the BOM line itself says it needs a separate 8712 transmitter), but sheet 13 wires it like a powered transmitter.
-5. **The PLC has no digital inputs**, so E-stop state, 24 V channel trips and A/C alarms are invisible to it. The machine network also uses 128.1.0.x, which is a public address block.
+**Realistic parts.** Every device face is the manufacturer's own image or line drawing taken from sheets 2 and 3. It sits at its sheet 3 position on a body of catalogue depth, with real DIN rails, slotted duct, end anchors and the stainless enclosure, and is rendered with studio lighting.
 
-Pump curves, device powers, drive losses and the wall heat coefficient are my assumptions, because the parts database was unreachable. They're collected at the top of `panel-model.mjs` for you to replace with datasheet values. The drawings have no P&ID, so the process side is my reading of the valve and instrument names.
+**Labelled wiring.** All 104 numbered wires on sheets 4-15 are routed through the ducts from terminal to terminal, along with the unnumbered jumpers and grounds, 25 IO-Link cables, 9 Ethernet cords and the field cables, each with a marker at both ends. The Wires tab lists every run: marker, AWG, both ends, sheet, line, potential, an approximate cut length and the drawing note. A CSV of the marker list can be downloaded.
+
+**References.** Each part links into Todd's PartsLib: its part record and the exact installation pages, such as 520-UM001 p.15/16/36, 1769-UM021 p.63/66, 1769-IN028 p.9/11, the WAGO Pro 2 manual p.30 and the Saginaw A/C manual pp.7-8. The key torques, clearances and wire ranges are quoted on the part card with their page. PartsLib's MCP connector was down (the gcloud login had expired), so the links were collected through the signed-in browser.
+
+## What to raise with engineering (all listed on the Issues tab)
+
+1. **Wire numbers.** 15 conductors have no wire number, and the numbers W18 to W105 have gaps. W20, W24, W25 and W71 have no AWG.
+2. **Wrong labels and cross-references.** W93 is labelled IO1 but goes to the E-STOP lamp. "HM1" is used for HMI1. Two NS1 and W60 cross references are wrong. CPL2's port pins are mislabelled, and VM1's C/Q and L- are reversed.
+3. **Sheet 15 shows TBD** for terminals that other sheets connect.
+4. **Missing positions.** RCP1, GB2, the A/C and subplate 2 have no position. TB4 is drawn about 446 mm long but needs about 370 mm.
+5. **BOM gaps.**
+   - T1's fuses are missing.
+   - Only one LPJ-70SP is listed; FU1 needs three.
+   - C3WH6 covers, the floor stand, field entries and bonding straps are missing.
+   - There are 7 GLG isolators for 6 tags.
+   - SCE-16P14 is a subpanel for a 16 × 14 in enclosure.
+   - Sheet 3 cites 1494U-IN007, which is the 200 A edition.
+6. **Missing documents.** Ten documents should be requested in PartsLib: 787-1668, 800H, 2711P-UM007, 1769-IN062, FL SWITCH 1116N, NAT-102, VTUX, the enclosure drawing, the 100 A 1494U instruction and DN-ASB2-10.
+
+Wire colours, door hinges and positions not drawn are assumptions; they are stated on the page and in the README.

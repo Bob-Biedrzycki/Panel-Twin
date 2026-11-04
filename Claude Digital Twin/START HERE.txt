@@ -1,57 +1,30 @@
-VFD 200 SIMULATOR - START HERE
-==============================
+VFD 200 ASSEMBLY GUIDE - START HERE
+===================================
 
-ONCE ONLY
-  Install Node.js from https://nodejs.org (the LTS version).
+OPEN IT
+  1. Download the "Claude Digital Twin" folder from Google Drive, or just
+     the file "VFD200 Assembly Guide.html".
+  2. Double-click "VFD200 Assembly Guide.html". It opens in your browser
+     (Chrome or Edge). It needs internet access for the 3D library.
 
-EACH TIME
-  1. Download the "Claude Digital Twin" folder from Google Drive.
-  2. Right-click the downloaded zip and choose "Extract All".
-  3. Open the extracted folder and double-click "Start SCADA Sim.cmd".
-     If Windows warns you, click "More info", then "Run anyway".
-  4. Two browser tabs open:
-       - SCADA screen: run the pumps, open valves, trigger faults.
-       - 3D twin: the panel, live. Drag to rotate; use the buttons along
-         the bottom to open the doors, cut it away or explode it.
-  5. To stop it, close the black command window.
+USE IT
+  - Work through the steps with "Next step" (or the arrow keys).
+    Tick each task as you finish it; the ticks are remembered on this
+    computer.
+  - Drag to turn the panel, scroll to zoom, right-drag to pan.
+  - Click a part to see its part number, install notes and links.
+  - Click a wire to see its number, size, both ends and the drawing note.
+  - "Wires" tab: the full wire list. "Download marker list (CSV)" gives a
+    file for the label printer.
+  - "Issues" tab: drawing and BOM questions to raise with engineering.
+  - The PartsLib links open the manual at the right page. Sign in with
+    your cpme-usa.com Google account.
 
-NOTES
-  - The 3D twin needs internet access (it loads its 3D library online).
-  - Don't move files out of the folder; they need each other.
-  - The .cmd won't run from the Drive web preview, so extract the folder first.
-
-
-WHAT'S IN THE PACKAGE
-=====================
-
-  Start SCADA Sim.cmd   The launcher. Double-click to run everything.
-
-  scada.html            The SCADA screen: CIP process with clickable valves,
-                        power one-line, 24 V breaker channels, drive
-                        faceplates, panel heat, trends, alarms and
-                        instructor faults.
-
-  panel-twin.html       The 3D twin of the panel, laid out from the drawings.
-                        It also opens on its own (double-click) without the
-                        simulator.
-
-  scada-sim.mjs         The simulator server. It serves both pages and runs
-                        Modbus TCP on port 5021 for testing real SCADA or HMI
-                        software against it.
-
-  panel-model.mjs       The engineering model behind both pages: drives,
-                        pumps, breakers, E-stop, 24 V channels and panel heat.
-                        Device powers, losses and pump curves are listed at
-                        the top for swapping in datasheet values.
-
-  README.md             Full documentation: the design review findings, what
-                        is assumed, and the complete Modbus register map.
-
-  COMPLETION.md         A one-page summary of what was built and the top five
-                        findings.
-
-  out\panel-vfd200.mp4  A 28-second video of the twin.
-
-  build.mjs             Developer tool to rebuild the twin after editing the
-                        model. It needs a toolkit that is only on Bob's PC, so
-                        others can ignore it.
+WHAT'S IN THE FOLDER
+  VFD200 Assembly Guide.html   The guide. This is the only file a
+                               builder needs.
+  README.md                    What the guide contains, what is assumed,
+                               and how to rebuild it.
+  COMPLETION.md                One-page summary of this pass.
+  src\, data\, assets\,        Source for the guide (developers only).
+  vendor\, tools\, build.mjs
