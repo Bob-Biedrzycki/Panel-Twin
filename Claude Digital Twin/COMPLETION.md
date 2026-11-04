@@ -2,13 +2,7 @@
 
 I've built a digital twin of panel VFD 200 from `Draft rev18.pdf` (the ABARTA Coca-Cola CIP double skid, two PowerFlex 525 drives on 15 HP pumps), wired to a SCADA simulator that runs the same solver. Twin and SCADA screen both drive one simulated panel live, and the Modbus TCP server answered reads and a speed-reference write correctly. The film came out clean (no bad frames).
 
-To run it:
-
-```
-node scada-sim.mjs
-```
-
-Then open http://127.0.0.1:8091/ for the SCADA screen and http://127.0.0.1:8091/twin for the 3D twin. A simulator is running now from this session, so those links work until you stop it. `panel-twin.html` also opens straight from disk and runs the solver on its own.
+To run it, double-click `Start SCADA Sim.cmd` in this folder (it needs Node.js 18 or newer). It starts the simulator and opens the SCADA screen (http://127.0.0.1:8091/) and the 3D twin (http://127.0.0.1:8091/twin) in your browser; close its window to stop it. See `START HERE.txt` for the step-by-step. `panel-twin.html` also opens straight from disk and runs the solver on its own.
 
 ## What's in Project 2/Claude Digital Twin
 
