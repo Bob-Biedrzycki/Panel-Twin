@@ -58,21 +58,24 @@ To change a step, a device position or a wire: edit `src/layout.mjs` or `data/*.
 - **Off-plate wires:** wires to field devices end in a stub below the bottom duct marked "to field". Door wires run along the left wall to the hinge and on to the device.
 - **TB4** is built at the real pitch (72 × 5.1 mm from 401 mm). The drawing shows it about 446 mm long.
 
-## Not in PartsLib yet (request or upload these)
+## Not in PartsLib yet: requested 2026-11-04
 
-- 787-1668 (WAGO EPSITRON).
-- 800H-FRXJTQH2RA5 installation instruction.
-- 2711P PanelView Plus 7 **Standard** user manual: 2711P-UM007, which has the cutout. Only the Performance manual, UM008, is held.
-- 1769-OW16 installation instruction (1769-IN062).
-- Phoenix FL SWITCH 1116N (1085219).
-- Moxa NAT-102.
-- Festo VTUX operating instructions.
-- Saginaw SCE-60XEL4918SSST drawing.
-- 1494U-D100 installation instruction for the 100 A frame. 1494U-IN007, which sheet 3 cites, is the 200 A edition.
-- AutomationDirect DN-ASB2-10.
-- The GLG isolator, which has no manufacturer documentation.
+These are on PartsLib's Needed list. Each request has origin key `vfd200-guide:<part>` and gives any public URL that was found. Once a PDF is uploaded, add its page links to `data/partslib.json` and run `node build.mjs`.
 
-The web search found public copies of several of these; see `data/install_docs.json`.
+| Request | What |
+|---|---|
+| #10994 | WAGO 787-1668 EPSITRON product manual |
+| #10995 | 800H-FRXJTQH2RA5 installation instruction |
+| #10996 | 2711P-UM007, PanelView Plus 7 **Standard** user manual: the cutout and mounting clips. Only the Performance manual, UM008, is held. |
+| #10997 | 1769-OW16 installation instruction, 1769-IN062 |
+| #10998 | Phoenix FL SWITCH 1116N (1085219) manual |
+| #10999 | Moxa NAT-102 quick installation guide and manual |
+| #11000 | Saginaw SCE-60XEL4918SSST dimension drawing and cut sheet |
+| #11001 | 1494U-D100 100 A installation instruction, 1494U-IN001. PartsLib holds 1494U-IN007, the 200 A edition that sheet 3 cites. |
+| #11002 | AutomationDirect DN-ASB2-10 cut sheet and drawing |
+| #7460 (existing) | Festo VTUX manual, already requested for the VTUX family |
+
+The GLG isolator has no manufacturer documentation, so nothing was requested for it.
 
 ## History
 
