@@ -1,0 +1,35 @@
+VFD 200 ASSEMBLY GUIDE V2.0 - START HERE
+========================================
+
+OPEN IT
+  Double-click "VFD200 Assembly Guide.html" (Chrome or Edge). It needs
+  internet access for the 3D library.
+
+BUILD
+  - Go through the steps with "Next step" or the arrow keys. Tick each task
+    as you finish it; ticks are remembered on this computer.
+  - Drag to turn the panel, scroll to zoom, right-drag to pan.
+  - "Remove front" (or F) takes the doors and the front frame off so you
+    can see inside. "Reset view" (or R) goes back to the step's view.
+  - Click any part for its part number, install notes, PartsLib links and
+    a table of every terminal and the wire on it.
+
+WIRE
+  - On a wiring step, press "Wire them one by one" (or open "Wire it").
+    Each card gives the marker, size, colour and cut length, both ends
+    (device, terminal, where it is on the device, end type, torque and
+    strip length) and the duct route. The panel highlights that wire and
+    rings both terminals.
+  - Press "Done, next" (or Enter) after each wire. Progress is saved.
+  - Wires tab: marker list (CSV) for the label printer, a printable run
+    sheet with tick boxes, and a cut list with metres per wire size.
+
+ISSUES
+  - Design issues: questions for the engineer who drew the panel.
+  - Modeling issues: what this guide assumes, and what it has resolved.
+
+FOLDER
+  VFD200 Assembly Guide.html   The guide: the only file a builder needs.
+  README.md / COMPLETION.md    What is in it, what is assumed, how to
+                               rebuild it.
+  src\ data\ assets\ tools\ vendor\ build.mjs   Source (developers only).
