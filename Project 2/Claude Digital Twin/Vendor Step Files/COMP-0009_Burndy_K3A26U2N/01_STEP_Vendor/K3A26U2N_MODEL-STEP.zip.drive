@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0009_Burndy_K3A26U2N/01_STEP_Vendor/K3A26U2N_MODEL-STEP.zip",
+  "bytes": 21957,
+  "sha256": "856404f5fb3cef64e33c9223fc6948d5de1c55903a4f4699e8302bb6006d5174",
+  "md5": "9232bfe10db7a5c2edda942a42cc76f9",
+  "mtime": "2026-11-05 07:56:17",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

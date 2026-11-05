@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0015_AB_25B-D024N104/02_Drawings/25B_PD_IP20_NEMA1_ExtFan.dwg",
+  "bytes": 16159954,
+  "sha256": "aeeb4eca3910abc1177502d270f54e7ac4747e4a31d0975e6a828091c7bbb45f",
+  "md5": "bca22f245d75da9cf8fd748006a566d5",
+  "mtime": "2026-11-05 07:15:26",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

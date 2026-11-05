@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0011_Bussmann_FNQ-R-6/01_STEP_Vendor/7714K42_UL Class CC Time-Delay Midget Fuse.STEP",
+  "bytes": 61773,
+  "sha256": "4533660b3d0e41061ef22d907669ce2e9f6309c22019f19d07b04f9e23e93c84",
+  "md5": "c6ea216549aeb2bca65662596ca1aaf1",
+  "mtime": "2026-11-05 07:41:55",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

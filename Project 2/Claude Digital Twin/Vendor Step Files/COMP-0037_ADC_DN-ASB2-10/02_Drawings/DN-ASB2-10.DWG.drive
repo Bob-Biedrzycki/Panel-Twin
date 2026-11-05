@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0037_ADC_DN-ASB2-10/02_Drawings/DN-ASB2-10.DWG",
+  "bytes": 43858,
+  "sha256": "9b3939a10998b95645c29191ee397a645bb1112eaa9eb42fc5d2201ea20a5e57",
+  "md5": "ddc554a58a1ac7008d6365f1e34f0cc9",
+  "mtime": "2026-11-05 08:02:28",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

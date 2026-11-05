@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0025_Phoenix_1085219/01_STEP_Vendor/3dfindit-PHOENIX_CONTACT-1085219-22026110514463769639431d0b6156e.zip",
+  "bytes": 353322,
+  "sha256": "6fc1243eea2dac85181372359fd5eb45d93b2768e0f49e6620067dffe3c9de97",
+  "md5": "9a1354d0ce24904e7052fd36b7fd01c0",
+  "mtime": "2026-11-05 07:47:19",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0021_ifm_AL1920/02_Drawings/CAD_DXF_ASI_0167.dxf",
+  "bytes": 1455078,
+  "sha256": "b35aa37d367853073d2bef8bda0c2a874fd8bf1e6cb5bcdf1833b4e536dc2044",
+  "md5": "9f83db1266ccbeea9a2712705d84ac5a",
+  "mtime": "2026-11-05 08:02:27",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

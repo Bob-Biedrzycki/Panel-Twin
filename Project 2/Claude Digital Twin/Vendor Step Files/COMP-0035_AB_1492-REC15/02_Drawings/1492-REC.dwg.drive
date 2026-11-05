@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0035_AB_1492-REC15/02_Drawings/1492-REC.dwg",
+  "bytes": 209807,
+  "sha256": "0a1ffdea36c770a3e0487ace4701e145eb10c9309fc4affc94cf0fd35ca6513a",
+  "md5": "6a0b8c930cb9e35af4c7b3f75170b6c9",
+  "mtime": "2026-11-05 07:15:34",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

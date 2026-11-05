@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0013_Eaton_FAZ-D2-3-NA/01_STEP_Vendor/102260.stp",
+  "bytes": 615750,
+  "sha256": "9e969f8ea4bb1356ad89967e47bf4dc0e266a8eac6efd19b4afab232aa766852",
+  "md5": "525c8f5bb78d090b55165d36c32320f4",
+  "mtime": "2026-11-05 08:02:27",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

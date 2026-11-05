@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0033_AB_1492-EAJ35/02_Drawings/1492-eaj35.pdf",
+  "bytes": 164839,
+  "sha256": "1972418f4dcee63f1d6b4693cdb3d4fa3fafd3bb29c0705d79ed251bdb0843d3",
+  "md5": "895de651e8b59e44cc9476915ef66cfb",
+  "mtime": "2026-11-05 07:15:32",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}
