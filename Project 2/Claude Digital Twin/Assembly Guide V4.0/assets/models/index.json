@@ -1,0 +1,8434 @@
+{
+ "SUB2": {
+  "step": "Vendor Step Files/COMP-0002_Saginaw_SCE-16P14/01_STEP_Vendor/SCE-16P14.stp",
+  "sha256": "9cfb733f240f826c67af199ad03d30d55597fa4ac4dd4b34dd191bb6ea148b7e",
+  "comp": "COMP-0002",
+  "pn": "SCE-16P14",
+  "lo": [
+   -165.1,
+   -190.5,
+   -1.905
+  ],
+  "hi": [
+   165.1,
+   190.5,
+   0
+  ],
+  "parts": [
+   {
+    "name": "MODEL-082-SUBPNL",
+    "mesh": 0,
+    "color": [
+     1,
+     1,
+     0.888
+    ],
+    "nv": 1520,
+    "ni": 4308
+   }
+  ],
+  "tri": 1436,
+  "bytes": 10175
+ },
+ "AC": {
+  "step": "Vendor Step Files/COMP-0003_Saginaw_SCE-AC1000B120VSS/01_STEP_Vendor/sce-ac1000b120vss.stp",
+  "sha256": "b9a794ffc32671ccfdb8b0575ee2da972748a9d98dcac5513d67c77730af040d",
+  "comp": "COMP-0003",
+  "pn": "SCE-AC1000B120VSS",
+  "lo": [
+   0.577,
+   0,
+   -211.629
+  ],
+  "hi": [
+   254.577,
+   480.667,
+   0.423
+  ],
+  "parts": [
+   {
+    "name": "OC5704_COVER_1",
+    "mesh": 0,
+    "color": null,
+    "nv": 33936,
+    "ni": 100656
+   },
+   {
+    "name": "OC5704_FILTER_COVER_1",
+    "mesh": 1,
+    "color": null,
+    "nv": 27336,
+    "ni": 81636
+   },
+   {
+    "name": "OC-5704_HOUSING_1",
+    "mesh": 2,
+    "color": null,
+    "nv": 6816,
+    "ni": 19188
+   },
+   {
+    "name": "OC-5704_BASE_1",
+    "mesh": 3,
+    "color": null,
+    "nv": 2824,
+    "ni": 8124
+   },
+   {
+    "name": "ADDA_AA1282HB-AT_CF-A_1",
+    "mesh": 4,
+    "color": null,
+    "nv": 3451,
+    "ni": 10872
+   },
+   {
+    "name": "OC5704_INT_BLWR_BRKT_1",
+    "mesh": 5,
+    "color": null,
+    "nv": 4048,
+    "ni": 13200
+   },
+   {
+    "name": "CAREL_PJEZS0GB00_1",
+    "mesh": 6,
+    "color": null,
+    "nv": 1482,
+    "ni": 3624
+   },
+   {
+    "name": "OC5704_CONNECTOR_BRACKET_1",
+    "mesh": 7,
+    "color": null,
+    "nv": 1016,
+    "ni": 2640
+   },
+   {
+    "name": "072106080019_1",
+    "mesh": 8,
+    "color": null,
+    "nv": 4236,
+    "ni": 10680
+   },
+   {
+    "name": "SOLID",
+    "mesh": 9,
+    "color": null,
+    "nv": 342,
+    "ni": 948
+   },
+   {
+    "name": "SOLID",
+    "mesh": 10,
+    "color": null,
+    "nv": 342,
+    "ni": 948
+   },
+   {
+    "name": "SOLID",
+    "mesh": 11,
+    "color": null,
+    "nv": 342,
+    "ni": 948
+   },
+   {
+    "name": "SOLID",
+    "mesh": 12,
+    "color": null,
+    "nv": 342,
+    "ni": 948
+   },
+   {
+    "name": "SOLID",
+    "mesh": 13,
+    "color": null,
+    "nv": 342,
+    "ni": 948
+   },
+   {
+    "name": "SOLID",
+    "mesh": 14,
+    "color": null,
+    "nv": 342,
+    "ni": 948
+   },
+   {
+    "name": "SOLID",
+    "mesh": 15,
+    "color": null,
+    "nv": 342,
+    "ni": 948
+   },
+   {
+    "name": "SOLID",
+    "mesh": 16,
+    "color": null,
+    "nv": 632,
+    "ni": 1716
+   },
+   {
+    "name": "SOLID",
+    "mesh": 17,
+    "color": null,
+    "nv": 632,
+    "ni": 1716
+   },
+   {
+    "name": "SOLID",
+    "mesh": 18,
+    "color": null,
+    "nv": 632,
+    "ni": 1716
+   },
+   {
+    "name": "SOLID",
+    "mesh": 19,
+    "color": null,
+    "nv": 632,
+    "ni": 1716
+   },
+   {
+    "name": "OC5704_DEFLECTOR_1",
+    "mesh": 20,
+    "color": null,
+    "nv": 340,
+    "ni": 888
+   },
+   {
+    "name": "SHELL",
+    "mesh": 21,
+    "color": null,
+    "nv": 110,
+    "ni": 318
+   },
+   {
+    "name": "SHELL",
+    "mesh": 22,
+    "color": null,
+    "nv": 110,
+    "ni": 318
+   },
+   {
+    "name": "SHELL",
+    "mesh": 23,
+    "color": null,
+    "nv": 110,
+    "ni": 318
+   },
+   {
+    "name": "SHELL",
+    "mesh": 24,
+    "color": null,
+    "nv": 110,
+    "ni": 318
+   },
+   {
+    "name": "SHELL",
+    "mesh": 25,
+    "color": null,
+    "nv": 110,
+    "ni": 318
+   },
+   {
+    "name": "SHELL",
+    "mesh": 26,
+    "color": null,
+    "nv": 110,
+    "ni": 318
+   },
+   {
+    "name": "SHELL",
+    "mesh": 27,
+    "color": null,
+    "nv": 110,
+    "ni": 318
+   },
+   {
+    "name": "SHELL",
+    "mesh": 28,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "SHELL",
+    "mesh": 29,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "SHELL",
+    "mesh": 30,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "SHELL",
+    "mesh": 31,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   }
+  ],
+  "tri": 89286,
+  "bytes": 657631
+ },
+ "LPJ": {
+  "step": "Vendor Step Files/COMP-0006_Bussmann_LPJ-70SP/01_STEP_Vendor/70325K513_UL Class J Time-Delay Fuse for Tight Spaces.STEP",
+  "sha256": "f422d773abda1b8b80f78786d11935d671a101857cfea20b09896fca688e3c9c",
+  "comp": "COMP-0006",
+  "pn": "LPJ-70SP",
+  "lo": [
+   -14.351,
+   -14.272,
+   -58.801
+  ],
+  "hi": [
+   14.351,
+   14.272,
+   58.801
+  ],
+  "parts": [
+   {
+    "name": "solid 0",
+    "mesh": 0,
+    "color": null,
+    "nv": 240,
+    "ni": 696
+   },
+   {
+    "name": "solid 1",
+    "mesh": 1,
+    "color": null,
+    "nv": 618,
+    "ni": 2196
+   },
+   {
+    "name": "solid 2",
+    "mesh": 2,
+    "color": null,
+    "nv": 618,
+    "ni": 2196
+   }
+  ],
+  "tri": 1696,
+  "bytes": 10646
+ },
+ "LUG": {
+  "step": "Vendor Step Files/COMP-0009_Burndy_K3A26U2N/01_STEP_Vendor/K3A26U2N_MODEL-STEP.stp",
+  "sha256": "60b2addac0555420aeb36474c37571a580b1e3c70847f41ee8d91328b13755ea",
+  "comp": "COMP-0009",
+  "pn": "K3A26U2N",
+  "lo": [
+   -95.25,
+   0,
+   -24.765
+  ],
+  "hi": [
+   0,
+   23.495,
+   24.765
+  ],
+  "parts": [
+   {
+    "name": "10069205",
+    "mesh": 0,
+    "color": null,
+    "nv": 1748,
+    "ni": 5298
+   },
+   {
+    "name": "10069304",
+    "mesh": 1,
+    "color": null,
+    "nv": 300,
+    "ni": 900
+   },
+   {
+    "name": "10069304",
+    "mesh": 2,
+    "color": null,
+    "nv": 300,
+    "ni": 900
+   },
+   {
+    "name": "10069304",
+    "mesh": 3,
+    "color": null,
+    "nv": 300,
+    "ni": 900
+   }
+  ],
+  "tri": 2666,
+  "bytes": 17088
+ },
+ "FNQ": {
+  "step": "Vendor Step Files/COMP-0011_Bussmann_FNQ-R-6/01_STEP_Vendor/7714K42_UL Class CC Time-Delay Midget Fuse.STEP",
+  "sha256": "4533660b3d0e41061ef22d907669ce2e9f6309c22019f19d07b04f9e23e93c84",
+  "comp": "COMP-0011",
+  "pn": "FNQ-R-6",
+  "lo": [
+   -5.207,
+   -5.191,
+   -19.05
+  ],
+  "hi": [
+   5.207,
+   5.191,
+   19.05
+  ],
+  "parts": [
+   {
+    "name": "solid 0",
+    "mesh": 0,
+    "color": null,
+    "nv": 116,
+    "ni": 324
+   },
+   {
+    "name": "solid 1",
+    "mesh": 1,
+    "color": null,
+    "nv": 636,
+    "ni": 2592
+   },
+   {
+    "name": "solid 2",
+    "mesh": 2,
+    "color": null,
+    "nv": 968,
+    "ni": 3996
+   }
+  ],
+  "tri": 2304,
+  "bytes": 14853
+ },
+ "FAZ3": {
+  "step": "Vendor Step Files/COMP-0013_Eaton_FAZ-D2-3-NA/01_STEP_Vendor/102260.stp",
+  "sha256": "9e969f8ea4bb1356ad89967e47bf4dc0e266a8eac6efd19b4afab232aa766852",
+  "comp": "COMP-0013",
+  "pn": "FAZ-D2/3-NA",
+  "lo": [
+   0,
+   0,
+   0
+  ],
+  "hi": [
+   53.1,
+   105,
+   73.041
+  ],
+  "parts": [
+   {
+    "name": "102260",
+    "mesh": 0,
+    "color": [
+     0.434,
+     0.434,
+     0.434
+    ],
+    "nv": 4136,
+    "ni": 9852
+   }
+  ],
+  "tri": 3284,
+  "bytes": 25787
+ },
+ "FAZ1": {
+  "step": "Vendor Step Files/COMP-0014_Eaton_FAZ-C2-1-NA-SP/01_STEP_Vendor/102080.stp",
+  "sha256": "c48971f4e03de584668454393549e438dad40c6b6c0f8e87c2cdf8721f528437",
+  "comp": "COMP-0014",
+  "pn": "FAZ-C2/1-NA",
+  "lo": [
+   0,
+   0,
+   0
+  ],
+  "hi": [
+   17.7,
+   105,
+   73.041
+  ],
+  "parts": [
+   {
+    "name": "102080",
+    "mesh": 0,
+    "color": [
+     0.434,
+     0.434,
+     0.434
+    ],
+    "nv": 1358,
+    "ni": 3240
+   }
+  ],
+  "tri": 1080,
+  "bytes": 8630
+ },
+ "ECR": {
+  "step": "Vendor Step Files/COMP-0019_AB_1769-ECR/01_STEP_Vendor/1769-ECR.stp",
+  "sha256": "e54f72ddf34211d3e267bd880f3c707c0973ec0ce4432a7cc56456c1f50702a1",
+  "comp": "COMP-0019",
+  "pn": "1769-ECR",
+  "lo": [
+   -4.5,
+   -118,
+   0
+  ],
+  "hi": [
+   18.5,
+   6.5,
+   80.5
+  ],
+  "parts": [
+   {
+    "name": "Product",
+    "mesh": 0,
+    "color": null,
+    "nv": 174,
+    "ni": 336
+   }
+  ],
+  "tri": 112,
+  "bytes": 933
+ },
+ "AL1920": {
+  "step": "Vendor Step Files/COMP-0021_ifm_AL1920/01_STEP_Vendor/CAD_STP_ASI_0167.stp",
+  "sha256": "dfb4ed4b81e56c7c3256827cf9c832f59fc8377f3e55eb595bf442a09496e149",
+  "comp": "COMP-0021",
+  "pn": "AL1920",
+  "lo": [
+   -25,
+   -63.052,
+   -7.17
+  ],
+  "hi": [
+   25,
+   63.052,
+   100.63
+  ],
+  "parts": [
+   {
+    "name": "_AL1930",
+    "mesh": 0,
+    "color": null,
+    "nv": 38522,
+    "ni": 106800
+   }
+  ],
+  "tri": 35600,
+  "bytes": 258592
+ },
+ "EPSITRON": {
+  "step": "Vendor Step Files/COMP-0022_WAGO_787-1668/01_STEP_Vendor/787-1668.stp",
+  "sha256": "19d230aaa240c5eb62d431ce502a2ff8c168595439556615ce3012c334392fa2",
+  "comp": "COMP-0022",
+  "pn": "787-1668",
+  "lo": [
+   -63.5,
+   -11.7,
+   0
+  ],
+  "hi": [
+   63.5,
+   143.2,
+   42
+  ],
+  "parts": [
+   {
+    "name": "787-1668",
+    "mesh": 0,
+    "color": [
+     0.729,
+     0.674,
+     0.587
+    ],
+    "nv": 2228,
+    "ni": 6456
+   },
+   {
+    "name": "787-1668",
+    "mesh": 0,
+    "color": [
+     0,
+     0.223,
+     0.448
+    ],
+    "nv": 3628,
+    "ni": 9432
+   },
+   {
+    "name": "787-1668",
+    "mesh": 0,
+    "color": [
+     0.025,
+     0.025,
+     0.027
+    ],
+    "nv": 736,
+    "ni": 1968
+   }
+  ],
+  "tri": 5952,
+  "bytes": 44387
+ },
+ "PRO2": {
+  "step": "Vendor Step Files/COMP-0023_WAGO_2787-2347/01_STEP_Vendor/2787-2347.stp",
+  "sha256": "cd7d456cc640e21d6cd36be955263f76b9db3237f933e72ffb0671fb4700f9e6",
+  "comp": "COMP-0023",
+  "pn": "2787-2347",
+  "lo": [
+   -86.12,
+   -6.6,
+   0
+  ],
+  "hi": [
+   83.2,
+   130.4,
+   70
+  ],
+  "parts": [
+   {
+    "name": "2787-2347",
+    "mesh": 0,
+    "color": [
+     0.729,
+     0.674,
+     0.587
+    ],
+    "nv": 6282,
+    "ni": 16596
+   },
+   {
+    "name": "2787-2347",
+    "mesh": 0,
+    "color": [
+     0.274,
+     0.285,
+     0.285
+    ],
+    "nv": 818,
+    "ni": 2130
+   },
+   {
+    "name": "2787-2347",
+    "mesh": 0,
+    "color": [
+     0,
+     0.223,
+     0.448
+    ],
+    "nv": 1570,
+    "ni": 4140
+   },
+   {
+    "name": "2787-2347",
+    "mesh": 0,
+    "color": [
+     0.025,
+     0.025,
+     0.027
+    ],
+    "nv": 1232,
+    "ni": 3246
+   }
+  ],
+  "tri": 8704,
+  "bytes": 64555
+ },
+ "FL1116": {
+  "step": "Vendor Step Files/COMP-0025_Phoenix_1085219/01_STEP_Vendor/1085219.stp",
+  "sha256": "75971d371732a77b90d49afaa628e230854d1a3335e02257b19e78dbd7c9361b",
+  "comp": "COMP-0025",
+  "pn": "1085219",
+  "lo": [
+   0,
+   0,
+   0
+  ],
+  "hi": [
+   40,
+   150.195,
+   98.612
+  ],
+  "parts": [
+   {
+    "name": "1085219_PART1",
+    "mesh": 0,
+    "color": null,
+    "nv": 6008,
+    "ni": 12582
+   },
+   {
+    "name": "1085219_PART2",
+    "mesh": 1,
+    "color": null,
+    "nv": 3275,
+    "ni": 8772
+   }
+  ],
+  "tri": 7118,
+  "bytes": 60274
+ },
+ "PTFIX12": {
+  "step": "Vendor Step Files/COMP-0027_Phoenix_PTFIX-6-12X2.5-BU/01_STEP_Vendor/3273354.stp",
+  "sha256": "e749575a38b33942df0f4ea33347b844ce94aab346ed629d1e5fb98c378d9e00",
+  "comp": "COMP-0027",
+  "pn": "PTFIX 6/12X2,5 BU",
+  "lo": [
+   0,
+   0,
+   0
+  ],
+  "hi": [
+   41,
+   28.6,
+   21.7
+  ],
+  "parts": [
+   {
+    "name": "3273354_PART1",
+    "mesh": 0,
+    "color": [
+     0,
+     0.165,
+     0.462
+    ],
+    "nv": 6874,
+    "ni": 17820
+   }
+  ],
+  "tri": 5940,
+  "bytes": 45145
+ },
+ "PTFIX18": {
+  "step": "Vendor Step Files/COMP-0028_Phoenix_PTFIX-6-18X2.5-BUWH/01_STEP_Vendor/1091673.stp",
+  "sha256": "f2a7c3ae9d0fe343142ec8d912c5aed15d2074ece932d894706e1dad39968d22",
+  "comp": "COMP-0028",
+  "pn": "PTFIX 6/18X2,5 BUWH",
+  "lo": [
+   0,
+   0,
+   0
+  ],
+  "hi": [
+   56.45,
+   28.6,
+   21.7
+  ],
+  "parts": [
+   {
+    "name": "1091673_PART1",
+    "mesh": 0,
+    "color": [
+     0,
+     0.165,
+     0.462
+    ],
+    "nv": 10286,
+    "ni": 26628
+   }
+  ],
+  "tri": 8876,
+  "bytes": 65800
+ },
+ "NS35A": {
+  "step": "Vendor Step Files/COMP-0029_Phoenix_PTFIX-NS35A/01_STEP_Vendor/3274056.stp",
+  "sha256": "e9f6a126060ef6dfa32d738703b775c11494312d126aefe868a362e8b9362677",
+  "comp": "COMP-0029",
+  "pn": "PTFIX-NS35A",
+  "lo": [
+   0,
+   0,
+   0
+  ],
+  "hi": [
+   10.3,
+   45.7,
+   11.95
+  ],
+  "parts": [
+   {
+    "name": "3274056_PART1",
+    "mesh": 0,
+    "color": [
+     0.275,
+     0.305,
+     0.319
+    ],
+    "nv": 440,
+    "ni": 1014
+   }
+  ],
+  "tri": 338,
+  "bytes": 2782
+ },
+ "J4": {
+  "step": "Vendor Step Files/COMP-0030_AB_1492-J4/01_STEP_Vendor/1492-j4.stp",
+  "sha256": "929cdcb00eef8b77b43499321f5d10161d8477e8cc14ca6992420b0eb22f351c",
+  "comp": "COMP-0030",
+  "pn": "1492-J4",
+  "lo": [
+   177.852,
+   -150.387,
+   -6.75
+  ],
+  "hi": [
+   183.952,
+   -90.351,
+   39.5
+  ],
+  "parts": [
+   {
+    "name": "SOLID",
+    "mesh": 0,
+    "color": null,
+    "nv": 1138,
+    "ni": 3000
+   }
+  ],
+  "tri": 1000,
+  "bytes": 7437
+ },
+ "J6": {
+  "step": "Vendor Step Files/COMP-0031_AB_1492-J6/01_STEP_Vendor/1492-j6.stp",
+  "sha256": "df32555277cd27117366b367ab12a168d45abc5ba521ec8ba80c5e897ae1c335",
+  "comp": "COMP-0031",
+  "pn": "1492-J6",
+  "lo": [
+   -32.026,
+   -7.05,
+   0
+  ],
+  "hi": [
+   28.01,
+   39.2,
+   8.103
+  ],
+  "parts": [
+   {
+    "name": "SOLID",
+    "mesh": 0,
+    "color": null,
+    "nv": 918,
+    "ni": 2454
+   }
+  ],
+  "tri": 818,
+  "bytes": 6164
+ },
+ "EAJ35": {
+  "step": "Vendor Step Files/COMP-0033_AB_1492-EAJ35/01_STEP_Vendor/1492-eaj35.stp",
+  "sha256": "9031b383851b35fc9e03b1b435906e1afa52cdcd12207c2838dadf064c41c001",
+  "comp": "COMP-0033",
+  "pn": "1492-EAJ35",
+  "lo": [
+   -27.9,
+   -10.9,
+   -8
+  ],
+  "hi": [
+   27.9,
+   36.1,
+   0
+  ],
+  "parts": [
+   {
+    "name": "1492-EAJ35_SW0001",
+    "mesh": 0,
+    "color": null,
+    "nv": 420,
+    "ni": 1092
+   }
+  ],
+  "tri": 364,
+  "bytes": 2716
+ },
+ "EBJ3": {
+  "step": "Vendor Step Files/COMP-0034_AB_1492-EBJ3/01_STEP_Vendor/1492-ebj3.stp",
+  "sha256": "375b6143aba96f35f86354d4753b34d9f980e33bd04207c210ebb9b6e86c31fd",
+  "comp": "COMP-0034",
+  "pn": "1492-EBJ3",
+  "lo": [
+   -28,
+   0,
+   -2.5
+  ],
+  "hi": [
+   28,
+   33.5,
+   1.5
+  ],
+  "parts": [
+   {
+    "name": "1492-EBJ3-Y",
+    "mesh": 0,
+    "color": null,
+    "nv": 284,
+    "ni": 708
+   }
+  ],
+  "tri": 236,
+  "bytes": 1775
+ },
+ "REC15": {
+  "step": "Vendor Step Files/COMP-0035_AB_1492-REC15/01_STEP_Vendor/1492-REC_.stp",
+  "sha256": "56ebc8145b2a63d07d0cc10c442794f6ca73fd0c64209d223c273ce063e6c88f",
+  "comp": "COMP-0035",
+  "pn": "1492-REC15",
+  "lo": [
+   -37.1,
+   -4.5,
+   -58.1
+  ],
+  "hi": [
+   37.1,
+   58.8,
+   65.55
+  ],
+  "parts": [
+   {
+    "name": "solid 0",
+    "mesh": 0,
+    "color": null,
+    "nv": 27398,
+    "ni": 96546
+   },
+   {
+    "name": "solid 1",
+    "mesh": 1,
+    "color": null,
+    "nv": 1742,
+    "ni": 4884
+   },
+   {
+    "name": "solid 2",
+    "mesh": 2,
+    "color": null,
+    "nv": 4240,
+    "ni": 11478
+   },
+   {
+    "name": "solid 3",
+    "mesh": 3,
+    "color": null,
+    "nv": 44,
+    "ni": 78
+   },
+   {
+    "name": "solid 4",
+    "mesh": 4,
+    "color": null,
+    "nv": 44,
+    "ni": 78
+   },
+   {
+    "name": "solid 5",
+    "mesh": 5,
+    "color": null,
+    "nv": 56,
+    "ni": 228
+   },
+   {
+    "name": "solid 6",
+    "mesh": 6,
+    "color": null,
+    "nv": 56,
+    "ni": 228
+   },
+   {
+    "name": "solid 7",
+    "mesh": 7,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 8",
+    "mesh": 8,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 9",
+    "mesh": 9,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 10",
+    "mesh": 10,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 11",
+    "mesh": 11,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 12",
+    "mesh": 12,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 13",
+    "mesh": 13,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 14",
+    "mesh": 14,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 15",
+    "mesh": 15,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 16",
+    "mesh": 16,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 17",
+    "mesh": 17,
+    "color": null,
+    "nv": 10687,
+    "ni": 38667
+   },
+   {
+    "name": "solid 18",
+    "mesh": 18,
+    "color": null,
+    "nv": 544,
+    "ni": 2112
+   },
+   {
+    "name": "solid 19",
+    "mesh": 19,
+    "color": null,
+    "nv": 170,
+    "ni": 564
+   },
+   {
+    "name": "solid 20",
+    "mesh": 20,
+    "color": null,
+    "nv": 64,
+    "ni": 120
+   },
+   {
+    "name": "solid 21",
+    "mesh": 21,
+    "color": null,
+    "nv": 70,
+    "ni": 174
+   }
+  ],
+  "tri": 51815,
+  "bytes": 379681
+ },
+ "ASB2": {
+  "step": "Vendor Step Files/COMP-0037_ADC_DN-ASB2-10/01_STEP_Vendor/DN-ASB2-10.STEP",
+  "sha256": "a710820da40d1982764be23d6ee76f2bcbacb1508840f1223dda6fbc8a45e09e",
+  "comp": "COMP-0037",
+  "pn": "DN-ASB2-10",
+  "lo": [
+   0,
+   -39.7,
+   -12.5
+  ],
+  "hi": [
+   50.503,
+   39.7,
+   12.5
+  ],
+  "parts": [
+   {
+    "name": "DN-ASB2-10",
+    "mesh": 0,
+    "color": null,
+    "nv": 882,
+    "ni": 2388
+   }
+  ],
+  "tri": 796,
+  "bytes": 6035
+ },
+ "800H": {
+  "step": "Vendor Step Files/COMP-0039_AB_800H-FRXJTQH2RA5/01_STEP_Vendor/800h-frxjt_s.stp",
+  "sha256": "7ca6b685bbea779360a8bde90ab5714f3572804ed481d8ffab9a0cd2de3bf23e",
+  "comp": "COMP-0039",
+  "pn": "800H-FRXJTQH2RA5",
+  "lo": [
+   -27.432,
+   -4.369,
+   -27.432
+  ],
+  "hi": [
+   27.432,
+   58.242,
+   27.432
+  ],
+  "parts": [
+   {
+    "name": "SOLID",
+    "mesh": 0,
+    "color": null,
+    "nv": 1608,
+    "ni": 4524
+   },
+   {
+    "name": "BUSHING_S",
+    "mesh": 1,
+    "color": null,
+    "nv": 308,
+    "ni": 852
+   },
+   {
+    "name": "40271-081-S",
+    "mesh": 2,
+    "color": null,
+    "nv": 576,
+    "ni": 1848
+   },
+   {
+    "name": "GASKET-S",
+    "mesh": 3,
+    "color": null,
+    "nv": 336,
+    "ni": 984
+   },
+   {
+    "name": "GASKET-S",
+    "mesh": 4,
+    "color": null,
+    "nv": 336,
+    "ni": 984
+   },
+   {
+    "name": "GASKET-S",
+    "mesh": 5,
+    "color": null,
+    "nv": 336,
+    "ni": 984
+   },
+   {
+    "name": "TRIM_WASHER-S",
+    "mesh": 6,
+    "color": null,
+    "nv": 312,
+    "ni": 900
+   },
+   {
+    "name": "THRUST_WASHER",
+    "mesh": 7,
+    "color": null,
+    "nv": 352,
+    "ni": 972
+   },
+   {
+    "name": "solid 8",
+    "mesh": 8,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 9",
+    "mesh": 9,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "40271-004-S",
+    "mesh": 10,
+    "color": null,
+    "nv": 2060,
+    "ni": 7980
+   },
+   {
+    "name": "40209-037-S",
+    "mesh": 11,
+    "color": null,
+    "nv": 2416,
+    "ni": 5892
+   }
+  ],
+  "tri": 8744,
+  "bytes": 61588
+ },
+ "RAIL": {
+  "step": "Vendor Step Files/COMP-0040_RSPRO_467-416/01_STEP_Vendor/8961K15_Steel DIN 3 Rail.STEP",
+  "sha256": "2fdc6b96076b6a12dfffa89ae98fc70eada607a65dc97174d7818a98ee83fc0c",
+  "comp": "COMP-0040",
+  "pn": "467-416 (McMaster 8961K15)",
+  "lo": [
+   0,
+   -17.5,
+   -500
+  ],
+  "hi": [
+   7.5,
+   17.5,
+   500
+  ],
+  "parts": [
+   {
+    "name": "8961K15_Steel DIN 3 Rail",
+    "mesh": 0,
+    "color": null,
+    "nv": 5352,
+    "ni": 15204
+   }
+  ],
+  "tri": 5068,
+  "bytes": 35932
+ },
+ "DUCT3": {
+  "step": "Vendor Step Files/COMP-0042_Panduit_F3X2WH6/01_STEP_Vendor/PartDrawings2.stp",
+  "sha256": "38eb05fad0bb153e513dcffe4dcd348018e5c86f93c84d6ce7113cb2fcb46013",
+  "comp": "COMP-0042",
+  "pn": "F3X2WH6",
+  "lo": [
+   -41.278,
+   0,
+   0
+  ],
+  "hi": [
+   41.279,
+   1828.8,
+   50.8
+  ],
+  "parts": [
+   {
+    "name": "D11010QG_00",
+    "mesh": 0,
+    "color": null,
+    "nv": 28200,
+    "ni": 67728
+   }
+  ],
+  "tri": 22576,
+  "bytes": 176054
+ },
+ "ENCL": {
+  "step": "Vendor Step Files/COMP-0001_Saginaw_SCE-60XEL4918SSST/01_STEP_Vendor/SCE-60XEL4918SSST.stp",
+  "sha256": "bb685d224b456d5435283a97bea22ac18fc80e5b0ffbe4bc7bc65f28e655bb24",
+  "comp": "COMP-0001",
+  "pn": "SCE-60XEL4918SSST",
+  "lo": [
+   -1.321,
+   -1642.778,
+   -1243.279
+  ],
+  "hi": [
+   533.252,
+   2.642,
+   1.321
+  ],
+  "parts": [
+   {
+    "name": "MODEL-138-BTM",
+    "mesh": 0,
+    "color": [
+     0.784,
+     0.823,
+     0.847
+    ],
+    "nv": 1644,
+    "ni": 4596
+   },
+   {
+    "name": "MODEL-138-RS",
+    "mesh": 1,
+    "color": [
+     0.784,
+     0.823,
+     0.847
+    ],
+    "nv": 1162,
+    "ni": 3264
+   },
+   {
+    "name": "MODEL-138-LS",
+    "mesh": 2,
+    "color": [
+     0.784,
+     0.823,
+     0.847
+    ],
+    "nv": 1882,
+    "ni": 5244
+   },
+   {
+    "name": "MODEL-138-BCK",
+    "mesh": 3,
+    "color": [
+     0.784,
+     0.823,
+     0.847
+    ],
+    "nv": 264,
+    "ni": 708
+   },
+   {
+    "name": "MODEL-138-TP",
+    "mesh": 4,
+    "color": [
+     0.784,
+     0.823,
+     0.847
+    ],
+    "nv": 1280,
+    "ni": 3228
+   },
+   {
+    "name": "MODEL-138-MN-DR",
+    "mesh": 5,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2544,
+    "ni": 6696
+   },
+   {
+    "name": "111267",
+    "mesh": 6,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 1708,
+    "ni": 5484
+   },
+   {
+    "name": "126935_HANDLE",
+    "mesh": 7,
+    "color": [
+     0.038,
+     0.038,
+     0.038
+    ],
+    "nv": 4820,
+    "ni": 15096
+   },
+   {
+    "name": "126935_HANDLE_INSERT",
+    "mesh": 8,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 3109,
+    "ni": 7962
+   },
+   {
+    "name": "126935_SHAFT_CAM",
+    "mesh": 9,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 2080,
+    "ni": 5172
+   },
+   {
+    "name": "126935_ADAPTER_CAM",
+    "mesh": 10,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 380,
+    "ni": 1008
+   },
+   {
+    "name": "126935_NUT_CAM",
+    "mesh": 11,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2282,
+    "ni": 7116
+   },
+   {
+    "name": "126935_BASE",
+    "mesh": 12,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 3302,
+    "ni": 9282
+   },
+   {
+    "name": "126935_PADLOCK_CATCH",
+    "mesh": 13,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1537,
+    "ni": 4686
+   },
+   {
+    "name": "126935_SCREW_SMALL",
+    "mesh": 14,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 4980,
+    "ni": 17532
+   },
+   {
+    "name": "126935_NUT_MOUNTING_SMALL",
+    "mesh": 15,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 3447,
+    "ni": 9633
+   },
+   {
+    "name": "126935_NUT_MOUNTING_LARGE",
+    "mesh": 16,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 852,
+    "ni": 2196
+   },
+   {
+    "name": "102237",
+    "mesh": 17,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 958,
+    "ni": 2676
+   },
+   {
+    "name": "MODEL-138-ROD-UPR-MD",
+    "mesh": 18,
+    "color": [
+     0.791,
+     0.716,
+     0.578
+    ],
+    "nv": 224,
+    "ni": 564
+   },
+   {
+    "name": "128146",
+    "mesh": 19,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2048,
+    "ni": 6684
+   },
+   {
+    "name": "128145",
+    "mesh": 20,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2754,
+    "ni": 8598
+   },
+   {
+    "name": "128143",
+    "mesh": 21,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 1709,
+    "ni": 4842
+   },
+   {
+    "name": "112504",
+    "mesh": 22,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 1906,
+    "ni": 5016
+   },
+   {
+    "name": "MODEL-138-ROD-LWR-MD",
+    "mesh": 23,
+    "color": [
+     0.791,
+     0.716,
+     0.578
+    ],
+    "nv": 224,
+    "ni": 564
+   },
+   {
+    "name": "128146",
+    "mesh": 24,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2048,
+    "ni": 6684
+   },
+   {
+    "name": "128145",
+    "mesh": 25,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2754,
+    "ni": 8598
+   },
+   {
+    "name": "128143",
+    "mesh": 26,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 1709,
+    "ni": 4842
+   },
+   {
+    "name": "112504",
+    "mesh": 27,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 1906,
+    "ni": 5016
+   },
+   {
+    "name": "MODEL-138-PR-GSKT-MD",
+    "mesh": 28,
+    "color": [
+     0.038,
+     0.038,
+     0.038
+    ],
+    "nv": 1528,
+    "ni": 5424
+   },
+   {
+    "name": "128258",
+    "mesh": 29,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 30,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "128258",
+    "mesh": 31,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 32,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "128258",
+    "mesh": 33,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 34,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "128258",
+    "mesh": 35,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 36,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "MODEL-138-SEC-DR",
+    "mesh": 37,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2436,
+    "ni": 6372
+   },
+   {
+    "name": "126937_HANDLE",
+    "mesh": 38,
+    "color": [
+     0.038,
+     0.038,
+     0.038
+    ],
+    "nv": 4820,
+    "ni": 15096
+   },
+   {
+    "name": "126937_HANDLE_INSERT",
+    "mesh": 39,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 3009,
+    "ni": 7770
+   },
+   {
+    "name": "126937_SHAFT_CAM",
+    "mesh": 40,
+    "color": [
+     0.527,
+     0.527,
+     0.527
+    ],
+    "nv": 2080,
+    "ni": 5172
+   },
+   {
+    "name": "126937_ADAPTER_CAM",
+    "mesh": 41,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 380,
+    "ni": 1008
+   },
+   {
+    "name": "126937_NUT_CAM",
+    "mesh": 42,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2282,
+    "ni": 7116
+   },
+   {
+    "name": "126937_BASE",
+    "mesh": 43,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 3302,
+    "ni": 9282
+   },
+   {
+    "name": "126937_PADLOCK_CATCH",
+    "mesh": 44,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1535,
+    "ni": 4674
+   },
+   {
+    "name": "126937_SCREW_SMALL",
+    "mesh": 45,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 4980,
+    "ni": 17532
+   },
+   {
+    "name": "126937_NUT_MOUNTING_SMALL",
+    "mesh": 46,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 3447,
+    "ni": 9633
+   },
+   {
+    "name": "126937_NUT_MOUNTING_LARGE",
+    "mesh": 47,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 852,
+    "ni": 2196
+   },
+   {
+    "name": "102237",
+    "mesh": 48,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 958,
+    "ni": 2676
+   },
+   {
+    "name": "MODEL-138-ROD-UPR-SD",
+    "mesh": 49,
+    "color": [
+     0.791,
+     0.716,
+     0.578
+    ],
+    "nv": 224,
+    "ni": 564
+   },
+   {
+    "name": "128146",
+    "mesh": 50,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2048,
+    "ni": 6684
+   },
+   {
+    "name": "128145",
+    "mesh": 51,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2754,
+    "ni": 8598
+   },
+   {
+    "name": "128143",
+    "mesh": 52,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 1709,
+    "ni": 4842
+   },
+   {
+    "name": "112504",
+    "mesh": 53,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 1906,
+    "ni": 5016
+   },
+   {
+    "name": "MODEL-138-ROD-LWR-SD",
+    "mesh": 54,
+    "color": [
+     0.791,
+     0.716,
+     0.578
+    ],
+    "nv": 224,
+    "ni": 564
+   },
+   {
+    "name": "128146",
+    "mesh": 55,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2048,
+    "ni": 6684
+   },
+   {
+    "name": "128145",
+    "mesh": 56,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 2754,
+    "ni": 8598
+   },
+   {
+    "name": "128143",
+    "mesh": 57,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 1709,
+    "ni": 4842
+   },
+   {
+    "name": "112504",
+    "mesh": 58,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 1906,
+    "ni": 5016
+   },
+   {
+    "name": "MODEL-138-PR-GSKT-SD",
+    "mesh": 59,
+    "color": [
+     0.038,
+     0.038,
+     0.038
+    ],
+    "nv": 1528,
+    "ni": 5424
+   },
+   {
+    "name": "128258",
+    "mesh": 60,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 61,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "128258",
+    "mesh": 62,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 63,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "128258",
+    "mesh": 64,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 65,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "128258",
+    "mesh": 66,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1597,
+    "ni": 4626
+   },
+   {
+    "name": "126395",
+    "mesh": 67,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1026,
+    "ni": 2874
+   },
+   {
+    "name": "128026",
+    "mesh": 68,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 1304,
+    "ni": 3528
+   },
+   {
+    "name": "128026",
+    "mesh": 69,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 1304,
+    "ni": 3528
+   },
+   {
+    "name": "MODEL-138-CCA-CHNL",
+    "mesh": 70,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 1400,
+    "ni": 3804
+   },
+   {
+    "name": "MODEL-138-CCA-STIF",
+    "mesh": 71,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2032,
+    "ni": 5652
+   },
+   {
+    "name": "100067",
+    "mesh": 72,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 272,
+    "ni": 768
+   },
+   {
+    "name": "100067",
+    "mesh": 73,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 272,
+    "ni": 768
+   },
+   {
+    "name": "103465",
+    "mesh": 74,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 272,
+    "ni": 768
+   },
+   {
+    "name": "103465",
+    "mesh": 75,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 272,
+    "ni": 768
+   },
+   {
+    "name": "129751",
+    "mesh": 76,
+    "color": [
+     0.073,
+     0.073,
+     0.073
+    ],
+    "nv": 2996,
+    "ni": 7356
+   },
+   {
+    "name": "129751",
+    "mesh": 77,
+    "color": [
+     0.073,
+     0.073,
+     0.073
+    ],
+    "nv": 2996,
+    "ni": 7356
+   },
+   {
+    "name": "102535",
+    "mesh": 78,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "102535",
+    "mesh": 79,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "102535",
+    "mesh": 80,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "102535",
+    "mesh": 81,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "102535",
+    "mesh": 82,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "102535",
+    "mesh": 83,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "102535",
+    "mesh": 84,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "102535",
+    "mesh": 85,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 978,
+    "ni": 3336
+   },
+   {
+    "name": "101653",
+    "mesh": 86,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "101653",
+    "mesh": 87,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "101653",
+    "mesh": 88,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "101653",
+    "mesh": 89,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "101653",
+    "mesh": 90,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "101653",
+    "mesh": 91,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "101653",
+    "mesh": 92,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "101653",
+    "mesh": 93,
+    "color": [
+     0.672,
+     0.168,
+     0.125
+    ],
+    "nv": 1164,
+    "ni": 5136
+   },
+   {
+    "name": "102245",
+    "mesh": 94,
+    "color": [
+     0.784,
+     0.823,
+     0.847
+    ],
+    "nv": 884,
+    "ni": 2724
+   },
+   {
+    "name": "102245",
+    "mesh": 95,
+    "color": [
+     0.784,
+     0.823,
+     0.847
+    ],
+    "nv": 884,
+    "ni": 2724
+   },
+   {
+    "name": "129823",
+    "mesh": 96,
+    "color": [
+     0.578,
+     0.578,
+     0.578
+    ],
+    "nv": 17851,
+    "ni": 58020
+   },
+   {
+    "name": "129825",
+    "mesh": 97,
+    "color": [
+     0.305,
+     0.305,
+     0.305
+    ],
+    "nv": 3236,
+    "ni": 11367
+   },
+   {
+    "name": "129826",
+    "mesh": 98,
+    "color": [
+     0.578,
+     0.578,
+     0.578
+    ],
+    "nv": 328,
+    "ni": 924
+   },
+   {
+    "name": "129828",
+    "mesh": 99,
+    "color": [
+     0.305,
+     0.305,
+     0.305
+    ],
+    "nv": 2175,
+    "ni": 6822
+   },
+   {
+    "name": "129835",
+    "mesh": 100,
+    "color": [
+     0.01,
+     0.01,
+     0.01
+    ],
+    "nv": 5692,
+    "ni": 24978
+   },
+   {
+    "name": "129834",
+    "mesh": 101,
+    "color": [
+     0.305,
+     0.305,
+     0.305
+    ],
+    "nv": 3552,
+    "ni": 11628
+   },
+   {
+    "name": "103737",
+    "mesh": 102,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 304,
+    "ni": 864
+   },
+   {
+    "name": "130216-STUD-CAP",
+    "mesh": 103,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 448,
+    "ni": 1356
+   },
+   {
+    "name": "102325",
+    "mesh": 104,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 1871,
+    "ni": 8760
+   },
+   {
+    "name": "129837",
+    "mesh": 105,
+    "color": [
+     0.578,
+     0.578,
+     0.578
+    ],
+    "nv": 566,
+    "ni": 1452
+   },
+   {
+    "name": "129829",
+    "mesh": 106,
+    "color": [
+     0.305,
+     0.305,
+     0.305
+    ],
+    "nv": 2984,
+    "ni": 9912
+   },
+   {
+    "name": "129830",
+    "mesh": 107,
+    "color": [
+     0.01,
+     0.01,
+     0.01
+    ],
+    "nv": 2302,
+    "ni": 7764
+   },
+   {
+    "name": "129836",
+    "mesh": 108,
+    "color": [
+     0.01,
+     0.01,
+     0.01
+    ],
+    "nv": 458,
+    "ni": 1464
+   },
+   {
+    "name": "129824",
+    "mesh": 109,
+    "color": [
+     0.032,
+     0.032,
+     0.032
+    ],
+    "nv": 9631,
+    "ni": 25680
+   },
+   {
+    "name": "130216-FLAT-WASHER",
+    "mesh": 110,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 216,
+    "ni": 624
+   },
+   {
+    "name": "130216-SCREW",
+    "mesh": 111,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 846,
+    "ni": 2718
+   },
+   {
+    "name": "130216-LOCK-NUT",
+    "mesh": 112,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 1168,
+    "ni": 3852
+   },
+   {
+    "name": "100897",
+    "mesh": 113,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 954,
+    "ni": 3072
+   },
+   {
+    "name": "100897",
+    "mesh": 114,
+    "color": [
+     1,
+     1,
+     1
+    ],
+    "nv": 954,
+    "ni": 3072
+   },
+   {
+    "name": "130514",
+    "mesh": 115,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 3940,
+    "ni": 14064
+   },
+   {
+    "name": "130514",
+    "mesh": 116,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 3940,
+    "ni": 14064
+   },
+   {
+    "name": "100813",
+    "mesh": 117,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2489,
+    "ni": 9150
+   },
+   {
+    "name": "108595",
+    "mesh": 118,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2638,
+    "ni": 7086
+   },
+   {
+    "name": "114504",
+    "mesh": 119,
+    "color": null,
+    "nv": 256,
+    "ni": 672
+   },
+   {
+    "name": "100813",
+    "mesh": 120,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2489,
+    "ni": 9150
+   },
+   {
+    "name": "108595",
+    "mesh": 121,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 2638,
+    "ni": 7086
+   },
+   {
+    "name": "114504",
+    "mesh": 122,
+    "color": null,
+    "nv": 256,
+    "ni": 672
+   },
+   {
+    "name": "MODEL-138-BB",
+    "mesh": 123,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 304,
+    "ni": 756
+   },
+   {
+    "name": "MODEL-138-BB",
+    "mesh": 124,
+    "color": [
+     0.687,
+     0.687,
+     0.687
+    ],
+    "nv": 304,
+    "ni": 756
+   },
+   {
+    "name": "100904",
+    "mesh": 125,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   },
+   {
+    "name": "100904",
+    "mesh": 126,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   },
+   {
+    "name": "100904",
+    "mesh": 127,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   },
+   {
+    "name": "100904",
+    "mesh": 128,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   },
+   {
+    "name": "100904",
+    "mesh": 129,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   },
+   {
+    "name": "100904",
+    "mesh": 130,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   },
+   {
+    "name": "100904",
+    "mesh": 131,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   },
+   {
+    "name": "100904",
+    "mesh": 132,
+    "color": [
+     0.791,
+     0.791,
+     0.791
+    ],
+    "nv": 1034,
+    "ni": 3540
+   }
+  ],
+  "tri": 252465,
+  "bytes": 1672297
+ },
+ "Q1": {
+  "step": "Vendor Step Files/COMP-0004_AB_1494U-D100/01_STEP_Vendor/10001235193_asm.stp",
+  "sha256": "eabb0b5946e4f739acff015fe5643538b09a4d882412875e2218696510726a8c",
+  "comp": "COMP-0004",
+  "pn": "1494U-D100",
+  "lo": [
+   -72.263,
+   -44.45,
+   -95.987
+  ],
+  "hi": [
+   109.159,
+   51.665,
+   138.319
+  ],
+  "parts": [
+   {
+    "name": "10000614520",
+    "mesh": 0,
+    "color": null,
+    "nv": 38662,
+    "ni": 122583
+   },
+   {
+    "name": "10000685578",
+    "mesh": 1,
+    "color": null,
+    "nv": 428,
+    "ni": 1200
+   },
+   {
+    "name": "10000685578",
+    "mesh": 2,
+    "color": null,
+    "nv": 428,
+    "ni": 1200
+   },
+   {
+    "name": "10000685578",
+    "mesh": 3,
+    "color": null,
+    "nv": 428,
+    "ni": 1200
+   },
+   {
+    "name": "10000637617",
+    "mesh": 4,
+    "color": null,
+    "nv": 976,
+    "ni": 2328
+   },
+   {
+    "name": "10000637617",
+    "mesh": 5,
+    "color": null,
+    "nv": 976,
+    "ni": 2328
+   },
+   {
+    "name": "10000637617",
+    "mesh": 6,
+    "color": null,
+    "nv": 976,
+    "ni": 2328
+   },
+   {
+    "name": "10000636936_AF6",
+    "mesh": 7,
+    "color": null,
+    "nv": 1456,
+    "ni": 4572
+   },
+   {
+    "name": "10000681640_AF5",
+    "mesh": 8,
+    "color": null,
+    "nv": 1273,
+    "ni": 3438
+   },
+   {
+    "name": "10000594862",
+    "mesh": 9,
+    "color": null,
+    "nv": 532,
+    "ni": 1560
+   },
+   {
+    "name": "10000680904",
+    "mesh": 10,
+    "color": null,
+    "nv": 2804,
+    "ni": 12180
+   },
+   {
+    "name": "10000636936_AF7",
+    "mesh": 11,
+    "color": null,
+    "nv": 1456,
+    "ni": 4572
+   },
+   {
+    "name": "10000681640_AF6",
+    "mesh": 12,
+    "color": null,
+    "nv": 1273,
+    "ni": 3438
+   },
+   {
+    "name": "10000594862",
+    "mesh": 13,
+    "color": null,
+    "nv": 532,
+    "ni": 1560
+   },
+   {
+    "name": "10000680904",
+    "mesh": 14,
+    "color": null,
+    "nv": 2804,
+    "ni": 12180
+   },
+   {
+    "name": "10000636936_AF8",
+    "mesh": 15,
+    "color": null,
+    "nv": 1456,
+    "ni": 4572
+   },
+   {
+    "name": "10000681640_AF7",
+    "mesh": 16,
+    "color": null,
+    "nv": 1273,
+    "ni": 3438
+   },
+   {
+    "name": "10000594862",
+    "mesh": 17,
+    "color": null,
+    "nv": 532,
+    "ni": 1560
+   },
+   {
+    "name": "10000680904",
+    "mesh": 18,
+    "color": null,
+    "nv": 2804,
+    "ni": 12180
+   },
+   {
+    "name": "10001097290",
+    "mesh": 19,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10001097290",
+    "mesh": 20,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10001097290",
+    "mesh": 21,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10001097290",
+    "mesh": 22,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10001097290",
+    "mesh": 23,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10001097290",
+    "mesh": 24,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10000397772",
+    "mesh": 25,
+    "color": null,
+    "nv": 15221,
+    "ni": 50904
+   },
+   {
+    "name": "10000685581",
+    "mesh": 26,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10000685581",
+    "mesh": 27,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10000798020",
+    "mesh": 28,
+    "color": null,
+    "nv": 20491,
+    "ni": 60645
+   },
+   {
+    "name": "10000772096",
+    "mesh": 29,
+    "color": null,
+    "nv": 332,
+    "ni": 768
+   },
+   {
+    "name": "10000772096",
+    "mesh": 30,
+    "color": null,
+    "nv": 332,
+    "ni": 768
+   },
+   {
+    "name": "10000772096",
+    "mesh": 31,
+    "color": null,
+    "nv": 332,
+    "ni": 768
+   },
+   {
+    "name": "10000772095",
+    "mesh": 32,
+    "color": null,
+    "nv": 412,
+    "ni": 960
+   },
+   {
+    "name": "10000772095",
+    "mesh": 33,
+    "color": null,
+    "nv": 412,
+    "ni": 960
+   },
+   {
+    "name": "10000772095",
+    "mesh": 34,
+    "color": null,
+    "nv": 412,
+    "ni": 960
+   },
+   {
+    "name": "10000812410_AF0",
+    "mesh": 35,
+    "color": null,
+    "nv": 1530,
+    "ni": 3144
+   },
+   {
+    "name": "10000812410_AF1",
+    "mesh": 36,
+    "color": null,
+    "nv": 1512,
+    "ni": 3108
+   },
+   {
+    "name": "10000812410_AF2",
+    "mesh": 37,
+    "color": null,
+    "nv": 786,
+    "ni": 1656
+   },
+   {
+    "name": "10000676834",
+    "mesh": 38,
+    "color": null,
+    "nv": 2596,
+    "ni": 6810
+   },
+   {
+    "name": "10000375003_AF0",
+    "mesh": 39,
+    "color": null,
+    "nv": 1376,
+    "ni": 5136
+   },
+   {
+    "name": "10000495007",
+    "mesh": 40,
+    "color": null,
+    "nv": 72,
+    "ni": 132
+   },
+   {
+    "name": "10000415089",
+    "mesh": 41,
+    "color": null,
+    "nv": 828,
+    "ni": 2964
+   },
+   {
+    "name": "10000472990",
+    "mesh": 42,
+    "color": null,
+    "nv": 1148,
+    "ni": 3192
+   },
+   {
+    "name": "10000714168",
+    "mesh": 43,
+    "color": null,
+    "nv": 2628,
+    "ni": 7704
+   },
+   {
+    "name": "M-1243",
+    "mesh": 44,
+    "color": null,
+    "nv": 216,
+    "ni": 624
+   },
+   {
+    "name": "10000686654",
+    "mesh": 45,
+    "color": null,
+    "nv": 1140,
+    "ni": 4812
+   },
+   {
+    "name": "B-36120",
+    "mesh": 46,
+    "color": null,
+    "nv": 540,
+    "ni": 1488
+   },
+   {
+    "name": "B-36119",
+    "mesh": 47,
+    "color": null,
+    "nv": 832,
+    "ni": 2952
+   },
+   {
+    "name": "M-5610",
+    "mesh": 48,
+    "color": null,
+    "nv": 292,
+    "ni": 780
+   },
+   {
+    "name": "40116-357_AF2",
+    "mesh": 49,
+    "color": null,
+    "nv": 9759,
+    "ni": 46338
+   },
+   {
+    "name": "10000685581",
+    "mesh": 50,
+    "color": null,
+    "nv": 718,
+    "ni": 2076
+   },
+   {
+    "name": "10000653616",
+    "mesh": 51,
+    "color": null,
+    "nv": 1738,
+    "ni": 5478
+   },
+   {
+    "name": "10000653616",
+    "mesh": 52,
+    "color": null,
+    "nv": 1738,
+    "ni": 5478
+   },
+   {
+    "name": "10000653616",
+    "mesh": 53,
+    "color": null,
+    "nv": 1738,
+    "ni": 5478
+   },
+   {
+    "name": "SOLID",
+    "mesh": 54,
+    "color": null,
+    "nv": 928,
+    "ni": 2568
+   },
+   {
+    "name": "SHELL",
+    "mesh": 55,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "SOLID",
+    "mesh": 56,
+    "color": null,
+    "nv": 928,
+    "ni": 2568
+   },
+   {
+    "name": "SHELL",
+    "mesh": 57,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "SOLID",
+    "mesh": 58,
+    "color": null,
+    "nv": 928,
+    "ni": 2568
+   },
+   {
+    "name": "SHELL",
+    "mesh": 59,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "40023-108",
+    "mesh": 60,
+    "color": null,
+    "nv": 126,
+    "ni": 288
+   },
+   {
+    "name": "40023-108",
+    "mesh": 61,
+    "color": null,
+    "nv": 126,
+    "ni": 288
+   },
+   {
+    "name": "40023-108",
+    "mesh": 62,
+    "color": null,
+    "nv": 126,
+    "ni": 288
+   },
+   {
+    "name": "40023-110-04",
+    "mesh": 63,
+    "color": null,
+    "nv": 2520,
+    "ni": 7692
+   },
+   {
+    "name": "40023-110-04",
+    "mesh": 64,
+    "color": null,
+    "nv": 2520,
+    "ni": 7692
+   },
+   {
+    "name": "40023-110-04",
+    "mesh": 65,
+    "color": null,
+    "nv": 2520,
+    "ni": 7692
+   },
+   {
+    "name": "SOLID",
+    "mesh": 66,
+    "color": null,
+    "nv": 766,
+    "ni": 2304
+   },
+   {
+    "name": "SHELL",
+    "mesh": 67,
+    "color": null,
+    "nv": 108,
+    "ni": 312
+   },
+   {
+    "name": "SOLID",
+    "mesh": 68,
+    "color": null,
+    "nv": 766,
+    "ni": 2304
+   },
+   {
+    "name": "SHELL",
+    "mesh": 69,
+    "color": null,
+    "nv": 108,
+    "ni": 312
+   },
+   {
+    "name": "SOLID",
+    "mesh": 70,
+    "color": null,
+    "nv": 766,
+    "ni": 2304
+   },
+   {
+    "name": "SHELL",
+    "mesh": 71,
+    "color": null,
+    "nv": 108,
+    "ni": 312
+   }
+  ],
+  "tri": 160356,
+  "bytes": 1124673
+ },
+ "FU1": {
+  "step": "Vendor Step Files/COMP-0005_AB_1494U-F100/01_STEP_Vendor/10001237276_asm.stp",
+  "sha256": "191ad042b9979f0fc7f5ee5d4edda6eff73865cc8c762d727ec859247b034763",
+  "comp": "COMP-0005",
+  "pn": "1494U-F100",
+  "lo": [
+   -65.996,
+   0,
+   -27.686
+  ],
+  "hi": [
+   66.038,
+   76.2,
+   41.275
+  ],
+  "parts": [
+   {
+    "name": "10000341110",
+    "mesh": 0,
+    "color": null,
+    "nv": 56541,
+    "ni": 193902
+   },
+   {
+    "name": "SOLID",
+    "mesh": 1,
+    "color": null,
+    "nv": 1108,
+    "ni": 3144
+   },
+   {
+    "name": "SOLID",
+    "mesh": 2,
+    "color": null,
+    "nv": 1108,
+    "ni": 3144
+   },
+   {
+    "name": "SOLID",
+    "mesh": 3,
+    "color": null,
+    "nv": 1108,
+    "ni": 3144
+   },
+   {
+    "name": "10001034530",
+    "mesh": 4,
+    "color": null,
+    "nv": 2444,
+    "ni": 6558
+   },
+   {
+    "name": "10001034530",
+    "mesh": 5,
+    "color": null,
+    "nv": 2444,
+    "ni": 6558
+   },
+   {
+    "name": "10001034530",
+    "mesh": 6,
+    "color": null,
+    "nv": 2444,
+    "ni": 6558
+   },
+   {
+    "name": "solid 7",
+    "mesh": 7,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 8",
+    "mesh": 8,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 9",
+    "mesh": 9,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 10",
+    "mesh": 10,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 11",
+    "mesh": 11,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 12",
+    "mesh": 12,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 13",
+    "mesh": 13,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 14",
+    "mesh": 14,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 15",
+    "mesh": 15,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 16",
+    "mesh": 16,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 17",
+    "mesh": 17,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 18",
+    "mesh": 18,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "10000653616",
+    "mesh": 19,
+    "color": null,
+    "nv": 1903,
+    "ni": 6384
+   },
+   {
+    "name": "10000653616",
+    "mesh": 20,
+    "color": null,
+    "nv": 1903,
+    "ni": 6384
+   },
+   {
+    "name": "10000653616",
+    "mesh": 21,
+    "color": null,
+    "nv": 1903,
+    "ni": 6384
+   },
+   {
+    "name": "SOLID",
+    "mesh": 22,
+    "color": null,
+    "nv": 944,
+    "ni": 2616
+   },
+   {
+    "name": "SHELL",
+    "mesh": 23,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "SOLID",
+    "mesh": 24,
+    "color": null,
+    "nv": 944,
+    "ni": 2616
+   },
+   {
+    "name": "SHELL",
+    "mesh": 25,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "SOLID",
+    "mesh": 26,
+    "color": null,
+    "nv": 944,
+    "ni": 2616
+   },
+   {
+    "name": "SHELL",
+    "mesh": 27,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "40023-108",
+    "mesh": 28,
+    "color": null,
+    "nv": 126,
+    "ni": 288
+   },
+   {
+    "name": "40023-108",
+    "mesh": 29,
+    "color": null,
+    "nv": 126,
+    "ni": 288
+   },
+   {
+    "name": "40023-108",
+    "mesh": 30,
+    "color": null,
+    "nv": 126,
+    "ni": 288
+   },
+   {
+    "name": "SOLID",
+    "mesh": 31,
+    "color": null,
+    "nv": 792,
+    "ni": 2364
+   },
+   {
+    "name": "SHELL",
+    "mesh": 32,
+    "color": null,
+    "nv": 108,
+    "ni": 312
+   },
+   {
+    "name": "SOLID",
+    "mesh": 33,
+    "color": null,
+    "nv": 792,
+    "ni": 2364
+   },
+   {
+    "name": "SHELL",
+    "mesh": 34,
+    "color": null,
+    "nv": 108,
+    "ni": 312
+   },
+   {
+    "name": "SOLID",
+    "mesh": 35,
+    "color": null,
+    "nv": 792,
+    "ni": 2364
+   },
+   {
+    "name": "SHELL",
+    "mesh": 36,
+    "color": null,
+    "nv": 108,
+    "ni": 312
+   },
+   {
+    "name": "40023-110-04",
+    "mesh": 37,
+    "color": null,
+    "nv": 2664,
+    "ni": 8628
+   },
+   {
+    "name": "40023-110-04",
+    "mesh": 38,
+    "color": null,
+    "nv": 2664,
+    "ni": 8628
+   },
+   {
+    "name": "40023-110-04",
+    "mesh": 39,
+    "color": null,
+    "nv": 2664,
+    "ni": 8628
+   }
+  ],
+  "tri": 95708,
+  "bytes": 679579
+ },
+ "PF525D": {
+  "step": "Vendor Step Files/COMP-0015_AB_25B-D024N104/01_STEP_Vendor/ng2-d-stp_20130731.stp",
+  "sha256": "6926fe9052a4b54e0c8a6cdcac9dc5aea68dff942a640d3beb233f1df18f98dd",
+  "comp": "COMP-0015",
+  "pn": "25B-D024N104",
+  "lo": [
+   -65,
+   -100.8,
+   -140.038
+  ],
+  "hi": [
+   65,
+   111.3,
+   120
+  ],
+  "parts": [
+   {
+    "name": "SOLID",
+    "mesh": 0,
+    "color": null,
+    "nv": 308,
+    "ni": 804
+   },
+   {
+    "name": "solid 1",
+    "mesh": 1,
+    "color": null,
+    "nv": 5809,
+    "ni": 18819
+   },
+   {
+    "name": "solid 2",
+    "mesh": 2,
+    "color": null,
+    "nv": 175,
+    "ni": 507
+   },
+   {
+    "name": "solid 3",
+    "mesh": 3,
+    "color": null,
+    "nv": 10755,
+    "ni": 34116
+   },
+   {
+    "name": "solid 4",
+    "mesh": 4,
+    "color": null,
+    "nv": 29,
+    "ni": 81
+   },
+   {
+    "name": "solid 5",
+    "mesh": 5,
+    "color": null,
+    "nv": 4620,
+    "ni": 14313
+   },
+   {
+    "name": "solid 6",
+    "mesh": 6,
+    "color": null,
+    "nv": 70,
+    "ni": 180
+   },
+   {
+    "name": "solid 7",
+    "mesh": 7,
+    "color": null,
+    "nv": 488,
+    "ni": 1374
+   },
+   {
+    "name": "solid 8",
+    "mesh": 8,
+    "color": null,
+    "nv": 4479,
+    "ni": 13800
+   },
+   {
+    "name": "solid 9",
+    "mesh": 9,
+    "color": null,
+    "nv": 69,
+    "ni": 195
+   },
+   {
+    "name": "solid 10",
+    "mesh": 10,
+    "color": null,
+    "nv": 66,
+    "ni": 180
+   },
+   {
+    "name": "solid 11",
+    "mesh": 11,
+    "color": null,
+    "nv": 55,
+    "ni": 159
+   },
+   {
+    "name": "solid 12",
+    "mesh": 12,
+    "color": null,
+    "nv": 94,
+    "ni": 288
+   },
+   {
+    "name": "solid 13",
+    "mesh": 13,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 14",
+    "mesh": 14,
+    "color": null,
+    "nv": 35,
+    "ni": 99
+   },
+   {
+    "name": "solid 15",
+    "mesh": 15,
+    "color": null,
+    "nv": 4007,
+    "ni": 13782
+   },
+   {
+    "name": "solid 16",
+    "mesh": 16,
+    "color": null,
+    "nv": 56,
+    "ni": 156
+   },
+   {
+    "name": "solid 17",
+    "mesh": 17,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 18",
+    "mesh": 18,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 19",
+    "mesh": 19,
+    "color": null,
+    "nv": 16,
+    "ni": 36
+   },
+   {
+    "name": "solid 20",
+    "mesh": 20,
+    "color": null,
+    "nv": 108,
+    "ni": 348
+   },
+   {
+    "name": "solid 21",
+    "mesh": 21,
+    "color": null,
+    "nv": 371,
+    "ni": 1197
+   },
+   {
+    "name": "solid 22",
+    "mesh": 22,
+    "color": null,
+    "nv": 145,
+    "ni": 381
+   },
+   {
+    "name": "solid 23",
+    "mesh": 23,
+    "color": null,
+    "nv": 29,
+    "ni": 81
+   },
+   {
+    "name": "solid 24",
+    "mesh": 24,
+    "color": null,
+    "nv": 45,
+    "ni": 129
+   },
+   {
+    "name": "solid 25",
+    "mesh": 25,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 26",
+    "mesh": 26,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 27",
+    "mesh": 27,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 28",
+    "mesh": 28,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 29",
+    "mesh": 29,
+    "color": null,
+    "nv": 12,
+    "ni": 24
+   },
+   {
+    "name": "solid 30",
+    "mesh": 30,
+    "color": null,
+    "nv": 12,
+    "ni": 24
+   },
+   {
+    "name": "solid 31",
+    "mesh": 31,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 32",
+    "mesh": 32,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 33",
+    "mesh": 33,
+    "color": null,
+    "nv": 17153,
+    "ni": 51627
+   },
+   {
+    "name": "solid 34",
+    "mesh": 34,
+    "color": null,
+    "nv": 11,
+    "ni": 33
+   },
+   {
+    "name": "solid 35",
+    "mesh": 35,
+    "color": null,
+    "nv": 39,
+    "ni": 123
+   },
+   {
+    "name": "solid 36",
+    "mesh": 36,
+    "color": null,
+    "nv": 40,
+    "ni": 114
+   },
+   {
+    "name": "solid 37",
+    "mesh": 37,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 38",
+    "mesh": 38,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 39",
+    "mesh": 39,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 40",
+    "mesh": 40,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 41",
+    "mesh": 41,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 42",
+    "mesh": 42,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 43",
+    "mesh": 43,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 44",
+    "mesh": 44,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 45",
+    "mesh": 45,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 46",
+    "mesh": 46,
+    "color": null,
+    "nv": 46,
+    "ni": 150
+   },
+   {
+    "name": "solid 47",
+    "mesh": 47,
+    "color": null,
+    "nv": 46,
+    "ni": 150
+   },
+   {
+    "name": "solid 48",
+    "mesh": 48,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 49",
+    "mesh": 49,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 50",
+    "mesh": 50,
+    "color": null,
+    "nv": 26,
+    "ni": 72
+   },
+   {
+    "name": "solid 51",
+    "mesh": 51,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 52",
+    "mesh": 52,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 53",
+    "mesh": 53,
+    "color": null,
+    "nv": 26,
+    "ni": 78
+   },
+   {
+    "name": "solid 54",
+    "mesh": 54,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 55",
+    "mesh": 55,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 56",
+    "mesh": 56,
+    "color": null,
+    "nv": 60,
+    "ni": 180
+   },
+   {
+    "name": "solid 57",
+    "mesh": 57,
+    "color": null,
+    "nv": 60,
+    "ni": 180
+   },
+   {
+    "name": "solid 58",
+    "mesh": 58,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 59",
+    "mesh": 59,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 60",
+    "mesh": 60,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 61",
+    "mesh": 61,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 62",
+    "mesh": 62,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 63",
+    "mesh": 63,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 64",
+    "mesh": 64,
+    "color": null,
+    "nv": 26,
+    "ni": 78
+   },
+   {
+    "name": "solid 65",
+    "mesh": 65,
+    "color": null,
+    "nv": 40,
+    "ni": 114
+   },
+   {
+    "name": "solid 66",
+    "mesh": 66,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 67",
+    "mesh": 67,
+    "color": null,
+    "nv": 26,
+    "ni": 78
+   },
+   {
+    "name": "solid 68",
+    "mesh": 68,
+    "color": null,
+    "nv": 40,
+    "ni": 114
+   },
+   {
+    "name": "solid 69",
+    "mesh": 69,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 70",
+    "mesh": 70,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 71",
+    "mesh": 71,
+    "color": null,
+    "nv": 39,
+    "ni": 123
+   },
+   {
+    "name": "solid 72",
+    "mesh": 72,
+    "color": null,
+    "nv": 26,
+    "ni": 78
+   },
+   {
+    "name": "solid 73",
+    "mesh": 73,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 74",
+    "mesh": 74,
+    "color": null,
+    "nv": 39,
+    "ni": 123
+   },
+   {
+    "name": "solid 75",
+    "mesh": 75,
+    "color": null,
+    "nv": 26,
+    "ni": 78
+   },
+   {
+    "name": "solid 76",
+    "mesh": 76,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 77",
+    "mesh": 77,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 78",
+    "mesh": 78,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 79",
+    "mesh": 79,
+    "color": null,
+    "nv": 21,
+    "ni": 57
+   },
+   {
+    "name": "solid 80",
+    "mesh": 80,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 81",
+    "mesh": 81,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 82",
+    "mesh": 82,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 83",
+    "mesh": 83,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 84",
+    "mesh": 84,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 85",
+    "mesh": 85,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 86",
+    "mesh": 86,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 87",
+    "mesh": 87,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 88",
+    "mesh": 88,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 89",
+    "mesh": 89,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 90",
+    "mesh": 90,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 91",
+    "mesh": 91,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 92",
+    "mesh": 92,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 93",
+    "mesh": 93,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 94",
+    "mesh": 94,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 95",
+    "mesh": 95,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 96",
+    "mesh": 96,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 97",
+    "mesh": 97,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 98",
+    "mesh": 98,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 99",
+    "mesh": 99,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 100",
+    "mesh": 100,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 101",
+    "mesh": 101,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 102",
+    "mesh": 102,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 103",
+    "mesh": 103,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 104",
+    "mesh": 104,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 105",
+    "mesh": 105,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 106",
+    "mesh": 106,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 107",
+    "mesh": 107,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 108",
+    "mesh": 108,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 109",
+    "mesh": 109,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 110",
+    "mesh": 110,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 111",
+    "mesh": 111,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 112",
+    "mesh": 112,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 113",
+    "mesh": 113,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 114",
+    "mesh": 114,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 115",
+    "mesh": 115,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 116",
+    "mesh": 116,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 117",
+    "mesh": 117,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 118",
+    "mesh": 118,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 119",
+    "mesh": 119,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 120",
+    "mesh": 120,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 121",
+    "mesh": 121,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 122",
+    "mesh": 122,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 123",
+    "mesh": 123,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 124",
+    "mesh": 124,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 125",
+    "mesh": 125,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 126",
+    "mesh": 126,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 127",
+    "mesh": 127,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 128",
+    "mesh": 128,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 129",
+    "mesh": 129,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 130",
+    "mesh": 130,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 131",
+    "mesh": 131,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 132",
+    "mesh": 132,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 133",
+    "mesh": 133,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 134",
+    "mesh": 134,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 135",
+    "mesh": 135,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 136",
+    "mesh": 136,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 137",
+    "mesh": 137,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 138",
+    "mesh": 138,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 139",
+    "mesh": 139,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 140",
+    "mesh": 140,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 141",
+    "mesh": 141,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 142",
+    "mesh": 142,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 143",
+    "mesh": 143,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 144",
+    "mesh": 144,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 145",
+    "mesh": 145,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 146",
+    "mesh": 146,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 147",
+    "mesh": 147,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 148",
+    "mesh": 148,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 149",
+    "mesh": 149,
+    "color": null,
+    "nv": 20,
+    "ni": 48
+   },
+   {
+    "name": "solid 150",
+    "mesh": 150,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 151",
+    "mesh": 151,
+    "color": null,
+    "nv": 31,
+    "ni": 87
+   },
+   {
+    "name": "solid 152",
+    "mesh": 152,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 153",
+    "mesh": 153,
+    "color": null,
+    "nv": 33,
+    "ni": 99
+   },
+   {
+    "name": "solid 154",
+    "mesh": 154,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 155",
+    "mesh": 155,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 156",
+    "mesh": 156,
+    "color": null,
+    "nv": 9,
+    "ni": 21
+   },
+   {
+    "name": "solid 157",
+    "mesh": 157,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 158",
+    "mesh": 158,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 159",
+    "mesh": 159,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 160",
+    "mesh": 160,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 161",
+    "mesh": 161,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 162",
+    "mesh": 162,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 163",
+    "mesh": 163,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 164",
+    "mesh": 164,
+    "color": null,
+    "nv": 38,
+    "ni": 114
+   },
+   {
+    "name": "solid 165",
+    "mesh": 165,
+    "color": null,
+    "nv": 49,
+    "ni": 147
+   },
+   {
+    "name": "solid 166",
+    "mesh": 166,
+    "color": null,
+    "nv": 70,
+    "ni": 210
+   },
+   {
+    "name": "solid 167",
+    "mesh": 167,
+    "color": null,
+    "nv": 3,
+    "ni": 3
+   },
+   {
+    "name": "solid 168",
+    "mesh": 168,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 169",
+    "mesh": 169,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 170",
+    "mesh": 170,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 171",
+    "mesh": 171,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 172",
+    "mesh": 172,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 173",
+    "mesh": 173,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 174",
+    "mesh": 174,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 175",
+    "mesh": 175,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 176",
+    "mesh": 176,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 177",
+    "mesh": 177,
+    "color": null,
+    "nv": 22,
+    "ni": 60
+   },
+   {
+    "name": "solid 178",
+    "mesh": 178,
+    "color": null,
+    "nv": 35,
+    "ni": 99
+   },
+   {
+    "name": "solid 179",
+    "mesh": 179,
+    "color": null,
+    "nv": 27,
+    "ni": 75
+   },
+   {
+    "name": "solid 180",
+    "mesh": 180,
+    "color": null,
+    "nv": 26,
+    "ni": 72
+   },
+   {
+    "name": "solid 181",
+    "mesh": 181,
+    "color": null,
+    "nv": 47,
+    "ni": 117
+   },
+   {
+    "name": "solid 182",
+    "mesh": 182,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 183",
+    "mesh": 183,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 184",
+    "mesh": 184,
+    "color": null,
+    "nv": 18,
+    "ni": 48
+   },
+   {
+    "name": "solid 185",
+    "mesh": 185,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 186",
+    "mesh": 186,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 187",
+    "mesh": 187,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 188",
+    "mesh": 188,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 189",
+    "mesh": 189,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 190",
+    "mesh": 190,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 191",
+    "mesh": 191,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 192",
+    "mesh": 192,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 193",
+    "mesh": 193,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 194",
+    "mesh": 194,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 195",
+    "mesh": 195,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 196",
+    "mesh": 196,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 197",
+    "mesh": 197,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 198",
+    "mesh": 198,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 199",
+    "mesh": 199,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 200",
+    "mesh": 200,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 201",
+    "mesh": 201,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 202",
+    "mesh": 202,
+    "color": null,
+    "nv": 24,
+    "ni": 48
+   },
+   {
+    "name": "solid 203",
+    "mesh": 203,
+    "color": null,
+    "nv": 18,
+    "ni": 36
+   },
+   {
+    "name": "solid 204",
+    "mesh": 204,
+    "color": null,
+    "nv": 18,
+    "ni": 36
+   },
+   {
+    "name": "solid 205",
+    "mesh": 205,
+    "color": null,
+    "nv": 36,
+    "ni": 90
+   },
+   {
+    "name": "solid 206",
+    "mesh": 206,
+    "color": null,
+    "nv": 37,
+    "ni": 93
+   },
+   {
+    "name": "solid 207",
+    "mesh": 207,
+    "color": null,
+    "nv": 24,
+    "ni": 48
+   },
+   {
+    "name": "solid 208",
+    "mesh": 208,
+    "color": null,
+    "nv": 18,
+    "ni": 36
+   },
+   {
+    "name": "solid 209",
+    "mesh": 209,
+    "color": null,
+    "nv": 18,
+    "ni": 36
+   },
+   {
+    "name": "solid 210",
+    "mesh": 210,
+    "color": null,
+    "nv": 156,
+    "ni": 426
+   },
+   {
+    "name": "solid 211",
+    "mesh": 211,
+    "color": null,
+    "nv": 156,
+    "ni": 426
+   },
+   {
+    "name": "solid 212",
+    "mesh": 212,
+    "color": null,
+    "nv": 60,
+    "ni": 162
+   },
+   {
+    "name": "solid 213",
+    "mesh": 213,
+    "color": null,
+    "nv": 11,
+    "ni": 27
+   },
+   {
+    "name": "solid 214",
+    "mesh": 214,
+    "color": null,
+    "nv": 29,
+    "ni": 81
+   },
+   {
+    "name": "solid 215",
+    "mesh": 215,
+    "color": null,
+    "nv": 29,
+    "ni": 81
+   },
+   {
+    "name": "solid 216",
+    "mesh": 216,
+    "color": null,
+    "nv": 29,
+    "ni": 81
+   },
+   {
+    "name": "solid 217",
+    "mesh": 217,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 218",
+    "mesh": 218,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 219",
+    "mesh": 219,
+    "color": null,
+    "nv": 60,
+    "ni": 180
+   },
+   {
+    "name": "solid 220",
+    "mesh": 220,
+    "color": null,
+    "nv": 55,
+    "ni": 165
+   },
+   {
+    "name": "solid 221",
+    "mesh": 221,
+    "color": null,
+    "nv": 32,
+    "ni": 90
+   },
+   {
+    "name": "solid 222",
+    "mesh": 222,
+    "color": null,
+    "nv": 32,
+    "ni": 90
+   },
+   {
+    "name": "solid 223",
+    "mesh": 223,
+    "color": null,
+    "nv": 78,
+    "ni": 228
+   },
+   {
+    "name": "solid 224",
+    "mesh": 224,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 225",
+    "mesh": 225,
+    "color": null,
+    "nv": 29,
+    "ni": 81
+   },
+   {
+    "name": "solid 226",
+    "mesh": 226,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 227",
+    "mesh": 227,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 228",
+    "mesh": 228,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 229",
+    "mesh": 229,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 230",
+    "mesh": 230,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 231",
+    "mesh": 231,
+    "color": null,
+    "nv": 35,
+    "ni": 87
+   },
+   {
+    "name": "solid 232",
+    "mesh": 232,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 233",
+    "mesh": 233,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 234",
+    "mesh": 234,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 235",
+    "mesh": 235,
+    "color": null,
+    "nv": 72,
+    "ni": 186
+   },
+   {
+    "name": "solid 236",
+    "mesh": 236,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 237",
+    "mesh": 237,
+    "color": null,
+    "nv": 72,
+    "ni": 186
+   },
+   {
+    "name": "solid 238",
+    "mesh": 238,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 239",
+    "mesh": 239,
+    "color": null,
+    "nv": 11,
+    "ni": 27
+   },
+   {
+    "name": "solid 240",
+    "mesh": 240,
+    "color": null,
+    "nv": 9,
+    "ni": 21
+   },
+   {
+    "name": "solid 241",
+    "mesh": 241,
+    "color": null,
+    "nv": 11,
+    "ni": 27
+   },
+   {
+    "name": "solid 242",
+    "mesh": 242,
+    "color": null,
+    "nv": 9,
+    "ni": 21
+   },
+   {
+    "name": "solid 243",
+    "mesh": 243,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 244",
+    "mesh": 244,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 245",
+    "mesh": 245,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 246",
+    "mesh": 246,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 247",
+    "mesh": 247,
+    "color": null,
+    "nv": 39,
+    "ni": 111
+   },
+   {
+    "name": "solid 248",
+    "mesh": 248,
+    "color": null,
+    "nv": 39,
+    "ni": 111
+   },
+   {
+    "name": "solid 249",
+    "mesh": 249,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 250",
+    "mesh": 250,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 251",
+    "mesh": 251,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 252",
+    "mesh": 252,
+    "color": null,
+    "nv": 39,
+    "ni": 111
+   },
+   {
+    "name": "solid 253",
+    "mesh": 253,
+    "color": null,
+    "nv": 39,
+    "ni": 111
+   },
+   {
+    "name": "solid 254",
+    "mesh": 254,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 255",
+    "mesh": 255,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 256",
+    "mesh": 256,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 257",
+    "mesh": 257,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 258",
+    "mesh": 258,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 259",
+    "mesh": 259,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 260",
+    "mesh": 260,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 261",
+    "mesh": 261,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 262",
+    "mesh": 262,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 263",
+    "mesh": 263,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 264",
+    "mesh": 264,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 265",
+    "mesh": 265,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 266",
+    "mesh": 266,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 267",
+    "mesh": 267,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 268",
+    "mesh": 268,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 269",
+    "mesh": 269,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 270",
+    "mesh": 270,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 271",
+    "mesh": 271,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 272",
+    "mesh": 272,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 273",
+    "mesh": 273,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 274",
+    "mesh": 274,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 275",
+    "mesh": 275,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 276",
+    "mesh": 276,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 277",
+    "mesh": 277,
+    "color": null,
+    "nv": 825,
+    "ni": 2793
+   },
+   {
+    "name": "solid 278",
+    "mesh": 278,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 279",
+    "mesh": 279,
+    "color": null,
+    "nv": 20,
+    "ni": 54
+   },
+   {
+    "name": "solid 280",
+    "mesh": 280,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 281",
+    "mesh": 281,
+    "color": null,
+    "nv": 20,
+    "ni": 54
+   },
+   {
+    "name": "solid 282",
+    "mesh": 282,
+    "color": null,
+    "nv": 20,
+    "ni": 54
+   },
+   {
+    "name": "solid 283",
+    "mesh": 283,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 284",
+    "mesh": 284,
+    "color": null,
+    "nv": 17,
+    "ni": 45
+   },
+   {
+    "name": "solid 285",
+    "mesh": 285,
+    "color": null,
+    "nv": 236,
+    "ni": 690
+   },
+   {
+    "name": "solid 286",
+    "mesh": 286,
+    "color": null,
+    "nv": 36,
+    "ni": 90
+   },
+   {
+    "name": "solid 287",
+    "mesh": 287,
+    "color": null,
+    "nv": 36,
+    "ni": 90
+   },
+   {
+    "name": "solid 288",
+    "mesh": 288,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 289",
+    "mesh": 289,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 290",
+    "mesh": 290,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 291",
+    "mesh": 291,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 292",
+    "mesh": 292,
+    "color": null,
+    "nv": 12,
+    "ni": 24
+   },
+   {
+    "name": "solid 293",
+    "mesh": 293,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 294",
+    "mesh": 294,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 295",
+    "mesh": 295,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 296",
+    "mesh": 296,
+    "color": null,
+    "nv": 52,
+    "ni": 144
+   },
+   {
+    "name": "solid 297",
+    "mesh": 297,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 298",
+    "mesh": 298,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 299",
+    "mesh": 299,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 300",
+    "mesh": 300,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 301",
+    "mesh": 301,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 302",
+    "mesh": 302,
+    "color": null,
+    "nv": 24,
+    "ni": 72
+   },
+   {
+    "name": "solid 303",
+    "mesh": 303,
+    "color": null,
+    "nv": 46,
+    "ni": 138
+   },
+   {
+    "name": "solid 304",
+    "mesh": 304,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 305",
+    "mesh": 305,
+    "color": null,
+    "nv": 42,
+    "ni": 126
+   },
+   {
+    "name": "solid 306",
+    "mesh": 306,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 307",
+    "mesh": 307,
+    "color": null,
+    "nv": 40,
+    "ni": 114
+   },
+   {
+    "name": "solid 308",
+    "mesh": 308,
+    "color": null,
+    "nv": 46,
+    "ni": 138
+   },
+   {
+    "name": "solid 309",
+    "mesh": 309,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 310",
+    "mesh": 310,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 311",
+    "mesh": 311,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 312",
+    "mesh": 312,
+    "color": null,
+    "nv": 46,
+    "ni": 138
+   },
+   {
+    "name": "solid 313",
+    "mesh": 313,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 314",
+    "mesh": 314,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 315",
+    "mesh": 315,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 316",
+    "mesh": 316,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 317",
+    "mesh": 317,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 318",
+    "mesh": 318,
+    "color": null,
+    "nv": 42,
+    "ni": 126
+   },
+   {
+    "name": "solid 319",
+    "mesh": 319,
+    "color": null,
+    "nv": 54,
+    "ni": 156
+   },
+   {
+    "name": "solid 320",
+    "mesh": 320,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 321",
+    "mesh": 321,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 322",
+    "mesh": 322,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 323",
+    "mesh": 323,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 324",
+    "mesh": 324,
+    "color": null,
+    "nv": 42,
+    "ni": 126
+   },
+   {
+    "name": "solid 325",
+    "mesh": 325,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 326",
+    "mesh": 326,
+    "color": null,
+    "nv": 7,
+    "ni": 15
+   },
+   {
+    "name": "solid 327",
+    "mesh": 327,
+    "color": null,
+    "nv": 318,
+    "ni": 972
+   },
+   {
+    "name": "solid 328",
+    "mesh": 328,
+    "color": null,
+    "nv": 273,
+    "ni": 843
+   },
+   {
+    "name": "solid 329",
+    "mesh": 329,
+    "color": null,
+    "nv": 17,
+    "ni": 45
+   },
+   {
+    "name": "solid 330",
+    "mesh": 330,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 331",
+    "mesh": 331,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 332",
+    "mesh": 332,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 333",
+    "mesh": 333,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 334",
+    "mesh": 334,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 335",
+    "mesh": 335,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 336",
+    "mesh": 336,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 337",
+    "mesh": 337,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 338",
+    "mesh": 338,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 339",
+    "mesh": 339,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 340",
+    "mesh": 340,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 341",
+    "mesh": 341,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 342",
+    "mesh": 342,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 343",
+    "mesh": 343,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 344",
+    "mesh": 344,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 345",
+    "mesh": 345,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 346",
+    "mesh": 346,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 347",
+    "mesh": 347,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 348",
+    "mesh": 348,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 349",
+    "mesh": 349,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 350",
+    "mesh": 350,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 351",
+    "mesh": 351,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 352",
+    "mesh": 352,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 353",
+    "mesh": 353,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 354",
+    "mesh": 354,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 355",
+    "mesh": 355,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 356",
+    "mesh": 356,
+    "color": null,
+    "nv": 10,
+    "ni": 18
+   },
+   {
+    "name": "solid 357",
+    "mesh": 357,
+    "color": null,
+    "nv": 8,
+    "ni": 12
+   },
+   {
+    "name": "solid 358",
+    "mesh": 358,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 359",
+    "mesh": 359,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 360",
+    "mesh": 360,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 361",
+    "mesh": 361,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 362",
+    "mesh": 362,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 363",
+    "mesh": 363,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 364",
+    "mesh": 364,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 365",
+    "mesh": 365,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 366",
+    "mesh": 366,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 367",
+    "mesh": 367,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 368",
+    "mesh": 368,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 369",
+    "mesh": 369,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 370",
+    "mesh": 370,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 371",
+    "mesh": 371,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 372",
+    "mesh": 372,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 373",
+    "mesh": 373,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 374",
+    "mesh": 374,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 375",
+    "mesh": 375,
+    "color": null,
+    "nv": 30,
+    "ni": 78
+   },
+   {
+    "name": "solid 376",
+    "mesh": 376,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 377",
+    "mesh": 377,
+    "color": null,
+    "nv": 140,
+    "ni": 438
+   },
+   {
+    "name": "solid 378",
+    "mesh": 378,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 379",
+    "mesh": 379,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 380",
+    "mesh": 380,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 381",
+    "mesh": 381,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 382",
+    "mesh": 382,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 383",
+    "mesh": 383,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 384",
+    "mesh": 384,
+    "color": null,
+    "nv": 211,
+    "ni": 651
+   },
+   {
+    "name": "solid 385",
+    "mesh": 385,
+    "color": null,
+    "nv": 11,
+    "ni": 27
+   },
+   {
+    "name": "solid 386",
+    "mesh": 386,
+    "color": null,
+    "nv": 11,
+    "ni": 27
+   },
+   {
+    "name": "solid 387",
+    "mesh": 387,
+    "color": null,
+    "nv": 35,
+    "ni": 99
+   },
+   {
+    "name": "solid 388",
+    "mesh": 388,
+    "color": null,
+    "nv": 104,
+    "ni": 300
+   },
+   {
+    "name": "solid 389",
+    "mesh": 389,
+    "color": null,
+    "nv": 31,
+    "ni": 105
+   },
+   {
+    "name": "solid 390",
+    "mesh": 390,
+    "color": null,
+    "nv": 33,
+    "ni": 111
+   },
+   {
+    "name": "solid 391",
+    "mesh": 391,
+    "color": null,
+    "nv": 33,
+    "ni": 111
+   },
+   {
+    "name": "solid 392",
+    "mesh": 392,
+    "color": null,
+    "nv": 31,
+    "ni": 105
+   },
+   {
+    "name": "solid 393",
+    "mesh": 393,
+    "color": null,
+    "nv": 117,
+    "ni": 480
+   },
+   {
+    "name": "solid 394",
+    "mesh": 394,
+    "color": null,
+    "nv": 224,
+    "ni": 993
+   },
+   {
+    "name": "solid 395",
+    "mesh": 395,
+    "color": null,
+    "nv": 47,
+    "ni": 129
+   },
+   {
+    "name": "solid 396",
+    "mesh": 396,
+    "color": null,
+    "nv": 87,
+    "ni": 255
+   },
+   {
+    "name": "solid 397",
+    "mesh": 397,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 398",
+    "mesh": 398,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 399",
+    "mesh": 399,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 400",
+    "mesh": 400,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 401",
+    "mesh": 401,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 402",
+    "mesh": 402,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 403",
+    "mesh": 403,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 404",
+    "mesh": 404,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 405",
+    "mesh": 405,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 406",
+    "mesh": 406,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 407",
+    "mesh": 407,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 408",
+    "mesh": 408,
+    "color": null,
+    "nv": 9,
+    "ni": 21
+   },
+   {
+    "name": "solid 409",
+    "mesh": 409,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 410",
+    "mesh": 410,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 411",
+    "mesh": 411,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 412",
+    "mesh": 412,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 413",
+    "mesh": 413,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 414",
+    "mesh": 414,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 415",
+    "mesh": 415,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 416",
+    "mesh": 416,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 417",
+    "mesh": 417,
+    "color": null,
+    "nv": 91,
+    "ni": 267
+   },
+   {
+    "name": "solid 418",
+    "mesh": 418,
+    "color": null,
+    "nv": 58,
+    "ni": 180
+   },
+   {
+    "name": "solid 419",
+    "mesh": 419,
+    "color": null,
+    "nv": 57,
+    "ni": 171
+   },
+   {
+    "name": "solid 420",
+    "mesh": 420,
+    "color": null,
+    "nv": 58,
+    "ni": 174
+   },
+   {
+    "name": "solid 421",
+    "mesh": 421,
+    "color": null,
+    "nv": 28,
+    "ni": 78
+   },
+   {
+    "name": "solid 422",
+    "mesh": 422,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 423",
+    "mesh": 423,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 424",
+    "mesh": 424,
+    "color": null,
+    "nv": 31,
+    "ni": 87
+   },
+   {
+    "name": "solid 425",
+    "mesh": 425,
+    "color": null,
+    "nv": 60,
+    "ni": 180
+   },
+   {
+    "name": "solid 426",
+    "mesh": 426,
+    "color": null,
+    "nv": 53,
+    "ni": 153
+   },
+   {
+    "name": "solid 427",
+    "mesh": 427,
+    "color": null,
+    "nv": 63,
+    "ni": 189
+   },
+   {
+    "name": "solid 428",
+    "mesh": 428,
+    "color": null,
+    "nv": 31,
+    "ni": 87
+   },
+   {
+    "name": "solid 429",
+    "mesh": 429,
+    "color": null,
+    "nv": 23,
+    "ni": 63
+   },
+   {
+    "name": "solid 430",
+    "mesh": 430,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 431",
+    "mesh": 431,
+    "color": null,
+    "nv": 63,
+    "ni": 189
+   },
+   {
+    "name": "solid 432",
+    "mesh": 432,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 433",
+    "mesh": 433,
+    "color": null,
+    "nv": 51,
+    "ni": 147
+   },
+   {
+    "name": "solid 434",
+    "mesh": 434,
+    "color": null,
+    "nv": 63,
+    "ni": 189
+   },
+   {
+    "name": "solid 435",
+    "mesh": 435,
+    "color": null,
+    "nv": 60,
+    "ni": 180
+   },
+   {
+    "name": "solid 436",
+    "mesh": 436,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 437",
+    "mesh": 437,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 438",
+    "mesh": 438,
+    "color": null,
+    "nv": 58,
+    "ni": 174
+   },
+   {
+    "name": "solid 439",
+    "mesh": 439,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 440",
+    "mesh": 440,
+    "color": null,
+    "nv": 1139,
+    "ni": 3501
+   },
+   {
+    "name": "solid 441",
+    "mesh": 441,
+    "color": null,
+    "nv": 248,
+    "ni": 714
+   },
+   {
+    "name": "solid 442",
+    "mesh": 442,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 443",
+    "mesh": 443,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 444",
+    "mesh": 444,
+    "color": null,
+    "nv": 746,
+    "ni": 2370
+   },
+   {
+    "name": "solid 445",
+    "mesh": 445,
+    "color": null,
+    "nv": 15,
+    "ni": 39
+   },
+   {
+    "name": "solid 446",
+    "mesh": 446,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 447",
+    "mesh": 447,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 448",
+    "mesh": 448,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 449",
+    "mesh": 449,
+    "color": null,
+    "nv": 25,
+    "ni": 69
+   },
+   {
+    "name": "solid 450",
+    "mesh": 450,
+    "color": null,
+    "nv": 28,
+    "ni": 78
+   },
+   {
+    "name": "solid 451",
+    "mesh": 451,
+    "color": null,
+    "nv": 28,
+    "ni": 78
+   },
+   {
+    "name": "solid 452",
+    "mesh": 452,
+    "color": null,
+    "nv": 28,
+    "ni": 78
+   },
+   {
+    "name": "solid 453",
+    "mesh": 453,
+    "color": null,
+    "nv": 25,
+    "ni": 69
+   },
+   {
+    "name": "solid 454",
+    "mesh": 454,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 455",
+    "mesh": 455,
+    "color": null,
+    "nv": 22,
+    "ni": 60
+   },
+   {
+    "name": "solid 456",
+    "mesh": 456,
+    "color": null,
+    "nv": 22,
+    "ni": 60
+   },
+   {
+    "name": "solid 457",
+    "mesh": 457,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 458",
+    "mesh": 458,
+    "color": null,
+    "nv": 14,
+    "ni": 42
+   },
+   {
+    "name": "solid 459",
+    "mesh": 459,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 460",
+    "mesh": 460,
+    "color": null,
+    "nv": 33,
+    "ni": 93
+   },
+   {
+    "name": "solid 461",
+    "mesh": 461,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 462",
+    "mesh": 462,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 463",
+    "mesh": 463,
+    "color": null,
+    "nv": 15,
+    "ni": 39
+   },
+   {
+    "name": "solid 464",
+    "mesh": 464,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 465",
+    "mesh": 465,
+    "color": null,
+    "nv": 33,
+    "ni": 93
+   },
+   {
+    "name": "solid 466",
+    "mesh": 466,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 467",
+    "mesh": 467,
+    "color": null,
+    "nv": 8,
+    "ni": 12
+   },
+   {
+    "name": "solid 468",
+    "mesh": 468,
+    "color": null,
+    "nv": 8,
+    "ni": 12
+   },
+   {
+    "name": "solid 469",
+    "mesh": 469,
+    "color": null,
+    "nv": 1145,
+    "ni": 3627
+   },
+   {
+    "name": "solid 470",
+    "mesh": 470,
+    "color": null,
+    "nv": 14,
+    "ni": 30
+   },
+   {
+    "name": "solid 471",
+    "mesh": 471,
+    "color": null,
+    "nv": 16,
+    "ni": 36
+   },
+   {
+    "name": "solid 472",
+    "mesh": 472,
+    "color": null,
+    "nv": 190,
+    "ni": 564
+   },
+   {
+    "name": "solid 473",
+    "mesh": 473,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 474",
+    "mesh": 474,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 475",
+    "mesh": 475,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 476",
+    "mesh": 476,
+    "color": null,
+    "nv": 31,
+    "ni": 87
+   },
+   {
+    "name": "solid 477",
+    "mesh": 477,
+    "color": null,
+    "nv": 8,
+    "ni": 12
+   },
+   {
+    "name": "solid 478",
+    "mesh": 478,
+    "color": null,
+    "nv": 13,
+    "ni": 27
+   },
+   {
+    "name": "solid 479",
+    "mesh": 479,
+    "color": null,
+    "nv": 17,
+    "ni": 45
+   },
+   {
+    "name": "solid 480",
+    "mesh": 480,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 481",
+    "mesh": 481,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 482",
+    "mesh": 482,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 483",
+    "mesh": 483,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 484",
+    "mesh": 484,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 485",
+    "mesh": 485,
+    "color": null,
+    "nv": 15,
+    "ni": 39
+   },
+   {
+    "name": "solid 486",
+    "mesh": 486,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 487",
+    "mesh": 487,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 488",
+    "mesh": 488,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 489",
+    "mesh": 489,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 490",
+    "mesh": 490,
+    "color": null,
+    "nv": 46,
+    "ni": 132
+   },
+   {
+    "name": "solid 491",
+    "mesh": 491,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 492",
+    "mesh": 492,
+    "color": null,
+    "nv": 66,
+    "ni": 162
+   },
+   {
+    "name": "solid 493",
+    "mesh": 493,
+    "color": null,
+    "nv": 64,
+    "ni": 162
+   },
+   {
+    "name": "solid 494",
+    "mesh": 494,
+    "color": null,
+    "nv": 30,
+    "ni": 78
+   },
+   {
+    "name": "solid 495",
+    "mesh": 495,
+    "color": null,
+    "nv": 30,
+    "ni": 78
+   },
+   {
+    "name": "solid 496",
+    "mesh": 496,
+    "color": null,
+    "nv": 66,
+    "ni": 162
+   },
+   {
+    "name": "solid 497",
+    "mesh": 497,
+    "color": null,
+    "nv": 56,
+    "ni": 174
+   },
+   {
+    "name": "solid 498",
+    "mesh": 498,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 499",
+    "mesh": 499,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 500",
+    "mesh": 500,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 501",
+    "mesh": 501,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 502",
+    "mesh": 502,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 503",
+    "mesh": 503,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 504",
+    "mesh": 504,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 505",
+    "mesh": 505,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 506",
+    "mesh": 506,
+    "color": null,
+    "nv": 59,
+    "ni": 159
+   },
+   {
+    "name": "solid 507",
+    "mesh": 507,
+    "color": null,
+    "nv": 11,
+    "ni": 27
+   },
+   {
+    "name": "solid 508",
+    "mesh": 508,
+    "color": null,
+    "nv": 30,
+    "ni": 78
+   },
+   {
+    "name": "solid 509",
+    "mesh": 509,
+    "color": null,
+    "nv": 30,
+    "ni": 78
+   },
+   {
+    "name": "solid 510",
+    "mesh": 510,
+    "color": null,
+    "nv": 306,
+    "ni": 888
+   },
+   {
+    "name": "solid 511",
+    "mesh": 511,
+    "color": null,
+    "nv": 82,
+    "ni": 228
+   },
+   {
+    "name": "solid 512",
+    "mesh": 512,
+    "color": null,
+    "nv": 28,
+    "ni": 78
+   },
+   {
+    "name": "solid 513",
+    "mesh": 513,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 514",
+    "mesh": 514,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 515",
+    "mesh": 515,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 516",
+    "mesh": 516,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 517",
+    "mesh": 517,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 518",
+    "mesh": 518,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 519",
+    "mesh": 519,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 520",
+    "mesh": 520,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 521",
+    "mesh": 521,
+    "color": null,
+    "nv": 7,
+    "ni": 15
+   },
+   {
+    "name": "solid 522",
+    "mesh": 522,
+    "color": null,
+    "nv": 9,
+    "ni": 21
+   },
+   {
+    "name": "solid 523",
+    "mesh": 523,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 524",
+    "mesh": 524,
+    "color": null,
+    "nv": 104,
+    "ni": 312
+   },
+   {
+    "name": "solid 525",
+    "mesh": 525,
+    "color": null,
+    "nv": 245,
+    "ni": 699
+   },
+   {
+    "name": "solid 526",
+    "mesh": 526,
+    "color": null,
+    "nv": 9,
+    "ni": 21
+   },
+   {
+    "name": "solid 527",
+    "mesh": 527,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 528",
+    "mesh": 528,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 529",
+    "mesh": 529,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 530",
+    "mesh": 530,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 531",
+    "mesh": 531,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 532",
+    "mesh": 532,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 533",
+    "mesh": 533,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 534",
+    "mesh": 534,
+    "color": null,
+    "nv": 7,
+    "ni": 15
+   },
+   {
+    "name": "solid 535",
+    "mesh": 535,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 536",
+    "mesh": 536,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 537",
+    "mesh": 537,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 538",
+    "mesh": 538,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 539",
+    "mesh": 539,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 540",
+    "mesh": 540,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 541",
+    "mesh": 541,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 542",
+    "mesh": 542,
+    "color": null,
+    "nv": 32,
+    "ni": 90
+   },
+   {
+    "name": "solid 543",
+    "mesh": 543,
+    "color": null,
+    "nv": 32,
+    "ni": 90
+   },
+   {
+    "name": "solid 544",
+    "mesh": 544,
+    "color": null,
+    "nv": 17,
+    "ni": 45
+   },
+   {
+    "name": "solid 545",
+    "mesh": 545,
+    "color": null,
+    "nv": 18,
+    "ni": 48
+   },
+   {
+    "name": "solid 546",
+    "mesh": 546,
+    "color": null,
+    "nv": 182,
+    "ni": 540
+   },
+   {
+    "name": "solid 547",
+    "mesh": 547,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 548",
+    "mesh": 548,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 549",
+    "mesh": 549,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 550",
+    "mesh": 550,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 551",
+    "mesh": 551,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 552",
+    "mesh": 552,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 553",
+    "mesh": 553,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 554",
+    "mesh": 554,
+    "color": null,
+    "nv": 17,
+    "ni": 45
+   },
+   {
+    "name": "solid 555",
+    "mesh": 555,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 556",
+    "mesh": 556,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 557",
+    "mesh": 557,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 558",
+    "mesh": 558,
+    "color": null,
+    "nv": 1115,
+    "ni": 3582
+   },
+   {
+    "name": "solid 559",
+    "mesh": 559,
+    "color": null,
+    "nv": 212,
+    "ni": 660
+   },
+   {
+    "name": "solid 560",
+    "mesh": 560,
+    "color": null,
+    "nv": 19,
+    "ni": 51
+   },
+   {
+    "name": "solid 561",
+    "mesh": 561,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 562",
+    "mesh": 562,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 563",
+    "mesh": 563,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 564",
+    "mesh": 564,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 565",
+    "mesh": 565,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 566",
+    "mesh": 566,
+    "color": null,
+    "nv": 44,
+    "ni": 126
+   },
+   {
+    "name": "solid 567",
+    "mesh": 567,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 568",
+    "mesh": 568,
+    "color": null,
+    "nv": 25,
+    "ni": 69
+   },
+   {
+    "name": "solid 569",
+    "mesh": 569,
+    "color": null,
+    "nv": 23,
+    "ni": 63
+   },
+   {
+    "name": "solid 570",
+    "mesh": 570,
+    "color": null,
+    "nv": 22,
+    "ni": 60
+   },
+   {
+    "name": "solid 571",
+    "mesh": 571,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 572",
+    "mesh": 572,
+    "color": null,
+    "nv": 23,
+    "ni": 63
+   },
+   {
+    "name": "solid 573",
+    "mesh": 573,
+    "color": null,
+    "nv": 25,
+    "ni": 69
+   },
+   {
+    "name": "solid 574",
+    "mesh": 574,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 575",
+    "mesh": 575,
+    "color": null,
+    "nv": 22,
+    "ni": 60
+   },
+   {
+    "name": "solid 576",
+    "mesh": 576,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 577",
+    "mesh": 577,
+    "color": null,
+    "nv": 32,
+    "ni": 90
+   },
+   {
+    "name": "solid 578",
+    "mesh": 578,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 579",
+    "mesh": 579,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 580",
+    "mesh": 580,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 581",
+    "mesh": 581,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 582",
+    "mesh": 582,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 583",
+    "mesh": 583,
+    "color": null,
+    "nv": 30,
+    "ni": 84
+   },
+   {
+    "name": "solid 584",
+    "mesh": 584,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 585",
+    "mesh": 585,
+    "color": null,
+    "nv": 13,
+    "ni": 39
+   },
+   {
+    "name": "solid 586",
+    "mesh": 586,
+    "color": null,
+    "nv": 35,
+    "ni": 99
+   },
+   {
+    "name": "solid 587",
+    "mesh": 587,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 588",
+    "mesh": 588,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 589",
+    "mesh": 589,
+    "color": null,
+    "nv": 329,
+    "ni": 1053
+   },
+   {
+    "name": "solid 590",
+    "mesh": 590,
+    "color": null,
+    "nv": 292,
+    "ni": 918
+   },
+   {
+    "name": "solid 591",
+    "mesh": 591,
+    "color": null,
+    "nv": 24,
+    "ni": 66
+   },
+   {
+    "name": "solid 592",
+    "mesh": 592,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 593",
+    "mesh": 593,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 594",
+    "mesh": 594,
+    "color": null,
+    "nv": 12,
+    "ni": 30
+   },
+   {
+    "name": "solid 595",
+    "mesh": 595,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 596",
+    "mesh": 596,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 597",
+    "mesh": 597,
+    "color": null,
+    "nv": 27,
+    "ni": 75
+   },
+   {
+    "name": "solid 598",
+    "mesh": 598,
+    "color": null,
+    "nv": 59,
+    "ni": 171
+   },
+   {
+    "name": "solid 599",
+    "mesh": 599,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 600",
+    "mesh": 600,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 601",
+    "mesh": 601,
+    "color": null,
+    "nv": 7,
+    "ni": 15
+   },
+   {
+    "name": "solid 602",
+    "mesh": 602,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 603",
+    "mesh": 603,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 604",
+    "mesh": 604,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 605",
+    "mesh": 605,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 606",
+    "mesh": 606,
+    "color": null,
+    "nv": 16,
+    "ni": 42
+   },
+   {
+    "name": "solid 607",
+    "mesh": 607,
+    "color": null,
+    "nv": 9,
+    "ni": 21
+   },
+   {
+    "name": "solid 608",
+    "mesh": 608,
+    "color": null,
+    "nv": 10,
+    "ni": 24
+   },
+   {
+    "name": "solid 609",
+    "mesh": 609,
+    "color": null,
+    "nv": 14,
+    "ni": 36
+   },
+   {
+    "name": "solid 610",
+    "mesh": 610,
+    "color": null,
+    "nv": 33,
+    "ni": 93
+   },
+   {
+    "name": "solid 611",
+    "mesh": 611,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 612",
+    "mesh": 612,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 613",
+    "mesh": 613,
+    "color": null,
+    "nv": 6,
+    "ni": 12
+   },
+   {
+    "name": "solid 614",
+    "mesh": 614,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 615",
+    "mesh": 615,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 616",
+    "mesh": 616,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 617",
+    "mesh": 617,
+    "color": null,
+    "nv": 7,
+    "ni": 15
+   },
+   {
+    "name": "solid 618",
+    "mesh": 618,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 619",
+    "mesh": 619,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 620",
+    "mesh": 620,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 621",
+    "mesh": 621,
+    "color": null,
+    "nv": 46,
+    "ni": 132
+   },
+   {
+    "name": "solid 622",
+    "mesh": 622,
+    "color": null,
+    "nv": 8,
+    "ni": 18
+   },
+   {
+    "name": "solid 623",
+    "mesh": 623,
+    "color": null,
+    "nv": 5,
+    "ni": 9
+   },
+   {
+    "name": "solid 624",
+    "mesh": 624,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 625",
+    "mesh": 625,
+    "color": null,
+    "nv": 11,
+    "ni": 27
+   },
+   {
+    "name": "solid 626",
+    "mesh": 626,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 627",
+    "mesh": 627,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 628",
+    "mesh": 628,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 629",
+    "mesh": 629,
+    "color": null,
+    "nv": 7,
+    "ni": 15
+   },
+   {
+    "name": "solid 630",
+    "mesh": 630,
+    "color": null,
+    "nv": 4,
+    "ni": 6
+   },
+   {
+    "name": "solid 631",
+    "mesh": 631,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 632",
+    "mesh": 632,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 633",
+    "mesh": 633,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 634",
+    "mesh": 634,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 635",
+    "mesh": 635,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 636",
+    "mesh": 636,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 637",
+    "mesh": 637,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 638",
+    "mesh": 638,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 639",
+    "mesh": 639,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 640",
+    "mesh": 640,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 641",
+    "mesh": 641,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 642",
+    "mesh": 642,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 643",
+    "mesh": 643,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 644",
+    "mesh": 644,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 645",
+    "mesh": 645,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 646",
+    "mesh": 646,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   },
+   {
+    "name": "solid 647",
+    "mesh": 647,
+    "color": null,
+    "nv": 13,
+    "ni": 33
+   }
+  ],
+  "tri": 70855,
+  "bytes": 571897
+ },
+ "PB2": {
+  "step": "Vendor Step Files/COMP-0016_AB_1769-PB2/01_STEP_Vendor/1769_PS_CASE.stp",
+  "sha256": "8dfe19a4a923abbd56ebc4b4129e07c48483e3a606913f0db2792363613bb5e6",
+  "comp": "COMP-0016",
+  "pn": "1769-PB2",
+  "lo": [
+   -4,
+   -132.65,
+   0
+  ],
+  "hi": [
+   70.002,
+   14.65,
+   87
+  ],
+  "parts": [
+   {
+    "name": "PS_BASE",
+    "mesh": 0,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 41476,
+    "ni": 127428
+   },
+   {
+    "name": "PS_TOP",
+    "mesh": 1,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 3876,
+    "ni": 11142
+   },
+   {
+    "name": "PS_DOOR",
+    "mesh": 2,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 1429,
+    "ni": 5226
+   },
+   {
+    "name": "LEVER",
+    "mesh": 3,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2032,
+    "ni": 4896
+   },
+   {
+    "name": "DIN_LOW_TEMP",
+    "mesh": 4,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2499,
+    "ni": 6882
+   },
+   {
+    "name": "DIN_LOW_TEMP",
+    "mesh": 5,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2499,
+    "ni": 6882
+   },
+   {
+    "name": "DIN_UPER_TEMP",
+    "mesh": 6,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2405,
+    "ni": 6666
+   },
+   {
+    "name": "DIN_UPER_TEMP",
+    "mesh": 7,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2405,
+    "ni": 6666
+   },
+   {
+    "name": "PS_TOP_COVER",
+    "mesh": 8,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 3156,
+    "ni": 10410
+   }
+  ],
+  "tri": 62066,
+  "bytes": 473317
+ },
+ "OW16": {
+  "step": "Vendor Step Files/COMP-0018_AB_1769-OW16/01_STEP_Vendor/1769-IO_CASE_15.stp",
+  "sha256": "6ecc863d0a78ce6ef754528866428c8e9bd0d014a6eda92f27d31a25281af168",
+  "comp": "COMP-0018",
+  "pn": "1769-OW16 (IO case)",
+  "lo": [
+   -65.85,
+   0,
+   0
+  ],
+  "hi": [
+   65.85,
+   87,
+   56.5
+  ],
+  "parts": [
+   {
+    "name": "solid 0",
+    "mesh": 0,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 7949,
+    "ni": 21756
+   },
+   {
+    "name": "solid 1",
+    "mesh": 1,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2583,
+    "ni": 8328
+   },
+   {
+    "name": "solid 2",
+    "mesh": 2,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 4294,
+    "ni": 12444
+   },
+   {
+    "name": "solid 3",
+    "mesh": 3,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2236,
+    "ni": 5526
+   },
+   {
+    "name": "solid 4",
+    "mesh": 4,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 1588,
+    "ni": 4356
+   },
+   {
+    "name": "solid 5",
+    "mesh": 5,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 25478,
+    "ni": 76134
+   },
+   {
+    "name": "solid 6",
+    "mesh": 6,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2529,
+    "ni": 7110
+   },
+   {
+    "name": "solid 7",
+    "mesh": 7,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2665,
+    "ni": 7452
+   },
+   {
+    "name": "solid 8",
+    "mesh": 8,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2665,
+    "ni": 7452
+   },
+   {
+    "name": "solid 9",
+    "mesh": 9,
+    "color": [
+     0.644,
+     0.644,
+     1
+    ],
+    "nv": 2529,
+    "ni": 7110
+   }
+  ],
+  "tri": 52556,
+  "bytes": 416428
+ },
+ "PVP7": {
+  "step": "Vendor Step Files/COMP-0038_AB_2711P-T10C21D8S/01_STEP_Vendor/PVP7S R1 10_assy.stp",
+  "sha256": "2cfbc95c6b6b70a6d304a982cc65fd8941555d714d23d2279a4717df529ba2cc",
+  "comp": "COMP-0038",
+  "pn": "2711P-T10C21D8S",
+  "lo": [
+   -148.5,
+   -126,
+   -49
+  ],
+  "hi": [
+   150.5,
+   126,
+   7.504
+  ],
+  "parts": [
+   {
+    "name": "130416_E1_10_HOLDER",
+    "mesh": 0,
+    "color": null,
+    "nv": 25578,
+    "ni": 68184
+   },
+   {
+    "name": "SOLID",
+    "mesh": 1,
+    "color": null,
+    "nv": 174,
+    "ni": 900
+   },
+   {
+    "name": "PRT0027",
+    "mesh": 2,
+    "color": null,
+    "nv": 5550,
+    "ni": 18168
+   },
+   {
+    "name": "PRT0028",
+    "mesh": 3,
+    "color": null,
+    "nv": 2646,
+    "ni": 6984
+   },
+   {
+    "name": "PRT0029",
+    "mesh": 4,
+    "color": null,
+    "nv": 4906,
+    "ni": 13434
+   },
+   {
+    "name": "solid 5",
+    "mesh": 5,
+    "color": null,
+    "nv": 64855,
+    "ni": 184878
+   },
+   {
+    "name": "solid 6",
+    "mesh": 6,
+    "color": null,
+    "nv": 0,
+    "ni": 0
+   }
+  ],
+  "tri": 97516,
+  "bytes": 747198
+ },
+ "DUCT2": {
+  "step": "Vendor Step Files/COMP-0041_Panduit_F2X2WH6/01_STEP_Vendor/PartDrawings.stp",
+  "sha256": "1c187c0589f2edb5d1e344fda8c67fdd3ca50c6d82b92c54650d8ccca35d3780",
+  "comp": "COMP-0041",
+  "pn": "F2X2WH6",
+  "lo": [
+   0,
+   -28.575,
+   0
+  ],
+  "hi": [
+   609.6,
+   28.575,
+   50.535
+  ],
+  "parts": [
+   {
+    "name": "solid 0",
+    "mesh": 0,
+    "color": null,
+    "nv": 45500,
+    "ni": 115128
+   }
+  ],
+  "tri": 38376,
+  "bytes": 283639
+ }
+}

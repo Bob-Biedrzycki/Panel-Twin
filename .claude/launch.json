@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "guide-v4",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-I", "-m", "http.server", "8765", "--bind", "127.0.0.1", "--directory", "Project 2/Claude Digital Twin/Assembly Guide V4.0"],
+      "port": 8765
+    }
+  ]
+}
