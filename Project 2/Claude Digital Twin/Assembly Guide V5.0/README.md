@@ -69,7 +69,6 @@ Open **`VFD200 Assembly Guide.html`** in Chrome or Edge. It is one self-containe
 ## Still open
 
 - **PowerFlex 525 blocks:** Rockwell's model has no terminal blocks; they are placed from 520-UM001's figures, and their exact height under the cover is not dimensioned.
-- **PartsLib:** the 1769-OW16 record says 35 mm wide; it is 52.5 mm.
 - **RCP1:** Rockwell's family model has the GFCI face, and the L/N/G order is not printed in any document held.
 - **GLG isolator:** its terminal numbering still has no manufacturer document.
 

@@ -25,7 +25,7 @@ This is the sixth pass, dated 2026-11-05. It is in `Assembly Guide V5.0/`; V1.0 
   - the 1769-ECR end cap moves 17.9 mm right;
   - the end anchor after it moves from 316 to 334 mm, into the 52 mm gap before SI1.
 - **Design issue:** sheet 3 draws IO1 single-wide.
-- **For Bob:** PartsLib record 813 (1769-OW16) still says 35 mm wide and should be corrected.
+- **PartsLib corrected (2026-11-05, on Bob's word):** 1769-IN062 is now stored in PartsLib (document 369, which also answered request #10997). Record 813 (1769-OW16) has cited claims from its p.14: width 52.5 mm, depth 87 mm and height 118 mm. These replace SkyCAD's uncited 35 mm width.
 
 **Wire landings: every wire goes into its terminal's real opening.**
 - **Openings in the makers' models (124 ends):**
