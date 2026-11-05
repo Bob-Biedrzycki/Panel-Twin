@@ -1,0 +1,18 @@
+# Text normalised to LF in the repo; CAD, media and documents untouched.
+* text=auto eol=lf
+*.step binary
+*.STEP binary
+*.stp binary
+*.STP binary
+*.dxf -text
+*.igs -text
+*.pdf binary
+*.dwg binary
+*.zip binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.glb binary
+# Drive-store pointers (tools/drive_store.py) are small JSON text files.
+*.drive text eol=lf
