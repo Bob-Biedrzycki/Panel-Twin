@@ -1,0 +1,34 @@
+{
+  "rated": {
+    "enabled": true,
+    "power": 22.37099999924479,
+    "rpm": 3494.9999999606716,
+    "frequency": 59.999999999324835,
+    "loadTorque": 30.561847483507815,
+    "kineticEnergy": 10716.21906637363
+  },
+  "sto_initial": {
+    "enabled": false,
+    "power": 0,
+    "rpm": 3494.9999999606716,
+    "frequency": 59.999999999324835,
+    "loadTorque": 30.561847483507815,
+    "kineticEnergy": 10716.21906637363
+  },
+  "coast_after_10_seconds": {
+    "enabled": false,
+    "power": 0,
+    "rpm": 198.87011810578753,
+    "frequency": 3.414079280786052,
+    "loadTorque": 0.09895193864796294,
+    "kineticEnergy": 34.696549420520334
+  },
+  "restart_inhibited": true,
+  "asset_count": 27,
+  "performance": {
+    "fps": 5.900091779297672,
+    "tris": 51442,
+    "parts": 253
+  },
+  "page_errors": []
+}

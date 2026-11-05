@@ -1,0 +1,38 @@
+{
+  "source_path": "C:\\Users\\Bob\\Documents\\Panel Twin\\Project 2\\Draft rev18.pdf",
+  "source_sha256": "91567c0518a3f84400aaa51ec7183ab8ea3ef0af6de1247c07768b183fe25bbd",
+  "pdf_pages": 18,
+  "drawing_revision": "A",
+  "filename_revision_label": "rev18",
+  "project_number": "1082-01",
+  "panel_id": "VFD 200",
+  "connection": "offline simulation",
+  "dimensions_m": {
+    "enclosure": {
+      "height": 1.524,
+      "width": 1.2446,
+      "depth": 0.4572,
+      "source_page": 18
+    },
+    "main_plate": {
+      "height": 1.422,
+      "width": 1.118,
+      "source_page": 3
+    }
+  },
+  "nominal_point": {
+    "frequency_hz": 60,
+    "motor_rpm": 3495,
+    "motor_count": 2,
+    "motor_hp_each": 15,
+    "source_page": 5
+  },
+  "assumptions": {
+    "coast_inertia_kg_m2_each": 0.08,
+    "viscous_drag_N_m_s_per_rad": 0.006,
+    "normal_lag_s": 1.2,
+    "load_law": "centrifugal cubic power",
+    "network_loss": "stop and latch; demonstrator policy",
+    "reset": "manual re-arm; demonstrator policy"
+  }
+}
