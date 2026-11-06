@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0004_AB_1494U-D100/01_STEP_Vendor/10001120358.zip",
+  "bytes": 20769,
+  "sha256": "4da4b05a0d48a8dbed57d2b8c01164ee1a3c2c627c14c99c60ea83736eef3a43",
+  "md5": "de1f00ebebe0b5b3c79307d9f74161aa",
+  "mtime": "2026-11-05 07:15:22",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

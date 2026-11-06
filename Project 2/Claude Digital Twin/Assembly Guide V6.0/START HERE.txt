@@ -1,0 +1,62 @@
+VFD 200 ASSEMBLY GUIDE V6.0 - START HERE
+========================================
+
+NEW IN V6
+  Checked against the shop photos of the build (2026-11-05). The CompactLogix
+  goes on as PLC1, PWS2, IO1 from the left (sheet 3 draws PWS2 first). The
+  drive, PB2, OW16, NS1, isolator, T1 and PDB1 terminals are where they are on
+  the fitted parts. See REVISIONS.md for the full list.
+
+OPEN IT
+  Double-click "VFD200 Assembly Guide.html" (Chrome or Edge). It needs
+  internet access for the 3D library. The file is about 14 MB: give it a
+  few seconds to load the makers' 3D models.
+
+SEE THE FINISHED PANEL
+  - "Completed panel" (or C) shows the panel as it will look when it is
+    done: every part and wire in place, doors and centre post off, duct
+    covers off, drive covers and 1769 doors open so every landing shows.
+    Press C again, or any step, to go back.
+
+BUILD
+  - Go through the steps with "Next step" or the arrow keys. Tick each task
+    as you finish it; ticks are remembered on this computer.
+  - Drag to turn the panel (all the way round and underneath), scroll to
+    zoom in close to a terminal, right-drag to pan.
+  - "Remove front" (or F) takes the doors and the centre post off so you
+    can see inside. "Reset view" (or R) goes back to the step's view.
+  - Click any part for its part number, install notes, PartsLib links, where
+    its 3D shape comes from, and a table of every terminal and its wire.
+
+SELECT AND TRACE
+  - Click a wire: everything else turns to glass, both terminals are ringed
+    and labelled. Press T (or Trace route) to fly along it.
+  - Click a part: its wires stay solid and every terminal gets a tag.
+  - The bar at the top of the panel jumps to the same wire or part in Build
+    steps, Wire it, Parts or Wires. Esc clears. The search box finds W29,
+    CB4, TB4...
+
+WIRE
+  - On a wiring step, press "Wire them one by one" (or open "Wire it").
+    Each card gives the marker, size, colour and cut length, both ends
+    (device, terminal, where it is on the device, end type, torque and
+    strip length) and the duct route.
+  - Press "Done, next" (or Enter) after each wire. Progress is saved.
+  - Wires tab: marker list (CSV) for the label printer, a printable run
+    sheet with tick boxes, and a cut list with metres per wire size.
+
+RCP1 (receptacle)
+  - The 1492-REC15 has ONE terminal block (L, N, G) at the top that feeds
+    both outlets. Land hot on L, neutral on N, ground on G. The two jumpers
+    drawn on sheet 6 are not fitted. Check the L/N/G marking on the device.
+
+ISSUES
+  - Design issues: questions for the engineer who drew the panel.
+  - Modeling issues: what this guide assumes, and what it has resolved.
+
+FOLDER
+  VFD200 Assembly Guide.html   The guide: the only file a builder needs.
+  README.md / COMPLETION.md    What is in it, what is assumed, how to
+                               rebuild it.
+  REVISIONS.md                 The V6 checklist from the shop photos.
+  src\ data\ assets\ tools\ vendor\ build.mjs   Source (developers only).

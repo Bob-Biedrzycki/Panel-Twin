@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0016_AB_1769-PB2/02_Drawings/1769-P_-2D.dwg",
+  "bytes": 113249,
+  "sha256": "f3f92716b67239e0767614bfd0d5e3e721f9682abc18175e1e972052089f57cb",
+  "md5": "3d85e971f4b99cfd76b710ab5a8ad3e5",
+  "mtime": "2026-11-05 07:15:27",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

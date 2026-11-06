@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0003_Saginaw_SCE-AC1000B120VSS/02_Drawings/sce-ac1000b120vss.pdf",
+  "bytes": 131549,
+  "sha256": "38e70159d02f0c09455a07e4cff2d6aed1df945bb58127e7f46015daae63fe73",
+  "md5": "7cce4a7b67ae43c0ed9f49d2b788015e",
+  "mtime": "2026-11-05 08:02:26",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

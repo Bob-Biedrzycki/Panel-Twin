@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0043_Panduit_C2WH6/02_Drawings/PartDrawings3.pdf",
+  "bytes": 96757,
+  "sha256": "822620f0b920b821815a274447c4d5668794f26e493f6db3d476f87c84e9c946",
+  "md5": "d0018e14b993b6115f9253807864f277",
+  "mtime": "2026-11-05 07:44:16",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

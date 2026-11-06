@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0038_AB_2711P-T10C21D8S/01_STEP_Vendor/PVP7S R1 10_assy.zip",
+  "bytes": 4340790,
+  "sha256": "995649d2a62b909f11a250fb5a997bc76269e7b307bf0e0f0ee832cef358b8d6",
+  "md5": "bdc30f1079e990caa2e45f1312705807",
+  "mtime": "2026-11-05 07:15:35",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

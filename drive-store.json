@@ -1,0 +1,11 @@
+{
+  "_about": "Google Drive store for the Panel Twin repo (Bob, chat, 2026-11-05: set up like Hot-Water-Set). Large files live in the Drive folder below at the same repo-relative path; git keeps a <file>.drive pointer. Edit this file, then run: python -I tools/drive_store.py pointers",
+  "drive_folder_url": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "drive_folder_id": "1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "rclone_base_remote": "cpme-drive",
+  "large_file_bytes": 5242880,
+  "directories": {
+    "*/*/Vendor Step Files": ["step", "stp", "zip", "pdf", "dwg", "dxf", "igs", "iges"]
+  },
+  "exclude": [".git", "node_modules", ".venv", "__pycache__", "_work"]
+}

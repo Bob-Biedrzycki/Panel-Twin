@@ -1,0 +1,191 @@
+[
+  {
+    "tag": "Q1",
+    "part_number": "1494U-D100",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "FU1",
+    "part_number": "1494U-F100",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "PDB1",
+    "part_number": "1492-PDC-3A200-S0108",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CB1",
+    "part_number": "140MT-F9E-C32",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CB2",
+    "part_number": "140MT-F9E-C32",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CB3",
+    "part_number": "FAZ-D2-3-NA",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "DRV1",
+    "part_number": "25B-D024N104",
+    "source_page": 5,
+    "ip": "128.1.0.20",
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "DRV2",
+    "part_number": "25B-D024N104",
+    "source_page": 5,
+    "ip": "128.1.0.21",
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "PWS2",
+    "part_number": "1769-PB2",
+    "source_page": 8,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "PLC1",
+    "part_number": "1769-L30ER",
+    "source_page": 8,
+    "ip": "128.1.0.4",
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "IO1",
+    "part_number": "1769-OW16",
+    "source_page": 8,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "SI1",
+    "part_number": "GLG-1xmA-1xmA",
+    "source_page": 13,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "SI2",
+    "part_number": "GLG-1xmA-1xmA",
+    "source_page": 13,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "SI3",
+    "part_number": "GLG-1xmA-1xmA",
+    "source_page": 13,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "SI4",
+    "part_number": "GLG-1xmA-1xmA",
+    "source_page": 13,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CPL1",
+    "part_number": "AL1920",
+    "source_page": 9,
+    "ip": "128.1.0.30",
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CPL2",
+    "part_number": "AL1920",
+    "source_page": 9,
+    "ip": "128.1.0.31",
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CPL3",
+    "part_number": "AL1920",
+    "source_page": 9,
+    "ip": "128.1.0.32",
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CB4",
+    "part_number": "787-1668",
+    "source_page": 7,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "PWS1",
+    "part_number": "2787-2347",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "T1",
+    "part_number": "E750WB",
+    "source_page": 4,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "CB5",
+    "part_number": "FAZ-C2-1-NA",
+    "source_page": 6,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "FU2",
+    "part_number": "CHCC1DU / FNQ-R-6",
+    "source_page": 6,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "SC1",
+    "part_number": "DP2200",
+    "source_page": 13,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "SC2",
+    "part_number": "DP2200",
+    "source_page": 13,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "PDB2",
+    "part_number": "PTFIX",
+    "source_page": 7,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  },
+  {
+    "tag": "PDB3",
+    "part_number": "PTFIX",
+    "source_page": 7,
+    "ip": null,
+    "geometry": "approximate envelope; relative placement from sheet 3"
+  }
+]

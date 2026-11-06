@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0040_RSPRO_467-416/01_STEP_Vendor/8961K15_Steel DIN 3 Rail.STEP",
+  "bytes": 569649,
+  "sha256": "2fdc6b96076b6a12dfffa89ae98fc70eada607a65dc97174d7818a98ee83fc0c",
+  "md5": "80de49bfff13afd992f23864336fbc4a",
+  "mtime": "2026-11-05 07:59:52",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

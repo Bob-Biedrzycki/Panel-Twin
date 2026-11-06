@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VP-1 SCADA Simulator</title>
+<style>
+:root {
+  --bg: #d9d9d6; --panel: #e8e8e5; --ink: #1d1f22; --mute: #5d6066; --faint: #9a9da3; --line: #b9bbbe;
+  --run: #2f6f3e; --off: #6b6e73; --a1: #c8102e; --a2: #e07b00; --a3: #c9a400; --sel: #2457a6;
+  --mono: ui-monospace, 'Cascadia Mono', Consolas, monospace; --sans: 'Segoe UI', system-ui, sans-serif;
+}
+* { box-sizing: border-box }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 13px/1.35 var(--sans) }
+header { display: flex; align-items: center; gap: 18px; padding: 8px 16px; background: #3a3d42; color: #eef0f2 }
+header h1 { font-size: 15px; font-weight: 600; margin: 0 } header .sub { color: #b8bcc2 }
+header .sp { flex: 1 } header a { color: #cfe0ff } header .lnk { font-family: var(--mono); font-size: 12px }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #888; margin-right: 6px; vertical-align: 0 }
+.dot.ok { background: #5fbf6a } .dot.bad { background: #e5484d }
+#alarms { background: #f4f4f2; border-bottom: 1px solid var(--line); min-height: 34px; max-height: 128px; overflow: auto }
+#alarms .row { display: grid; grid-template-columns: 34px 92px 130px 1fr 60px; gap: 8px; padding: 4px 16px; border-top: 1px solid #e3e3e0; align-items: center }
+#alarms .row.unack { font-weight: 600 } #alarms .row.cleared { color: var(--faint) }
+#alarms .none { padding: 8px 16px; color: var(--mute) }
+.pri { display: inline-block; width: 22px; text-align: center; color: #fff; font-size: 11px; font-weight: 700; border-radius: 2px; padding: 1px 0 }
+.pri.p1 { background: var(--a1) } .pri.p2 { background: var(--a2) } .pri.p3 { background: var(--a3); color: #1d1f22 }
+#alarms .row.unack .pri { animation: blink 1s steps(2) infinite } @keyframes blink { 50% { opacity: .35 } }
+main { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 12px; padding: 12px 16px }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 3px; padding: 10px 12px }
+.card h2 { margin: 0 0 8px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--mute); font-weight: 600 }
+#oneline svg { width: 100%; height: auto; display: block }
+#oneline text { font-family: var(--sans); font-size: 12px; fill: var(--ink) }
+#oneline .tag { font-weight: 700 } #oneline .val { font-family: var(--mono); font-size: 12px }
+#oneline .lbl { fill: var(--mute); font-size: 11px }
+#oneline .w { stroke: #44474c; stroke-width: 2; fill: none } #oneline .w0 { stroke: #8a8d92; stroke-width: 2; fill: none; stroke-dasharray: 5 3 }
+#oneline .dead { stroke: #b2b4b8 } #oneline .box { fill: #f1f1ef; stroke: #44474c; stroke-width: 1.4 }
+#oneline .box.alarm { stroke: var(--a1); stroke-width: 2.5 } #oneline .box.warn { stroke: var(--a2); stroke-width: 2.5 }
+#oneline .pe { stroke: #3b7a3b; stroke-width: 1.6; fill: none }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px }
+canvas.trend { width: 100%; height: 150px; display: block; background: #f3f3f1; border: 1px solid #d0d1d3 }
+.legend { display: flex; gap: 14px; font-size: 11px; color: var(--mute); margin-top: 4px } .legend i { display: inline-block; width: 14px; height: 2px; vertical-align: 3px; margin-right: 4px }
+table { width: 100%; border-collapse: collapse; font-size: 12px }
+th, td { text-align: left; padding: 3px 6px; border-top: 1px solid #d6d7d8 } th { color: var(--mute); font-weight: 600; font-size: 11px }
+td.v { font-family: var(--mono); text-align: right; white-space: nowrap } td.a { font-family: var(--mono); color: var(--mute) }
+.ctl { margin: 10px 0 } .ctl .row { display: flex; justify-content: space-between } .ctl b { font-family: var(--mono); font-weight: 600 }
+.ctl input[type=range] { width: 100%; accent-color: #4a4d52 }
+button { font: inherit; background: #f6f6f4; border: 1px solid #9a9da3; border-radius: 3px; padding: 6px 10px; cursor: pointer; color: var(--ink) }
+button:hover { background: #fff } button.on { background: #fde8e8; border-color: var(--a1); color: #8c0b1f; font-weight: 600 }
+.btns { display: flex; flex-wrap: wrap; gap: 6px } .note { color: var(--mute); font-size: 11.5px; margin-top: 6px }
+.kv { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; font-size: 12.5px } .kv b { font-family: var(--mono); font-weight: 600; text-align: right }
+.bar { height: 8px; background: #cfd0d2; border-radius: 2px; overflow: hidden; margin: 4px 0 2px; position: relative } .bar div { height: 100%; background: #5b5e63 }
+.bar .lim { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--a1) }
+#log { font-family: var(--mono); font-size: 11.5px; max-height: 160px; overflow: auto; color: var(--mute) }
+#offline { display: none; position: fixed; inset: 0; background: rgba(40,40,44,.55); color: #fff; font-size: 18px; align-items: center; justify-content: center; text-align: center }
+@media (max-width: 1100px) { main { grid-template-columns: 1fr } .grid2 { grid-template-columns: 1fr } }
+</style>
+</head>
+<body>
+<header>
+  <div><h1>VP-1 · 24 VDC Thin Client / OIT Panel</h1><div class="sub">OIT-24VDC · SCADA simulator · rev A review model</div></div>
+  <div class="sp"></div>
+  <div class="lnk"><span class="dot" id="linkdot"></span><span id="linktxt">connecting</span></div>
+  <div class="lnk" id="mbinfo"></div>
+  <a href="/twin" target="_blank">Open 3D twin ↗</a>
+  <div class="lnk" id="clock"></div>
+</header>
+<section id="alarms"><div class="none">No alarms</div></section>
+<main>
+  <div>
+    <div class="card" id="oneline">
+      <h2>24 VDC distribution · sheet 2</h2>
+      <svg viewBox="0 0 980 360" id="ol"></svg>
+    </div>
+    <div class="grid2">
+      <div class="card"><h2>Trend · last 15 min</h2><canvas class="trend" id="tr1"></canvas>
+        <div class="legend"><span><i style="background:#1d1f22"></i>Bus V</span><span><i style="background:#2457a6"></i>CB1 A (×4)</span><span><i style="background:#b0571a"></i>Enclosure °C</span></div></div>
+      <div class="card"><h2>Enclosure thermal</h2>
+        <div class="kv">
+          <span>Internal air</span><b id="k_t"></b>
+          <span>Settles at</span><b id="k_tss"></b>
+          <span>Room ambient</span><b id="k_amb"></b>
+          <span>Heat released inside</span><b id="k_heat"></b>
+          <span>TB1-8 contact</span><b id="k_term"></b>
+        </div>
+        <div class="bar" title="0 to 60 °C; red mark at the 50 °C device rating"><div id="k_tbar"></div><span class="lim" style="left:83.3%"></span></div>
+        <div class="note">Lumped heat balance: shell 1.21 m² at 4.5 W/m²K (back on the wall), 21 kJ/K. Time constant about 65 min; use the time warp to see it settle.</div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h2>Tags · Modbus TCP map</h2><table id="tags"><thead><tr><th>Tag</th><th>Addr</th><th style="text-align:right">Value</th></tr></thead><tbody></tbody></table></div>
+      <div class="card"><h2>Event log</h2><div id="log"></div></div>
+    </div>
+  </div>
+  <aside>
+    <div class="card">
+      <h2>Operator</h2>
+      <div class="ctl"><div class="row"><span>HMI1 backlight</span><b id="o_bl"></b></div><input type="range" id="bl" min="0" max="100" step="1"></div>
+      <div class="btns"><button id="ack">Acknowledge all</button></div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <h2>Field actions</h2>
+      <div class="btns"><button id="reset">Reset CB1</button><button id="open">Open CB1</button></div>
+      <div class="note">CB1 (1489-M1C060) is a manual breaker: these are what a technician does at the panel, not SCADA commands.</div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <h2>Instructor · simulation</h2>
+      <div class="ctl"><div class="row"><span>Field 24 V supply</span><b id="o_vf"></b></div><input type="range" id="vf" min="0" max="30" step="0.1"></div>
+      <div class="ctl"><div class="row"><span>TC1 CPU load</span><b id="o_cpu"></b></div><input type="range" id="cpu" min="0" max="100" step="1"></div>
+      <div class="ctl"><div class="row"><span>Room ambient</span><b id="o_amb"></b></div><input type="range" id="amb" min="0" max="55" step="0.5"></div>
+      <div class="ctl"><div class="row"><span>Thermal time warp</span><b id="o_warp"></b></div><input type="range" id="warp" min="1" max="600" step="1"></div>
+      <h2 style="margin-top:14px">Faults</h2>
+      <div class="btns">
+        <button id="f_short" data-tag="VP1.Fault.ShortTB1_6">Short TB1-6 to 0 V</button>
+        <button id="f_loose" data-tag="VP1.Fault.Loose0V_TB1_8">Loose 0 V at TB1-8</button>
+        <button id="f_psu" data-tag="VP1.Fault.SupplyLost">Field supply lost</button>
+      </div>
+      <div class="note">TB1-6 is the spare on the jumpered +24 V group. With the field supply in current limit, the short is fed at 12 A, so CB1 trips on its thermal element after about 35 s. The magnetic trip needs about 84 A on DC.</div>
+    </div>
+  </aside>
+</main>
+<div id="offline"><div>Lost the simulator.<br><small>Is <code>node scada-sim.mjs</code> still running?</small></div></div>
+<script>
+const $ = (s) => document.querySelector(s)
+const f = (v, d = 1) => v == null ? '—' : Number(v).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d })
+let S = null, TAGS = [], hist = { keys: [], rows: [] }, dragging = {}
+
+const post = (o) => fetch('/api/write', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ who: 'scada', ...o }) }).then(() => refreshLog())
+async function boot() {
+  const h = await (await fetch('/api/hello')).json()
+  $('#mbinfo').textContent = h.modbus ? `Modbus TCP ${h.modbus.host}:${h.modbus.port}` : 'Modbus off'
+  TAGS = await (await fetch('/api/tags')).json()
+  hist = await (await fetch('/api/history')).json()
+  $('#tags tbody').innerHTML = TAGS.map((t) => `<tr><td title="${t.desc}">${t.name}</td><td class="a">${{ ir: '3', di: '1', hr: '4', co: '0' }[t.kind]}${String(t.addr + 1).padStart(5, '0')}${t.scale > 1 ? ' ÷' + t.scale : ''}</td><td class="v" data-t="${t.name}"></td></tr>`).join('')
+  const es = new EventSource('/events')
+  es.onmessage = (e) => { S = JSON.parse(e.data); draw(); $('#offline').style.display = 'none'; $('#linkdot').className = 'dot ok'; $('#linktxt').textContent = 'simulator live' }
+  es.onerror = () => { $('#linkdot').className = 'dot bad'; $('#linktxt').textContent = 'offline'; $('#offline').style.display = 'flex' }
+  setInterval(async () => { try { hist = await (await fetch('/api/history')).json(); drawTrend() } catch {} }, 2000)
+  setInterval(refreshLog, 3000); refreshLog()
+}
+async function refreshLog() { try { const ev = await (await fetch('/api/events')).json(); $('#log').innerHTML = ev.slice().reverse().map((e) => `<div>${new Date(e.t).toLocaleTimeString()} · ${e.who} · ${e.what}</div>`).join('') } catch {} }
+
+// controls
+const bindSlider = (id, tag, scale = 1) => {
+  const el = $('#' + id)
+  el.addEventListener('pointerdown', () => dragging[id] = true)
+  el.addEventListener('pointerup', () => dragging[id] = false)
+  el.addEventListener('change', () => { dragging[id] = false; post({ tag, value: Number(el.value) * scale }) })
+}
+bindSlider('bl', 'VP1.HMI1.Backlight'); bindSlider('vf', 'VP1.Field.VoltageSP'); bindSlider('cpu', 'VP1.TC1.CpuLoad'); bindSlider('amb', 'VP1.Ambient.TempSP'); bindSlider('warp', 'VP1.Sim.TimeWarp')
+$('#ack').onclick = () => post({ action: 'ack' }); $('#reset').onclick = () => post({ action: 'reset' }); $('#open').onclick = () => post({ action: 'open' })
+for (const b of document.querySelectorAll('[data-tag]')) b.onclick = () => post({ tag: b.dataset.tag, value: !b.classList.contains('on') })
+setInterval(() => { $('#clock').textContent = new Date().toLocaleTimeString() }, 1000)
+
+// the one-line (sheet 2 layout, simplified)
+function oneline(T) {
+  const cb = T['VP1.CB1.Closed'], live = cb && T['VP1.Bus.Voltage'] > 1, src = T['VP1.Field.Voltage'] > 1
+  const hmiOn = T['VP1.HMI1.On'], tcRun = T['VP1.TC1.Running'], mode = T['VP1.TC1.Mode']
+  const w = (on) => `w ${on ? '' : 'dead'}`
+  const bad = (x) => x ? 'alarm' : ''
+  const busCls = !live ? '' : T['VP1.Bus.OK'] ? '' : 'warn'
+  return `
+  <text x="20" y="28" class="tag">+24 VDC FIELD</text><text x="20" y="44" class="val">${f(T['VP1.Field.Voltage'], 2)} V</text>
+  <text x="20" y="60" class="lbl">${T['VP1.Supply.Limiting'] ? '⚠ supply in current limit' : 'supply normal'}</text>
+  <line x1="60" y1="70" x2="60" y2="110" class="${w(src)}"/><circle cx="60" cy="116" r="6" class="box"/><text x="72" y="120" class="lbl">TB1-2</text>
+  <line x1="60" y1="122" x2="60" y2="150" class="${w(src)}"/>
+  <rect x="30" y="150" width="60" height="58" rx="3" class="box ${bad(!cb)}"/>
+  <text x="38" y="168" class="tag">CB1</text><text x="38" y="184" class="lbl">6 A · C</text>
+  ${cb ? `<line x1="60" y1="190" x2="60" y2="204" class="w"/>` : `<line x1="60" y1="190" x2="76" y2="202" class="w"/>`}
+  <text x="100" y="168" class="val">${f(T['VP1.CB1.Current'], 2)} A</text><text x="100" y="184" class="lbl">thermal ${f(T['VP1.CB1.Thermal'], 0)} %</text>
+  <text x="100" y="200" class="lbl" fill="${cb ? '#2f6f3e' : '#c8102e'}">${cb ? 'CLOSED' : 'TRIPPED / OPEN'}</text>
+  <line x1="60" y1="208" x2="60" y2="300" class="${w(live)}"/>
+  <line x1="60" y1="300" x2="640" y2="300" class="${w(live)}"/>
+  <text x="90" y="292" class="lbl">TB1-4..6 jumpered · bus</text><text x="90" y="322" class="val ${busCls}">${f(T['VP1.Bus.Voltage'], 2)} V</text>
+  ${[[280, 'TB1-4', 'HMI1', 'HIS-ML22-STTD', hmiOn, `${f(T['VP1.HMI1.Voltage'], 2)} V · ${f(T['VP1.HMI1.Power'], 1)} W`, hmiOn ? (tcRun ? 'displaying' : 'no video · power save') : 'OFF'],
+      [460, 'TB1-5', 'TC1', 'CONTEC 94115-03', mode > 0, `${f(T['VP1.TC1.Voltage'], 2)} V · ${f(T['VP1.TC1.Power'], 1)} W`, mode === 2 ? 'client running' : mode === 1 ? `booting ${T['VP1.TC1.BootPct']} %` : 'OFF'],
+      [640, 'TB1-6', 'SPARE', S.short ? 'SHORTED TO 0 V' : 'jumpered, not used', !S.short, S.short ? 'fault (instructor)' : '', '']
+    ].map(([x, tb, tag, part, on, v1, st]) => `
+    <line x1="${x}" y1="300" x2="${x}" y2="250" class="${w(live)}"/><circle cx="${x}" cy="244" r="6" class="box"/><text x="${x + 10}" y="248" class="lbl">${tb}</text>
+    <line x1="${x}" y1="238" x2="${x}" y2="200" class="${w(live)}"/>
+    <rect x="${x - 70}" y="110" width="140" height="90" rx="3" class="box ${tag === 'SPARE' ? bad(S.short) : bad(!on)}"/>
+    <text x="${x - 60}" y="130" class="tag">${tag}</text><text x="${x - 60}" y="146" class="lbl">${part}</text>
+    <text x="${x - 60}" y="166" class="val">${v1}</text><text x="${x - 60}" y="184" class="lbl" fill="${on ? '#2f6f3e' : '#c8102e'}">${st}</text>`).join('')}
+  <line x1="790" y1="300" x2="640" y2="300" class="w0"/>
+  <text x="800" y="290" class="tag">0 VDC</text><text x="800" y="306" class="lbl">TB1-3 · TB1-7..9 jumpered</text>
+  <text x="800" y="322" class="lbl">${S.loose ? '⚠ TB1-8 loose: ' + f(T['VP1.TB1_8.Temp'], 0) + ' °C' : 'returns normal'}</text>
+  <text x="800" y="120" class="tag">PE</text><text x="800" y="136" class="lbl">TB1-1 ↔ TB1-10 via rail</text>
+  <path d="M 800 150 L 960 150 M 825 150 L 825 180 M 925 150 L 925 180" class="pe"/><text x="805" y="196" class="lbl">TC1:FG</text><text x="900" y="196" class="lbl">HMI1:PE</text>
+  <text x="800" y="230" class="tag">Enclosure</text><text x="800" y="246" class="val">${f(T['VP1.Enc.Temp'], 1)} °C</text><text x="870" y="246" class="lbl">→ ${f(T['VP1.Enc.TempSettle'], 1)} °C</text>`
+}
+function draw() {
+  const T = S.tags
+  $('#ol').innerHTML = oneline(T)
+  for (const td of document.querySelectorAll('td[data-t]')) { const v = T[td.dataset.t]; td.textContent = typeof v === 'boolean' ? (v ? 'TRUE' : 'false') : f(v, Math.abs(v) >= 100 || Number.isInteger(v) ? 0 : 2) }
+  // alarms
+  const al = S.alarms
+  $('#alarms').innerHTML = al.length ? al.map((a) => `<div class="row ${a.acked ? '' : 'unack'} ${a.active ? '' : 'cleared'}"><span class="pri p${a.prio}">${a.prio}</span><span>${a.active ? 'ACTIVE' : 'CLEARED'}${a.acked ? '' : ' · UNACK'}</span><span>${a.id}</span><span>${a.text}</span><span>${a.acked ? '' : `<button onclick="post({action:'ack'})">Ack</button>`}</span></div>`).join('') : '<div class="none">No alarms</div>'
+  // thermal card
+  $('#k_t').textContent = `${f(T['VP1.Enc.Temp'], 1)} °C`; $('#k_tss').textContent = `${f(T['VP1.Enc.TempSettle'], 1)} °C`; $('#k_amb').textContent = `${f(T['VP1.Ambient.Temp'], 1)} °C`
+  $('#k_heat').textContent = `${f(T['VP1.Heat.Internal'], 1)} W`; $('#k_term').textContent = `${f(T['VP1.TB1_8.Temp'], 0)} °C`
+  $('#k_tbar').style.width = `${Math.min(100, T['VP1.Enc.Temp'] / 60 * 100)}%`; $('#k_tbar').style.background = T['VP1.Enc.Temp'] >= 50 ? '#c8102e' : T['VP1.Enc.Temp'] >= 45 ? '#e07b00' : '#5b5e63'
+  // controls follow the tags unless the user is dragging
+  const sync = (id, v, out, txt) => { if (!dragging[id]) $('#' + id).value = v; $('#' + out).textContent = txt }
+  sync('bl', T['VP1.HMI1.Backlight'], 'o_bl', `${f(T['VP1.HMI1.Backlight'], 0)} %`)
+  sync('vf', T['VP1.Field.VoltageSP'], 'o_vf', `${f(T['VP1.Field.VoltageSP'], 1)} V`)
+  sync('cpu', T['VP1.TC1.CpuLoad'], 'o_cpu', `${f(T['VP1.TC1.CpuLoad'], 0)} %`)
+  sync('amb', T['VP1.Ambient.TempSP'], 'o_amb', `${f(T['VP1.Ambient.TempSP'], 1)} °C`)
+  sync('warp', T['VP1.Sim.TimeWarp'], 'o_warp', `${f(T['VP1.Sim.TimeWarp'], 0)} ×`)
+  $('#f_short').classList.toggle('on', S.short); $('#f_loose').classList.toggle('on', S.loose); $('#f_psu').classList.toggle('on', S.psu)
+}
+function drawTrend() {
+  const c = $('#tr1'), r = devicePixelRatio || 1, W = c.clientWidth, H = c.clientHeight
+  c.width = W * r; c.height = H * r
+  const g = c.getContext('2d'); g.scale(r, r); g.clearRect(0, 0, W, H)
+  const rows = hist.rows.slice(-900); if (rows.length < 2) return
+  const t1 = rows[rows.length - 1][0], t0 = t1 - 900e3
+  const X = (t) => 30 + ((t - t0) / 900e3) * (W - 36), Y = (v) => H - 14 - (v / 60) * (H - 22)
+  g.strokeStyle = '#dadbdc'; g.fillStyle = '#7b7e84'; g.font = '10px Segoe UI'
+  for (const v of [0, 20, 40, 60]) { g.beginPath(); g.moveTo(30, Y(v)); g.lineTo(W - 6, Y(v)); g.stroke(); g.fillText(v, 8, Y(v) + 3) }
+  const line = (k, col, sc = 1) => { const i = hist.keys.indexOf(k) + 1; g.strokeStyle = col; g.lineWidth = 1.6; g.beginPath(); rows.forEach((row, j) => { const x = X(row[0]), y = Y(row[i] * sc); j ? g.lineTo(x, y) : g.moveTo(x, y) }); g.stroke() }
+  line('VP1.Bus.Voltage', '#1d1f22'); line('VP1.CB1.Current', '#2457a6', 4); line('VP1.Enc.Temp', '#b0571a')
+}
+addEventListener('resize', drawTrend)
+boot().catch(() => { $('#offline').style.display = 'flex' })
+</script>
+</body>
+</html>

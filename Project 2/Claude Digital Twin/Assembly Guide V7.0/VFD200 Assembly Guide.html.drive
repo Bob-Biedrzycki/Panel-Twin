@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Assembly Guide V7.0/VFD200 Assembly Guide.html",
+  "bytes": 14265770,
+  "sha256": "3fe09f41af59fd1bbc2a11eb2de5a733d4b3694dabce85a940e627b8a74c3051",
+  "md5": "a74f5044ec05a45e98263cabf3aee4d8",
+  "mtime": "2026-11-05 17:22:56",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

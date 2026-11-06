@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0005_AB_1494U-F100/01_STEP_Vendor/10001237276_asm.stp",
+  "bytes": 10056689,
+  "sha256": "191ad042b9979f0fc7f5ee5d4edda6eff73865cc8c762d727ec859247b034763",
+  "md5": "da328161610914c34350b7de41e85426",
+  "mtime": "2026-11-05 08:02:26",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

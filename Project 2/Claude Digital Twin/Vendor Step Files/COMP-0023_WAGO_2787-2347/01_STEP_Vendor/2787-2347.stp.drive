@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0023_WAGO_2787-2347/01_STEP_Vendor/2787-2347.stp",
+  "bytes": 1045207,
+  "sha256": "cd7d456cc640e21d6cd36be955263f76b9db3237f933e72ffb0671fb4700f9e6",
+  "md5": "d5a6ef65bf5179472bd01431e6962042",
+  "mtime": "2026-11-05 08:02:27",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0001_Saginaw_SCE-60XEL4918SSST/02_Drawings/sce-60xel4918ssst-sales-drw.dwg",
+  "bytes": 3202518,
+  "sha256": "0f76ca58b284d5cc49f7875a653edd6c4fde3c0dace4fcabb167f8aa3099d838",
+  "md5": "e84ebd70af077b3a8ac9a7f8beb0d5dc",
+  "mtime": "2026-11-05 08:02:26",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

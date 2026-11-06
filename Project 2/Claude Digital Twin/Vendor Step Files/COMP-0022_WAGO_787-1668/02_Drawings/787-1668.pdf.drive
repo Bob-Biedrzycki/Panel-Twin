@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Vendor Step Files/COMP-0022_WAGO_787-1668/02_Drawings/787-1668.pdf",
+  "bytes": 1468239,
+  "sha256": "6de78d2ab706904e4353c800b7883d743a4f787c5341c10beb709c7369c9aec7",
+  "md5": "d52cac5c0aa81a48d137c04b7215c760",
+  "mtime": "2026-11-05 08:02:27",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}
