@@ -1,0 +1,88 @@
+VFD 200 ASSEMBLY GUIDE V9.0 - START HERE
+========================================
+
+NEW IN V9
+  The screen is rebuilt for the person at the bench. Along the top: Build,
+  Wire, Parts, Wire list, Issues, how much is done, and Find. At the bottom
+  of the instructions: one row of big buttons (Back / Next step, or Back /
+  Done, next wire / Skip). On the 3D view: Finished, Doors off, Reset,
+  Closer, Further, Colours, Wide view. AA makes the text larger. The guide
+  opens at the step you left it at.
+  FU1 is a trailer fuse block: it hangs 113 mm under Q1 and the three
+  LPJ-70SP fuses are the link. There are no W1-W3 wires to make.
+  (The button and tab names further down this file are V8's.)
+
+NEW IN V8
+  Q1, FU1 and PDB1 are wired straight lug to lug. Wires that share a clamp
+  lie side by side. IO1's wires leave through its wire channel and PWS2's
+  come from below. CBL-IOL-09 lands on one port (X01-1, -3, -4).
+  "Completed panel" now fits the whole plate in the window. New buttons:
+  Look from (front, left, right, above, below), Wire colours (K), Help (H).
+  P hides the side panel.
+
+NEW IN V7
+  IO1 wires come in from the bottom. FU1 load wires go into their lugs. The
+  isolator plugs are stepped, so the 9-12 wires clear the 13-16 plug. The
+  drive covers stay on as see-through glass in the wiring steps and the
+  Completed panel.
+
+NEW IN V6
+  Checked against the shop photos of the build (2026-11-05). The CompactLogix
+  goes on as PLC1, PWS2, IO1 from the left (sheet 3 draws PWS2 first). The
+  drive, PB2, OW16, NS1, isolator, T1 and PDB1 terminals are where they are on
+  the fitted parts. See REVISIONS.md for the full list.
+
+OPEN IT
+  Double-click "VFD200 Assembly Guide.html" (Chrome or Edge). It needs
+  internet access for the 3D library. The file is about 14 MB: give it a
+  few seconds to load the makers' 3D models.
+
+SEE THE FINISHED PANEL
+  - "Completed panel" (or C) shows the panel as it will look when it is
+    done: every part and wire in place, doors and centre post off, duct
+    covers off, drive covers on as see-through glass and 1769 doors open,
+    so every landing shows.
+    Press C again, or any step, to go back.
+
+BUILD
+  - Go through the steps with "Next step" or the arrow keys. Tick each task
+    as you finish it; ticks are remembered on this computer.
+  - Drag to turn the panel (all the way round and underneath), scroll to
+    zoom in close to a terminal, right-drag to pan.
+  - "Remove front" (or F) takes the doors and the centre post off so you
+    can see inside. "Reset view" (or R) goes back to the step's view.
+  - Click any part for its part number, install notes, PartsLib links, where
+    its 3D shape comes from, and a table of every terminal and its wire.
+
+SELECT AND TRACE
+  - Click a wire: everything else turns to glass, both terminals are ringed
+    and labelled. Press T (or Trace route) to fly along it.
+  - Click a part: its wires stay solid and every terminal gets a tag.
+  - The bar at the top of the panel jumps to the same wire or part in Build
+    steps, Wire it, Parts or Wires. Esc clears. The search box finds W29,
+    CB4, TB4...
+
+WIRE
+  - On a wiring step, press "Wire them one by one" (or open "Wire it").
+    Each card gives the marker, size, colour and cut length, both ends
+    (device, terminal, where it is on the device, end type, torque and
+    strip length) and the duct route.
+  - Press "Done, next" (or Enter) after each wire. Progress is saved.
+  - Wires tab: marker list (CSV) for the label printer, a printable run
+    sheet with tick boxes, and a cut list with metres per wire size.
+
+RCP1 (receptacle)
+  - The 1492-REC15 has ONE terminal block (L, N, G) at the top that feeds
+    both outlets. Land hot on L, neutral on N, ground on G. The two jumpers
+    drawn on sheet 6 are not fitted. Check the L/N/G marking on the device.
+
+ISSUES
+  - Design issues: questions for the engineer who drew the panel.
+  - Modeling issues: what this guide assumes, and what it has resolved.
+
+FOLDER
+  VFD200 Assembly Guide.html   The guide: the only file a builder needs.
+  README.md / COMPLETION.md    What is in it, what is assumed, how to
+                               rebuild it.
+  REVISIONS.md                 The V6 checklist from the shop photos.
+  src\ data\ assets\ tools\ vendor\ build.mjs   Source (developers only).
