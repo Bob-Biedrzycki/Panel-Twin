@@ -12,7 +12,7 @@ GitHub: https://github.com/Bob-Biedrzycki/Panel-Twin. Commits made before 2026-1
 
 ## How this repo saves
 
-This file only says *how* to save. The rules themselves are Bob's global git rules: the day's branch, staging by name, a save after each piece of work, Bob merges to main.
+This file only says *how* to save. The rules themselves are Bob's global git rules: the day's branch, staging by name, a save after each piece of work, and the end-of-day merge to main (the global `end-of-day` skill does it for every repo when Bob says his day is over; nothing to do here).
 
 - **Save:** `python -I tools/save.py --message "<what changed and why>" <path> [<path> ...]`. It does four things in order:
   - starts or uses `daily/<today>`;
