@@ -1,0 +1,42 @@
+{
+ "_source": "Installation facts read from the PDF pages stored in PartsLib on 2026-11-04 (document and page given with each). Only values printed on the page; nothing estimated.",
+ "25B-D024N104": [
+  "520-UM001 p.15: mount upright on a flat, vertical, level surface; frame D mounting screws M5 (#10-24), 2.45-2.94 N·m (22-26 lb·in).",
+  "520-UM001 p.16-17: vertical mounting needs 50 mm (2.0 in) above and below; IP20/open type runs to 50 °C ambient without derating.",
+  "520-UM001 p.36: frame D power terminals take 10-6 AWG (5.3-13.3 mm²), torque 1.76-2.16 N·m (15.6-19.1 lb·in). Terminal screws can loosen in shipment: torque all before power-up.",
+  "520-UM001 p.37: separate control and signal wires from power wires by at least 0.3 m (1 ft)."
+ ],
+ "1769-L30ER": [
+  "1769-UM021 p.66: allow 50 mm (2 in) on all sides of the CompactLogix 5370 L3 system; modules are mounted horizontal to each other. Sheet 3 keeps 52 mm to the D1 riser and to SI1."
+ ],
+ "1769-PB2": [
+  "1769-IN028 p.9: 50 mm (2 in) on all sides for ventilation; it grounds through the DIN rail (zinc-plated rail).",
+  "1769-IN028 p.11: PB2 terminals 3 = +24 V DC in, 4 = DC neutral, 5 = chassis ground (1 and 2 not used); 14 AWG solid Cu 90 °C at 1.27 N·m (11.24 lb·in); up to two wires per terminal."
+ ],
+ "2787-2347": [
+  "WAGO product manual p.30: keep at least 50 mm between the ventilation openings and adjacent surfaces; front facing forward, vents up and down; the rail centre line is 65 mm from the top and bottom of the unit.",
+  "WAGO product manual p.31: hook the rail guide on the top edge of the DIN-35 rail and snap in (EN 60715); release by pulling the latch down."
+ ],
+ "SCE-AC1000B120VSS": [
+  "Saginaw A/C manual p.7: drill and cut to the supplied template (check its largest dimensions first); M6 bolts with toothed washers and the mounting gasket; only the supplied hardware; tighten to 40 lb·in; reinforce the wall if it warps; do not run it in the first 15 minutes after installation.",
+  "Saginaw A/C manual p.8: cutout dimensions."
+ ],
+ "1494U-D100": [
+  "1494U-IN007 p.2 (200 A edition, cited on sheet 3): measure the top hole to the top of the enclosure, locate the handle holes with template C on the mounting plate, 7/32 in holes for the thread-forming screws supplied."
+ ],
+ "FAZ-C2-1-NA-SP": [
+  "Eaton FAZ-NA p.6: one wire 18-6 AWG or two wires 18-10 AWG; torque 21 lb·in (2.4 N·m) for 18-12 AWG, 25 lb·in (2.8 N·m) for 10-8 AWG; Eaton does not recommend ferrules or crimp terminals."
+ ],
+ "FAZ-D2-3-NA": [
+  "Eaton FAZ-NA p.6: one wire 18-6 AWG or two wires 18-10 AWG; torque 21 lb·in (2.4 N·m) for 18-12 AWG, 25 lb·in (2.8 N·m) for 10-8 AWG; Eaton does not recommend ferrules or crimp terminals."
+ ],
+ "PTFIX 6-12X2,5 BU": [
+  "Phoenix PTFIX 6/12X2,5-NS35A data sheet p.2: push-in outputs, strip 8-10 mm, 26-12 AWG (0.14-4 mm²), ferrules 0.14-2.5 mm²."
+ ],
+ "PTFIX 6-18X2,5 BUWH": [
+  "Phoenix PTFIX data sheet p.2 (same family): push-in outputs, strip 8-10 mm, 26-12 AWG (0.14-4 mm²), ferrules 0.14-2.5 mm²."
+ ],
+ "1492-PDC-3A200-S0108": [
+  "1492-TD019 p.7: mounting torque not to exceed 30 lb·in."
+ ]
+}
