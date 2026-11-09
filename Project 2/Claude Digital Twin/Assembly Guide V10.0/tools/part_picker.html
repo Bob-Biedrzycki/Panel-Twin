@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Vendor model parts</title>
+<style>html,body{margin:0;height:100%;font:12px Inter,system-ui,sans-serif;background:#f3f2ee}#info{position:fixed;left:8px;top:8px;background:#fffd;padding:6px 8px;border-radius:6px;font-family:monospace;white-space:pre}</style>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }</script>
+</head><body><div id="info">loading</div>
+<script type="module">
+// One vendor model, turned into panel axes (?rot=x90,z-90), orbit with the mouse, hover names the part (index, name,
+// triangles, panel-axis box in mm). ?hide=1,2 hides parts, ?only=3,4 shows only those. window.view(az, el, dist, [tx,ty,tz])
+// sets the camera (degrees, mm) for repeatable checks.
+import * as THREE from 'three'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { gunzip, decodeModel } from '../src/models.js'
+const qs = new URLSearchParams(location.search), key = qs.get('k')
+const idx = await (await fetch('../assets/models/index.json')).json(), meta = idx[key]
+const parts = decodeModel(THREE, await gunzip(await (await fetch(`../assets/models/${key}.bin`)).arrayBuffer()), meta)
+const ren = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); ren.setPixelRatio(devicePixelRatio); ren.setSize(innerWidth, innerHeight); document.body.appendChild(ren.domElement)
+const scene = new THREE.Scene(); scene.background = new THREE.Color('#fafaf8')
+scene.add(new THREE.HemisphereLight('#ffffff', '#777777', 1.5)); const dl = new THREE.DirectionalLight('#fff', 1.7); dl.position.set(100, 200, 300); scene.add(dl)
+const g = new THREE.Group(); scene.add(g)
+const AX = { x: new THREE.Vector3(1, 0, 0), y: new THREE.Vector3(0, 1, 0), z: new THREE.Vector3(0, 0, 1) }
+for (const r of (qs.get('rot') ?? '').split(',').filter(Boolean)) { g.rotateOnWorldAxis(AX[r[0]], Number(r.slice(1)) * Math.PI / 180); g.updateMatrixWorld() }
+const hide = new Set((qs.get('hide') ?? '').split(',').filter(Boolean).map(Number)), only = qs.get('only') ? new Set(qs.get('only').split(',').map(Number)) : null
+parts.forEach((p, i) => {
+  if (hide.has(i) || (only && !only.has(i))) return
+  const c = p.color && !(p.color[0] > 0.6 && p.color[2] > 0.95) ? new THREE.Color(...p.color) : new THREE.Color().setHSL((i * 0.137) % 1, 0.3, 0.68)
+  const m = new THREE.Mesh(p.geo, new THREE.MeshStandardMaterial({ color: c, roughness: 0.6, metalness: 0.05, side: THREE.DoubleSide })); m.userData.i = i; g.add(m)
+})
+const b = new THREE.Box3().setFromObject(g), c = b.getCenter(new THREE.Vector3()), sz = b.getSize(new THREE.Vector3())
+const cam = new THREE.PerspectiveCamera(30, innerWidth / innerHeight, 1, 1e5)
+const ctl = new OrbitControls(cam, ren.domElement); ctl.target.copy(c)
+window.view = (az = 0, el = 0, dist = sz.length() * 1.8, t = null) => { if (t) ctl.target.set(...t); const a = az * Math.PI / 180, e = el * Math.PI / 180; cam.position.set(ctl.target.x + dist * Math.cos(e) * Math.sin(a), ctl.target.y + dist * Math.sin(e), ctl.target.z + dist * Math.cos(e) * Math.cos(a)); ctl.update() }
+window.view(25, 20)
+const info = document.getElementById('info'), ray = new THREE.Raycaster(), mouse = new THREE.Vector2()
+const base = `${key} ${meta.pn}  ${sz.x.toFixed(1)} x ${sz.y.toFixed(1)} x ${sz.z.toFixed(1)} mm  box ${b.min.toArray().map((v) => v.toFixed(1))}..${b.max.toArray().map((v) => v.toFixed(1))}`
+info.textContent = base
+ren.domElement.addEventListener('pointermove', (e) => {
+  mouse.set(e.clientX / innerWidth * 2 - 1, -e.clientY / innerHeight * 2 + 1); ray.setFromCamera(mouse, cam)
+  const h = ray.intersectObjects(g.children)[0]
+  if (!h) { info.textContent = base; return }
+  const i = h.object.userData.i, p = parts[i], bb = new THREE.Box3().setFromObject(h.object)
+  info.textContent = `${base}\npart ${i} ${p.name} ${p.ni / 3} tri  box ${bb.min.toArray().map((v) => v.toFixed(1))}..${bb.max.toArray().map((v) => v.toFixed(1))}\nhit ${h.point.toArray().map((v) => v.toFixed(1))}`
+})
+;(function loop() { requestAnimationFrame(loop); ren.render(scene, cam) })()
+document.title = 'ready'
+</script></body></html>
