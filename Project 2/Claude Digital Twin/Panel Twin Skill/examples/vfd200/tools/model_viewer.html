@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Vendor model check</title>
+<style>body{margin:0;font:12px Inter,system-ui,sans-serif;background:#f3f2ee} #grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(560px,1fr));gap:8px;padding:8px}
+.cell{background:#fff;border:1px solid #ddd;border-radius:8px;padding:6px} .cell b{font-family:monospace} canvas{display:block}</style>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }</script>
+</head><body><div id="grid"></div>
+<script type="module">
+// Shows each converted vendor model from the front (+Z toward the viewer), the right (+X) and the top (+Y), in the
+// maker's own axes, with optional transform (?rot=KEY:x90,y-90 ...) and a pin overlay (?pins=1, from window.PINS).
+import * as THREE from 'three'
+import { gunzip, decodeModel } from '../src/models.js'
+const qs = new URLSearchParams(location.search)
+const idx = await (await fetch('../assets/models/index.json')).json()
+const keys = (qs.get('k') ?? Object.keys(idx).join(',')).split(',')
+const size = Number(qs.get('s') ?? 180)
+const views = (qs.get('v') ?? 'front,right,top,back').split(',')
+const DIRS = { iso: [0.55, 0.45, 0.7, 0, 1, 0], front: [0, 0, 1, 0, 1, 0], back: [0, 0, -1, 0, 1, 0], right: [1, 0, 0, 0, 1, 0], left: [-1, 0, 0, 0, 1, 0], top: [0, 1, 0, 0, 0, -1], bottom: [0, -1, 0, 0, 0, 1] }
+const ren = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); ren.setSize(size, size)
+for (const k of keys) {
+  const mk = k.split('#')[0], meta = idx[mk]; if (!meta) continue
+  const buf = await gunzip(await (await fetch(`../assets/models/${mk}.bin`)).arrayBuffer())
+  const parts = decodeModel(THREE, buf, meta)
+  const scene = new THREE.Scene(); scene.background = new THREE.Color('#fafaf8')
+  scene.add(new THREE.HemisphereLight('#ffffff', '#666666', 1.6)); const dl = new THREE.DirectionalLight('#fff', 1.6); dl.position.set(1, 2, 3); scene.add(dl)
+  const g = new THREE.Group(); scene.add(g)
+  const hide = new Set((qs.get('hide') ?? '').split(';').find((r) => r.startsWith(k + ':'))?.slice(k.length + 1).split(',').map(Number) ?? [])
+  const only = qs.get('only') ? new Set(qs.get('only').split(',').map(Number)) : null
+  parts.forEach((p, i) => { if (hide.has(i) || (only && !only.has(i))) return; const c = p.color ? new THREE.Color(...p.color) : new THREE.Color().setHSL((i * 0.13) % 1, 0.35, 0.6); g.add(new THREE.Mesh(p.geo, new THREE.MeshStandardMaterial({ color: c, roughness: 0.6, metalness: 0.1, side: THREE.DoubleSide }))) })
+  const rot = (qs.get('rot') ?? '').split(';').find((r) => r.startsWith(k + ':'))?.slice(k.length + 1)
+  const AX = { x: new THREE.Vector3(1, 0, 0), y: new THREE.Vector3(0, 1, 0), z: new THREE.Vector3(0, 0, 1) }
+  if (rot) for (const r of rot.split(',')) { const ax = r[0], deg = Number(r.slice(1)); g.rotateOnWorldAxis(AX[ax], deg * Math.PI / 180); g.updateMatrixWorld() }
+  const b = new THREE.Box3().setFromObject(g), c = b.getCenter(new THREE.Vector3()), sz = b.getSize(new THREE.Vector3())
+  g.add(new THREE.AxesHelper(Math.max(sz.x, sz.y, sz.z) * 0.3))
+  const R = Math.max(sz.x, sz.y, sz.z) * 0.6
+  const cell = document.createElement('div'); cell.className = 'cell'
+  cell.innerHTML = `<b>${k}</b> ${meta.pn} · ${sz.x.toFixed(1)} W x ${sz.y.toFixed(1)} H x ${sz.z.toFixed(1)} D mm · ${meta.tri} tri · ${meta.parts.length} parts${rot ? ' · rot ' + rot : ''}<div style="display:flex;gap:4px" class="row"></div>`
+  document.getElementById('grid').appendChild(cell)
+  for (const v of views) {
+    const d = DIRS[v], cam = new THREE.OrthographicCamera(-R, R, R, -R, -R * 10, R * 10)
+    cam.position.set(c.x + d[0] * R * 3, c.y + d[1] * R * 3, c.z + d[2] * R * 3); cam.up.set(d[3], d[4], d[5]); cam.lookAt(c)
+    ren.render(scene, cam)
+    const im = document.createElement('canvas'); im.width = size; im.height = size; const cx = im.getContext('2d'); cx.drawImage(ren.domElement, 0, 0)
+    cx.fillStyle = '#000'; cx.font = '11px sans-serif'; cx.fillText(v, 4, 12)
+    cell.querySelector('.row').appendChild(im)
+  }
+}
+document.title = 'ready'
+</script></body></html>

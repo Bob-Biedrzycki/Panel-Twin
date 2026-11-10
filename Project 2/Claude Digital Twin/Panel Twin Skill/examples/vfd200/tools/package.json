@@ -1,0 +1,1 @@
+{ "name": "vfd200-guide-tools", "private": true, "type": "module", "dependencies": { "occt-import-js": "0.0.23" } }
