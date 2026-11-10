@@ -8,6 +8,8 @@ One repo for everything in `Documents\Panel Twin`, set up 2026-11-05 (Bob, chat,
   - the Codex twin;
   - `Vendor Step Files/`.
 
+- `Project 3/`: panel VFD-RT00-03 (Westby Creamery 10006, Sharpe Engineering drawings): the drawing set and Claude's assembly guide V1.
+
 GitHub: https://github.com/Bob-Biedrzycki/Panel-Twin. Commits made before 2026-11-05 were made in `Project 2/` as a local repo, so their paths have no `Project 2/` prefix.
 
 ## How this repo saves
