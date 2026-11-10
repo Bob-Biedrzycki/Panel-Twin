@@ -28,7 +28,14 @@ export const MODEL_FIT = {
   // 600 V class J, with phase barriers; the shop photos show the clip plates on the switch). So its poles line up with
   // Q1's, and its top is 113.0 mm below the bottom of Q1's moulding. Placed from sheet 3 it sat 8.0 mm to the right and
   // 12.4 mm too low (a 125.4 mm gap, wider than the 117.6 mm fuse). dx, dy move it; trailer: guide.js adds the fuses.
-  FU1: { model: 'FU1', rot: ['x90'], pins: FU1_PINS, landings: FU1_LAND, dx: -8.0, dy: -12.4, trailer: { under: 'Q1', z: 113.0, bodyBelowOrigin: 70.0, axisZ: 68, barrier: 23 } },
+  // V13 (Draft rev20): sheet 3 now lines FU1's poles up with Q1's (47 mm from the plate edge for both) and prints
+  // "Z = 113 mm per manual". FU1 keeps its V9-V12 place relative to Q1 (Q1 itself moved 30 mm right and 33 mm down). The
+  // rev20 picture of FU1 sits 60.5 mm higher than that and 1.3 mm left: dx, dy are now measured from the rev20 rectangle.
+  // V15: DIM Z (113.0 mm) runs from the switch's lower mounting slots to the fuse block's mounting holes (1494U-IN001 p.10 figure;
+  // sheet 3 rev20 draws the dimension between the same two rows). V9-V14 read it as the gap from the switch moulding to the top
+  // of the block and had FU1 53.5 mm too low. Rockwell's drawings: slots 6.06 in below the top of the line lugs (10001235194),
+  // block holes 1.80 in below the top of the block (10001237277); with Q1 where sheet 3 pictures it the block's top is at 283 mm.
+  FU1: { model: 'FU1', rot: ['x90'], pins: FU1_PINS, landings: FU1_LAND, dx: 1.5, dy: 6.0, trailer: { under: 'Q1', z: 113.0, bodyBelowOrigin: 70.0, axisZ: 68, barrier: 23 } },
   Lug1: { model: 'LUG', rot: ['z90', 'y90'] },
   CB3: { model: 'FAZ3', rot: [] },
   CB5: { model: 'FAZ1', rot: [] },

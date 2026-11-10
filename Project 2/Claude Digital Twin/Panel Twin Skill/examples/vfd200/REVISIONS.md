@@ -1,4 +1,41 @@
-﻿# V12 revisions: Bob's review of V11
+# V15 revisions: mounting holes from documents; FU1 height
+
+Bob: do what we can about mounting holes for the parts we have reference material for; show nothing and make no educated guess for the others.
+
+- [x] **Documents read in PartsLib** (pages rendered or text read): Rockwell 10001235194 and 10001237277, 1494U-IN001 p.2 and p.10, 1492-TD019 p.14, 520-UM001 p.15 and p.188, Burndy K3A26U2N sheet, ILSCO D167 page, SolaHD catalogue p.173 and p.175.
+- [x] **`HOLES` in `src/guide.js`**: seven parts with patterns, PDB1 with columns only; every number is printed in the cited document. Shown on the part card, in the step table, as centre lines on the mark-out drawing and on a selected part in 3D, in the CSV and the print sheets. Looked at: FU1 and DRV1 cards, the step 6 full-screen drawing.
+- [x] **Cross-check.** Q1's right-hand hole column: sheet 3's 47 mm from the right edge and Rockwell's 3.32 in from the end of the mechanism both give 1071 mm. FU1's mounting notches fall on the 1025 and 1071 mm lines in the 3D model.
+- [x] **FU1 moved up 53.5 mm** (`src/model_fit.mjs`): Z between hole rows. Looked at the power entry: fuse blades in the clips of both parts.
+- [x] **Step text, issues, START HERE** brought in line.
+- [x] **Audit.** PASS, two tight bends (V14: four).
+- [ ] **Not done:** Q1, PDB1, Lug1, GB1 and T1 cards were not pictured; print and CSV not opened; no click-through by hand.
+
+# V14 revisions: locating every item (GD&T), accuracy
+
+Bob asked for GD&T so the assemblers can locate every item: more visual, intuitive and logical, from first principles; existing features left as they are; focus on accuracy.
+
+- [x] **Datums A, B, C and baseline dimensions.** Positions are read back from the 3D model (so picture and number agree) in mm from the plate's top left corner. Checked: PDB1 right edge 1098 = 1118 - 20 (sheet 3 prints 20); Lug1 61 down, 20 right of D4 (prints 60, 20); DRV1 130.5 wide (real 130); T1 162 (real 162).
+- [x] **Sheet 3 scale corrected** (`assets/tex/index.json`, `src/layout.mjs`, FU1 fit, RCP1, `tools/extract_textures.py`). Plate measured in both PDFs: 505.68 x 643.56 pt.
+- [x] **Locate view, step tables, part cards, 3D overlay, full-screen drawing, print, CSV.** Looked at in pictures: step 11 in Build (tape along rail 4), Locate for steps 2, 3 and 10, the PDB1 and Q1 part cards, full-screen drawings for steps 3 and 11.
+- [x] **Existing features.** Nothing removed; one tab and one tool button added. Wire landings re-checked at CPL2 after parts moved.
+- [x] **Audit.** PASS, four tight bends (V13: five).
+- [ ] **Not done:** print preview and the CSV download were not opened; the guide was not clicked through by hand; Locate was not pictured at phone width or with larger text; hole patterns not added.
+
+# V13 revisions: Draft rev20
+
+Bob sent Draft rev20 and asked for the guide for the assemblers.
+
+- [x] **rev18 against rev20, every sheet.** Pixel comparison of all 18 sheets, then four independent readers (sheets 4-6, 7-10, 11-14, 15-18). Sheets 2, 3, 5, 15 and the TB2/TB4 blocks read again by hand at 260-300 dpi.
+- [x] **Door.** HMI1 and E-STOP on the right door: 287 / 257 / 1400 mm and 168 / 550 / 935 mm (sheet 2). Checked in a picture of step 20.
+- [x] **Subplate.** Device rectangles taken from the rev20 PDF (`tools/extract_textures.py`); strips and isolators at real widths. Checked in pictures of the whole panel, the power entry, rail 3, rail 4 left and right, and TB4.
+- [x] **Wire list.** `data/wirelist.json` rewritten for rev20 (123 wires, 37 cables, no duplicate numbers). Read against sheets 4-14 again by two readers who had not seen it: no wrong number, size, device, terminal, potential or colour; five line-number references corrected.
+- [x] **Readings in `build.mjs`.** Lamp wire W96 through TB4-1; W25/W27 to the E-STOP, W49/W51 as jumpers; VM1's cable straight to CPL2 X08.
+- [x] **Parts list.** As the rev20 BOM (63 lines).
+- [x] **Issues, step text, START HERE.** Rewritten for rev20.
+- [x] **Audit.** PASS with five tight bends named in the README (V12 baseline: two).
+- [ ] **Not done:** the guide was not opened by hand in a browser and clicked through step by step; the checks were the command-line audit and 13 pictures. Read in pictures: the Build view, and the wire cards for W49 and EVT005-06. The Wire list and Issues views were not looked at on screen.
+
+# V12 revisions: Bob's review of V11
 
 Bob left the sheet 5 junction choice to the guide and asked for the completed product as the next revision.
 

@@ -13,7 +13,7 @@ The output is always a folder, one per version, named `Assembly Guide V<N>.0`:
 2. `START HERE.txt`, `README.md`, `REVISIONS.md`, `COMPLETION.md`: the handover, what changed, the checklist, what was not verified.
 3. The source it was built from (`build.mjs`, `src/`, `data/`, `assets/`, `tools/`, `vendor/`).
 
-Look at `examples/vfd200/` first. It is a complete, real guide (CPME 1082-01, panel VFD 200: 48 devices, 190 wires and cables, 33 makers' models) that went through twelve review rounds with the engineer who owns the job. `examples/posters/` shows what it looks like; its drawing set is `examples/drawings/Draft rev18.pdf`. Every rule below was learned on it; `references/lessons.md` says how.
+Look at `examples/vfd200/` first. It is a complete, real guide (CPME 1082-01, panel VFD 200: 47 devices, 166 wires and cables, 33 makers' models) that went through fifteen review rounds with the engineer who owns the job, including one change of drawing revision. `examples/posters/` shows what it looks like; its drawing set is `examples/drawings/Draft rev20.pdf`. Every rule below was learned on it; `references/lessons.md` says how.
 
 All the commands below take full paths, so you never need to change directory. `<skill>` is this folder.
 
@@ -26,6 +26,8 @@ A guide is wrong in a way that matters when a builder would do the wrong thing b
 - a wire passes through a solid, across the face of a device it does not land on, or shares a line with another wire
 - a device is the wrong size, turned the wrong way, or in the wrong place against the drawing or the photo
 - a number on a wire card (marker, size, terminal, torque, cut length) is not from a document and does not say so
+- a part cannot be found from the plate's edges: its position from the two datum edges is missing, or is not the position the 3D panel shows
+- a mounting hole, cutout or tolerance is shown that no document gives. Holes with no document are not shown at all; tolerances the drawings do not give are marked as proposed
 - the guide departs from the drawings anywhere and does not say so, both at that step and under Issues
 - a claim of "checked" is not backed by the audit, a picture you looked at, or the document page you read
 
@@ -74,6 +76,8 @@ The enclosure, subplate, ducts, DIN rails and every device with its tag, part nu
 
 Real widths come from the makers' documents, not from the layout sheet: layout symbols are often not to scale (the example found a 52.5 mm module drawn at 34.6 mm). When they disagree, place the device at its real size and raise a design issue.
 
+**Measure the layout sheet's scale before scaling anything from it.** Read the plate's outline out of the PDF and divide the printed plate size by it, then check the result against two or three printed dimensions (`references/locating.md`). The example ran thirteen versions on a scale that was 0.85 % small, which put parts up to 10 mm out at the far side of the plate.
+
 ### 5. Makers' models: `tools/models.json`, `src/model_fit.mjs`
 
 Convert each STEP file to a compressed mesh, then say which model stands in for which device and how it is turned into panel axes (X right, Y up, Z out of the plate). `references/models.md`.
@@ -92,7 +96,18 @@ For each device type: where each terminal is, and which way the wire enters. The
 
 The order of trust for a terminal's position: the maker's model (measure it), then the maker's manual figure, then a photo of the fitted part, then the layout sheet's face picture (often several millimetres off). Record the source in the layout's `src` string; the guide shows it on the part.
 
-### 7. Build, then audit
+### 7. Locating: datums, positions, mounting holes, tolerances
+
+The guide says where every item goes from the same two edges of the plate, because that is how a builder measures: datum B the top edge, datum C the left edge, datum A the plate face, baseline dimensions only. The numbers are read back from the 3D model, so the engine does this for any panel once the layout is right; what you supply is in the `LOCATE` block of `src/guide.js` (`references/locating.md`):
+
+- `PRINTED`: what the layout sheet prints as a dimension for a part, quoted, as the check on the ordinates.
+- `DOOR_ITEMS`: door cutouts from the door's own edges, as the door sheet dimensions them.
+- `HOLES`: mounting holes, **only where a maker's document or the drawing gives them, each with its citation**. No document, no entry, and the guide then shows nothing for that part: no estimate, no "typical", no pattern assumed centred. Where a document gives a pattern but not where it sits in the outline, give the pattern and say "mark through the part".
+- Tolerances: drawings rarely give any. The guide proposes three classes (a 1, 3 and 6 mm position zone to A, B, C) and marks them as proposed, with a design issue. Replace them when engineering gives real ones.
+
+A dimension between two parts (a fuse block under its switch) has to be read off the maker's figure for what it runs between; the example had one wrong for six versions.
+
+### 8. Build, then audit
 
 ```sh
 node "<guide folder>/build.mjs"
@@ -105,7 +120,7 @@ Fix causes, not symptoms: a wire through a housing usually means the terminal or
 
 Keep check outputs (JSON, pictures, sheet tiles) out of the version folder: in a scratch folder, or a `checks` folder beside the version folders if the team wants them kept.
 
-### 8. Look at it like the person who has to build from it (required)
+### 9. Look at it like the person who has to build from it (required)
 
 ```sh
 node "<skill>/scripts/shot.mjs" "<guide folder>" "<scratch>/whole.png" --complete
@@ -115,17 +130,19 @@ node "<skill>/scripts/shot.mjs" "<guide folder>" "<scratch>/io1-below.png" --com
 
 `<xc>,<yc>,<z1>` for every device are in the audit JSON under `devices`. A picture takes from 10 seconds to 2 minutes depending on the machine, so run several at once in the background rather than one after another. Add `--tab wire|parts|wires|issues` to picture what the instructions panel says. Read every picture you make. Go device by device: from the front, and from the side the wires enter. For each one ask: is this the part in the photo or the catalogue; is it the right way round; does each wire go into an opening; could a hand and a screwdriver actually do this. Where you have a photo, put the two side by side.
 
+Picture the locating too: a mounting step (`--step N`), its Locate view (`--step N --tab locate`), its full-screen mark-out drawing (`--step N --locbig`) and a plate-mounted part's card (`--find TAG --tab parts`).
+
 For a new guide, do this for every device, not a sample: in the example, each round of looking found something the audit had passed. If a browser pane is available, `node "<skill>/scripts/serve.mjs" "<guide folder>"` serves it; `window.guide` has `DEV`, `WIRES`, `flyTo`, `select`, `showComplete`.
 
-### 9. Read the drawings against the wire list (required before a first handover)
+### 10. Read the drawings against the wire list (required before a first handover)
 
 Go through every schematic sheet conductor by conductor and compare with `data/wirelist.json`. `references/review.md` gives the procedure, including how to split the sheets across independent readers and what to tell them. Report only differences, then check each one on the sheet yourself before acting on it. In the example this found the incoming feeder and ground, which had been missing for eleven versions because they are drawn dashed and unnumbered.
 
-### 10. The screen
+### 11. The screen
 
 The engine's screen is already laid out for an installer: views along the top, one bar of large buttons at the bottom that never moves, a tool rail on the 3D view, progress always in sight, a larger-text toggle, and it reopens at the step it was left at. Keep those properties when you change it. `references/screen.md`.
 
-### 11. Hand over
+### 12. Hand over
 
 Write, for this version:
 
@@ -150,7 +167,9 @@ node "<skill>/scripts/diff_routes.mjs" "<scratch>/before.json" "<scratch>/after.
 - **Never edit a version that was handed over.** It is the record of what the builder was given; the next round has to be comparable with it.
 - **Audit the last version before changing anything**, so you can say what your change did.
 - **`diff_routes.mjs` answers "did anything else move?"** It compares every wire in the two versions. When it shows only the changes you meant, you need to look closely only at the devices you touched, and you say that is what you did. When it shows more, look at those too.
-- **Re-read the drawings (step 9) only if the wire list or a reading of the drawings changed.**
+- **Re-read the drawings (step 10) only if the wire list or a reading of the drawings changed.**
+- **A new revision of the drawing set** is a revision of the guide, not a new panel. Compare the two PDFs page by page first (render both, difference them), then have readers list what changed per sheet group; rewrite the wire list by script from those findings, and have readers who have not seen it check it against the new sheets. Wire numbers can change wholesale: say so to the builder first, because markers made from the last revision are then wrong.
+- **When a part moves**, its Locate numbers, mark-out drawing and wire routes follow by themselves. Re-check what the sheet prints for it (`PRINTED`) and its `HOLES` entry.
 - **When the complaint is vague** ("still oddities"), find candidates yourself (audit, then pictures of every device), and say which you found and fixed and that you could not tell whether these were the ones meant.
 - **When the reviewer mentions something a third person said** ("someone mentioned the fuse block"), search earlier sessions and notes; if there is no record, go to the maker's instruction for that part and say your fix is a reading to be confirmed.
 - **A question** ("do the wires go in the front?") is a request to find out from the hardware, the photos and the maker's document, answer it, and fix the model if the answer shows it is wrong.
@@ -165,6 +184,7 @@ node "<skill>/scripts/diff_routes.mjs" "<scratch>/before.json" "<scratch>/after.
 | `references/inputs.md` | Writing `wirelist.json` and `layout.mjs`; reading sheets with no text layer; device faces |
 | `references/models.md` | Getting and converting makers' STEP models; orientation; performance |
 | `references/landings.md` | Terminal positions, openings, how wires leave devices, special cases |
+| `references/locating.md` | Datums and baseline dimensions, checking the sheet's scale, mounting holes from documents only, the tolerance proposal |
 | `references/engine-map.md` | What each source file and each block of `guide.js` does; what is VFD 200-specific; writing a builder for a part with no model |
 | `references/review.md` | The audit's output line by line, looking at devices, the drawing review, what to report |
 | `references/screen.md` | The installer screen and why it is the way it is |

@@ -119,3 +119,7 @@ Each device's front is a picture laid over its model: `assets/tex/<TAG>.webp`, w
 3. Where the sheet has no face picture, or the wrong one, and a straight-on photo of the fitted part exists, rectify the photo to a flat face with a perspective transform instead. Where there is neither, leave the face off: a plain model is better than a wrong label.
 
 `tools/detect_terminals.py` (needs OpenCV) was an early helper for finding screw heads on a face picture; it is not part of the workflow.
+
+## The layout sheet's scale
+
+Positions scaled from the layout sheet's pictures are only as good as the scale. Measure it from the plate outline in the PDF and check it against printed dimensions before using any picture position: `references/locating.md`. `tools/extract_textures.py` in the example writes true mm for its sheet; its origin and scale are that sheet's and have to be measured again for another sheet or another revision.

@@ -1,4 +1,41 @@
-# VFD 200 Assembly Guide V12.0: Completion Description
+# VFD 200 Assembly Guide V15.0: Completion Description
+
+## V15 (mounting holes; FU1 height)
+
+V15 is in `Assembly Guide V15.0/`. V1.0 to V14.0 are unchanged.
+
+**Asked:** mounting holes for the parts with reference material; nothing shown or guessed for the rest; then update the skill for this and for dimensioning, including the tolerance proposal.
+
+**Done and checked:** see `REVISIONS.md` (V15).
+
+**Not verified:** two offsets used to place the FU1 model (where the hole row is on each of Q1 and FU1) were measured on Rockwell's dimension drawings, about 1 mm each; they affect only where the model is drawn, not any number shown to the builder. The HMI cutout, E-STOP hole and A/C cutout documents were not read, so those parts show positions only.
+
+## V14 (locating every item)
+
+V14 is in `Assembly Guide V14.0/`. V1.0 to V13.0 are unchanged.
+
+**Asked:** implement GD&T so assemblers can easily locate every item; make locating visual, intuitive and logical from first principles; leave existing features; focus on accuracy; Bob reviews before it goes into the skill.
+
+**Done and checked:** see `REVISIONS.md` (V14). The Locate code is one block in `src/guide.js` (search "V14: LOCATE") plus small hooks; it carries its own styles.
+
+**Decisions made for Bob to review:** the datum corner (top left of subplate 1, as sheet 3 dimensions); the three tolerance classes (proposed, not from a document); locating plate parts by outline; magenta for everything dimensional so it is not confused with a wire colour.
+
+**Not verified:** see the unticked line in `REVISIONS.md`. The scale correction rests on the plate outline and four cross-checks against printed dimensions, not on a shop measurement.
+
+## V13 (Draft rev20)
+
+V13 is in `Assembly Guide V13.0/`. V1.0 to V12.0 are unchanged.
+
+**Asked:** build the guide for the assemblers from Draft rev20.
+
+**Done and checked:** see `REVISIONS.md` (V13). The engine is V12's with the audit hooks the Panel Twin Skill added; `src/guide.js` changes are the door (right door, new exit and route), RCP1's position, TB1's orientation and one wire-class rule.
+
+**Not verified:**
+- FU1's height against the hardware: carried from V9-V12 (1494U-IN001 p.10, shop photos); the manual was not re-read for V13.
+- The door wiring route, and so the HMI1 and E-STOP cut lengths.
+- No shop photo exists of the rev20 arrangement; positions are from sheet 3 and real widths.
+- The BOM and terminal sheets (15-18) were read by one reader, not two.
+- A full click-through in a browser (see REVISIONS).
 
 ## V12 (Bob's review of V11)
 

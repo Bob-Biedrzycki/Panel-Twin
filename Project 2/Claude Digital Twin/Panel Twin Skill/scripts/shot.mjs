@@ -2,7 +2,8 @@
 // Take a picture of a built guide from the command line, to LOOK at a landing or a part without opening a browser.
 //   node scripts/shot.mjs "<guide folder>" "<out.png>" [--step 13] [--complete] [--find W29|CB4|s195] [--view az,el,dist,x,y,z]
 //                         [--size 1600x1000] [--wait 12] [--html "<name>.html"] [--page "tools/model_viewer.html?k=KEY&..."]
-//                         [--tab wire|parts|wires|issues]
+//                         [--tab wire|parts|wires|issues|locate] [--locbig]
+// --locbig opens the full-screen mark-out drawing of the step (with --step N): where every item of that step goes.
 // --find takes a wire number, a device tag, or a segment id (s195) for a wire that has no number.
 // --tab opens a view in the instructions panel: with --find, "wire" shows that wire's card and "parts" the part's page;
 //   "wires" the wire list, "issues" the issues. Use it to read what the builder will be told.
@@ -32,6 +33,7 @@ if (args.includes('--complete')) q.set('complete', '1')
 if (opt('--find')) q.set('find', opt('--find'))
 if (opt('--view')) q.set('view', opt('--view'))
 if (opt('--tab')) q.set('tab', opt('--tab'))
+if (args.includes('--locbig')) q.set('locbig', '1')
 const [w, h] = opt('--size', '1600x1000').split('x').map(Number), wait = Number(opt('--wait', 12)) * 1000
 const url = page ? `${base}${page}` : `${base}${encodeURIComponent(html)}?${q}`
 await mkdir(dirname(out), { recursive: true }); await rm(out, { force: true })

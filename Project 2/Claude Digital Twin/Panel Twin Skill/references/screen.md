@@ -28,3 +28,7 @@ The person using the guide is standing at a bench or in front of an enclosure, o
 ## Changing it
 
 The page's HTML and CSS are in `build.mjs`; the panel's contents are built in `src/guide.js` (`const ui`, and the toolbar section after it). After any change, open all the steps and all five views and read the console: there must be no messages. Check a narrow window (phone width) as well as a wide one, with `scripts/shot.mjs --size 390x844`.
+
+## Locate
+
+A sixth view, Locate, sits beside Build in the top bar, and a Dimensions button (L) on the tool rail. They follow the same rules as the rest: large targets, nothing that moves, numbers in mm with inches beside them, one colour (magenta) for everything dimensional so it is never mistaken for a wire. The 3D dimensions show in the mounting phases and in Locate, and stay out of the way while wiring. `references/locating.md`.

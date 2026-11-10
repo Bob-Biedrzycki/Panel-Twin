@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.0
+
+Locating, mounting holes and a scale correction, from three more review rounds on VFD 200 (V13 to V15).
+
+- **Locate.** Every duct, rail, rail part, plate part and door cutout has its position from two datum edges (B top, C left; A the plate face), as baseline dimensions read back from the 3D model: a Locate view (mark-out drawing per step, table in mm and inches, full-screen drawing, print sheets, CSV), a "Where it goes" table on each mounting step and card on each part, and on the 3D panel the datum edges, a tape along each rail and leaders to a selected part. New `references/locating.md`; SKILL.md step 7.
+- **Mounting holes: documents only.** `HOLES` holds a part's hole pattern only when a maker's document or the drawing gives it, with the citation. No document, nothing shown.
+- **Tolerance proposal.** Three position classes (1, 3 and 6 mm zones to A, B, C) shown as feature control frames and plain words, always marked as proposed.
+- **Scale check.** The layout sheet's scale is measured from the plate outline and checked against printed dimensions. The example had been 0.85 % small; corrected.
+- **Drawing revisions.** How to take a new revision of the drawing set (difference the PDFs, readers per sheet group, wire list rewritten by script and re-read).
+- **Worked example** is now Assembly Guide V15.0, built from Draft rev20 (`examples/drawings/`): door devices on the right door, the rev20 subplate, 123 wires and 37 cables, FU1 at DIM Z between the mounting-hole rows. Audit: PASS with two tight bends, as before.
+- `scripts/shot.mjs`: `--tab locate`, `--locbig`. `scripts/new_panel.mjs`: checklist items 1b and 11b. Evals: rev20 names, one new eval (holes with and without a document).
+- Not changed: the audit (`tools/audit.js`), the other scripts, the four V12 posters (four Locate posters added).
+
 ## 1.0.0
 
 First bundle, made from the VFD 200 panel twin (CPME 1082-01) after twelve review rounds.

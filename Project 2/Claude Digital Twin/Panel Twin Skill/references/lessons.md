@@ -31,3 +31,15 @@ The example guide went from V1 to V12 between 2026-11-04 and 2026-11-09, each ve
 - `transmission` materials and per-frame shadow maps took an integrated GPU to 5 frames a second.
 - Inserting new segments in the middle of the list moved every later wire to a different lane in the ducts. Add new segments at the end.
 - A terminal list's own cross-check table had four cable names off by one; nothing read it, so nothing broke, and nothing caught it either.
+
+## Rounds 13 to 15
+
+| Round | What happened | The rule it left |
+|---|---|---|
+| 13 | The drawing set went from rev18 to rev20: door devices on the other door, half the subplate rearranged, a 72-terminal strip deleted, most wire numbers changed. The revision block still read "A". | Difference the two PDFs page by page before reading anything. Rewrite the wire list by script from readers' findings, then have other readers check it. Tell the builder first that old markers are wrong |
+| 13 | The guide's own V12 could not be audited: it predated the audit hook. | Baseline from the copy that has the hooks; say which copy |
+| 13 | The guide judged the new sheet's picture of a fuse block wrong and kept its own placement. | It was the guide that was wrong (round 15). When the model and the drawing disagree, read the maker's figure before saying so |
+| 14 | Asked for GD&T so assemblers can locate every item. | Datums and baseline dimensions from the plate's own corner; numbers read back from the model; tolerances proposed and marked as proposed |
+| 14 | Checking the new numbers against printed dimensions showed every picture-derived position was 0.85 % out, for thirteen versions. | Measure the sheet's scale from the plate outline and check it against printed dimensions |
+| 15 | Asked for mounting holes where there is reference material and nothing where there is not. | `HOLES`: documents only, cited, exactly as much as the document gives; no entry means nothing shown |
+| 15 | Reading the maker's page for the holes showed DIM Z runs between two rows of mounting holes, not between two mouldings: the fuse block had been 53 mm low since round 9, and three "tight bends" blamed on the drawing were the guide's. | Read what a dimension runs between off the figure, not the table |
