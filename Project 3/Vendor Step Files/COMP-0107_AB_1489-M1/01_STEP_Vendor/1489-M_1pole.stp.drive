@@ -1,0 +1,9 @@
+{
+  "path": "Project 3/Vendor Step Files/COMP-0107_AB_1489-M1/01_STEP_Vendor/1489-M_1pole.stp",
+  "bytes": 7029547,
+  "sha256": "33b8fffb85abfff163736ccf26f311fabd404f20380bc6a617827410ee124249",
+  "md5": "cd36580a9de77d2c2b5ddf53dd207090",
+  "mtime": "2013-09-09 01:47:22",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

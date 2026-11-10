@@ -1,0 +1,58 @@
+VFD-RT00-03 ASSEMBLY GUIDE, V2.0
+Westby Creamery, 10006 Intake Receiving VFD. From "10006 VFD-RT00-03.pdf" (Sharpe Engineering, initial release 06/24/26).
+
+V2.0: makers' own 3D models for the drives, disconnect, fuse block, motor breakers, 24 V supply, 1489 breakers
+and duct. The fuse block is now where Rockwell's instruction puts it (item 13). B01421 moved to terminal 4.
+It has not been checked against a built panel, and it rests on the readings listed below.
+Read "Issues" in the guide before you build from it.
+
+HOW TO OPEN IT
+  Double-click "VFD-RT00-03 Assembly Guide.html". It opens in Edge or Chrome. It needs an internet connection.
+
+WHAT THE SCREEN DOES
+  Top:     Build (step by step), Wire (one wire at a time), Parts, Wire list, Issues. Find box: type B01081, TB1, CBB0108.
+  Bottom:  Back / Next step. In Wire: Done, next wire.
+  Left:    Finished (the completed panel), Doors off, Reset, Closer / Further, Colours, Wide view.
+  Click any part or wire to see what it is, where it lands and how long to cut it. It reopens at the step you left.
+
+WHERE THE GUIDE IS NOT AS THE DRAWINGS SHOW IT (each is also on the wire or part, and under Issues)
+  1. Tags. The 24 V supply and its fuse holder carry the layout tags PWSB0125 and FUB0125 (the schematic says
+     PWSB0132 and FUB0132). The three Ethernet jacks have no tag on the drawings: JKN0102, JKN0104, JKN0106 here.
+     The fuse block under the disconnect is DISCB0101-F here.
+  2. Terminal numbers. The drawings do not number the terminals. This guide numbers each strip from the left:
+       TB120-1: 1-4 B01421, 5-7 C01021 (jumpered), 8 C01022, 9 C01051, 10 C01081, 11-13 B01411 (jumpered), 14-17 ground
+       TB1:     1-3 B02061, 4 B02101, 5-7 B03061, 8 B03101, 9-11 B04061, 12 B04101, 13-19 B01341, 20-23 ground
+                (each group of three and the seven B01341 blocks are jumpered)
+       TB24-1:  1-2 B01331 (jumpered), 3 B01341
+     Panel wiring is on the upper screw, field wiring on the lower. Where a block takes two panel wires the second is
+     on the lower screw. Which block and which side each wire uses is this guide's choice.
+     B01421 uses terminal 4: from the transformer fuse on the lower screw, to CBC0102 on the upper.
+  3. "1AWG". Ten branch conductors printed 1AWG on sheet B01 are shown as 14 AWG (the next phase, and the same wires
+     on the drive sheets, are printed 14AWG). B01021, B01022, B01023 (fuse block to TBB0106) are left at 1 AWG as
+     printed. CONFIRM ALL SIZES BEFORE CUTTING.
+  4. B01421 and B01411 are printed 8 AWG into TB120-1. A 1492-J4 block takes 22 to 10 AWG. Shown as printed. CONFIRM.
+  5. Transformer fuses. FUB0137 and FUB0142 are the transformer's own fuse blocks. Three conductors the schematic
+     draws (fuse to H1, fuse to H4, X1 to fuse) are listed "not a wire to make". The H2-H3 link is the flat link.
+  6. Pump feedback returns. Sheet C01's terminal labels do not agree with sheet Z04. The guide follows Z04:
+     CRAUX1 returns on terminal 8 (C01022), CRAUX2 on 9 (C01051), CRAUX3 on 10 (C01081).
+  7. Centre jumpers, not wire jumpers, on the B0x061 groups (sheet Z05 draws the jumper; B02-B04 print a wire size).
+  8. Relay terminals. Only sheet B04 prints 11 and 14 on the contact; all three relays are wired that way.
+     WHICH SCREW ON THE RELAY IS WHICH IS ASSUMED: check the marking on the relay.
+  9. Fuse holders and 1489 breakers: line at the top is this guide's choice.
+ 10. Incoming ground on tap 1 of the ground bar (drawn on the middle one of five unnumbered screws).
+ 11. SAFE-OFF. The drive sheets say "Remove safe-off jumper" but connect nothing to S1 and S2. The guide lands
+     nothing there. LEAVE THE SAFE-OFF JUMPER IN until engineering says what S1/S2 connect to.
+ 12. Field wiring (feeder, motor leads, pump contacts, Ethernet to the switch) has no drawn entry. It is shown
+     leaving through the floor. Motor wiring beyond the auxiliary disconnects is not shown.
+
+ 13. FUSE BLOCK HEIGHT. Sheet Z02 draws the fuse block about 70 mm lower than a 60 A class J fuse reaches (it draws
+     the 100 A spacing). The guide puts it by Rockwell's instruction: block mounting holes 1.976 in (50.2 mm) below
+     the switch's lower mounting holes. Set it with an LPJ-60SP fuse in hand.
+
+WHAT IS STILL A STAND-IN OR A SIMPLE SHAPE
+  The enclosure (an 18 in deep model pressed to 12 in) and the air conditioner are stand-ins. Fuse holders, relays
+  and Ethernet jacks are simple shapes. The drive's power terminal block is built to the larger frame's pattern.
+  Use the terminal NAMES on the wire card to find a terminal.
+
+AUDIT: no wire through a solid, across a device or sharing a clamp; every wire end lands on a device that exists.
+No tight bends.

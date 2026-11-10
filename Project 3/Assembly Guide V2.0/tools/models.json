@@ -1,0 +1,14 @@
+{
+ "_about": "Makers' STEP files for the VFD-RT00-03 guide. Paths under ../Vendor Step Files (register.csv there gives each file's source and hash). The models fetched for this panel, 2026-11-10, are the first block. The second block came with the VFD 200 guide: their STEP files are in Project 2's Vendor Step Files, not here, and their converted meshes are already in assets/models. Run: node --max-old-space-size=12000 tools/step_to_mesh.mjs KEY ...",
+ "models": {
+  "PF525C":   { "comp": "COMP-0101", "pn": "25B-D013N104", "step": "COMP-0101_AB_25B-D013N104/01_STEP_Vendor/ng2-c-stp_20130731.stp", "deflection": 0.004 },
+  "Q60":      { "comp": "COMP-0102", "pn": "1494U-D60", "step": "COMP-0102_AB_1494U-D60/01_STEP_Vendor/10001235006_asm.stp", "deflection": 0.009 },
+  "FU60":     { "comp": "COMP-0103", "pn": "1494U-F60", "step": "COMP-0103_AB_1494U-F60/01_STEP_Vendor/10001236416_asm.stp", "deflection": 0.009 },
+  "MTD":      { "comp": "COMP-0104", "pn": "140MT-D9E-C20", "step": "COMP-0104_AB_140MT-D9E-C20/01_STEP_Vendor/140MT-D9E_T (STP) 10005888367.stp", "deflection": 0.006 },
+  "MTTE":     { "comp": "COMP-0105", "pn": "140MT-C-TE", "step": "COMP-0105_AB_140MT-C-TE/01_STEP_Vendor/140MT-C-TE_10005925264_prt00.stp", "deflection": 0.006 },
+  "XLE":      { "comp": "COMP-0106", "pn": "1606-XLE240E-3", "step": "COMP-0106_AB_1606-XLE240E-3/01_STEP_Vendor/1606-XLE240E-3.stp", "deflection": 0.006 },
+  "M1489":    { "comp": "COMP-0107", "pn": "1489-M1 (1 pole)", "step": "COMP-0107_AB_1489-M1/01_STEP_Vendor/1489-M_1pole.stp", "deflection": 0.005 },
+  "FC60J":    { "comp": "COMP-0108", "pn": "1494U-FC60J", "step": "COMP-0108_AB_1494U-FC60J/01_STEP_Vendor/1494U-FC60J.stp" },
+  "DUCT23":   { "comp": "COMP-0109", "pn": "G2X3WH6", "step": "COMP-0109_Panduit_G2X3WH6/01_STEP_Vendor/PartDrawings4.stp", "deflection": 0.02, "angular": 1.2 }
+ }
+}

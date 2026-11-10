@@ -1,0 +1,94 @@
+{
+ "_source": "PartsLib compiled records, read 2026-11-10 (25B-D013N104, 1606-XLE240E-3) and 2026-11-04 (the rest, with the VFD 200 guide). w/h/d in mm. Values are PartsLib's, not field-verified.",
+ "25B-D013N104": {
+  "w": 109,
+  "h": 220,
+  "d": 184,
+  "dsrc": "520-TD001I-EN-E p.15: frame C 109.0 x 220 x 184",
+  "clear": {
+   "top_mm": 50,
+   "bottom_mm": 50,
+   "left_mm": 25,
+   "right_mm": 25
+  },
+  "torque": {
+   "nm": [
+    1.76,
+    2.16
+   ],
+   "lb_in": [
+    15.6,
+    19.1
+   ],
+   "src": "520-TD001I-EN-E p.23"
+  },
+  "wire_awg": [
+   14,
+   8
+  ]
+ },
+ "1606-XLE240E-3": {
+  "w": 62,
+  "h": 124,
+  "d": 124.5,
+  "dsrc": "1606-RM002A p.21: 117 mm from the rail",
+  "clear": {
+   "top_mm": 40,
+   "bottom_mm": 20,
+   "left_mm": 5,
+   "right_mm": 5
+  },
+  "torque": {
+   "nm": 1,
+   "lb_in": 9,
+   "src": "1606-RM002A p.14"
+  },
+  "wire_awg": [
+   20,
+   10
+  ]
+ },
+ "1492-EAJ35": {
+  "w": 7.87,
+  "h": 55.88
+ },
+ "1492-EBJ3": {
+  "w": 1.5,
+  "h": 56
+ },
+ "1492-J4": {
+  "w": 6.1,
+  "h": 60,
+  "d": 47,
+  "dsrc": "rail 7.5 mm + depth from rail",
+  "torque": {
+   "nm": 1,
+   "lb_in": 9,
+   "src": "1492-TD015 p.2"
+  },
+  "wire_awg": [
+   22,
+   10
+  ]
+ },
+ "1492-PDC-3A200-S0108": {
+  "w": 143.3,
+  "h": 127,
+  "d": 99.6,
+  "dsrc": "1492-TD019 p.14 Figure 3 (A/B/C)"
+ },
+ "D167-14": {
+  "w": 8.7,
+  "h": 170.7,
+  "d": 19.1,
+  "wire_awg": [
+   14,
+   4
+  ]
+ },
+ "E750WB": {
+  "w": 162.1,
+  "h": 176,
+  "d": 178.1
+ }
+}
