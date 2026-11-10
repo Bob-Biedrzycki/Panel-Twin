@@ -1,0 +1,111 @@
+VFD 200 ASSEMBLY GUIDE V13.0 - START HERE
+=========================================
+Built from Draft rev20. (V12 and earlier were built from Draft rev18.)
+
+OPEN IT
+  Double-click "VFD200 Assembly Guide.html" (Chrome or Edge). It needs
+  internet access for the 3D library. The file is about 14 MB: give it a
+  few seconds to load. It opens at the step you left it at.
+
+READ THIS FIRST: THE DRAWINGS CHANGED
+  Draft rev20 is a different panel arrangement from rev18, and most wire
+  numbers changed. Do not use markers, cut lists, run sheets or wires made
+  from rev18 or from guide V12: the same number now names a different wire
+  (W62 was TB2-1 to CB5; it is now the RCP1 ground). Print new ones from
+  Wire list in this guide.
+  What moved:
+  Door        HMI1 and the E-STOP are on the RIGHT door (were on the left).
+  Rail 1      FU2, CB3, CB2, CB1. TB1 is no longer on this rail.
+  Power       Q1 and FU1 are about 30 mm further right and 33 mm lower.
+  Rail 3      PLC1, PWS2, IO1, then NS1 and NS2 (were on rail 4), then
+              CPL1-CPL3, CB4, PWS1.
+  Rail 4      SI6 to SI1 (all six isolators), PDB2, PDB3, TB3, TB4, RCP1,
+              CB5, TB2, TB1.
+  TB4         Now five terminals: TB4-1 the E-STOP lamp, TB4-2 to TB4-5 the
+              drives' safe-off. (rev18 called this strip TB5.)
+  Gone        The 72-terminal TB4 and the 24 internal IO-Link cables. The
+              field instrument cables land straight on the CPL1, CPL2 and
+              CPL3 plugs, on site. In the shop, leave those plugs unwired.
+  If parts of the subplate are already built to rev18, ask engineering
+  before reworking them (Issues).
+
+THE SCREEN
+  Along the top   Build, Wire, Parts, Wire list, Issues; how many tasks and
+                  wires are done; Find (type W29, CB4, TB4, FU1-L1); AA for
+                  larger text; ? for help.
+  On the 3D view  Finished (the completed panel), Doors off, Reset, Closer,
+                  Further, Colours (what each wire colour is; pick one to
+                  show only those), Wide view (hides the instructions).
+                  Under the view: Look from front, left, right, above, below.
+  At the bottom   One row of big buttons that never moves: Back / Next step
+                  in Build; Back / Done, next wire / Skip in Wire.
+
+MOVE AROUND
+  Drag to turn the panel, all the way round and underneath. Scroll or pinch
+  to zoom right in to a terminal. Right-drag to slide the view.
+  Keys: arrows = step or wire, C = Finished, F = Doors off, R = Reset,
+  T = fly along the selected wire, K = Colours, P = Wide view, H = help,
+  + and - = zoom, Esc = clear the selection.
+
+BUILD
+  Each step shows where you are in the job, what to do as tick rows, what to
+  check with engineering first, and the parts fitted in that step. Parts and
+  documents are folded away until you open them. Next step turns green when
+  every task in the step is ticked. Ticks are remembered on this computer.
+
+WIRE
+  Press "Start wiring" on a wiring step, or Wire at the top. Each card shows
+  the marker, size, colour and cut length, both ends (device, terminal, where
+  it is on the device, end type, torque and strip length) and the duct route.
+  Press "Done, next wire" (or Enter) after each one.
+  Wire list: marker list (CSV) for the label printer, a printable run sheet
+  with tick boxes, and a cut list with metres per wire size.
+
+SELECT AND TRACE
+  Click a wire: everything else turns to glass and both ends are ringed and
+  named. Click a part: its wires stay solid and every terminal is tagged.
+  The buttons on the selection are Wire it, Wires, Parts, Step, Trace route.
+
+THINGS THAT ARE NOT AS THE DRAWINGS SHOW THEM
+  FU1         A trailer fuse block under Q1, poles in line, Z = 113 mm. The
+              three LPJ-70SP fuses are the link from Q1 to FU1: there are no
+              W1-W3 wires. The picture on sheet 3 shows FU1 about 60 mm
+              higher than a fuse allows; the guide puts it where the fuses
+              reach. Engineering to confirm.
+  W4-W6       FU1 is 22 mm to the right of PDB1 and close above it, so
+              these 4 AWG wires make a tight offset. Form them by hand.
+  T1          H3 to H2 is the flat metal link that comes with the
+              transformer, not a wire.
+  RCP1        One terminal block (L, N, G) at the top feeds both outlets.
+              The two jumpers on sheet 6 are not fitted. Check the L/N/G
+              marking on the device.
+  TB4         W25 goes from TB4-2 to E-STOP 12 and W27 from TB4-3 to
+              E-STOP 21. W49 is a jumper TB4-4 to TB4-2 and W51 a jumper
+              TB4-5 to TB4-3, on the door side. Sheet 5 draws junction dots
+              and does not say where they are made; this is the guide's
+              reading, with sheet 15. Engineering to confirm.
+  Door wires  The right door hinges on the centre post. The guide brings
+              the HMI1 and E-STOP wires forward from the duct below the
+              drives at the centre post. No route is on the drawings: ask
+              before cutting these to length.
+  Rail 3      PLC1, PWS2, IO1 from the left, as built (sheet 3 draws PWS2
+              first). IO1 is 52.5 mm wide.
+  Rail 4      The six isolators are 22.5 mm each (row ends at 259.5 mm);
+              TB1 is 48.6 mm long. Sheet 3 draws both shorter.
+  CBL-IOL-01  VM1 to CPL2 port X08, as drawn: brown (C/Q) on X08-3 and blue
+              (L-) on X08-4. That looks reversed against the AL1920 label.
+              Confirm before power is applied.
+  Feeder      The incoming feeder (Q1 1L1, 3L2, 5L3) and ground (GB1
+              terminal 1) are by the installer; size and entry point are
+              not on the drawings.
+  Fuses       T1's three fuses are not in the BOM; the guide shows a best
+              approximation (FNQ-R-3-1/2 x 2, FNM-10 x 1). Confirm before
+              ordering. Three LPJ-70SP are needed; the BOM lists one.
+  Every one of these is under Issues, for the engineer who drew the panel.
+
+FOLDER
+  VFD200 Assembly Guide.html   The guide: the only file a builder needs.
+  README.md                    What changed in each version, what is open.
+  REVISIONS.md                 The checklists, V13 back to V6.
+  COMPLETION.md                What was asked, done and not verified.
+  src\ data\ assets\ tools\ vendor\ build.mjs   Source (developers only).
