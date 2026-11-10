@@ -1,0 +1,79 @@
+VFD 200 ASSEMBLY GUIDE V12.0 - START HERE
+=========================================
+
+OPEN IT
+  Double-click "VFD200 Assembly Guide.html" (Chrome or Edge). It needs
+  internet access for the 3D library. The file is about 14 MB: give it a
+  few seconds to load. It opens at the step you left it at.
+
+NEW IN V12
+  E-STOP safety wiring: W24 is a jumper on TB5 from terminal 1 to 3, and
+  W25 from terminal 2 to 4, on the door side of the strip. One wire goes
+  from TB5-3 to E-STOP 12 and one from TB5-4 to E-STOP 21. (V11 ran all
+  four to the E-STOP.) Sheet 5 does not say where the junctions are made;
+  this is the guide's choice and is listed for engineering to confirm.
+
+THE SCREEN
+  Along the top   Build, Wire, Parts, Wire list, Issues; how many tasks and
+                  wires are done; Find (type W29, CB4, TB4, FU1-L1); AA for
+                  larger text; ? for help.
+  On the 3D view  Finished (the completed panel), Doors off, Reset, Closer,
+                  Further, Colours (what each wire colour is; pick one to
+                  show only those), Wide view (hides the instructions).
+                  Under the view: Look from front, left, right, above, below.
+  At the bottom   One row of big buttons that never moves: Back / Next step
+                  in Build; Back / Done, next wire / Skip in Wire.
+
+MOVE AROUND
+  Drag to turn the panel, all the way round and underneath. Scroll or pinch
+  to zoom right in to a terminal. Right-drag to slide the view.
+  Keys: arrows = step or wire, C = Finished, F = Doors off, R = Reset,
+  T = fly along the selected wire, K = Colours, P = Wide view, H = help,
+  + and - = zoom, Esc = clear the selection.
+
+BUILD
+  Each step shows where you are in the job, what to do as tick rows, what to
+  check with engineering first, and the parts fitted in that step. Parts and
+  documents are folded away until you open them. Next step turns green when
+  every task in the step is ticked. Ticks are remembered on this computer.
+
+WIRE
+  Press "Start wiring" on a wiring step, or Wire at the top. Each card shows
+  the marker, size, colour and cut length, both ends (device, terminal, where
+  it is on the device, end type, torque and strip length) and the duct route.
+  Press "Done, next wire" (or Enter) after each one.
+  Wire list: marker list (CSV) for the label printer, a printable run sheet
+  with tick boxes, and a cut list with metres per wire size.
+
+SELECT AND TRACE
+  Click a wire: everything else turns to glass and both ends are ringed and
+  named. Click a part: its wires stay solid and every terminal is tagged.
+  The buttons on the selection are Wire it, Wires, Parts, Step, Trace route.
+
+THINGS THAT ARE NOT AS THE DRAWINGS SHOW THEM
+  FU1         A trailer fuse block, 113 mm under Q1. The three LPJ-70SP
+              fuses are the link from Q1 to FU1: there are no W1-W3 wires.
+  T1          H3 to H2 is the flat metal link that comes with the
+              transformer, not a wire.
+  RCP1        One terminal block (L, N, G) at the top feeds both outlets.
+              The two jumpers on sheet 6 are not fitted. Check the L/N/G
+              marking on the device.
+  TB5         W24 and W25 are jumpers on the strip (above). W24, W25 and
+              W102 are marked on the door side of TB5 only.
+  Rail 3      PLC1, PWS2, IO1 from the left, as built (sheet 3 draws PWS2
+              first). IO1 is 52.5 mm wide.
+  CBL-IOL-09  Lands on CPL2 X01-1, X01-3, X01-4 (sheet 11 misprints two).
+  Feeder      The incoming feeder (Q1 1L1, 3L2, 5L3) and ground (GB1
+              terminal 1) are by the installer; size and entry point are
+              not on the drawings.
+  Fuses       T1's three fuses are not in the BOM; the guide shows a best
+              approximation (FNQ-R-3-1/2 x 2, FNM-10 x 1). Confirm before
+              ordering. Three LPJ-70SP are needed; the BOM lists one.
+  Every one of these is under Issues, for the engineer who drew the panel.
+
+FOLDER
+  VFD200 Assembly Guide.html   The guide: the only file a builder needs.
+  README.md                    What changed in each version, what is open.
+  REVISIONS.md                 The checklists, V12 back to V6.
+  COMPLETION.md                What was asked, done and not verified.
+  src\ data\ assets\ tools\ vendor\ build.mjs   Source (developers only).

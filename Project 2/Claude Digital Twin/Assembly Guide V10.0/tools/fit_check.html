@@ -1,0 +1,63 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Fit check</title>
+<style>body{margin:0;font:12px Inter,system-ui,sans-serif;background:#f3f2ee} #grid{display:flex;flex-wrap:wrap;gap:8px;padding:8px}
+.cell{background:#fff;border:1px solid #ddd;border-radius:8px;padding:6px} .cell b{font-family:monospace} canvas{display:block;margin-top:4px}</style>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }</script>
+</head><body><div id="grid"></div>
+<script type="module">
+// For each device: the vendor model (turned as in src/model_fit.mjs, or ?rot=TAG:x90,z-90;...) seen from the front, centred
+// on its sheet 3 rectangle, at one scale with the sheet 3 face image laid over it (?a= opacity) and the terminal points.
+// Red rectangle: the sheet 3 face. Blue: the model's outline. Dots: terminals (pins in src/terminals.mjs, or ?fitpins= model-relative).
+import * as THREE from 'three'
+import { gunzip, decodeModel } from '../src/models.js'
+import { MODEL_FIT } from '../src/model_fit.mjs'
+import { DEVICES } from '../src/layout.mjs'
+import { LAYOUTS, DEVICE_LAYOUT } from '../src/terminals.mjs'
+const qs = new URLSearchParams(location.search)
+const idx = await (await fetch('../assets/models/index.json')).json()
+const tex = await (await fetch('../assets/tex/index.json')).json()
+const tags = (qs.get('t') ?? Object.keys(MODEL_FIT).join(',')).split(',')
+const PX = Number(qs.get('px') ?? 3)               // pixels per mm
+const alpha = Number(qs.get('a') ?? 0.45)
+const ren = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, alpha: true })
+const AX = { x: new THREE.Vector3(1, 0, 0), y: new THREE.Vector3(0, 1, 0), z: new THREE.Vector3(0, 0, 1) }
+const rotOver = Object.fromEntries((qs.get('rot') ?? '').split(';').filter(Boolean).map((s) => { const [k, v] = s.split(':'); return [k, v ? v.split(',') : []] }))
+for (const tag of tags) {
+  const f = MODEL_FIT[tag], d = DEVICES.find((x) => x.tag === tag); if (!f) continue
+  const meta = idx[f.model]
+  const parts = decodeModel(THREE, await gunzip(await (await fetch(`../assets/models/${f.model}.bin`)).arrayBuffer()), meta)
+  const scene = new THREE.Scene(); scene.add(new THREE.HemisphereLight('#fff', '#777', 1.7)); const dl = new THREE.DirectionalLight('#fff', 1.5); dl.position.set(-1, 2, 4); scene.add(dl)
+  const g = new THREE.Group(); scene.add(g)
+  parts.forEach((p, i) => g.add(new THREE.Mesh(p.geo, new THREE.MeshStandardMaterial({ color: p.color ? new THREE.Color(...p.color) : new THREE.Color().setHSL((i * 0.13) % 1, 0.25, 0.62), roughness: 0.6, side: THREE.DoubleSide }))))
+  for (const r of rotOver[tag] ?? f.rot) g.rotateOnWorldAxis(AX[r[0]], Number(r.slice(1)) * Math.PI / 180)
+  g.updateMatrixWorld()
+  const b = new THREE.Box3().setFromObject(g), c = b.getCenter(new THREE.Vector3()), sz = b.getSize(new THREE.Vector3())
+  // sheet 3 rectangle (mm, Y down)
+  const rr = d?.r ? { X0: d.r[0], X1: d.r[1], Yt: d.r[2], Yb: d.r[3] } : tex[d?.tex] ?? { X0: 0, X1: sz.x, Yt: 0, Yb: sz.y }
+  const rw = rr.X1 - rr.X0, rh = rr.Yb - rr.Yt, rcx = (rr.X0 + rr.X1) / 2 + (f.dx ?? 0), rcy = (rr.Yt + rr.Yb) / 2 + (f.dy ?? 0)
+  const Wmm = Math.max(rw, sz.x) + 30, Hmm = Math.max(rh, sz.y) + 30
+  const W = Math.round(Wmm * PX), H = Math.round(Hmm * PX)
+  ren.setSize(W, H)
+  const cam = new THREE.OrthographicCamera(-Wmm / 2, Wmm / 2, Hmm / 2, -Hmm / 2, -5000, 5000); cam.position.set(c.x, c.y, c.z + 1000); cam.lookAt(c.x, c.y, c.z)
+  ren.render(scene, cam)
+  const cv = document.createElement('canvas'); cv.width = W; cv.height = H; const cx = cv.getContext('2d')
+  cx.fillStyle = '#fafaf8'; cx.fillRect(0, 0, W, H); cx.drawImage(ren.domElement, 0, 0)
+  // sheet coords -> canvas: model centre sits on the rectangle centre
+  // the model is centred on the rectangle centre moved by (dx, dy); the face image and the pins stay where sheet 3 has them
+  const toC = (X, Y) => [W / 2 + (X - rcx) * PX, H / 2 + (Y - rcy) * PX]
+  if (d?.tex && tex[d.tex]) { const im = new Image(); im.src = `../assets/tex/${tex[d.tex].file}`; await im.decode(); cx.globalAlpha = alpha; const [x0, y0] = toC(rr.X0, rr.Yt); cx.drawImage(im, x0, y0, rw * PX, rh * PX); cx.globalAlpha = 1 }
+  cx.strokeStyle = '#d00'; cx.lineWidth = 1; { const [x0, y0] = toC(rr.X0, rr.Yt); cx.strokeRect(x0, y0, rw * PX, rh * PX) }
+  cx.strokeStyle = '#06c'; cx.strokeRect(W / 2 - sz.x * PX / 2, H / 2 - sz.y * PX / 2, sz.x * PX, sz.y * PX)
+  // terminal points as placed on the model outline (u, v of the model's front outline)
+  const lay = LAYOUTS[DEVICE_LAYOUT[tag]]
+  if (lay) for (const [n, [u, v]] of Object.entries(lay.pins)) {
+    const [x, y] = toC(rr.X0 + u * rw, rr.Yt + v * rh)
+    cx.fillStyle = '#ff2d00'; cx.beginPath(); cx.arc(x, y, 3, 0, 7); cx.fill()
+    if (qs.has('names')) { cx.fillStyle = '#000'; cx.font = '9px monospace'; cx.fillText(n, x + 4, y - 3) }
+  }
+  const cell = document.createElement('div'); cell.className = 'cell'
+  cell.innerHTML = `<b>${tag}</b> ${f.model} · model ${sz.x.toFixed(1)} x ${sz.y.toFixed(1)} x ${sz.z.toFixed(1)} mm · sheet 3 ${rw.toFixed(1)} x ${rh.toFixed(1)} · rot ${(rotOver[tag] ?? f.rot).join(',')}`
+  cell.appendChild(cv); document.getElementById('grid').appendChild(cell)
+}
+document.title = 'ready'
+</script></body></html>
