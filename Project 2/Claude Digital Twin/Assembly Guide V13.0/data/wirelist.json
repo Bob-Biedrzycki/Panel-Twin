@@ -1,0 +1,4251 @@
+{
+ "source": "Draft rev20.pdf sheets 4-15 (BOM sheets 16-18 used for part numbers and terminal types). Rewritten from the rev18 list on 2026-11-10 after a sheet-by-sheet comparison of rev18 and rev20.",
+ "wires": [
+  {
+   "wire": "W1",
+   "awg": "4",
+   "potential": "L1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Q1",
+    "term": "2T1"
+   },
+   "to": {
+    "dev": "FU1",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0409",
+   "note": ""
+  },
+  {
+   "wire": "W2",
+   "awg": "4",
+   "potential": "L2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Q1",
+    "term": "4T2"
+   },
+   "to": {
+    "dev": "FU1",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0409",
+   "note": ""
+  },
+  {
+   "wire": "W3",
+   "awg": "4",
+   "potential": "L3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Q1",
+    "term": "6T3"
+   },
+   "to": {
+    "dev": "FU1",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0409",
+   "note": ""
+  },
+  {
+   "wire": "W4",
+   "awg": "4",
+   "potential": "L4",
+   "color_if_shown": null,
+   "from": {
+    "dev": "FU1",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "PDB1",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0415",
+   "note": ""
+  },
+  {
+   "wire": "W5",
+   "awg": "4",
+   "potential": "L5",
+   "color_if_shown": null,
+   "from": {
+    "dev": "FU1",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "PDB1",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0423",
+   "note": ""
+  },
+  {
+   "wire": "W6",
+   "awg": "4",
+   "potential": "L6",
+   "color_if_shown": null,
+   "from": {
+    "dev": "FU1",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "PDB1",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0432",
+   "note": ""
+  },
+  {
+   "wire": "W7",
+   "awg": "8",
+   "potential": "L1-1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L1-1"
+   },
+   "to": {
+    "dev": "CB1",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0415",
+   "note": "cross ref (0447)"
+  },
+  {
+   "wire": "W8",
+   "awg": "8",
+   "potential": "L1-2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L1-2"
+   },
+   "to": {
+    "dev": "CB2",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0416",
+   "note": "cross ref (0459)"
+  },
+  {
+   "wire": "W9",
+   "awg": "14",
+   "potential": "L1-3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L1-3"
+   },
+   "to": {
+    "dev": "T1",
+    "term": "1L1 (H1 primary fuse)"
+   },
+   "sheet": 4,
+   "line": "0417",
+   "note": "cross ref (0468)"
+  },
+  {
+   "wire": "W10",
+   "awg": "14",
+   "potential": "L1-4",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L1-4"
+   },
+   "to": {
+    "dev": "CB3",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0418",
+   "note": "cross ref (0475)"
+  },
+  {
+   "wire": "W11",
+   "awg": "8",
+   "potential": "L2-1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L2-1"
+   },
+   "to": {
+    "dev": "CB1",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0423",
+   "note": "cross ref (0448)"
+  },
+  {
+   "wire": "W12",
+   "awg": "8",
+   "potential": "L2-2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L2-2"
+   },
+   "to": {
+    "dev": "CB2",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0424",
+   "note": "cross ref (0460)"
+  },
+  {
+   "wire": "W13",
+   "awg": "14",
+   "potential": "L2-3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L2-3"
+   },
+   "to": {
+    "dev": "T1",
+    "term": "3L2 (H4 primary fuse)"
+   },
+   "sheet": 4,
+   "line": "0425",
+   "note": "cross ref (0471)"
+  },
+  {
+   "wire": "W14",
+   "awg": "14",
+   "potential": "L2-4",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L2-4"
+   },
+   "to": {
+    "dev": "CB3",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0426",
+   "note": "cross ref (0476)"
+  },
+  {
+   "wire": "W15",
+   "awg": "8",
+   "potential": "L3-1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L3-1"
+   },
+   "to": {
+    "dev": "CB1",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0432",
+   "note": "cross ref (0449)"
+  },
+  {
+   "wire": "W16",
+   "awg": "8",
+   "potential": "L3-2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L3-2"
+   },
+   "to": {
+    "dev": "CB2",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0433",
+   "note": "cross ref (0461)"
+  },
+  {
+   "wire": "W17",
+   "awg": "14",
+   "potential": "L16",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB1",
+    "term": "L3-4"
+   },
+   "to": {
+    "dev": "CB3",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0435",
+   "note": "cross ref (0477); potential printed L16 (not L3-4 like the other PDB1 outputs)"
+  },
+  {
+   "wire": "W29",
+   "awg": "8",
+   "potential": "L7",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB1",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "DRV1",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0447",
+   "note": ""
+  },
+  {
+   "wire": "W30",
+   "awg": "8",
+   "potential": "L8",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB1",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "DRV1",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0448",
+   "note": ""
+  },
+  {
+   "wire": "W31",
+   "awg": "8",
+   "potential": "L9",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB1",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "DRV1",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0449",
+   "note": ""
+  },
+  {
+   "wire": "W32",
+   "awg": "8",
+   "potential": "L10",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB2",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "DRV2",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0459",
+   "note": ""
+  },
+  {
+   "wire": "W33",
+   "awg": "8",
+   "potential": "L11",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB2",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "DRV2",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0460",
+   "note": ""
+  },
+  {
+   "wire": "W34",
+   "awg": "8",
+   "potential": "L12",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB2",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "DRV2",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0461",
+   "note": ""
+  },
+  {
+   "wire": "W35",
+   "awg": "14",
+   "potential": "L13",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB3",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "PWS1",
+    "term": "L1"
+   },
+   "sheet": 4,
+   "line": "0475",
+   "note": ""
+  },
+  {
+   "wire": "W36",
+   "awg": "14",
+   "potential": "L14",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB3",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "PWS1",
+    "term": "L2"
+   },
+   "sheet": 4,
+   "line": "0476",
+   "note": ""
+  },
+  {
+   "wire": "W37",
+   "awg": "14",
+   "potential": "L15",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB3",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "PWS1",
+    "term": "L3"
+   },
+   "sheet": 4,
+   "line": "0477",
+   "note": ""
+  },
+  {
+   "wire": "W38",
+   "awg": "8",
+   "potential": "L18",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV1",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "MTR1",
+    "term": "U"
+   },
+   "sheet": 4,
+   "line": "0447",
+   "note": "passes through TB1-1 (sheet 14 line 1450); only one number shown. W38 label is on the DRV1->TB1 segment (sheet 4); TB1->MTR1 segment is unnumbered motor wiring 'Installed on site'"
+  },
+  {
+   "wire": "W39",
+   "awg": "8",
+   "potential": "L19",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV1",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "MTR1",
+    "term": "V"
+   },
+   "sheet": 4,
+   "line": "0448",
+   "note": "passes through TB1-2 (sheet 14 line 1451); only one number shown. W39 label is on the DRV1->TB1 segment (sheet 4); TB1->MTR1 segment is unnumbered motor wiring 'Installed on site'"
+  },
+  {
+   "wire": "W40",
+   "awg": "8",
+   "potential": "L20",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV1",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "MTR1",
+    "term": "W"
+   },
+   "sheet": 4,
+   "line": "0449",
+   "note": "passes through TB1-3 (sheet 14 line 1452); only one number shown. W40 label is on the DRV1->TB1 segment (sheet 4); TB1->MTR1 segment is unnumbered motor wiring 'Installed on site'"
+  },
+  {
+   "wire": "W42",
+   "awg": "8",
+   "potential": "L21",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV2",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "MTR2",
+    "term": "U"
+   },
+   "sheet": 4,
+   "line": "0459",
+   "note": "passes through TB1-4 (sheet 14 line 1458); only one number shown. Label is on the DRV2->TB1 segment (sheet 4); TB1->MTR2 segment is unnumbered motor wiring 'Installed on site'"
+  },
+  {
+   "wire": "W43",
+   "awg": "8",
+   "potential": "L22",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV2",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "MTR2",
+    "term": "V"
+   },
+   "sheet": 4,
+   "line": "0460",
+   "note": "passes through TB1-5 (sheet 14 line 1459); only one number shown. Label is on the DRV2->TB1 segment (sheet 4); TB1->MTR2 segment is unnumbered motor wiring 'Installed on site'"
+  },
+  {
+   "wire": "W44",
+   "awg": "8",
+   "potential": "L23",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV2",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "MTR2",
+    "term": "W"
+   },
+   "sheet": 4,
+   "line": "0461",
+   "note": "passes through TB1-6 (sheet 14 line 1460); only one number shown. Label is on the DRV2->TB1 segment (sheet 4); TB1->MTR2 segment is unnumbered motor wiring 'Installed on site'"
+  },
+  {
+   "wire": "W41",
+   "awg": "8",
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "DRV1",
+    "term": "PE"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 4,
+   "line": "0453",
+   "note": "ground (green)"
+  },
+  {
+   "wire": "W45",
+   "awg": "8",
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "DRV2",
+    "term": "PE"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 4,
+   "line": "0465",
+   "note": "ground (green)"
+  },
+  {
+   "wire": "W54",
+   "awg": "14",
+   "potential": "L",
+   "color_if_shown": null,
+   "from": {
+    "dev": "T1",
+    "term": "2T1 (X2 secondary fuse)"
+   },
+   "to": {
+    "dev": "TB2",
+    "term": "1"
+   },
+   "sheet": 4,
+   "line": "0468",
+   "note": "cross ref (0600): drawn to the L bus on sheet 6, which joins TB2-1 and TB2-2 at a junction; how TB2-1/TB2-2 are linked is not shown"
+  },
+  {
+   "wire": "W19",
+   "awg": "14",
+   "potential": "N",
+   "color_if_shown": null,
+   "from": {
+    "dev": "T1",
+    "term": "X1"
+   },
+   "to": {
+    "dev": "TB2",
+    "term": "3"
+   },
+   "sheet": 4,
+   "line": "0471",
+   "note": "cross ref (0600): drawn to the N bus on sheet 6, which joins TB2-3 and TB2-4; N is bonded to GND by W20 at a junction just after W19"
+  },
+  {
+   "wire": "W20",
+   "awg": "14",
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "to": {
+    "dev": "T1",
+    "term": "X1 (N conductor bond junction)"
+   },
+   "sheet": 4,
+   "line": "0473",
+   "note": "ground/neutral bond, green; Drawn landing on a junction dot on the N conductor downstream of W19, not on a device terminal; X1 end inferred",
+   "inferred": true
+  },
+  {
+   "wire": "W21",
+   "awg": "12",
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "PWS1",
+    "term": "PE"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 4,
+   "line": "0474",
+   "note": "ground (green)"
+  },
+  {
+   "wire": "W22",
+   "awg": "12",
+   "potential": "DC-COM",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PWS1",
+    "term": "1 (OUT-)"
+   },
+   "to": {
+    "dev": "CB4",
+    "term": "0V (upper, line 0714)"
+   },
+   "sheet": 4,
+   "line": "0475",
+   "note": "cross ref (0700); sheet 7 DC-COM lands on CB4 upper 0V terminal"
+  },
+  {
+   "wire": "W23",
+   "awg": "12",
+   "potential": "24V",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PWS1",
+    "term": "4 (OUT+)"
+   },
+   "to": {
+    "dev": "CB4",
+    "term": "DC24+"
+   },
+   "sheet": 4,
+   "line": "0479",
+   "note": "cross ref (0700); sheet 7 24V lands on CB4 DC24+"
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "L2-3/L1-3 series link",
+   "color_if_shown": null,
+   "from": {
+    "dev": "T1",
+    "term": "H2"
+   },
+   "to": {
+    "dev": "T1",
+    "term": "H3"
+   },
+   "sheet": 4,
+   "line": "0469",
+   "note": "unnumbered jumper (drawn red) between primary taps H2 and H3 for 480 V connection"
+  },
+  {
+   "wire": "W24",
+   "awg": "16",
+   "potential": "1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV1",
+    "term": "S1 (Safety 1)"
+   },
+   "to": {
+    "dev": "TB4",
+    "term": "2"
+   },
+   "sheet": 5,
+   "line": "0523",
+   "note": "Remove factory safe-off jumper on DRV1"
+  },
+  {
+   "wire": "W26",
+   "awg": null,
+   "potential": "3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV1",
+    "term": "S2 (Safety 2)"
+   },
+   "to": {
+    "dev": "TB4",
+    "term": "3"
+   },
+   "sheet": 5,
+   "line": "0524",
+   "note": "no AWG printed ('W26 -')"
+  },
+  {
+   "wire": "W25",
+   "awg": "16",
+   "potential": "1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB4",
+    "term": "2"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "12"
+   },
+   "sheet": 5,
+   "line": "0529",
+   "note": "Door side of TB4. Sheet 5 draws W25 to a junction dot at line 0531, where it meets W49; one unnumbered leg (no size printed) goes on from the junction to E-STOP 12. Where the junction is made is not shown."
+  },
+  {
+   "wire": "W27",
+   "awg": "16",
+   "potential": "3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB4",
+    "term": "3"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "21"
+   },
+   "sheet": 5,
+   "line": "0529",
+   "note": "Door side of TB4. Sheet 5 draws W27 to a junction dot at line 0535, where it meets W51; one unnumbered leg (no size printed) goes on from the junction to E-STOP 21. Where the junction is made is not shown."
+  },
+  {
+   "wire": "W48",
+   "awg": null,
+   "potential": "1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV2",
+    "term": "S1 (Safety 1)"
+   },
+   "to": {
+    "dev": "TB4",
+    "term": "4"
+   },
+   "sheet": 5,
+   "line": "0523",
+   "note": "no AWG printed ('W48 -'). Remove factory safe-off jumper on DRV2"
+  },
+  {
+   "wire": "W50",
+   "awg": "16",
+   "potential": "3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRV2",
+    "term": "S2 (Safety 2)"
+   },
+   "to": {
+    "dev": "TB4",
+    "term": "5"
+   },
+   "sheet": 5,
+   "line": "0524",
+   "note": ""
+  },
+  {
+   "wire": "W49",
+   "awg": "16",
+   "potential": "1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB4",
+    "term": "4"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "12"
+   },
+   "sheet": 5,
+   "line": "0529",
+   "note": "Door side of TB4. Sheet 5 draws W49 to a junction dot at line 0531, where it meets W25; one unnumbered leg (no size printed) goes on from the junction to E-STOP 12. Where the junction is made is not shown."
+  },
+  {
+   "wire": "W51",
+   "awg": "16",
+   "potential": "3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB4",
+    "term": "5"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "21"
+   },
+   "sheet": 5,
+   "line": "0529",
+   "note": "Door side of TB4. Sheet 5 draws W51 to a junction dot at line 0535, where it meets W27; one unnumbered leg (no size printed) goes on from the junction to E-STOP 21. Where the junction is made is not shown."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "24V - 8",
+   "color_if_shown": null,
+   "from": {
+    "dev": "E-STOP",
+    "term": "11"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "22"
+   },
+   "sheet": 5,
+   "line": "0535",
+   "note": "unnumbered jumper; 24V-8 (from CB4 OUT8, W28) feeds both contacts 11 and 22"
+  },
+  {
+   "wire": "W56",
+   "awg": "14",
+   "potential": null,
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB2",
+    "term": "1"
+   },
+   "to": {
+    "dev": "CB5",
+    "term": "L1"
+   },
+   "sheet": 6,
+   "line": "0608",
+   "note": "potential not printed (L bus from W54)"
+  },
+  {
+   "wire": "W58",
+   "awg": "14",
+   "potential": "6",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB5",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "RCP1",
+    "term": "L2-1"
+   },
+   "sheet": 6,
+   "line": "0608",
+   "note": ""
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "6",
+   "color_if_shown": null,
+   "from": {
+    "dev": "RCP1",
+    "term": "L2-1"
+   },
+   "to": {
+    "dev": "RCP1",
+    "term": "L1-2"
+   },
+   "sheet": 6,
+   "line": "0608",
+   "note": "unnumbered jumper, upper to lower receptacle (hot)"
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "N",
+   "color_if_shown": null,
+   "from": {
+    "dev": "RCP1",
+    "term": "L1-1"
+   },
+   "to": {
+    "dev": "RCP1",
+    "term": "L2-2"
+   },
+   "sheet": 6,
+   "line": "0608",
+   "note": "unnumbered jumper, upper to lower receptacle (neutral)"
+  },
+  {
+   "wire": "W65",
+   "awg": "14",
+   "potential": "N",
+   "color_if_shown": null,
+   "from": {
+    "dev": "RCP1",
+    "term": "L1-1"
+   },
+   "to": {
+    "dev": "TB2",
+    "term": "3"
+   },
+   "sheet": 6,
+   "line": "0608",
+   "note": ""
+  },
+  {
+   "wire": "W62",
+   "awg": "14",
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "RCP1",
+    "term": "GND"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 6,
+   "line": "0612",
+   "note": "ground (green)"
+  },
+  {
+   "wire": "W57",
+   "awg": "14",
+   "potential": null,
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB2",
+    "term": "2"
+   },
+   "to": {
+    "dev": "FU2",
+    "term": "1L1"
+   },
+   "sheet": 6,
+   "line": "0624",
+   "note": "potential not printed (L bus from W54)"
+  },
+  {
+   "wire": "W59",
+   "awg": "14",
+   "potential": "2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "FU2",
+    "term": "2T1"
+   },
+   "to": {
+    "dev": "Panel",
+    "term": "X1-1 (L)"
+   },
+   "sheet": 6,
+   "line": "0624",
+   "note": "device is the air conditioner, red tag printed 'Panel' with label 'ACU' (SCE-AC1000B120VSS)"
+  },
+  {
+   "wire": "W63",
+   "awg": "14",
+   "potential": "N",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Panel",
+    "term": "X1-3 (N)"
+   },
+   "to": {
+    "dev": "TB2",
+    "term": "4"
+   },
+   "sheet": 6,
+   "line": "0626",
+   "note": "ACU (tag 'Panel')"
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "Panel",
+    "term": "X1-4 (PE)"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 6,
+   "line": "0627",
+   "note": "unnumbered ground (green), ACU"
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "L",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB2",
+    "term": "1"
+   },
+   "to": {
+    "dev": "TB2",
+    "term": "2"
+   },
+   "sheet": 6,
+   "line": "0608-0624",
+   "note": "link between TB2-1 and TB2-2 implied by L bus junction; method not shown",
+   "inferred": true
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "N",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB2",
+    "term": "3"
+   },
+   "to": {
+    "dev": "TB2",
+    "term": "4"
+   },
+   "sheet": 6,
+   "line": "0608-0626",
+   "note": "link between TB2-3 and TB2-4 implied by N bus junction; method not shown",
+   "inferred": true
+  },
+  {
+   "wire": "W67",
+   "awg": "12",
+   "potential": "0V",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "0V (lower, line 0715)"
+   },
+   "to": {
+    "dev": "PDB3",
+    "term": "IN"
+   },
+   "sheet": 7,
+   "line": "0715",
+   "note": "cross ref (0748)"
+  },
+  {
+   "wire": "W68",
+   "awg": "14",
+   "potential": "24V - 1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT1"
+   },
+   "to": {
+    "dev": "PWS2",
+    "term": "+24V DC"
+   },
+   "sheet": 7,
+   "line": "0722",
+   "note": "cross ref (0804); CB4 channel set to 3A"
+  },
+  {
+   "wire": "W69",
+   "awg": "14",
+   "potential": "24V - 2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT2"
+   },
+   "to": {
+    "dev": "HMI1",
+    "term": "DC +"
+   },
+   "sheet": 7,
+   "line": "0723",
+   "note": "cross ref (0858); CB4 channel set to 3A; destination text on sheet 7 reads 'HM1' (device is HMI1)"
+  },
+  {
+   "wire": "W70",
+   "awg": "14",
+   "potential": "24V - 3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT3"
+   },
+   "to": {
+    "dev": "CPL1",
+    "term": "X31-3 (+24VDC)"
+   },
+   "sheet": 7,
+   "line": "0724",
+   "note": "cross ref (0905); CB4 channel set to 4A"
+  },
+  {
+   "wire": "W71",
+   "awg": "14",
+   "potential": "24V - 4",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT4"
+   },
+   "to": {
+    "dev": "CPL2",
+    "term": "X31-3 (+24VDC)"
+   },
+   "sheet": 7,
+   "line": "0725",
+   "note": "cross ref (0924); CB4 channel set to 4A"
+  },
+  {
+   "wire": "W72",
+   "awg": "14",
+   "potential": "24V - 5",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT5"
+   },
+   "to": {
+    "dev": "CPL3",
+    "term": "X31-3 (+24VDC)"
+   },
+   "sheet": 7,
+   "line": "0726",
+   "note": "cross ref (0949); CB4 channel set to 4A"
+  },
+  {
+   "wire": "W73",
+   "awg": "16",
+   "potential": "24V - 6",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT6"
+   },
+   "to": {
+    "dev": "VM1",
+    "term": "1 (P24)"
+   },
+   "sheet": 7,
+   "line": "0727",
+   "note": "cross ref (1014); CB4 channel set to 2A"
+  },
+  {
+   "wire": "W74",
+   "awg": "14",
+   "potential": "24V - 7",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT7"
+   },
+   "to": {
+    "dev": "PDB2",
+    "term": "IN"
+   },
+   "sheet": 7,
+   "line": "0728",
+   "note": "cross ref (0772); CB4 channel set to 2A"
+  },
+  {
+   "wire": "W28",
+   "awg": "16",
+   "potential": "24V - 8",
+   "color_if_shown": null,
+   "from": {
+    "dev": "CB4",
+    "term": "OUT8"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "11 and 22 (via jumper)"
+   },
+   "sheet": 7,
+   "line": "0729",
+   "note": "cross ref (0535); CB4 channel set to 2A; lands on E-STOP 24V-8 node feeding contacts 11 and 22"
+  },
+  {
+   "wire": "W75",
+   "awg": "14",
+   "potential": "9",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT1"
+   },
+   "to": {
+    "dev": "PWS2",
+    "term": "DC COM"
+   },
+   "sheet": 7,
+   "line": "0748",
+   "note": "cross ref (0804)"
+  },
+  {
+   "wire": "W76",
+   "awg": "14",
+   "potential": "10",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT2"
+   },
+   "to": {
+    "dev": "HMI1",
+    "term": "DC -"
+   },
+   "sheet": 7,
+   "line": "0749",
+   "note": "cross ref (0858); destination text reads 'HM1' (device is HMI1)"
+  },
+  {
+   "wire": "W77",
+   "awg": "14",
+   "potential": "11",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT3"
+   },
+   "to": {
+    "dev": "CPL1",
+    "term": "X31-1 (GND)"
+   },
+   "sheet": 7,
+   "line": "0750",
+   "note": "cross ref (0905)"
+  },
+  {
+   "wire": "W78",
+   "awg": "14",
+   "potential": "12",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT4"
+   },
+   "to": {
+    "dev": "CPL2",
+    "term": "X31-1 (GND)"
+   },
+   "sheet": 7,
+   "line": "0751",
+   "note": "cross ref (0924)"
+  },
+  {
+   "wire": "W79",
+   "awg": "14",
+   "potential": "13",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT5"
+   },
+   "to": {
+    "dev": "CPL3",
+    "term": "X31-1 (GND)"
+   },
+   "sheet": 7,
+   "line": "0752",
+   "note": "cross ref (0949)"
+  },
+  {
+   "wire": "W80",
+   "awg": "16",
+   "potential": "14",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT6"
+   },
+   "to": {
+    "dev": "VM1",
+    "term": "2 (N24)"
+   },
+   "sheet": 7,
+   "line": "0753",
+   "note": "cross ref (1014)"
+  },
+  {
+   "wire": "W81",
+   "awg": "16",
+   "potential": "15",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT7"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "US-"
+   },
+   "sheet": 7,
+   "line": "0754",
+   "note": "cross ref (0869)"
+  },
+  {
+   "wire": "W82",
+   "awg": "16",
+   "potential": "16",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT8"
+   },
+   "to": {
+    "dev": "NS2",
+    "term": "V-"
+   },
+   "sheet": 7,
+   "line": "0755",
+   "note": "cross ref (0848)"
+  },
+  {
+   "wire": "W83",
+   "awg": "14",
+   "potential": "17",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT9"
+   },
+   "to": {
+    "dev": "CE1",
+    "term": "N"
+   },
+   "sheet": 7,
+   "line": "0756",
+   "note": "cross ref (1304)"
+  },
+  {
+   "wire": "W84",
+   "awg": "14",
+   "potential": "18",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT10"
+   },
+   "to": {
+    "dev": "SI1",
+    "term": "15 (Com)"
+   },
+   "sheet": 7,
+   "line": "0757",
+   "note": "cross ref (1315)"
+  },
+  {
+   "wire": "W85",
+   "awg": "14",
+   "potential": "19",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT11"
+   },
+   "to": {
+    "dev": "FM1",
+    "term": "N"
+   },
+   "sheet": 7,
+   "line": "0758",
+   "note": "cross ref (1348)"
+  },
+  {
+   "wire": "W86",
+   "awg": "14",
+   "potential": "20",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT12"
+   },
+   "to": {
+    "dev": "SI2",
+    "term": "15 (Com)"
+   },
+   "sheet": 7,
+   "line": "0759",
+   "note": "cross ref (1359)"
+  },
+  {
+   "wire": "W87",
+   "awg": "16",
+   "potential": "21",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT13"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "X2 (lamp)"
+   },
+   "sheet": 7,
+   "line": "0760",
+   "note": "cross ref (0826); destination text on sheet 7 reads 'IO1' but cross ref (0826) and sheet 8 show E-STOP lamp X2 (potential 21)"
+  },
+  {
+   "wire": "W47",
+   "awg": "16",
+   "potential": "4",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT14"
+   },
+   "to": {
+    "dev": "DRV1",
+    "term": "4 (Digital Common)"
+   },
+   "sheet": 7,
+   "line": "0761",
+   "note": "cross ref (0505)"
+  },
+  {
+   "wire": "W52",
+   "awg": "16",
+   "potential": "5",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB3",
+    "term": "OUT15"
+   },
+   "to": {
+    "dev": "DRV2",
+    "term": "4 (Digital Common)"
+   },
+   "sheet": 7,
+   "line": "0762",
+   "note": "cross ref (0505)"
+  },
+  {
+   "wire": "W88",
+   "awg": "16",
+   "potential": "22",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB2",
+    "term": "OUT1"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "US+"
+   },
+   "sheet": 7,
+   "line": "0772",
+   "note": "cross ref (0869)"
+  },
+  {
+   "wire": "W89",
+   "awg": "16",
+   "potential": "23",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB2",
+    "term": "OUT2"
+   },
+   "to": {
+    "dev": "NS2",
+    "term": "V+"
+   },
+   "sheet": 7,
+   "line": "0773",
+   "note": "cross ref (0848)"
+  },
+  {
+   "wire": "W90",
+   "awg": "14",
+   "potential": "24",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB2",
+    "term": "OUT3"
+   },
+   "to": {
+    "dev": "CE1",
+    "term": "L"
+   },
+   "sheet": 7,
+   "line": "0774",
+   "note": "cross ref (1304); CE1 L/N fed 24 VDC; sheet 13 flags 'Voltage rating source unknown'"
+  },
+  {
+   "wire": "W91",
+   "awg": "14",
+   "potential": "25",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB2",
+    "term": "OUT4"
+   },
+   "to": {
+    "dev": "SI1",
+    "term": "16 (24V)"
+   },
+   "sheet": 7,
+   "line": "0775",
+   "note": "cross ref (1315)"
+  },
+  {
+   "wire": "W92",
+   "awg": "14",
+   "potential": "26",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB2",
+    "term": "OUT5"
+   },
+   "to": {
+    "dev": "FM1",
+    "term": "L1"
+   },
+   "sheet": 7,
+   "line": "0776",
+   "note": "cross ref (1348)"
+  },
+  {
+   "wire": "W93",
+   "awg": "14",
+   "potential": "27",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB2",
+    "term": "OUT6"
+   },
+   "to": {
+    "dev": "SI2",
+    "term": "16 (24V)"
+   },
+   "sheet": 7,
+   "line": "0777",
+   "note": "cross ref (1359)"
+  },
+  {
+   "wire": "W94",
+   "awg": "16",
+   "potential": "28",
+   "color_if_shown": null,
+   "from": {
+    "dev": "PDB2",
+    "term": "OUT7"
+   },
+   "to": {
+    "dev": "IO1",
+    "term": "VAC-VDC 1"
+   },
+   "sheet": 7,
+   "line": "0778",
+   "note": "cross ref (0824)"
+  },
+  {
+   "wire": "W96",
+   "awg": "16",
+   "potential": "29",
+   "color_if_shown": null,
+   "from": {
+    "dev": "IO1",
+    "term": "OUT 0"
+   },
+   "to": {
+    "dev": "E-STOP",
+    "term": "X1 (lamp)"
+   },
+   "sheet": 8,
+   "line": "0826",
+   "note": "passes through TB4-1; W96 label is on the TB4-1 -> E-STOP X1 segment, the IO1 OUT0 -> TB4-1 segment is unnumbered (potential 29 both sides)"
+  },
+  {
+   "wire": "W97",
+   "awg": "14",
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "PWS2",
+    "term": "FG / GND"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 8,
+   "line": "0806",
+   "note": "ground (green)"
+  },
+  {
+   "wire": "W98",
+   "awg": "14",
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "HMI1",
+    "term": "GND"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 8,
+   "line": "0860",
+   "note": "ground (green)"
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "CE1",
+    "term": "GND (earth symbol)"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "sheet": 13,
+   "line": "1312",
+   "note": "unnumbered ground (green)"
+  },
+  {
+   "wire": "W101",
+   "awg": "18",
+   "potential": "A1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "1 (T)"
+   },
+   "to": {
+    "dev": "SI1",
+    "term": "9 (AIn+)"
+   },
+   "sheet": 13,
+   "line": "1317",
+   "note": ""
+  },
+  {
+   "wire": "W100",
+   "awg": "18",
+   "potential": "A2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "1 (B)"
+   },
+   "to": {
+    "dev": "SI1",
+    "term": "10 (AIn-)"
+   },
+   "sheet": 13,
+   "line": "1319",
+   "note": ""
+  },
+  {
+   "wire": "W102",
+   "awg": "18",
+   "potential": "A3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI1",
+    "term": "3 (AOut+)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "2 (T)"
+   },
+   "sheet": 13,
+   "line": "1317",
+   "note": ""
+  },
+  {
+   "wire": "W103",
+   "awg": "18",
+   "potential": "A4",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI1",
+    "term": "4 (AOut-)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "2 (B)"
+   },
+   "sheet": 13,
+   "line": "1319",
+   "note": ""
+  },
+  {
+   "wire": "W105",
+   "awg": "18",
+   "potential": "A5",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "3 (T)"
+   },
+   "to": {
+    "dev": "SI2",
+    "term": "9 (AIn+)"
+   },
+   "sheet": 13,
+   "line": "1361",
+   "note": ""
+  },
+  {
+   "wire": "W104",
+   "awg": "18",
+   "potential": "A6",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "3 (B)"
+   },
+   "to": {
+    "dev": "SI2",
+    "term": "10 (AIn-)"
+   },
+   "sheet": 13,
+   "line": "1363",
+   "note": ""
+  },
+  {
+   "wire": "W106",
+   "awg": "18",
+   "potential": "A7",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI2",
+    "term": "3 (AOut+)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "4 (T)"
+   },
+   "sheet": 13,
+   "line": "1361",
+   "note": ""
+  },
+  {
+   "wire": "W107",
+   "awg": "18",
+   "potential": "A8",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI2",
+    "term": "4 (AOut-)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "4 (B)"
+   },
+   "sheet": 13,
+   "line": "1363",
+   "note": ""
+  },
+  {
+   "wire": "W110",
+   "awg": "18",
+   "potential": "A9",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "9 (T)"
+   },
+   "to": {
+    "dev": "SI3",
+    "term": "9 (AIn+)"
+   },
+   "sheet": 14,
+   "line": "1407",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "W111",
+   "awg": "18",
+   "potential": "A10",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "9 (B)"
+   },
+   "to": {
+    "dev": "SI3",
+    "term": "10 (AIn-)"
+   },
+   "sheet": 14,
+   "line": "1409",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "W114",
+   "awg": "18",
+   "potential": "A11",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI3",
+    "term": "3 (AOut+)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "10 (T)"
+   },
+   "sheet": 14,
+   "line": "1407",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W115",
+   "awg": "18",
+   "potential": "A12",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI3",
+    "term": "4 (AOut-)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "10 (B)"
+   },
+   "sheet": 14,
+   "line": "1409",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W112",
+   "awg": "18",
+   "potential": "A13",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "11 (T)"
+   },
+   "to": {
+    "dev": "SI4",
+    "term": "9 (AIn+)"
+   },
+   "sheet": 14,
+   "line": "1420",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "W113",
+   "awg": "18",
+   "potential": "A14",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "11 (B)"
+   },
+   "to": {
+    "dev": "SI4",
+    "term": "10 (AIn-)"
+   },
+   "sheet": 14,
+   "line": "1422",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "W116",
+   "awg": "18",
+   "potential": "A15",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI4",
+    "term": "3 (AOut+)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "12 (T)"
+   },
+   "sheet": 14,
+   "line": "1420",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W117",
+   "awg": "18",
+   "potential": "A16",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI4",
+    "term": "4 (AOut-)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "12 (B)"
+   },
+   "sheet": 14,
+   "line": "1422",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W108",
+   "awg": "18",
+   "potential": "A17",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "5 (T)"
+   },
+   "to": {
+    "dev": "SI5",
+    "term": "9 (AIn+)"
+   },
+   "sheet": 14,
+   "line": "1434",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W109",
+   "awg": "18",
+   "potential": "A18",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "5 (B)"
+   },
+   "to": {
+    "dev": "SI5",
+    "term": "10 (AIn-)"
+   },
+   "sheet": 14,
+   "line": "1436",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W118",
+   "awg": "18",
+   "potential": "A19",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI5",
+    "term": "3 (AOut+)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "6 (T)"
+   },
+   "sheet": 14,
+   "line": "1434",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "W119",
+   "awg": "18",
+   "potential": "A20",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI5",
+    "term": "4 (AOut-)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "6 (B)"
+   },
+   "sheet": 14,
+   "line": "1436",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "W120",
+   "awg": "18",
+   "potential": "A21",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "7 (T)"
+   },
+   "to": {
+    "dev": "SI6",
+    "term": "9 (AIn+)"
+   },
+   "sheet": 14,
+   "line": "1478",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W121",
+   "awg": "18",
+   "potential": "A22",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB3",
+    "term": "7 (B)"
+   },
+   "to": {
+    "dev": "SI6",
+    "term": "10 (AIn-)"
+   },
+   "sheet": 14,
+   "line": "1480",
+   "note": "SPARE isolator; TB3 field side has no destination shown"
+  },
+  {
+   "wire": "W128",
+   "awg": "18",
+   "potential": "A23",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI6",
+    "term": "3 (AOut+)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "8 (T)"
+   },
+   "sheet": 14,
+   "line": "1478",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "W129",
+   "awg": "18",
+   "potential": "A24",
+   "color_if_shown": null,
+   "from": {
+    "dev": "SI6",
+    "term": "4 (AOut-)"
+   },
+   "to": {
+    "dev": "TB3",
+    "term": "8 (B)"
+   },
+   "sheet": 14,
+   "line": "1480",
+   "note": "SPARE isolator"
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "to": {
+    "dev": "MTR1",
+    "term": "GND"
+   },
+   "sheet": 14,
+   "line": "1453",
+   "note": "unnumbered motor ground (green), installed on site"
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "GND",
+   "color_if_shown": "green (drawn)",
+   "from": {
+    "dev": "GND BAR",
+    "term": null
+   },
+   "to": {
+    "dev": "MTR2",
+    "term": "GND"
+   },
+   "sheet": 14,
+   "line": "1461",
+   "note": "unnumbered motor ground (green), installed on site"
+  }
+ ],
+ "cables": [
+  {
+   "cable": "EVT005-01",
+   "type": "EVT005",
+   "from": {
+    "dev": "LT1"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X01-1",
+     "potential": "IOL1-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X01-3",
+     "potential": "IOL1-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X01-4",
+     "potential": "IOL1-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL1 port X01 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-02",
+   "type": "EVT005",
+   "from": {
+    "dev": "LT2"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X02-1",
+     "potential": "IOL2-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X02-3",
+     "potential": "IOL2-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X02-4",
+     "potential": "IOL2-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL1 port X02 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-03",
+   "type": "EVT005",
+   "from": {
+    "dev": "LT3"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X03-1",
+     "potential": "IOL3-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X03-3",
+     "potential": "IOL3-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X03-4",
+     "potential": "IOL3-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL1 port X03 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT002-01",
+   "type": "EVT002",
+   "from": {
+    "dev": "FM2"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X06-1",
+     "potential": "IOL6-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X06-3",
+     "potential": "IOL6-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X06-4",
+     "potential": "IOL6-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL1 port X06 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-04",
+   "type": "EVT005",
+   "from": {
+    "dev": "CE2"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X07-1",
+     "potential": "IOL7-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X07-3",
+     "potential": "IOL7-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X07-4",
+     "potential": "IOL7-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL1 port X07 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-05",
+   "type": "EVT005",
+   "from": {
+    "dev": "TT1"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X08-1",
+     "potential": "IOL8-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X08-3",
+     "potential": "IOL8-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X08-4",
+     "potential": "IOL8-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL1 port X08 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-06",
+   "type": "EVT005",
+   "from": {
+    "dev": "TT2"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X01-1",
+     "potential": "IOL9-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X01-3",
+     "potential": "IOL9-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X01-4",
+     "potential": "IOL9-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL2 port X01 (rev20: no terminal strip between the field cable and the IO-Link master); sheet 11 prints no terminal names on CPL2 port 1 (lines 1148-1151): X01-1/-3/-4 taken by position"
+  },
+  {
+   "cable": "EVT002-02",
+   "type": "EVT002",
+   "from": {
+    "dev": "FM3"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X02-1",
+     "potential": "IOL10-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X02-3",
+     "potential": "IOL10-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X02-4",
+     "potential": "IOL10-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL2 port X02 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT002-03",
+   "type": "EVT002",
+   "from": {
+    "dev": "FM4"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X03-1",
+     "potential": "IOL11-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X03-3",
+     "potential": "IOL11-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X03-4",
+     "potential": "IOL11-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL2 port X03 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-07",
+   "type": "EVT005",
+   "from": {
+    "dev": "TT3"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X04-1",
+     "potential": "IOL12-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X04-3",
+     "potential": "IOL12-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X04-4",
+     "potential": "IOL12-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL2 port X04 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-08",
+   "type": "EVT005",
+   "from": {
+    "dev": "TT4"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X05-1",
+     "potential": "IOL13-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X05-3",
+     "potential": "IOL13-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X05-4",
+     "potential": "IOL13-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL2 port X05 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-09",
+   "type": "EVT005",
+   "from": {
+    "dev": "CE3"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X06-1",
+     "potential": "IOL14-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X06-3",
+     "potential": "IOL14-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X06-4",
+     "potential": "IOL14-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL2 port X06 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVT005-10",
+   "type": "EVT005",
+   "from": {
+    "dev": "CE4"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1",
+     "term_to": "X07-1",
+     "potential": "IOL15-1"
+    },
+    {
+     "color": null,
+     "term_from": "3",
+     "term_to": "X07-3",
+     "potential": "IOL15-3"
+    },
+    {
+     "color": null,
+     "term_from": "4",
+     "term_to": "X07-4",
+     "potential": "IOL15-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "core colours not shown; instrument pin 2 not used; lands directly on CPL2 port X07 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVC001-01",
+   "type": "EVC001",
+   "from": {
+    "dev": "SC1"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1 (L+)",
+     "term_to": "X04-1",
+     "potential": "IOL4-1"
+    },
+    {
+     "color": "White",
+     "term_from": "3 (L-)",
+     "term_to": "X04-3",
+     "potential": "IOL4-3"
+    },
+    {
+     "color": "Blue",
+     "term_from": "4 (IO-Link)",
+     "term_to": "X04-4",
+     "potential": "IOL4-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "cross refs (1331)(1335)(1337); colours as printed: White on L-, Blue on IO-Link, none on L+; lands directly on CPL1 port X04 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVC001-02",
+   "type": "EVC001",
+   "from": {
+    "dev": "SC2"
+   },
+   "to": {
+    "dev": "CPL1"
+   },
+   "cores": [
+    {
+     "color": "Brown",
+     "term_from": "1 (L+)",
+     "term_to": "X05-1",
+     "potential": "IOL5-1"
+    },
+    {
+     "color": "White",
+     "term_from": "3 (L-)",
+     "term_to": "X05-3",
+     "potential": "IOL5-3"
+    },
+    {
+     "color": "Blue",
+     "term_from": "4 (IO-Link)",
+     "term_to": "X05-4",
+     "potential": "IOL5-4"
+    }
+   ],
+   "sheet": 11,
+   "note": "cross refs (1375)(1379)(1381); lands directly on CPL1 port X05 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "CBL-IOL-01",
+   "type": "A1021803-1",
+   "from": {
+    "dev": "VM1"
+   },
+   "to": {
+    "dev": "CPL2"
+   },
+   "cores": [
+    {
+     "potential": "IOL16-1",
+     "term_from": "3 (L+)",
+     "term_to": "X08-1",
+     "color": "Black"
+    },
+    {
+     "potential": "IOL16-3",
+     "term_from": "5 (C/Q)",
+     "term_to": "X08-3",
+     "color": "Brown"
+    },
+    {
+     "potential": "IOL16-4",
+     "term_from": "4 (L-)",
+     "term_to": "X08-4",
+     "color": "Blue"
+    }
+   ],
+   "sheet": 11,
+   "note": "from VM1 sheet 10 (refs 1179/1181/1182 <-> 1035), direct to CPL2 port X08. As drawn, VM1 pin 5 (C/Q) lands on X08-3 and VM1 pin 4 (L-) on X08-4: on every other port -3 is L- and -4 is C/Q; check"
+  },
+  {
+   "cable": "EVC094-03",
+   "type": "EVC094",
+   "from": {
+    "dev": "SC3"
+   },
+   "to": {
+    "dev": "CPL3"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1 (L+)",
+     "term_to": "X01-1",
+     "potential": "IOL17-1"
+    },
+    {
+     "color": null,
+     "term_from": "3 (L-)",
+     "term_to": "X01-3",
+     "potential": "IOL17-3"
+    },
+    {
+     "color": null,
+     "term_from": "4 (IO-Link)",
+     "term_to": "X01-4",
+     "potential": "IOL17-4"
+    }
+   ],
+   "sheet": 12,
+   "note": "colours not shown; lands directly on CPL3 port X01 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVC094-04",
+   "type": "EVC094",
+   "from": {
+    "dev": "SC4"
+   },
+   "to": {
+    "dev": "CPL3"
+   },
+   "cores": [
+    {
+     "color": "Brown",
+     "term_from": "1 (L+)",
+     "term_to": "X02-1",
+     "potential": "IOL18-1"
+    },
+    {
+     "color": "White",
+     "term_from": "3 (L-)",
+     "term_to": "X02-3",
+     "potential": "IOL18-3"
+    },
+    {
+     "color": "Blue",
+     "term_from": "4 (IO-Link)",
+     "term_to": "X02-4",
+     "potential": "IOL18-4"
+    }
+   ],
+   "sheet": 12,
+   "note": "lands directly on CPL3 port X02 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVC001-03",
+   "type": "EVC001",
+   "from": {
+    "dev": "SC5"
+   },
+   "to": {
+    "dev": "CPL3"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1 (L+)",
+     "term_to": "X03-1",
+     "potential": "IOL19-1"
+    },
+    {
+     "color": "Brown",
+     "term_from": "3 (L-)",
+     "term_to": "X03-3",
+     "potential": "IOL19-3"
+    },
+    {
+     "color": "White",
+     "term_from": "4 (IO-Link)",
+     "term_to": "X03-4",
+     "potential": "IOL19-4"
+    }
+   ],
+   "sheet": 12,
+   "note": "colours as printed: Brown on L-, White on IO-Link, none on L+ - differs from EVC001-02 (Brown = L+); lands directly on CPL3 port X03 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "EVC001-04",
+   "type": "EVC001",
+   "from": {
+    "dev": "SC6"
+   },
+   "to": {
+    "dev": "CPL3"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "1 (L+)",
+     "term_to": "X04-1",
+     "potential": "IOL20-1"
+    },
+    {
+     "color": null,
+     "term_from": "3 (L-)",
+     "term_to": "X04-3",
+     "potential": "IOL20-3"
+    },
+    {
+     "color": null,
+     "term_from": "4 (IO-Link)",
+     "term_to": "X04-4",
+     "potential": "IOL20-4"
+    }
+   ],
+   "sheet": 12,
+   "note": "colours not shown; lands directly on CPL3 port X04 (rev20: no terminal strip between the field cable and the IO-Link master)"
+  },
+  {
+   "cable": "CBL-ANL-01",
+   "type": "PLTC-18-1S-1 (shielded pair 18 AWG)",
+   "from": {
+    "dev": "CE1"
+   },
+   "to": {
+    "dev": "TB3"
+   },
+   "cores": [
+    {
+     "color": "White",
+     "term_from": "AO1+",
+     "term_to": "TB3-1 (T)",
+     "potential": "A1"
+    },
+    {
+     "color": "Black",
+     "term_from": "AO1-",
+     "term_to": "TB3-1 (B)",
+     "potential": "A2"
+    },
+    {
+     "color": "shield",
+     "term_from": "-",
+     "term_to": "GND BAR",
+     "potential": ""
+    }
+   ],
+   "sheet": 13,
+   "note": "connect shield to panel ground bar at one end only"
+  },
+  {
+   "cable": "CBL-ANL-02",
+   "type": "PLTC-18-1S-1 (shielded pair 18 AWG)",
+   "from": {
+    "dev": "FM1"
+   },
+   "to": {
+    "dev": "TB3"
+   },
+   "cores": [
+    {
+     "color": "White",
+     "term_from": "8 (+)",
+     "term_to": "TB3-3 (T)",
+     "potential": "A5"
+    },
+    {
+     "color": "Black",
+     "term_from": "7 (-)",
+     "term_to": "TB3-3 (B)",
+     "potential": "A6"
+    },
+    {
+     "color": "shield",
+     "term_from": "-",
+     "term_to": "GND BAR",
+     "potential": ""
+    }
+   ],
+   "sheet": 13,
+   "note": "FM1 configured for INTERNAL power: terminal 7 (-), 8 (+); shield one end only"
+  },
+  {
+   "cable": "EVC094-01",
+   "type": "EVC094",
+   "from": {
+    "dev": "TB3"
+   },
+   "to": {
+    "dev": "SC1"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "TB3-2 (T)",
+     "term_to": "2 (AIn)",
+     "potential": "A3"
+    },
+    {
+     "color": null,
+     "term_from": "TB3-2 (B)",
+     "term_to": "3 (L-)",
+     "potential": "A4"
+    }
+   ],
+   "sheet": 13,
+   "note": "colours not shown"
+  },
+  {
+   "cable": "EVC094-02",
+   "type": "EVC094",
+   "from": {
+    "dev": "TB3"
+   },
+   "to": {
+    "dev": "SC2"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "TB3-4 (T)",
+     "term_to": "2 (AIn)",
+     "potential": "A7"
+    },
+    {
+     "color": null,
+     "term_from": "TB3-4 (B)",
+     "term_to": "3 (L-)",
+     "potential": "A8"
+    }
+   ],
+   "sheet": 13,
+   "note": "colours not shown"
+  },
+  {
+   "cable": "EVC001-05",
+   "type": "EVC001",
+   "from": {
+    "dev": "SC3"
+   },
+   "to": {
+    "dev": "TB3"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "2 (AOut)",
+     "term_to": "TB3-9 (T)",
+     "potential": "A9"
+    },
+    {
+     "color": null,
+     "term_from": "3 (L-)",
+     "term_to": "TB3-9 (B)",
+     "potential": "A10"
+    }
+   ],
+   "sheet": 14,
+   "note": "colours not shown; refs (1214)(1216)"
+  },
+  {
+   "cable": "EVC001-06",
+   "type": "EVC001",
+   "from": {
+    "dev": "SC4"
+   },
+   "to": {
+    "dev": "TB3"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "2 (AOut)",
+     "term_to": "TB3-11 (T)",
+     "potential": "A13"
+    },
+    {
+     "color": null,
+     "term_from": "3 (L-)",
+     "term_to": "TB3-11 (B)",
+     "potential": "A14"
+    }
+   ],
+   "sheet": 14,
+   "note": "colours not shown; refs (1233)(1235)"
+  },
+  {
+   "cable": "EVC094-05",
+   "type": "EVC094",
+   "from": {
+    "dev": "TB3"
+   },
+   "to": {
+    "dev": "SC5"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "TB3-6 (T)",
+     "term_to": "2 (AIn)",
+     "potential": "A19"
+    },
+    {
+     "color": null,
+     "term_from": "TB3-6 (B)",
+     "term_to": "3 (L-)",
+     "potential": "A20"
+    }
+   ],
+   "sheet": 14,
+   "note": "colours not shown; refs (1253)(1255)"
+  },
+  {
+   "cable": "EVC094-06",
+   "type": "EVC094",
+   "from": {
+    "dev": "TB3"
+   },
+   "to": {
+    "dev": "SC6"
+   },
+   "cores": [
+    {
+     "color": null,
+     "term_from": "TB3-8 (T)",
+     "term_to": "2 (AIn)",
+     "potential": "A23"
+    },
+    {
+     "color": null,
+     "term_from": "TB3-8 (B)",
+     "term_to": "3 (L-)",
+     "potential": "A24"
+    }
+   ],
+   "sheet": 14,
+   "note": "colours not shown; refs (1271)(1273)"
+  },
+  {
+   "cable": "Cable1",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "NS2",
+    "term": "LAN"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "1"
+   },
+   "cores": [],
+   "sheet": 8
+  },
+  {
+   "cable": "Cable2",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "PLC1",
+    "term": "ETH 1"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "2"
+   },
+   "cores": [],
+   "sheet": 8
+  },
+  {
+   "cable": "Cable3",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "Plant Network",
+    "term": "-"
+   },
+   "to": {
+    "dev": "NS2",
+    "term": "WAN"
+   },
+   "cores": [],
+   "sheet": 8
+  },
+  {
+   "cable": "Cable4",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "DRV1",
+    "term": "RJ45"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "3"
+   },
+   "cores": [],
+   "sheet": 8
+  },
+  {
+   "cable": "Cable5",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "DRV2",
+    "term": "RJ45"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "4"
+   },
+   "cores": [],
+   "sheet": 8,
+   "note": "NS1 side cross ref printed (0527)"
+  },
+  {
+   "cable": "Cable6",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "HMI1",
+    "term": "ETH"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "5"
+   },
+   "cores": [],
+   "sheet": 8,
+   "note": "NS1 side label reads 'HM1' (HMI1)"
+  },
+  {
+   "cable": "Cable7",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "CPL1",
+    "term": "X21"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "6"
+   },
+   "cores": [],
+   "sheet": 8
+  },
+  {
+   "cable": "Cable8",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "CPL2",
+    "term": "X21"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "7"
+   },
+   "cores": [],
+   "sheet": 8
+  },
+  {
+   "cable": "Cable9",
+   "type": "Ethernet RJ45 (type not specified)",
+   "from": {
+    "dev": "CPL3",
+    "term": "X21"
+   },
+   "to": {
+    "dev": "NS1",
+    "term": "8"
+   },
+   "cores": [],
+   "sheet": 8
+  }
+ ],
+ "terminals": [
+  {
+   "strip": "TB1",
+   "term": "1",
+   "type": "1492-J6",
+   "inside": "W38 from DRV1-T1",
+   "field": "MTR1-U (unnumbered, installed on site)",
+   "potential": "L18",
+   "sheet": 15
+  },
+  {
+   "strip": "TB1",
+   "term": "2",
+   "type": "1492-J6",
+   "inside": "W39 from DRV1-T2",
+   "field": "MTR1-V (unnumbered, installed on site)",
+   "potential": "L19",
+   "sheet": 15
+  },
+  {
+   "strip": "TB1",
+   "term": "3",
+   "type": "1492-J6",
+   "inside": "W40 from DRV1-T3",
+   "field": "MTR1-W (unnumbered, installed on site)",
+   "potential": "L20",
+   "sheet": 15
+  },
+  {
+   "strip": "TB1",
+   "term": "4",
+   "type": "1492-J6",
+   "inside": "W42 from DRV2-T1",
+   "field": "MTR2-U (unnumbered, installed on site)",
+   "potential": "L21",
+   "sheet": 15
+  },
+  {
+   "strip": "TB1",
+   "term": "5",
+   "type": "1492-J6",
+   "inside": "W43 from DRV2-T2",
+   "field": "MTR2-V (unnumbered, installed on site)",
+   "potential": "L22",
+   "sheet": 15
+  },
+  {
+   "strip": "TB1",
+   "term": "6",
+   "type": "1492-J6",
+   "inside": "W44 from DRV2-T3",
+   "field": "MTR2-W (unnumbered, installed on site)",
+   "potential": "L23",
+   "sheet": 15
+  },
+  {
+   "strip": "TB2",
+   "term": "1",
+   "type": "1492-J4",
+   "inside": "W54 from T1 secondary fuse 2T1 (L bus); W62 to CB5-L1",
+   "field": "(TBD)",
+   "potential": "L",
+   "sheet": 15,
+   "note": "sheet 15 shows (TBD) on both sides; connections taken from sheets 4 and 6"
+  },
+  {
+   "strip": "TB2",
+   "term": "2",
+   "type": "1492-J4",
+   "inside": "L bus (junction with TB2-1); W63 to FU2-1L1",
+   "field": "(TBD)",
+   "potential": "L",
+   "sheet": 15,
+   "note": "sheet 15 shows (TBD) on both sides; connections taken from sheets 4 and 6"
+  },
+  {
+   "strip": "TB2",
+   "term": "3",
+   "type": "1492-J4",
+   "inside": "W19 from T1-X1 (N bus); W71 from RCP1-L1-1",
+   "field": "(TBD)",
+   "potential": "N",
+   "sheet": 15,
+   "note": "sheet 15 shows (TBD) on both sides; connections taken from sheets 4 and 6"
+  },
+  {
+   "strip": "TB2",
+   "term": "4",
+   "type": "1492-J4",
+   "inside": "N bus (junction with TB2-3); W69 from ACU X1-3",
+   "field": "(TBD)",
+   "potential": "N",
+   "sheet": 15,
+   "note": "sheet 15 shows (TBD) on both sides; connections taken from sheets 4 and 6"
+  },
+  {
+   "strip": "TB3",
+   "term": "1",
+   "type": "1492-JD4",
+   "inside": "to SI1-9",
+   "field": "CBL-ANL-01 White from CE1-AO1+",
+   "potential": "A1",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "1",
+   "type": "1492-JD4",
+   "inside": "to SI1-10",
+   "field": "CBL-ANL-01 Black from CE1-AO1-",
+   "potential": "A1",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "2",
+   "type": "1492-JD4",
+   "inside": "from SI1-3",
+   "field": "EVC094-01 to SC1-2",
+   "potential": "A3",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "2",
+   "type": "1492-JD4",
+   "inside": "from SI1-4",
+   "field": "EVC094-01 to SC1-3",
+   "potential": "A3",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "3",
+   "type": "1492-JD4",
+   "inside": "to SI2-9",
+   "field": "CBL-ANL-02 White from FM1-8",
+   "potential": "A5",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "3",
+   "type": "1492-JD4",
+   "inside": "to SI2-10",
+   "field": "CBL-ANL-02 Black from FM1-7",
+   "potential": "A5",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "4",
+   "type": "1492-JD4",
+   "inside": "from SI2-3",
+   "field": "EVC094-02 to SC2-2",
+   "potential": "A7",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "4",
+   "type": "1492-JD4",
+   "inside": "from SI2-4",
+   "field": "EVC094-02 to SC2-3",
+   "potential": "A7",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "5",
+   "type": "1492-JD4",
+   "inside": "to SI5-9",
+   "field": null,
+   "potential": "A17",
+   "sheet": 15,
+   "level": "T",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB3",
+   "term": "5",
+   "type": "1492-JD4",
+   "inside": "to SI5-10",
+   "field": null,
+   "potential": "A17",
+   "sheet": 15,
+   "level": "B",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB3",
+   "term": "6",
+   "type": "1492-JD4",
+   "inside": "from SI5-3",
+   "field": "EVC094-05 to SC5-2",
+   "potential": "A19",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "6",
+   "type": "1492-JD4",
+   "inside": "from SI5-4",
+   "field": "EVC094-05 to SC5-3",
+   "potential": "A19",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "7",
+   "type": "1492-JD4",
+   "inside": "to SI6-9",
+   "field": null,
+   "potential": "A21",
+   "sheet": 15,
+   "level": "T",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB3",
+   "term": "7",
+   "type": "1492-JD4",
+   "inside": "to SI6-10",
+   "field": null,
+   "potential": "A21",
+   "sheet": 15,
+   "level": "B",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB3",
+   "term": "8",
+   "type": "1492-JD4",
+   "inside": "from SI6-3",
+   "field": "EVC094-06 to SC6-2",
+   "potential": "A23",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "8",
+   "type": "1492-JD4",
+   "inside": "from SI6-4",
+   "field": "EVC094-06 to SC6-3",
+   "potential": "A23",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "9",
+   "type": "1492-JD4",
+   "inside": "to SI3-9",
+   "field": "EVC001-05 from SC3-2",
+   "potential": "A9",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "9",
+   "type": "1492-JD4",
+   "inside": "to SI3-10",
+   "field": "EVC001-05 from SC3-3",
+   "potential": "A9",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "10",
+   "type": "1492-JD4",
+   "inside": "from SI3-3",
+   "field": null,
+   "potential": "A11",
+   "sheet": 15,
+   "level": "T",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB3",
+   "term": "10",
+   "type": "1492-JD4",
+   "inside": "from SI3-4",
+   "field": null,
+   "potential": "A11",
+   "sheet": 15,
+   "level": "B",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB3",
+   "term": "11",
+   "type": "1492-JD4",
+   "inside": "to SI4-9",
+   "field": "EVC001-06 from SC4-2",
+   "potential": "A13",
+   "sheet": 15,
+   "level": "T"
+  },
+  {
+   "strip": "TB3",
+   "term": "11",
+   "type": "1492-JD4",
+   "inside": "to SI4-10",
+   "field": "EVC001-06 from SC4-3",
+   "potential": "A13",
+   "sheet": 15,
+   "level": "B"
+  },
+  {
+   "strip": "TB3",
+   "term": "12",
+   "type": "1492-JD4",
+   "inside": "from SI4-3",
+   "field": null,
+   "potential": "A15",
+   "sheet": 15,
+   "level": "T",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB3",
+   "term": "12",
+   "type": "1492-JD4",
+   "inside": "from SI4-4",
+   "field": null,
+   "potential": "A15",
+   "sheet": 15,
+   "level": "B",
+   "note": "no field connection shown"
+  },
+  {
+   "strip": "TB4",
+   "term": "1",
+   "type": "1492-J4",
+   "inside": "IO1-OUT 0 (unnumbered)",
+   "field": "E-STOP-X1 via W96",
+   "potential": "29",
+   "sheet": 15
+  },
+  {
+   "strip": "TB4",
+   "term": "2",
+   "type": "1492-J4",
+   "inside": "W24 from DRV1-S1 (sheet 5; sheet 15 prints \"TB4 - 4\")",
+   "field": "E-STOP-12 (W25 on sheet 5)",
+   "potential": "1",
+   "sheet": 15
+  },
+  {
+   "strip": "TB4",
+   "term": "3",
+   "type": "1492-J4",
+   "inside": "W26 from DRV1-S2 (sheet 5; sheet 15 prints \"TB4 - 5\")",
+   "field": "E-STOP-21 (W27 on sheet 5)",
+   "potential": "3",
+   "sheet": 15
+  },
+  {
+   "strip": "TB4",
+   "term": "4",
+   "type": "1492-J4",
+   "inside": "W48 from DRV2-S1 (sheet 5; sheet 15 prints \"TB4 - 2\")",
+   "field": "W49 to the junction with W25 (sheet 5); nothing on sheet 15",
+   "potential": "1",
+   "sheet": 15
+  },
+  {
+   "strip": "TB4",
+   "term": "5",
+   "type": "1492-J4",
+   "inside": "W50 from DRV2-S2 (sheet 5; sheet 15 prints \"TB4 - 3\")",
+   "field": "W51 to the junction with W27 (sheet 5); nothing on sheet 15",
+   "potential": "3",
+   "sheet": 15
+  }
+ ],
+ "devices": [
+  {
+   "tag": "Q1",
+   "part": "1494U-D100",
+   "terminals_used": [
+    "1L1",
+    "2T1",
+    "3L2",
+    "4T2",
+    "5L3",
+    "6T3"
+   ]
+  },
+  {
+   "tag": "FU1",
+   "part": "1494U-F100 holder, LPJ-70SP fuses (70A)",
+   "terminals_used": [
+    "L1",
+    "L2",
+    "L3",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  },
+  {
+   "tag": "GB1",
+   "part": "D167-14 (BOM GB1/GB2)",
+   "terminals_used": [
+    "1"
+   ]
+  },
+  {
+   "tag": "PDB1",
+   "part": "1492-PDC-3A200-S0108",
+   "terminals_used": [
+    "L1",
+    "L1-1",
+    "L1-2",
+    "L1-3",
+    "L1-4",
+    "L2",
+    "L2-1",
+    "L2-2",
+    "L2-3",
+    "L2-4",
+    "L3",
+    "L3-1",
+    "L3-2",
+    "L3-4"
+   ]
+  },
+  {
+   "tag": "CB1",
+   "part": "140MT-F9E-C32",
+   "terminals_used": [
+    "L1",
+    "L2",
+    "L3",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  },
+  {
+   "tag": "CB2",
+   "part": "140MT-F9E-C32",
+   "terminals_used": [
+    "L1",
+    "L2",
+    "L3",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  },
+  {
+   "tag": "CB3",
+   "part": "FAZ-D2-3-NA",
+   "terminals_used": [
+    "L1",
+    "L2",
+    "L3",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  },
+  {
+   "tag": "T1",
+   "part": "E750WB (750 VA, 240/480:120)",
+   "terminals_used": [
+    "1L1 (H1 primary fuse)",
+    "2T1 (X2 secondary fuse)",
+    "3L2 (H4 primary fuse)",
+    "H2",
+    "H3",
+    "X1",
+    "X1 (N conductor bond junction)"
+   ]
+  },
+  {
+   "tag": "DRV1",
+   "part": "25B-D024N104",
+   "terminals_used": [
+    "4 (Digital Common)",
+    "L1",
+    "L2",
+    "L3",
+    "PE",
+    "RJ45",
+    "S1 (Safety 1)",
+    "S2 (Safety 2)",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  },
+  {
+   "tag": "DRV2",
+   "part": "25B-D024N104",
+   "terminals_used": [
+    "4 (Digital Common)",
+    "L1",
+    "L2",
+    "L3",
+    "PE",
+    "RJ45",
+    "S1 (Safety 1)",
+    "S2 (Safety 2)",
+    "T1",
+    "T2",
+    "T3"
+   ]
+  },
+  {
+   "tag": "PWS1",
+   "part": "2787-2347",
+   "terminals_used": [
+    "1 (OUT-)",
+    "4 (OUT+)",
+    "L1",
+    "L2",
+    "L3",
+    "PE"
+   ]
+  },
+  {
+   "tag": "CB5",
+   "part": "FAZ-C2-1-NA-SP",
+   "terminals_used": [
+    "L1",
+    "T1"
+   ]
+  },
+  {
+   "tag": "FU2",
+   "part": "CHCC1DU holder, FNQ-R-6 fuse",
+   "terminals_used": [
+    "1L1",
+    "2T1"
+   ]
+  },
+  {
+   "tag": "RCP1",
+   "part": "1492-REC15",
+   "terminals_used": [
+    "GND",
+    "L1-1",
+    "L1-2",
+    "L2-1",
+    "L2-2"
+   ]
+  },
+  {
+   "tag": "Panel",
+   "part": "SCE-AC1000B120VSS (air conditioner, label ACU)",
+   "terminals_used": [
+    "X1-1 (L)",
+    "X1-3 (N)",
+    "X1-4 (PE)"
+   ]
+  },
+  {
+   "tag": "CB4",
+   "part": "787-1668",
+   "terminals_used": [
+    "0V (lower, line 0715)",
+    "0V (upper, line 0714)",
+    "DC24+",
+    "OUT1",
+    "OUT2",
+    "OUT3",
+    "OUT4",
+    "OUT5",
+    "OUT6",
+    "OUT7",
+    "OUT8"
+   ]
+  },
+  {
+   "tag": "PDB3",
+   "part": "PTFIX 6-18X2,5 BUWH",
+   "terminals_used": [
+    "IN",
+    "OUT1",
+    "OUT10",
+    "OUT11",
+    "OUT12",
+    "OUT13",
+    "OUT14",
+    "OUT15",
+    "OUT2",
+    "OUT3",
+    "OUT4",
+    "OUT5",
+    "OUT6",
+    "OUT7",
+    "OUT8",
+    "OUT9"
+   ]
+  },
+  {
+   "tag": "PDB2",
+   "part": "PTFIX 6-12X2,5 BU",
+   "terminals_used": [
+    "IN",
+    "OUT1",
+    "OUT2",
+    "OUT3",
+    "OUT4",
+    "OUT5",
+    "OUT6",
+    "OUT7"
+   ]
+  },
+  {
+   "tag": "PWS2",
+   "part": "1769-PB2",
+   "terminals_used": [
+    "+24V DC",
+    "DC COM",
+    "FG / GND"
+   ]
+  },
+  {
+   "tag": "PLC1",
+   "part": "1769-L30ER",
+   "terminals_used": [
+    "ETH 1"
+   ]
+  },
+  {
+   "tag": "IO1",
+   "part": "1769-OW16",
+   "terminals_used": [
+    "OUT 0",
+    "VAC-VDC 1"
+   ]
+  },
+  {
+   "tag": "E-STOP",
+   "part": "800H-FRXJTQH2RA5",
+   "terminals_used": [
+    "11",
+    "11 and 22 (via jumper)",
+    "12",
+    "21",
+    "22",
+    "X1 (lamp)",
+    "X2 (lamp)"
+   ]
+  },
+  {
+   "tag": "NS1",
+   "part": "1085219",
+   "terminals_used": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "US+",
+    "US-"
+   ]
+  },
+  {
+   "tag": "NS2",
+   "part": "NAT-102",
+   "terminals_used": [
+    "LAN",
+    "V+",
+    "V-",
+    "WAN"
+   ]
+  },
+  {
+   "tag": "HMI1",
+   "part": "2711P-T10C21D8S",
+   "terminals_used": [
+    "DC +",
+    "DC -",
+    "ETH",
+    "GND"
+   ]
+  },
+  {
+   "tag": "CPL1",
+   "part": "AL1920",
+   "terminals_used": [
+    "X01-1",
+    "X01-3",
+    "X01-4",
+    "X02-1",
+    "X02-3",
+    "X02-4",
+    "X03-1",
+    "X03-3",
+    "X03-4",
+    "X04-1",
+    "X04-3",
+    "X04-4",
+    "X05-1",
+    "X05-3",
+    "X05-4",
+    "X06-1",
+    "X06-3",
+    "X06-4",
+    "X07-1",
+    "X07-3",
+    "X07-4",
+    "X08-1",
+    "X08-3",
+    "X08-4",
+    "X21",
+    "X31-1 (GND)",
+    "X31-3 (+24VDC)"
+   ]
+  },
+  {
+   "tag": "CPL2",
+   "part": "AL1920",
+   "terminals_used": [
+    "X01-1",
+    "X02-1",
+    "X02-3",
+    "X02-4",
+    "X03-1",
+    "X03-3",
+    "X03-4",
+    "X04-1",
+    "X04-3",
+    "X04-4",
+    "X05-1",
+    "X05-3",
+    "X05-4",
+    "X06-1",
+    "X06-3",
+    "X06-4",
+    "X07-1",
+    "X07-3",
+    "X07-4",
+    "X08-1",
+    "X08-3",
+    "X08-4",
+    "X21",
+    "X31-1 (GND)",
+    "X31-3 (+24VDC)"
+   ]
+  },
+  {
+   "tag": "CPL3",
+   "part": "AL1920",
+   "terminals_used": [
+    "X01-1",
+    "X01-3",
+    "X01-4",
+    "X02-1",
+    "X02-3",
+    "X02-4",
+    "X03-1",
+    "X03-3",
+    "X03-4",
+    "X04-1",
+    "X04-3",
+    "X04-4",
+    "X05-1",
+    "X05-3",
+    "X05-4",
+    "X06-1",
+    "X06-3",
+    "X06-4",
+    "X07-1",
+    "X07-3",
+    "X07-4",
+    "X08-1",
+    "X08-3",
+    "X08-4",
+    "X21",
+    "X31-1 (GND)",
+    "X31-3 (+24VDC)"
+   ]
+  },
+  {
+   "tag": "VM1",
+   "part": "VTUX-A-P-IOL-SQUQTLAL-UD16K-XLRV4ARV4ARV4ARV4AXR-IPX0",
+   "terminals_used": [
+    "1 (P24)",
+    "2 (N24)",
+    "3 (L+)",
+    "4 (L-)",
+    "5 (C/Q)"
+   ]
+  },
+  {
+   "tag": "LT1",
+   "part": "PM1708",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "LT2",
+   "part": "PM1708",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "LT3",
+   "part": "PM1708",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "FM1",
+   "part": "8721AHA020UA1",
+   "terminals_used": [
+    "7 (-)",
+    "8 (+)",
+    "L1",
+    "N"
+   ]
+  },
+  {
+   "tag": "FM2",
+   "part": "SUH401",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "FM3",
+   "part": "SUH401",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "FM4",
+   "part": "SUH401",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "CE1",
+   "part": "Rosemount 1056",
+   "terminals_used": [
+    "AO1+",
+    "AO1-",
+    "GND (earth symbol)",
+    "L",
+    "N"
+   ]
+  },
+  {
+   "tag": "CE2",
+   "part": "LDL201",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "CE3",
+   "part": "LDL201",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "CE4",
+   "part": "LDL201",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "TT1",
+   "part": "TD2947",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "TT2",
+   "part": "TD2947",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "TT3",
+   "part": "TD2947",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "TT4",
+   "part": "TD2947",
+   "terminals_used": [
+    "1",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "SC1",
+   "part": "DP2200",
+   "terminals_used": [
+    "1 (L+)",
+    "2 (AIn)",
+    "3 (L-)",
+    "4 (IO-Link)"
+   ]
+  },
+  {
+   "tag": "SC2",
+   "part": "DP2200",
+   "terminals_used": [
+    "1 (L+)",
+    "2 (AIn)",
+    "3 (L-)",
+    "4 (IO-Link)"
+   ]
+  },
+  {
+   "tag": "SC5",
+   "part": "DP2200",
+   "terminals_used": [
+    "1 (L+)",
+    "2 (AIn)",
+    "3 (L-)",
+    "4 (IO-Link)"
+   ]
+  },
+  {
+   "tag": "SC6",
+   "part": "DP2200",
+   "terminals_used": [
+    "1 (L+)",
+    "2 (AIn)",
+    "3 (L-)",
+    "4 (IO-Link)"
+   ]
+  },
+  {
+   "tag": "SC3",
+   "part": "EIO104",
+   "terminals_used": [
+    "1 (L+)",
+    "2 (AOut)",
+    "3 (L-)",
+    "4 (IO-Link)"
+   ]
+  },
+  {
+   "tag": "SC4",
+   "part": "EIO104",
+   "terminals_used": [
+    "1 (L+)",
+    "2 (AOut)",
+    "3 (L-)",
+    "4 (IO-Link)"
+   ]
+  },
+  {
+   "tag": "SI1",
+   "part": "GLG-1xmA-1xmA",
+   "terminals_used": [
+    "10 (AIn-)",
+    "15 (Com)",
+    "16 (24V)",
+    "3 (AOut+)",
+    "4 (AOut-)",
+    "9 (AIn+)"
+   ]
+  },
+  {
+   "tag": "SI2",
+   "part": "GLG-1xmA-1xmA",
+   "terminals_used": [
+    "10 (AIn-)",
+    "15 (Com)",
+    "16 (24V)",
+    "3 (AOut+)",
+    "4 (AOut-)",
+    "9 (AIn+)"
+   ]
+  },
+  {
+   "tag": "SI3",
+   "part": "GLG-1xmA-1xmA",
+   "terminals_used": [
+    "10 (AIn-)",
+    "3 (AOut+)",
+    "4 (AOut-)",
+    "9 (AIn+)"
+   ]
+  },
+  {
+   "tag": "SI4",
+   "part": "GLG-1xmA-1xmA",
+   "terminals_used": [
+    "10 (AIn-)",
+    "3 (AOut+)",
+    "4 (AOut-)",
+    "9 (AIn+)"
+   ]
+  },
+  {
+   "tag": "SI5",
+   "part": "GLG-1xmA-1xmA",
+   "terminals_used": [
+    "10 (AIn-)",
+    "3 (AOut+)",
+    "4 (AOut-)",
+    "9 (AIn+)"
+   ]
+  },
+  {
+   "tag": "SI6",
+   "part": "GLG-1xmA-1xmA",
+   "terminals_used": [
+    "10 (AIn-)",
+    "3 (AOut+)",
+    "4 (AOut-)",
+    "9 (AIn+)"
+   ]
+  },
+  {
+   "tag": "MTR1",
+   "part": "CEM3713T (15 HP, 17.7 A)",
+   "terminals_used": [
+    "GND",
+    "U",
+    "V",
+    "W"
+   ]
+  },
+  {
+   "tag": "MTR2",
+   "part": "CEM3713T (15 HP, 17.7 A)",
+   "terminals_used": [
+    "GND",
+    "U",
+    "V",
+    "W"
+   ]
+  },
+  {
+   "tag": "TB1",
+   "part": "1492-J6",
+   "terminals_used": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ]
+  },
+  {
+   "tag": "TB2",
+   "part": "1492-J4",
+   "terminals_used": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  },
+  {
+   "tag": "TB3",
+   "part": "1492-JD4",
+   "terminals_used": [
+    "1 (B)",
+    "1 (T)",
+    "10 (B)",
+    "10 (T)",
+    "11 (B)",
+    "11 (T)",
+    "12 (B)",
+    "12 (T)",
+    "2 (B)",
+    "2 (T)",
+    "3 (B)",
+    "3 (T)",
+    "4 (B)",
+    "4 (T)",
+    "5 (B)",
+    "5 (T)",
+    "6 (B)",
+    "6 (T)",
+    "7 (B)",
+    "7 (T)",
+    "8 (B)",
+    "8 (T)",
+    "9 (B)",
+    "9 (T)"
+   ]
+  },
+  {
+   "tag": "GND BAR",
+   "part": "D167-14 (drawings say 'GND BAR', no tag)",
+   "terminals_used": []
+  },
+  {
+   "tag": "TB4",
+   "part": "1492-J4",
+   "terminals_used": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  }
+ ],
+ "unreadable": [
+  "Nothing illegible in rev20 at 300-700 dpi. On sheet 14 the digits of TB1-2 to TB1-6 sit under the dashed \"Installed on site\" border (taken by sequence).",
+  "Sheet 5 W26 and W48 show no AWG ('Wnn -'); the two legs from the sheet 5 junctions to E-STOP 12 and 21 have no number and no size.",
+  "Line numbers are taken from the left-margin position of each wire; where a wire sits between two margin numbers the printed cross-reference was used. Lines for unnumbered ground/jumper entries are approximate."
+ ]
+}

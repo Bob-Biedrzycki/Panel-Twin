@@ -9,11 +9,11 @@
     {
       "id": 2,
       "prompt": "In the VFD 200 guide, IO1's VAC-VDC 2 terminal has no supply. Add a 16 AWG wire for it from PDB2 OUT8 on the 24 V sheet, as a new version, and make sure nothing else broke.",
-      "expected_output": "A new version folder made with scripts/new_version.mjs (the earlier one untouched, VERSION 13.0). The wire added in ADDED in build.mjs, not in data/wirelist.json: no invented wire number or potential number, awg 16, from PDB2 OUT8 to IO1 VAC-VDC 2, sheet 7, step w24, added: true, a note beginning NOT ON THE DRAWINGS; a design issue and a task or flag on the step. Appended last so no existing segment moves. Built; audit run on the last version and the new one; scripts/diff_routes.mjs shows 195 identical, 0 changed, 1 new; the new wire is drawn, nothing unresolved, through/across/shared/behind 0. Pictures of IO1 and PDB2 taken with scripts/shot.mjs and looked at. Handover documents updated. The reply says whether it is saved, that the wire is not on the drawings and needs engineering to add and number it, gives the audit numbers, and says what was not checked."
+      "expected_output": "A new version folder made with scripts/new_version.mjs (the earlier one untouched, VERSION 16.0). The wire added in ADDED in build.mjs, not in data/wirelist.json: no invented wire number or potential number, awg 16, from PDB2 OUT8 to IO1 VAC-VDC 2, sheet 7, step w24, added: true, a note beginning NOT ON THE DRAWINGS; a design issue and a task or flag on the step. Appended last so no existing segment moves. Built; audit run on the last version and the new one; scripts/diff_routes.mjs shows 195 identical, 0 changed, 1 new; the new wire is drawn, nothing unresolved, through/across/shared/behind 0. Pictures of IO1 and PDB2 taken with scripts/shot.mjs and looked at. Handover documents updated. The reply says whether it is saved, that the wire is not on the drawings and needs engineering to add and number it, gives the audit numbers, and says what was not checked."
     },
     {
       "id": 3,
-      "prompt": "Can you check sheet 4 of Draft rev18.pdf against the wire list in the VFD 200 guide and tell me if anything is missing?",
+      "prompt": "Can you check sheet 4 of Draft rev20.pdf against the wire list in the VFD 200 guide and tell me if anything is missing?",
       "expected_output": "The PDF is found to have no text layer (sheet_tiles.py --text reports 0) and is read as image tiles. Sheet 4's conductors are compared with the sheet-4 entries. The report lists only differences, each checked on the sheet, with counts (45 conductors drawn; the incoming feeder to Q1 1L1/3L2/5L3 and ground to GB1 terminal 1 are drawn dashed and are handled in build.mjs as FEEDERS rather than in wirelist.json). It says what was not covered (other sheets)."
     },
     {
@@ -25,6 +25,12 @@
       "id": 5,
       "prompt": "We have a new job, a small PLC panel: drawing set PDF, BOM spreadsheet, no photos yet. Make the panel twin.",
       "expected_output": "Gathers and states what exists (text layer or not, BOM, models available, documents). Starts from the example with new_panel.mjs, proves build and audit, then replaces data in checklist order: wirelist.json transcribed with sheet and line numbers, layout.mjs, faces, makers' models fetched (asking before downloads, never doing CAPTCHAs or logins), model_fit with each orientation checked, terminals with sources, the panel-specific guide.js blocks. Audit clean, every device looked at, sheets re-read against the list by independent readers, design issues separated from modeling issues, handover documents written, and a plain statement of what was not verified (nothing checked against a built panel)."
+    },
+    {
+      "id": 6,
+      "prompt": "In the VFD 200 guide, the assemblers want the mounting holes for CB4 (WAGO 787-1668) and for the drives shown on their part pages. Add them as a new version.",
+      "expected_output": "A new version made with scripts/new_version.mjs. The drives already carry their documented pattern (116.0 x 247.0 mm, M5, 520-UM001 p.188 and p.15): nothing is invented for where it sits in the outline. CB4 is a DIN-rail part with no mounting holes and no hole document: no HOLES entry is added and nothing is shown or estimated for it; the answer says so and says what document would be needed. Any number added is printed in a cited document that was opened. The build and audit are run and their numbers reported.",
+      "files": []
     }
   ]
 }

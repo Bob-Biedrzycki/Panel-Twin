@@ -1,0 +1,10 @@
+﻿comp,part_number,source_url,date,file,bytes,sha256
+COMP-0101_AB_25B-D013N104,25B-D013N104,https://configurator.rockwellautomation.com/api/Doc/3D_STP_PF525_FrameC.zip,2026-11-10,ng2-c-stp_20130731.stp,13377186,2bf252da63e2e1c04dd4bece8d0a1b2e0e8d2469794ef999666459f5d8c96f91
+COMP-0102_AB_1494U-D60,1494U-D60,https://configurator.rockwellautomation.com/api/Doc/10001235006_asm.zip,2026-11-10,10001235006_asm.stp,14629650,5dd8b717d7d9316a8ef9364e61b956b6532c9bce5e1904110c6fa62f170611d8
+COMP-0103_AB_1494U-F60,1494U-F60,https://configurator.rockwellautomation.com/api/Doc/10001236416_asm.zip,2026-11-10,10001236416_asm.stp,9921247,38af691a7eb38beef29d16ad4156675e728fad16b31f99f4d196157576c61a37
+COMP-0104_AB_140MT-D9E-C20,140MT-D9E-C20,https://configurator.rockwellautomation.com/api/Doc/140MT-D9E_T (STP) 10005888367.zip,2026-11-10,140MT-D9E_T (STP) 10005888367.stp,65258161,83222f51d55e1502c47ce5b05844a75626a3536cda5fe1334445112977563443
+COMP-0105_AB_140MT-C-TE,140MT-C-TE,https://configurator.rockwellautomation.com/api/Doc/140MT-C-TE_10005925264_prt00.zip,2026-11-10,140MT-C-TE_10005925264_prt00.stp,6206240,416d133497f9502bd5129168cc3ce46d596716165fb54d7d6215bcaee43e7c49
+COMP-0106_AB_1606-XLE240E-3,1606-XLE240E-3,https://configurator.rockwellautomation.com/api/Doc/1606-XLE240E-3.zip,2026-11-10,1606-XLE240E-3.stp,18281721,846866fe1544c35ee33e51e249e20b34ca5f3dbc499e32d4edd253d75dadbfa1
+COMP-0107_AB_1489-M1,1489-M1C100 / 1489-M1C050,https://configurator.rockwellautomation.com/api/Doc/1489-M_1pole.zip,2026-11-10,1489-M_1pole.stp,7029547,33b8fffb85abfff163736ccf26f311fabd404f20380bc6a617827410ee124249
+COMP-0108_AB_1494U-FC60J,1494U-FC60J,https://configurator.rockwellautomation.com/api/Doc/1494U-FC60J.zip,2026-11-10,1494U-FC60J.stp,694030,ed5f8b5a2317bcd3bcba639342f6a0356d536f0c41b67f52fcc3b49809710271
+COMP-0109_Panduit_G2X3WH6,G2X3WH6,https://www.panduit.com/PanProductResource/en/G2X3WH6/PartDrawings4.stp,2026-11-10,PartDrawings4.stp,3757011,c3177a1aa0d7a9104ec31ffc2e2175b83b1e291f40c4be896e92beb05f6415da

@@ -38,6 +38,10 @@ Details for every step are in the skill's SKILL.md and references/.
       come from \`JOB.panel\`.
       Expect: builds, loads, audit runs (it will report differences from the example: W1-W3 drawn again, and so on).
 
+- [ ] 1b. \`src/guide.js\`, the \`LOCATE\` block: empty \`PRINTED\`, \`HOLES\` and \`DOOR_ITEMS\` (they are VFD 200's printed dimensions,
+      mounting holes and door cutouts) and reduce the class rule (\`it.cls\`) to rail parts S, everything else F.
+      Expect: builds and loads; Locate shows positions with no holes and no door cutouts.
+
 **B. Replace the panel (the guide stops loading until this group is done)**
 
 - [ ] 2. \`src/layout.mjs\`: JOB, ENC, BOM, DUCTS, RAILS, DEVICES, ANCHORS, PHASES, STEPS for the new panel
@@ -61,6 +65,9 @@ Details for every step are in the skill's SKILL.md and references/.
 - [ ] 9. Audit: nothing through, across, shared, behind, not drawn, unresolved; tight bends zero or named.
 - [ ] 10. Every device looked at close up, front and wire-entry side (scripts/shot.mjs).
 - [ ] 11. The drawings re-read against the wire list by independent readers (references/review.md).
+- [ ] 11b. Locating (references/locating.md): the layout sheet's scale measured and checked against printed dimensions;
+      \`PRINTED\`, \`DOOR_ITEMS\` for this panel; \`HOLES\` only from documents you have opened, each cited; the tolerance
+      classes left marked as proposed, with a design issue. Picture a mounting step, its Locate view and a part card.
 - [ ] 12. \`build.mjs\`: this panel's readings (not-fitted wires, links, feeders, additions), each with its reason;
       DESIGN_ISSUES and MODELING_ISSUES.
 - [ ] 13. \`README.md\`, \`START HERE.txt\`, \`REVISIONS.md\`, \`COMPLETION.md\` written for this panel. Delete this file.

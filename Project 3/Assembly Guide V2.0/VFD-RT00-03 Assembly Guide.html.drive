@@ -1,0 +1,9 @@
+{
+  "path": "Project 3/Assembly Guide V2.0/VFD-RT00-03 Assembly Guide.html",
+  "bytes": 11348154,
+  "sha256": "99b7cdb012d3ed7fb4440b4e383f8f8d9c1c135f7e518ef008d901fd99102458",
+  "md5": "11bfa7dfce603874376c351fb8979283",
+  "mtime": "2026-11-10 10:43:06",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

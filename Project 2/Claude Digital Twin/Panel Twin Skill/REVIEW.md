@@ -111,3 +111,22 @@ I checked the outputs myself: the version numbers, where the wire was put, wheth
 2. Generalise the `TB\d` pass-through pattern and move the PartsLib address into data.
 3. Add a wire-beside-wire check to the audit.
 4. Run the description trigger test with the team's real phrasing.
+
+## 1.1.0 (2026-11-10): what was tested and what was not
+
+Made in the same session as VFD 200 V13 to V15; Bob reviewed V14 and asked for V15 and this update.
+
+**Tested**
+- `new_panel.mjs` from this bundle into an empty folder, then `build.mjs` and `audit_headless.mjs --max-kinks 2`: AUDIT: PASS, 171 segments, 166 drawn, 47 devices, two tight bends (W56, CBL-IOL-01 jacket). The checklist carries items 1b and 11b.
+- `shot.mjs --step 10 --locbig` on that copy wrote the full-screen mark-out drawing.
+- The Locate views were looked at in about 25 pictures while V14 and V15 were built: mounting steps 4, 6, 8, 10 and 11, Locate for steps 2, 3 and 10, full-screen drawings for steps 3, 6 and 11, part cards for Q1, PDB1, FU1 and DRV1.
+- Every `HOLES` number was read on the cited page in PartsLib (rendered page or page text) in this session.
+- The scale correction was checked against four printed or documented dimensions (PDB1 20 mm, Lug1 60 and 20 mm, drive 130 mm, T1 162 mm).
+
+**Not tested**
+- No fresh agent has used 1.1.0: the five 1.0.0 evals were not re-run against the new example, and the new sixth eval has not been run.
+- Checklist item 1b (emptying `PRINTED`, `HOLES`, `DOOR_ITEMS`) was not carried out on a copy.
+- A new panel end to end: still not run (as in 1.0.0).
+- Print sheets, the CSV download, a narrow screen and larger text in the Locate view.
+- The four V12 posters are of the rev18 arrangement; the four Locate posters are current.
+

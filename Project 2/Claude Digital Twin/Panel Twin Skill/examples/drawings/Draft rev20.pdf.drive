@@ -1,0 +1,9 @@
+{
+  "path": "Project 2/Claude Digital Twin/Panel Twin Skill/examples/drawings/Draft rev20.pdf",
+  "bytes": 8770742,
+  "sha256": "71aa2d5f8ec4101c268f0a2764b006ed3bd84603ffcb3077f3f3b13c76735ae6",
+  "md5": "b20f764b1ea8f976aeb9faa4bc103c1b",
+  "mtime": "2026-11-10 09:55:52",
+  "drive_folder": "https://drive.google.com/drive/folders/1W66LzMh4b1UK9vm8R7QCytJWm4yQ9twc",
+  "note": "Pointer to a file in the Panel Twin Google Drive store (same path under that folder). Written by tools/drive_store.py; never edited by hand."
+}

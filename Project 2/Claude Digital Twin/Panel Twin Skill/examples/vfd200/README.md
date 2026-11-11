@@ -1,6 +1,75 @@
-# VFD 200 Assembly Guide V12.0 (CPME 1082-01, ABARTA Coca-Cola CIP Double Skid)
+# VFD 200 Assembly Guide V15.0 (CPME 1082-01, ABARTA Coca-Cola CIP Double Skid)
 
-An interactive build and wiring guide for panel **VFD 200**, made from `../../Draft rev18.pdf` (rev A, 18 sheets), the makers' 3D models in `../Vendor Step Files/`, and the shop photos of the build in progress. Open **`VFD200 Assembly Guide.html`** in Chrome or Edge; `START HERE.txt` is the one-page handover. V1.0 to V11.0 are kept unchanged beside this folder.
+An interactive build and wiring guide for panel **VFD 200**, made from `../../Draft rev20.pdf` (rev A, 18 sheets), the makers' 3D models in `../Vendor Step Files/`, and the shop photos of the build in progress. Open **`VFD200 Assembly Guide.html`** in Chrome or Edge (it needs internet for the 3D library). Builders: read `START HERE.txt`.
+
+## What's new in V15 (Bob: mounting holes where we have the reference, nothing where we do not)
+
+- **Mounting holes, from the makers' documents only.** The "Where it goes" card of a part shows its hole pattern, the screw or drill size, and the source, when a document gives it:
+
+  | Part | What the document gives | Source |
+  |---|---|---|
+  | Q1 | 4 holes, 46.0 x 124.0 mm; columns at 1025 and 1071 mm from the left edge; 11/64 in pilot holes | Rockwell drawing 10001235194; 1494U-IN001 p.2; sheet 3 |
+  | FU1 | 2 holes 46.0 mm apart, in line with Q1's; 113.0 mm (Z) below Q1's lower slots | Rockwell drawing 10001237277; 1494U-IN001 p.10; sheet 3 |
+  | DRV1, DRV2 | 4 holes, 116.0 x 247.0 mm, M5 | 520-UM001 p.188, p.15 |
+  | Lug1 | 2 holes 44.5 mm apart, 9/16 in | Burndy specification sheet |
+  | GB1 | 2 holes 50.3 mm apart, first 65.2 mm from the end, #10 | ILSCO D167 page C-235 |
+  | T1 | 4 slots 7.9 x 21.6 mm; width 135.1 or 111.0, depth 108.0 or 146.1 mm | SolaHD catalogue p.173, p.175 |
+  | PDB1 | 3 hole columns only (26.2 mm in, 45.5 mm apart) | 1492-TD019 p.14 |
+
+  Where a document gives the pattern but not where it sits inside the part's outline, the guide says so and says to mark through the part. **Nothing is shown, and nothing is estimated, for ducts, rails, HMI1, the E-STOP, the A/C, subplate 2 and VM1.**
+- **FU1 was 53 mm too low since V9.** Reading 1494U-IN001 p.10 for the holes showed that DIM Z (113 mm) runs from the switch's lower mounting slots to the fuse block's mounting holes, which is also how rev20 sheet 3 dimensions it. Corrected. The fuse blades now reach the clips on both parts, and W4, W5 and W6 no longer bend too tightly. The V13 remark that sheet 3's picture of FU1 was wrong is withdrawn: the drawing was right.
+
+### Audit
+
+Through a solid 0, across a device 0, shared clamp 0, behind the plate 0, unresolved 0, not drawn 0; 171 segments, 320 ends. Two tight bends, the two V12 had: W56 at TB2 and the CBL-IOL-01 jacket at VM1.
+
+### Open
+
+- Sheet 3's 104 mm to Q1: it points about 13 mm below Rockwell's top hole row. No height is shown for Q1's holes until engineering answers; Rockwell's method is the template from the handle hole.
+- Hole positions inside the outline for the drives, Lug1, GB1, T1 and PDB1's rows: not in the documents held.
+- The tolerances and the datum corner are proposals until engineering confirms.
+
+## What's new in V14 (Bob: locating every item, GD&T, accuracy)
+
+Everything V13 had is still there. Added:
+
+- **Datums.** Every position on subplate 1 is measured from the same two edges: datum C, the left edge (across), and datum B, the top edge (down); datum A is the plate face. Baseline dimensions only: nothing is measured from one part to the next, so errors do not add up. Door cutouts use the right door's own top and handle edges, as sheet 2 does.
+- **Locate (new view, top bar).** For each mounting step: a mark-out drawing with the datum edges and an ordinate for every item, a table (left and right edge, top and bottom edge or rail centre line, mm and inches, what it sits against on a rail, how closely to hold it), a full-screen drawing (a rail step zooms to its rail), printable mark-out sheets and a positions CSV.
+- **On the 3D panel.** In the mounting steps the two datum edges are lit; each rail carries a tape from the left edge with a number at every part; a selected part gets a leader from each edge with its two numbers, and a check dimension at its far corner. The Dimensions button (L) turns it off.
+- **On each step and part.** Mounting steps have a "Where it goes" table; each part's page starts with a "Where it goes" card. Step 3 (mark out and drill) lists everything that is drilled for: ducts, rails and plate-mounted parts.
+- **Tolerances.** Three classes shown as a feature control frame and in words: a 1 mm circle (Q1, FU1, door cutouts), 3 mm (ducts, rails, plate parts), 6 mm along the rail (rail parts). **The drawings give none: these are proposed**, and say so wherever they appear (Design issues).
+- **Accuracy: the sheet 3 scale.** Building this showed that V1 to V13 read sheet 3's pictures 0.85 % too small: parts were up to 8 mm too far left and 10 mm too high towards the right and bottom of the plate, and rail parts sat 2 to 7 mm above their rails. Corrected; PDB1 now lands 20.0 mm from the right edge, as sheet 3 prints, and the drives measure 130 mm.
+
+### Audit
+
+Through a solid 0, across a device 0, shared clamp 0, behind the plate 0, unresolved 0, not drawn 0; 171 segments, 320 ends. Four tight bends: W5 and W6 (FU1 to PDB1, the geometry rev20 draws), W56 at TB2, the CBL-IOL-01 jacket at VM1. Every wire moved slightly from V13 because the parts moved to their true positions.
+
+### Open
+
+- Mounting hole patterns are not in the guide: plate parts are located by outline, and by sheet 3's printed dimensions where it has them.
+- The tolerances and the datum corner are proposals until engineering confirms.
+- Everything open in V13.
+
+## What's new in V13 (Draft rev20)
+
+Bob sent Draft rev20 and asked for the guide for the assemblers. Rev20 is a re-arrangement of the same panel, so V13 is V12 rebuilt to it.
+
+- **Door (sheet 2):** HMI1 and the E-STOP are on the right door, at the new dimensions.
+- **Subplate (sheet 3):** Q1, FU1 and Lug1 moved; rail 1 is FU2, CB3, CB2, CB1; NS1 and NS2 are on rail 3; all six isolators (SI6 to SI1), TB4, RCP1, CB5, TB2 and TB1 are on rail 4.
+- **Wiring (sheets 4-14):** 123 wires and 37 cables, with rev20's wire numbers (most changed). The 72-terminal TB4 and its 24 internal IO-Link cables are gone: the 20 field cables land on the CPL1-CPL3 plugs. The old TB5 is TB4; the safe-off wiring is W24-W27 and W48-W51.
+- **Parts (sheets 16-18):** 1492-J4 quantity 8, three Ethernet patch cord lines added, the MS4 filter regulator removed.
+- **Issues:** rewritten for rev20. Five are new and matter before building: the renumbering (old markers are wrong), the door wiring route to a door hinged on the centre post, field cables landing on the IO-Link masters with no entry or route drawn, the tight FU1 to PDB1 offset for W4-W6, and rework of what the shop already built to rev18.
+
+### Audit
+
+Through a solid 0, across a device 0, shared clamp 0, behind the plate 0, unresolved 0, not drawn 0; 171 segments, 320 conductor ends. Five tight bends: W56 at TB2 and the CBL-IOL-01 jacket at VM1 (the same two as V12, under their rev20 names), and W4, W5, W6 between FU1 and PDB1, which is the geometry rev20 draws (Design issues).
+
+### Open
+
+- The Z reference for FU1 (the sheet 3 picture is about 60 mm higher than the guide places it).
+- The door wiring route; the lengths of the HMI1 and E-STOP wires depend on it.
+- The sheet 5 junctions (W25/W49, W27/W51): the guide makes them on TB4-2 and TB4-3.
+- Everything open in V12 that rev20 did not change (GLG terminal numbering, T1 fuses, field entries, GB2, A/C and subplate 2 positions).
 
 ## What's new in V12 (Bob's review of V11)
 

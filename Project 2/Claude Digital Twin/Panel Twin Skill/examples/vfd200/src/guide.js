@@ -304,8 +304,12 @@ let hmiHole, estopHole
 {
   const wl = VDOOR.L?.w ?? 0.573, wr = 0.575
   // sheet 2: display centre 1400 mm from the floor and 287 mm from the door's centre-post edge; E-STOP 138 mm from that edge
-  hmiHole = { x: wl - 0.287, y: 1.4, w: 0.269, h: 0.224 }
-  estopHole = { x: wl - 0.138, y: 1.097, r: 0.0152 }
+  // V13 (Draft rev20 sheet 2): HMI1 and the E-STOP are on the RIGHT door (rev18: the left door). Display centre 1400 mm from
+  // the floor, 257 mm below the top of the door and 287 mm from the door's right (handle) edge; E-STOP centre 168 mm from
+  // that edge and 935 mm above the bottom of the door (550 mm below its top), which is 1107 mm from the floor.
+  const wR = VDOOR.R?.w ?? wr
+  hmiHole = { x: wR - 0.287, y: 1.4, w: 0.269, h: 0.224 }
+  estopHole = { x: wR - 0.168, y: 1.4 + 0.257 - 0.550, r: 0.0152 }
   if (!VENC) {
   doorL.add(mesh(doorPanel(wl, 1), M.ssDoor))
   doorR.add(mesh(doorPanel(wr, 1), M.ssDoor))
@@ -318,7 +322,7 @@ let hmiHole, estopHole
   }
   cutG.add(mesh([box(hmiHole.w, hmiHole.h, 0.004, hmiHole.x, hmiHole.y, 0.0015, 0)], M.hole))
   cutG.add(mesh([cyl(estopHole.r, 0.004, estopHole.x, estopHole.y, 0.0015, 'z', 32)], M.hole))
-  doorL.add(cutG)
+  doorR.add(cutG)
 }
 
 // A/C on the left side wall: Enviro-Therm 1000 BTU/h, 254 x 480 x 190.5 mm (PartsLib record), position not drawn
@@ -1206,7 +1210,8 @@ for (const [rk, list] of Object.entries(G.ANCHORS)) {
 // V4: Rockwell's own model. It is 74.2 mm along the rail and 123.7 mm tall, so it fills the space between the TB5 end
 // anchor (887.4 mm) and CB5 (978.4 mm), centred at 932 mm; the V3 position (900-945 mm) was a 45 mm box.
 if (hasModel(FIT.MODEL_FIT.RCP1?.model) && G.RAILS.r4 && STEP_GROUPS.rail4) {      // job-specific: remove with RCP1's entry in model_fit.mjs
-  const rail = G.RAILS.r4, Xc = 932, v = vendor(FIT.MODEL_FIT.RCP1.model, FIT.MODEL_FIT.RCP1.rot)
+  // V13 (Draft rev20): sheet 3 now draws RCP1, between TB4 and CB5, centred at 806.0 mm (V14: true scale; 768.5 to 843.4 mm)
+  const rail = G.RAILS.r4, Xc = 806.0, v = vendor(FIT.MODEL_FIT.RCP1.model, FIT.MODEL_FIT.RCP1.rot)
   const dv = addVendorDevice({ tag: 'RCP1', pn: '1492-REC15', step: 'rail4', body: '#dddcd5' }, FIT.MODEL_FIT.RCP1, STEP_GROUPS.rail4, { X0: Xc - v.size.x * 500, X1: Xc + v.size.x * 500, Yt: rail.y - v.size.y * 500, Yb: rail.y + v.size.y * 500 })
   tagPlate('RCP1', Xc, rail.y + v.size.y * 500 + 9, 22); TAG_PLATES[TAG_PLATES.length - 1].userData.step = 'rail4'
   void dv
@@ -1260,7 +1265,7 @@ const SUB2 = { x: -W / 2 + T + 0.004, y: 0.58, z: D * 0.42 }
 // ------------------------------------------------------------------ door devices: HMI1 PanelView Plus 7 (297 x 252 mm bezel, PartsLib) and the E-STOP
 {
   const hw = 0.297, hh = 0.252
-  const g = new THREE.Group(); doorL.add(g); doorDevG.userData.real = g
+  const g = new THREE.Group(); doorR.add(g); doorDevG.userData.real = g
   const bez = mesh([box(hw, hh, 0.012, hmiHole.x, hmiHole.y, 0.0028 + 0.006, 0.006)], M.grey)
   const scr = new THREE.Mesh(at(new THREE.PlaneGeometry(hw * 0.985, hh * 0.985), hmiHole.x, hmiHole.y, 0.0028 + 0.0122), faceMat('HMI1'))
   const back = mesh([box(0.27, 0.22, 0.06, hmiHole.x, hmiHole.y, -0.03, 0.004)], M.black)
@@ -1347,7 +1352,7 @@ function term(devTag, rawTerm, key) {
     const s = dv.d.strip, sl = STRIP_LAYOUT[s.kind], X = s.x0 + s.pitch * (i + 0.5), Yt = G.RAILS[dv.d.rail].y - s.h / 2
     const level = m?.[2]
     const field = raw.includes(':field')
-    const insideTop = devTag !== 'TB1'                 // TB1's drive side faces the duct below rail 1
+    const insideTop = true                             // V13 (rev20): TB1 is on rail 4 now, drive side up like every other strip (on rail 1 it faced down)
     const topSide = field ? !insideTop : insideTop
     let v; if (s.kind === 'JD4') { const pair = sl[level ?? 'T']; v = topSide ? pair[0] : pair[1] } else v = topSide ? sl.inside : sl.field
     if (!insideTop) v = 1 - v
@@ -1588,7 +1593,7 @@ const kindOf = (s) => {
   if (p === 'GND' || /GND BAR/.test(f) && !/DC -|COM/.test(f)) return 'gnd'
   if (s.sheet === 4 && s.label === 'W54') return 'hot120'
   if (s.sheet === 4 && s.label === 'W19') return 'neutral'
-  if (s.sheet <= 5 && !/\bS[12]\b|Digital|E-STOP|TB5|OUT-|OUT\+|DC-COM|24V/.test(f + ' ' + p)) return 'power'
+  if (s.sheet <= 5 && !/\bS[12]\b|Digital|E-STOP|TB4|OUT-|OUT\+|DC-COM|24V/.test(f + ' ' + p)) return 'power'
   if (s.sheet === 6 || s.sheet === 4 && /T1|FU2|TB2|RCP1/.test(f) && !/PWS1/.test(f)) return p === 'N' ? 'neutral' : 'hot120'
   if (/PDB3|0V|OUT-|DC COM|DC -|N24|Com|AIn-|AOut-|X31-1|V-|US-|\(lamp\)|DC-COM/.test(f + ' ' + p) && !/X1 \(lamp\)/.test(f)) return 'dc0'
   return 'dc'
@@ -1705,7 +1710,11 @@ const tube = (pts, r, radial = 6) => { const c = new THREE.CatmullRomCurve3(pts,
 
 // ------------------------------------------------------------------ build every conductor and cable
 const WIRES = []                    // per segment: { s, obj, tubes[], kind, curve, step, len, ends, ducts }
-const DOOR_EXIT = { X: 42, Y: 260 }, AC_EXIT = { X: 42, Y: 140 }
+// V13 (Draft rev20): HMI1 and the E-STOP are on the right door, which hinges on the centre post. Their wires leave the plate
+// from duct D5 (below the drives) at the centre post and cross to the door at its hinge edge. The drawings do not show a
+// route: Design issues. (V12: the left door, leaving from the left riser along the left wall.)
+const DOOR_HINGE_X = doorR.position.x - 0.012
+const DOOR_EXIT = { X: Math.round((DOOR_HINGE_X + SW / 2) * 1000), Y: 738 }, AC_EXIT = { X: 42, Y: 140 }
 const DUCT_USE = Object.fromEntries(G.DUCTS.map((d) => [d.id, { ac: new Set(), dc: new Set() }]))
 const FIELD_EXIT = (X) => ({ X: clamp(X, 120, 1040), Y: 1440, z: PZ + 0.03, e: 'b', exit: true, free: true })
 const EP_CACHE = new Map()
@@ -1757,7 +1766,7 @@ function tailFor(ex) {
   const wx = -W / 2 + T + 0.012, ey = SY(ex.Y)
   if (ex.offplate === 'A/C') return [V3(SX(4), ey, PZ + 0.03), V3(wx, ey, PZ + 0.05), V3(wx, 1.3, D * 0.42), V3(wx, 1.2, D * 0.5)]
   if (ex.sub2) return [V3(SX(4), ey, PZ + 0.03), V3(wx, ey, PZ + 0.05), V3(wx, lerp(ey, SUB2.y + 0.06, 0.5), SUB2.z - 0.12), V3(SUB2.x + 0.07, SUB2.y + 0.06, SUB2.z - 0.1)]   // V9: along the wall at its own height (V8 climbed 100 mm past VM1 and came back)
-  if (ex.door) return [V3(SX(4), ey, PZ + 0.03), V3(wx, ey, PZ + 0.05), V3(wx, ey - 0.03, D - 0.12), V3(wx + 0.004, ey - 0.05, D - 0.05)]
+  if (ex.door) { const hx = DOOR_HINGE_X; return [V3(hx, ey, PZ + 0.05), V3(hx, ey - 0.01, lerp(PZ, D, 0.5)), V3(hx, ey - 0.03, D - 0.12), V3(hx + 0.004, ey - 0.05, D - 0.05)] }
   // field wiring: down out of the bottom duct to a cable gland in the enclosure floor (no entries are drawn: design issue)
   const g = glandAt(SX(ex.X))
   return [V3(SX(ex.X), SY(1436), PZ + 0.03), V3(lerp(SX(ex.X), g.x, 0.5), Y0 + 0.03, lerp(PZ + 0.03, g.z, 0.6)), V3(g.x, Y0 + T + 0.004, g.z), V3(g.x, Y0 - 0.05, g.z)]
@@ -2072,7 +2081,7 @@ function focusOn(points, pad = 1) {
 function focusTag(tag) {
   const dv = DEV[tag]
   if (dv?.obj) { lab.machine.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(dv.obj); if (b.isEmpty()) return; const inv = new THREE.Matrix4().copy(lab.machine.matrixWorld).invert(); b.applyMatrix4(inv); focusOn([b.min, b.max], 1.6) }
-  else if (dv?.door) { const p = DEV[tag].local.clone(); doorL.updateMatrixWorld(true); doorL.localToWorld(p); lab.machine.worldToLocal(p); focusOn([p.clone().addScalar(-0.12), p.clone().addScalar(0.12)]) }
+  else if (dv?.door) { const p = DEV[tag].local.clone(); doorR.updateMatrixWorld(true); doorR.localToWorld(p); lab.machine.worldToLocal(p); focusOn([p.clone().addScalar(-0.12), p.clone().addScalar(0.12)]) }
 }
 lab.onTick((dt, l, rdt) => {
   if (camTween) {
@@ -2092,7 +2101,7 @@ lab.onTick((dt, l, rdt) => {
   const pulse = 0.5 + 0.5 * Math.sin(performance.now() / 220)
   hiMat.opacity = 0.55 + 0.4 * pulse
   for (const r of ringG.children) r.scale.setScalar(1 + 0.35 * pulse)
-  tags.update()
+  tags.update(); LOC.update()
 })
 lab.controlsOrbit.addEventListener('start', () => { if (camTween) { camTween = null; lab.controlsOrbit.enableDamping = true } })
 
@@ -2105,7 +2114,7 @@ const tags = (() => {
   function el(key, cls) { if (!els.has(key)) { const e = document.createElement('div'); layer.appendChild(e); els.set(key, e) } const e = els.get(key); e.className = cls; return e }
   function anchor(tag) {
     const dv = DEV[tag]; if (!dv) return null
-    if (dv.door) { const p = V3(dv.local.x, dv.local.y + 0.1, 0.04); doorL.localToWorld(p); return p }
+    if (dv.door) { const p = V3(dv.local.x, dv.local.y + 0.1, 0.04); doorR.localToWorld(p); return p }
     if (dv.sub2) { const p = V3(0, 0.07, 0.2); dv.group.localToWorld(p); return p }
     const p = V3(dv.xc, dv.yT + 0.012, dv.z1); lab.machine.localToWorld(p); return p
   }
@@ -2182,7 +2191,7 @@ function select(sel, { fly = true, from } = {}) {
         const txt = w.cores?.length ? `${p.dev} ${w.cores.filter((k) => k.which === side).map((k) => `${k.p.pin} ${k.name}`).join(' · ')}` : endTxt(e)
         const sub = w.cores?.length ? w.cores.filter((k) => k.which === side).map((k) => k.p.where).join('; ') : p.where
         ends.push({ html: `<b>${lbl}</b> ${esc(txt)}<small>${esc(sub ?? '')}</small>`, world: () => lab.machine.localToWorld(c.clone()) })
-      } else if (e.dev === 'HMI1' || e.dev === 'E-STOP') ends.push({ html: `<b>${lbl}</b> ${esc(endTxt(e))}<small>on the door</small>`, world: () => doorL.localToWorld(DEV[e.dev].local.clone()) })
+      } else if (e.dev === 'HMI1' || e.dev === 'E-STOP') ends.push({ html: `<b>${lbl}</b> ${esc(endTxt(e))}<small>on the door</small>`, world: () => doorR.localToWorld(DEV[e.dev].local.clone()) })
       else if (p?.exit) ends.push({ html: `<b>${lbl}</b> ${esc(endTxt(e))}<small>${p.offplate ? esc(p.offplate) : 'gland in the floor: site'}</small>`, world: () => lab.machine.localToWorld(w.curve.getPointAt(lbl === 'A' ? 0 : 1).clone()) })
     }
     tags.setEnds(ends)
@@ -2285,6 +2294,324 @@ const wm = {
   isDone(segIdx) { return !!(store.get('wired') ?? {})[G.SEGMENTS[segIdx].id] },
 }
 
+// ------------------------------------------------------------------ V14: LOCATE. Where every item goes, from three datums.
+// First principles: a builder locates a part with a tape or a square hooked on an edge. So every position is given from
+// the same two edges of the plate (baseline dimensions, never a chain from one part to the next, so errors do not add up):
+//   datum A  the face of the subplate (parts sit flat on it)
+//   datum B  the top edge of the subplate (every "down" dimension starts here)
+//   datum C  the left edge of the subplate (every "across" dimension starts here)
+// This is the origin sheet 3 itself dimensions from (its top left corner). The numbers are the positions this guide
+// builds the 3D panel at, read back from the model: sheet 3's pictures scaled from the PDF (good to about 1 mm), with
+// real widths from the makers' documents where sheet 3 is not to scale. What sheet 3 prints as a dimension is quoted.
+// Tolerances: the drawings give none. The three classes below are this guide's proposal (Design issues), shown as a
+// feature control frame and in plain words. Door parts use the door's own edges, as sheet 2 dimensions them.
+const LOC = (() => {
+  const mmX = (x) => (x + SW / 2) * 1000, mmY = (y) => (Y0 + 0.051 + SH - y) * 1000
+  const h = (v) => Math.round(v * 2) / 2
+  const mm = (v) => { const r = h(v); return Number.isInteger(r) ? String(r) : r.toFixed(1) }
+  const inch = (v) => { let n = Math.round(v / 25.4 * 16), w = Math.floor(n / 16), f = n % 16, d = 16; while (f && f % 2 === 0) { f /= 2; d /= 2 } return `${w}${f ? ` ${f}/${d}` : ''} in` }
+  const both = (v) => `<b>${mm(v)}</b> <small>${inch(v)}</small>`
+  const INK = '#b0127a'
+  const TOL = {
+    C: { zone: 1, pm: '±0.5 mm', name: 'Critical fit', why: 'another part has to line up with it' },
+    F: { zone: 3, pm: '±1.5 mm', name: 'Fixed to the plate', why: 'drilled or screwed down: it cannot be moved later' },
+    S: { zone: 6, pm: '±3 mm along the rail', name: 'On a DIN rail', why: 'it slides: the order and what it sits against matter more than the number' },
+  }
+  const fcf = (c) => `<span class="fcf" title="Position within a ${TOL[c].zone} mm circle of the true position, measured from datums A, B and C (${TOL[c].pm}). Proposed by this guide: the drawings give no tolerance."><i>⌖</i><i>⌀${TOL[c].zone}</i><i>A</i><i>B</i><i>C</i></span>`
+  // what sheet 3 (Draft rev20) prints as a dimension for a part, quoted so it can be checked against the ordinates
+  const PRINTED = {
+    Q1: 'Sheet 3 prints 104 mm down from the top edge and 47 mm in from the right edge (1071 mm from the left edge) to the mounting point it marks on the switch. Use these two for the first hole; the outline numbers above are the envelope of the whole switch and mechanism.',
+    FU1: 'Sheet 3 prints "Z = 113 mm per manual" and 47 mm in from the right edge. Z is the distance from Q1\'s lower mounting slots down to this block\'s two mounting holes (1494U-IN001 p.10): set the block from the switch, not from the plate edges.',
+    Lug1: 'Sheet 3 prints 60 mm down from the top edge and 20 mm right of duct D4.',
+    GB1: 'Sheet 3 prints 39 mm right of duct D4, 39 mm left of PDB1 and 55 mm above duct D5.',
+    PDB1: 'Sheet 3 prints 20 mm in from the right edge and 100 mm above duct D5.',
+    DRV1: 'Sheet 3 prints 50 mm clear on each side of the drive.', DRV2: 'Sheet 3 prints 50 mm clear on each side of the drive.',
+    T1: 'Sheet 3 puts it in the 262 mm bay between ducts D6 and D7.',
+  }
+  // V15: mounting holes, ONLY where a maker's document (or sheet 3) gives them. Every number here is printed in the document
+  // cited; nothing is scaled off a picture and nothing is inferred. A part with no entry shows no hole information at all.
+  //   pat: the hole pattern itself (mm across, mm down), drawn as a small diagram
+  //   cols: hole columns in mm from datum C, only where documents fix them on the plate (fn of the item for an offset from its edge)
+  //   where: what the documents do and do not say about placing the pattern on the plate
+  const HOLES = {
+    Q1: { n: 4, pat: { w: 46.0, h: 124.0 }, cols: () => [1025, 1071], drill: 'Drill four 11/64 in (4.4 mm) holes for the thread-forming screws supplied with the switch.',
+      text: 'Two round holes at the top and two slots 124.0 mm (4.88 in) below them, each pair 46.0 mm (1.81 in) apart, between the poles. The right-hand pair is 84.3 mm (3.32 in) in from the right end of the operating mechanism.',
+      where: 'Across, two documents agree: the right-hand holes are 1071 mm from the left edge (sheet 3: 47 mm from the right edge; Rockwell: 3.32 in from the end of the mechanism) and the left-hand holes 1025 mm. Down, Rockwell locates the switch from the handle hole in the flange with paper template PN-254969, and sheet 3 prints 104 mm to a point that sits about 13 mm below the top hole row on Rockwell\'s drawing. No height is shown until engineering says which is meant: use the template.',
+      cite: 'Rockwell drawing 10001235194 (1494U 100 A switch); 1494U-IN001 p.2; sheet 3' },
+    FU1: { n: 2, pat: { w: 46.0 }, cols: () => [1025, 1071], drill: 'Two holes for #10-32 screws (the holes in the block are 0.203 in).',
+      text: 'Two holes 46.0 mm (1.81 in) apart, between the poles, 9.4 mm (0.37 in) above the bottom of the moulding.',
+      where: 'Across: in line with Q1\'s holes, 1025 and 1071 mm from the left edge. Down: 113.0 mm below Q1\'s lower mounting slots (DIM Z, 4.449 in, for 100 A 600 V class J fuses). Set it from the switch, not from the plate edge.',
+      cite: 'Rockwell drawing 10001237277 (1494U 100 A fuse block); 1494U-IN001 p.10; sheet 3 ("Z = 113 mm per manual")' },
+    PDB1: { n: 6, cols: (i) => [i.X0 + 26.2, i.X0 + 71.7, i.X0 + 117.2], drill: '',
+      text: 'Six slots: one at the top and one at the bottom of each pole, in three columns 45.5 mm apart, the outer columns 26.2 mm in from each side of the block.',
+      where: 'The heights of the two rows of slots are not dimensioned in the document, and it calls its dimensions approximate: mark the rows from the block itself.',
+      cite: '1492-TD019 p.14, Figure 3 (D and E)' },
+    DRV1: { n: 4, pat: { w: 116.0, h: 247.0 }, drill: 'M5 (#10-24) screws, 2.45-2.94 N·m (22-26 lb·in).',
+      text: 'Four holes: 116.0 mm apart across, 247.0 mm apart down, on a body 130.0 x 260.0 mm.',
+      where: 'Where the pattern sits inside the outline is not dimensioned in the manual: mark it through the drive.',
+      cite: '520-UM001 p.188 (frame D) and p.15' },
+    Lug1: { n: 2, pat: { h: 44.5 }, drill: 'The lug\'s holes are 9/16 in (14 mm), for 1/2 in studs or bolts.',
+      text: 'Two holes 44.5 mm (1.75 in) apart along the lug.', where: 'Their distance from the end of the lug is not on the sheet held: mark through the lug.',
+      cite: 'Burndy K3A26U2N specification sheet' },
+    GB1: { n: 2, pat: { h: 50.3 }, drill: 'The bar\'s mounting holes are 13/64 in, for #10 screws.',
+      text: 'Two holes 50.3 mm (1.98 in) apart along the bar; the first is 65.2 mm (2.566 in) from the end of the bar, at its 7th tap.',
+      where: 'The page does not say which end: check on the bar.', cite: 'ILSCO D167 catalogue page C-235' },
+    T1: { n: 4, drill: 'Slots 7.9 x 21.6 mm (0.31 x 0.85 in).',
+      text: 'Four slots in the mounting plate. Mounting width 135.1 mm (W1) or 111.0 mm (W2); mounting depth 108.0 mm (D1) or 146.1 mm (D2).',
+      where: 'The catalogue gives two widths and two depths for the two sets of slots: use the pair that matches the slots you fasten through.',
+      cite: 'SolaHD catalogue p.173 (mounting profile) and p.175 (E750WB)' },
+  }
+  HOLES.DRV2 = HOLES.DRV1
+  const STEP_OF_RAIL = { r1: 'rail1', r3: 'rail3', r4: 'rail4' }
+  const ITEMS = []
+  for (const d of G.DUCTS) { const [X0, X1, Yt, Yb] = d.r; ITEMS.push({ tag: d.id, kind: 'duct', step: 'duct', X0, X1, Yt, Yb, cls: 'F', what: `${d.size.replace('x', ' x ')} in duct, ${d.note}`, src: 'sheet 3 dimensions' }) }
+  for (const [k, r] of Object.entries(G.RAILS)) ITEMS.push({ tag: r.name, kind: 'rail', step: 'rails', X0: r.x0, X1: r.x1, Y: r.y, Yt: r.y - 17.5, Yb: r.y + 17.5, cls: 'F', rail: k, what: `35 mm DIN rail, ${mm(r.x1 - r.x0)} mm long`, src: 'sheet 3 (10 mm from the duct at each end); centre line scaled from the picture', printed: 'Keep the rail parallel to the top edge: measure the centre line down from datum B at both ends.' })
+  for (const [k, list] of Object.entries(G.ANCHORS ?? {})) list.forEach((X, i) => ITEMS.push({ tag: `${G.RAILS[k].name} anchor ${i + 1}`, kind: 'raildev', anchor: true, step: STEP_OF_RAIL[k], rail: k, X0: X, X1: X + 7.9, Y: G.RAILS[k].y, Yt: G.RAILS[k].y - 27, Yb: G.RAILS[k].y + 27, cls: 'S', what: '1492-EAJ35 end anchor', src: 'sheet 3' }))
+  for (const [tag, dv] of Object.entries(DEV)) {
+    if (dv.x0 === undefined || dv.d?.at === 'fuse' || dv.door || dv.sub2) continue
+    const d = dv.d ?? {}, rail = d.rail ?? (tag === 'RCP1' ? 'r4' : null)
+    const it = { tag, dev: true, kind: rail ? 'raildev' : 'plate', step: d.step, rail, X0: mmX(dv.x0), X1: mmX(dv.x1), Yt: mmY(dv.yT), Yb: mmY(dv.yB), what: d.pn ?? '', printed: PRINTED[tag] }
+    if (rail) it.Y = G.RAILS[rail].y
+    it.cls = rail ? 'S' : tag === 'Q1' || tag === 'FU1' ? 'C' : 'F'
+    it.src = d.xNote ? d.xNote : d.strip ? 'sheet 3 start, real terminal pitch' : rail ? 'sheet 3 picture, scaled; real body width from the maker\'s model' : 'sheet 3 picture, scaled; outline of the maker\'s model'
+    if (HOLES[tag]) { it.holes = HOLES[tag]; it.cols = HOLES[tag].cols ? HOLES[tag].cols(it).map((v) => Math.round(v * 2) / 2) : null }
+    ITEMS.push(it)
+  }
+  // on a rail: what each part sits against, left to right
+  for (const k of Object.keys(G.RAILS)) {
+    const row = ITEMS.filter((i) => i.kind === 'raildev' && i.rail === k).sort((a, b) => a.X0 - b.X0)
+    row.forEach((it, n) => { it.order = n + 1; it.of = row.length; const p = row[n - 1]; if (!p) { it.against = `first on ${G.RAILS[k].name}, ${mm(it.X0 - G.RAILS[k].x0)} mm from the rail's left end`; return } const gap = it.X0 - p.X1; it.against = gap < -0.8 ? `locks onto ${p.tag}` : gap < 0.8 ? `tight against ${p.tag}` : `${mm(gap)} mm gap after ${p.tag}` })
+  }
+  // the right door (sheet 2): datums are the door's own top edge and its handle (right) edge
+  const DOOR = { w: (VDOOR.R?.w ?? 0.575) * 1000, h: (VDOOR.R?.h ?? 1.485) * 1000 }
+  const DOOR_ITEMS = [
+    { tag: 'HMI1', kind: 'door', step: 'cutouts', cls: 'C', fromRight: 287, fromTop: 257, w: 269, hh: 224, what: 'PanelView Plus 7 cutout, 269 wide x 224 high (sheet 2: "approx.")', printed: 'Sheet 2 prints: display centre 287 mm from the door\'s right edge, 257 mm below the top of the door, 1400 mm from the floor. Take the cutout size and tolerance from the PanelView Plus 7 instructions before cutting.' },
+    { tag: 'E-STOP', kind: 'door', step: 'cutouts', cls: 'C', fromRight: 168, fromTop: 550, w: 30.5, hh: 30.5, round: true, what: '30 mm operator hole (800H)', printed: 'Sheet 2 prints: centre 168 mm from the door\'s right edge, 550 mm below the top of the door, 935 mm above its bottom.' },
+  ]
+  const byTag = (t) => ITEMS.find((i) => i.tag === t) ?? DOOR_ITEMS.find((i) => i.tag === t)
+  const stepsWith = () => G.STEPS.filter((s) => itemsOf(s.id).length)
+  // the mark-out step ("plate") is where everything that is drilled for gets marked: ducts, rails and plate-mounted parts
+  const itemsOf = (stepId) => [...ITEMS.filter((i) => i.step === stepId || (stepId === 'plate' && (i.kind === 'duct' || i.kind === 'rail' || i.kind === 'plate'))).sort((a, b) => (a.rail ?? '').localeCompare(b.rail ?? '') || a.X0 - b.X0 || a.Yt - b.Yt), ...DOOR_ITEMS.filter((i) => i.step === stepId)]
+
+  // ---- the mark-out drawing: the plate seen square-on, datum edges marked, ordinates of the chosen items on the two edges
+  function sheet(scope, sel, big) {
+    const on = new Set(scope.map((i) => i.tag)), F = big ? 22 : 30, mL = 190, mT = big ? 250 : 170
+    // a rail step, full screen: only the band round that rail, so the row is as large as the window allows. The top edge is
+    // then out of the picture: the ticks stand on a break line and the rail's own distance from the top edge is written on it
+    const crop = big && scope.length > 0 && scope.every((i) => i.kind === 'raildev'), top = crop ? Math.min(...scope.map((i) => i.Yt)) - 60 : 0, bot = crop ? Math.max(...scope.map((i) => i.Yb)) + 70 : 1422
+    const lead = [], xs = [], ys = []
+    const body = ITEMS.filter((i) => !i.anchor).map((i) => {
+      const hot = on.has(i.tag), s = i.tag === sel
+      const cl = `${i.kind}${hot ? ' hot' : ''}${s ? ' sel' : ''}`
+      if (i.kind === 'rail') return `<line class="${cl}" x1="${i.X0}" x2="${i.X1}" y1="${i.Y}" y2="${i.Y}"/>`
+      const w = i.X1 - i.X0, hh = i.Yb - i.Yt
+      return `<rect class="${cl}" ${i.dev ? `data-dev="${esc(i.tag)}"` : ''} x="${i.X0.toFixed(1)}" y="${i.Yt.toFixed(1)}" width="${w.toFixed(1)}" height="${hh.toFixed(1)}"><title>${esc(i.tag)}</title></rect>${hot && (w > 60 || big) ? `<text class="tg" x="${(i.X0 + w / 2).toFixed(1)}" y="${(i.Yt + hh / 2 + 7).toFixed(1)}" text-anchor="middle" font-size="${Math.min(F, Math.max(11, w * 0.42))}">${esc(i.tag)}</text>` : ''}`
+    }).join('')
+    for (const i of scope) {
+      if (i.kind === 'door') continue
+      const y = i.Y ?? i.Yt
+      xs.push(i.X0); ys.push(y)
+      lead.push(`<path class="ld" d="M${i.X0.toFixed(1)} ${y.toFixed(1)}V${top}M${i.X0.toFixed(1)} ${y.toFixed(1)}H0"/>`)
+      if (i.cols) for (const c of i.cols) { xs.push(c); lead.push(`<path class="cl" d="M${c} ${(i.Yt - 14).toFixed(1)}V${(i.Yb + 14).toFixed(1)}"/>`) }
+      if (i.kind === 'duct' || i.kind === 'rail' || scope.length <= 2) { xs.push(i.X1); if (i.kind === 'duct' || i.kind === 'plate') ys.push(i.Yb) }
+    }
+    const uniq = (a) => [...new Set(a.map((v) => h(v)))].sort((p, q) => p - q)
+    let last = -99, lvl = 0
+    const words = big || scope.length <= 2                  // the small drawing in the panel is a map: the numbers are in the table beside it
+    const xt = uniq(xs).map((v) => { lvl = v - last < F * 1.05 ? (lvl + 1) % 3 : 0; last = v; const y = top - 14 - lvl * F * 2.9; return `<path class="tk" d="M${v} ${top}V${words ? y + 4 : top - 16}"/>${words ? `<text class="ord" font-size="${F}" transform="translate(${v + F * 0.36} ${y}) rotate(-90)">${mm(v)}</text>` : ''}` }).join('')
+    last = -99
+    const yt = uniq(ys).map((v) => { const dy = v - last < F * 1.05 ? F * 1.05 - (v - last) : 0; last = v + dy; return `<path class="tk" d="M0 ${v}H-12"/>${words ? `<text class="ord" font-size="${F}" x="-16" y="${v + dy + F * 0.36}" text-anchor="end">${mm(v)}</text>` : ''}` }).join('')
+    return `<svg class="locsvg${big ? '' : ' thumb'}" ${big ? '' : `data-locbig="${esc(scope[0]?.step ?? '')}"`} viewBox="${-mL} ${top - mT} ${1118 + mL + 40} ${bot - top + mT + 40}" xmlns="http://www.w3.org/2000/svg">
+      <clipPath id="lc${big ? 1 : 0}${crop ? 1 : 0}"><rect x="-4" y="${top}" width="1200" height="${bot - top}"/></clipPath><g clip-path="url(#lc${big ? 1 : 0}${crop ? 1 : 0})"><rect class="plate" x="0" y="0" width="1118" height="1422"/>${body}</g>
+      ${crop ? `<path class="brk" d="M0 ${top}H1118"/><text class="ord" font-size="${F}" x="1118" y="${top - mT + F * 2.6}" text-anchor="end">this line is ${mm(top)} mm below the top edge (B)</text>` : '<path class="datum" d="M0 0H1118"/>'}<path class="datum" d="M0 ${top}V${bot}"/>
+      <g class="dflag">${crop ? '' : `<rect x="${1118 - 250}" y="${-mT + 6}" width="250" height="${F * 1.5}"/><text x="${1118 - 125}" y="${-mT + 6 + F * 1.1}" font-size="${F}" text-anchor="middle">B  top edge</text><circle cx="0" cy="0" r="13"/>`}
+      <rect x="${-mL + 4}" y="${bot - F * 1.5}" width="${mL - 20}" height="${F * 1.5}"/><text x="${-mL + 4 + (mL - 20) / 2}" y="${bot - F * 0.4}" font-size="${F * 0.9}" text-anchor="middle">C  left edge</text>
+      <text x="${-mL + 8}" y="${top - mT + F * 1.1}" font-size="${F * 0.9}">mm from C →${crop ? '' : '  from B ↓'}</text></g>
+      ${lead.join('')}${xt}${yt}</svg>`
+  }
+  function doorSheet(scope, big) {
+    const F = big ? 20 : 26, W = DOOR.w, H = DOOR.h
+    const parts = DOOR_ITEMS.map((i) => { const cx = W - i.fromRight, cy = i.fromTop, hot = scope.some((s) => s.tag === i.tag)
+      return `${i.round ? `<circle class="plate cut${hot ? ' hot' : ''}" cx="${cx}" cy="${cy}" r="${i.w / 2}"/>` : `<rect class="plate cut${hot ? ' hot' : ''}" x="${cx - i.w / 2}" y="${cy - i.hh / 2}" width="${i.w}" height="${i.hh}"/>`}
+        <path class="ld" d="M${cx} ${cy}H${W}M${cx} ${cy}V0"/><path class="tk" d="M${cx - 14} ${cy}h28M${cx} ${cy - 14}v28M${cx} 0v-14M${W} ${cy}h14"/>
+        <text class="ord" font-size="${F}" x="${cx}" y="-20" text-anchor="middle">${mm(i.fromRight)}</text><text class="ord" font-size="${F}" x="${W + 20}" y="${cy + F * 0.36}">${mm(i.fromTop)}</text><text class="tg" font-size="${F}" x="${cx - i.w / 2 - 10}" y="${cy + 8}" text-anchor="end">${esc(i.tag)}</text>` }).join('')
+    // the top part of the door only (both cutouts are in it), so the numbers are large enough to read
+    const Hs = Math.min(H, Math.max(...DOOR_ITEMS.map((i) => i.fromTop + i.hh / 2)) + 160)
+    return `<svg class="locsvg door" viewBox="-40 -${F * 3.4} ${W + 150} ${Hs + F * 3.4 + 20}" xmlns="http://www.w3.org/2000/svg"><path class="plate" d="M0 ${Hs}V0H${W}V${Hs}"/>${parts}
+      <path class="datum" d="M0 0H${W}"/><path class="datum" d="M${W} 0V${Hs}"/><g class="dflag"><text x="${W / 2}" y="-${F * 2.2}" font-size="${F * 0.8}" text-anchor="middle">top of the right door · mm in from its handle edge</text><text font-size="${F}" transform="translate(${W + 118} ${Hs / 2}) rotate(90)" text-anchor="middle">handle edge · mm down from the top</text></g></svg>`
+  }
+
+  // ---- words and tables
+  function rowHTML(i, sel) {
+    if (i.kind === 'door') return `<tr data-dev="${esc(i.tag)}" class="${i.tag === sel ? 'sel' : ''}"><td><b>${esc(i.tag)}</b><small>${esc(i.what)}</small></td><td>${both(i.fromRight)}<small>from the door's handle edge, to the centre</small></td><td>${both(i.fromTop)}<small>down from the top of the door, to the centre</small></td><td>${fcf(i.cls)}</td></tr>`
+    const x = `${both(i.X0)}<small>left ${i.kind === 'rail' ? 'end' : 'edge'}</small><br>${both(i.X1)}<small>right ${i.kind === 'rail' ? 'end' : 'edge'} (check)</small>`
+    const y = i.kind === 'rail' ? `${both(i.Y)}<small>centre line</small>` : i.kind === 'raildev' ? `<span class="onrail">${esc(G.RAILS[i.rail].name)}</span><small>${i.order} of ${i.of} from the left<br>${esc(i.against)}</small>` : `${both(i.Yt)}<small>top edge</small><br>${both(i.Yb)}<small>bottom edge (check)</small>`
+    return `<tr ${i.dev ? `data-dev="${esc(i.tag)}"` : ''} class="${i.tag === sel ? 'sel' : ''}"><td><b>${esc(i.tag)}</b><small>${esc(i.what)}</small>${i.holes ? `<small class="hl">⊕ ${i.holes.n} mounting holes${i.holes.pat ? `: ${[i.holes.pat.w, i.holes.pat.h].filter(Boolean).map(mm).join(' x ')} mm` : ''}${i.cols ? `, columns at ${i.cols.map(mm).join(', ')}` : ''}. Tap for the pattern.</small>` : ''}</td><td>${x}</td><td>${y}</td><td>${fcf(i.cls)}</td></tr>`
+  }
+  const table = (scope, sel) => !scope.length ? '' : `<table class="loct"><thead><tr><th>Item</th><th>Across, from the left edge <i class="dm">C</i></th><th>Down, from the top edge <i class="dm">B</i></th><th>Hold to</th></tr></thead><tbody>${scope.map((i) => rowHTML(i, sel)).join('')}</tbody></table>`
+  const legend = () => `<div class="locleg"><p><i class="dm">A</i> the face of the subplate · <i class="dm">B</i> its top edge · <i class="dm">C</i> its left edge. Hook the tape on the edge and read every number from it: do not measure from one part to the next.</p>
+    ${Object.entries(TOL).map(([k, t]) => `<p>${fcf(k)} <b>${t.name}</b>: within ${t.pm} (${t.why}).</p>`).join('')}
+    <p class="muted small">Positions are where this guide's 3D panel has each part: sheet 3 scaled from the drawing (good to about 1 mm) with real widths from the makers' documents. The tolerances are this guide's proposal, not the drawing's: see Issues. Mounting hole patterns are not on sheet 3: take them from each part's instructions (Parts).</p></div>`
+  // the hole pattern as the document gives it: crosses at the holes, the two spacings written on it
+  function patSVG(pt) {
+    if (!pt) return ''
+    const w = pt.w ?? 0, hh = pt.h ?? 0, sc = 150 / Math.max(w, hh, 1), W = Math.max(w * sc, 0), H = Math.max(hh * sc, 0), pts = []
+    for (const x of w ? [0, W] : [0]) for (const y of hh ? [0, H] : [0]) pts.push([x, y])
+    return `<svg class="patsvg" viewBox="-56 -34 ${W + 112} ${H + 68}" width="${Math.round(W + 112)}" height="${Math.round(H + 68)}" xmlns="http://www.w3.org/2000/svg">${pts.map(([x, y]) => `<path class="tk" d="M${x - 9} ${y}h18M${x} ${y - 9}v18"/><circle class="hc" cx="${x}" cy="${y}" r="5"/>`).join('')}
+      ${w ? `<path class="ld" d="M0 -20H${W}"/><text class="ord" font-size="15" x="${W / 2}" y="-24" text-anchor="middle">${mm(w)}</text>` : ''}${hh ? `<path class="ld" d="M${W + 20} 0V${H}"/><text class="ord" font-size="15" x="${W + 26}" y="${H / 2 + 5}">${mm(hh)}</text>` : ''}</svg>`
+  }
+  function holesHTML(i) {
+    const hl = i.holes; if (!hl) return ''
+    return `<div class="lochole"><h4>Mounting holes <span class="hint">from the maker's document</span></h4>${patSVG(hl.pat)}<p>${esc(hl.text)}</p>${hl.drill ? `<p>${esc(hl.drill)}</p>` : ''}
+      ${i.cols ? `<p>Hole columns, from <i class="dm">C</i>: ${i.cols.map((v) => both(v)).join(' · ')}</p>` : ''}${hl.where ? `<p class="note">${esc(hl.where)}</p>` : ''}<p class="muted small">From: ${esc(hl.cite)}</p></div>`
+  }
+  // the block on a part's page and under a selected part
+  function card(tag) {
+    const i = byTag(tag); if (!i) return ''
+    const t = TOL[i.cls]
+    const where = i.kind === 'door' ? `<p class="locbig">${both(i.fromRight)} from the handle edge of the right door · ${both(i.fromTop)} down from its top edge <small>(to the centre)</small></p>`
+      : i.kind === 'raildev' ? `<p class="locbig"><span class="onrail">${esc(G.RAILS[i.rail].name)}</span> · left edge ${both(i.X0)} from <i class="dm">C</i> · right edge ${both(i.X1)}</p><p>${i.order} of ${i.of} from the left on this rail: ${esc(i.against)}. Rail centre line ${both(i.Y)} down from <i class="dm">B</i>.</p>`
+      : `<p class="locbig">left edge ${both(i.X0)} from <i class="dm">C</i> · top edge ${both(i.Yt)} from <i class="dm">B</i></p><p>Check: right edge ${both(i.X1)}, bottom edge ${both(i.Yb)}. Size ${mm(i.X1 - i.X0)} x ${mm(i.Yb - i.Yt)} mm.</p>`
+    return `<section class="loccard"><h3>Where it goes <button class="lnk" data-tab="locate">mark-out drawing →</button></h3>${where}
+      <p>${fcf(i.cls)} ${t.name}: ${t.pm}.</p>${i.printed ? `<p class="note">${esc(i.printed)}</p>` : ''}<p class="muted small">From: ${esc(i.src ?? 'sheet 2')}</p>${holesHTML(i)}
+      ${i.kind === 'door' ? doorSheet([i]) : sheet([i], tag)}</section>`
+  }
+  // the short list under a build step
+  function stepBlock(st) {
+    const scope = itemsOf(st.id); if (!scope.length) return ''
+    return `<section class="locstep"><h3>Where it goes <span class="hint">from the top left corner of the plate</span></h3>${table(scope, SEL.tag)}<button class="btn ghost" data-tab="locate">Open the mark-out drawing</button></section>`
+  }
+  let viewStep = null
+  function tabHTML() {
+    const steps = stepsWith()
+    const stId = viewStep && steps.some((s) => s.id === viewStep) ? viewStep : (steps.find((s) => s.id === G.STEPS[cur].id) ?? steps.find((s) => SEL.tag && byTag(SEL.tag)?.step === s.id) ?? steps[0]).id
+    viewStep = stId
+    const scope = SEL.kind === 'dev' && byTag(SEL.tag) && byTag(SEL.tag).step === stId ? itemsOf(stId) : itemsOf(stId)
+    const door = scope.some((i) => i.kind === 'door'), plate = scope.filter((i) => i.kind !== 'door')
+    return `<div class="stephead"><div class="num">⌖</div><div><h2>Locate</h2><p class="why">Where every item goes, measured from the same two edges.</p></div></div>
+      <div class="wtools"><select data-locstep>${steps.map((s) => `<option value="${s.id}" ${s.id === stId ? 'selected' : ''}>Step ${stepIndex(s.id) + 1}: ${esc(s.title)}</option>`).join('')}</select><button class="btn ghost" data-locbig>Big drawing</button></div>
+      ${plate.length ? sheet(plate, SEL.tag) : ''}${door ? doorSheet(scope) : ''}
+      ${legend()}${table(scope, SEL.tag)}
+      <div class="wtools"><button class="btn" data-locprint>Print the mark-out sheets</button><button class="btn ghost" data-loccsv>Positions (CSV)</button></div>`
+  }
+  function bigOpen(stepId) {
+    let o = document.getElementById('g-locbig'); if (!o) { o = document.createElement('div'); o.id = 'g-locbig'; document.body.appendChild(o); o.addEventListener('click', (e) => { if (e.target.closest('[data-close]') || e.target === o) o.classList.remove('open'); const d = e.target.closest('[data-dev]'); if (d) { o.classList.remove('open'); select({ kind: 'dev', tag: d.dataset.dev }) } }) }
+    if (stepId) viewStep = stepId
+    if (!viewStep) viewStep = stepsWith()[0].id
+    const scope = itemsOf(viewStep), st = G.STEPS[stepIndex(viewStep)]
+    o.innerHTML = `<div class="in"><header><b>Step ${stepIndex(viewStep) + 1}: ${esc(st.title)}</b><span>All dimensions in mm from the top left corner of subplate 1: across from the left edge (C), down from the top edge (B).</span><button data-close>Close ✕</button></header>${scope.some((i) => i.kind !== 'door') ? sheet(scope.filter((i) => i.kind !== 'door'), SEL.tag, true) : doorSheet(scope, true)}</div>`
+    o.classList.add('open')
+  }
+  function csv() {
+    const rows = [['item', 'part', 'step', 'on', 'left edge from C mm', 'right edge from C mm', 'top edge or centre line from B mm', 'bottom edge from B mm', 'sits against', 'tolerance (proposed)', 'from', 'mounting holes (maker document)', 'hole columns from C mm', 'hole source']]
+    for (const i of ITEMS) rows.push([i.tag, i.what, stepIndex(i.step) + 1, i.rail ? G.RAILS[i.rail].name : 'subplate 1', mm(i.X0), mm(i.X1), mm(i.Y ?? i.Yt), i.Y !== undefined ? '' : mm(i.Yb), i.against ?? '', `${TOL[i.cls].pm} (dia ${TOL[i.cls].zone} | A | B | C)`, i.src ?? '', i.holes ? `${i.holes.text} ${i.holes.drill}` : '', i.cols ? i.cols.map(mm).join(' / ') : '', i.holes?.cite ?? ''])
+    for (const i of DOOR_ITEMS) rows.push([i.tag, i.what, stepIndex(i.step) + 1, 'right door', `${mm(i.fromRight)} from the handle edge`, '', `${mm(i.fromTop)} from the top of the door`, '', '', TOL[i.cls].pm, 'sheet 2'])
+    const text = rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\r\n')
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'text/csv' })); a.download = 'VFD200 positions.csv'; a.click()
+  }
+  function print() {
+    const box = document.getElementById('g-print')
+    box.innerHTML = `<h1>VFD 200 mark-out sheets</h1><p>${esc(G.JOB.number)} · ${esc(G.JOB.project)} · from ${esc(G.JOB.drawing)} rev ${esc(G.JOB.rev)} · assembly guide V${esc(G.VERSION)}. All dimensions in mm (inches to the nearest 1/16) from datum C (left edge of subplate 1) and datum B (its top edge). Tolerances are proposed by the guide: the drawings give none.</p>` +
+      stepsWith().map((st) => { const sc = itemsOf(st.id), pl = sc.filter((i) => i.kind !== 'door'); return `<div class="locpage"><h2>Step ${stepIndex(st.id) + 1}: ${esc(st.title)}</h2>${pl.length ? sheet(pl, null, true) : ''}${sc.some((i) => i.kind === 'door') ? doorSheet(sc, true) : ''}${table(sc, null)}${sc.filter((i) => i.holes).map((i) => `<h3>${esc(i.tag)}</h3>${holesHTML(i)}`).join('')}</div>` }).join('')
+    window.print()
+  }
+
+  // ---- the same thing on the 3D panel: datum edges lit, a leader from each edge to the part, numbers on the leaders
+  const g3 = new THREE.Group(); g3.renderOrder = 30; lab.machine.add(g3)
+  const lm = new THREE.MeshBasicMaterial({ color: INK, depthTest: false, transparent: true, opacity: 0.95 }), dm = new THREE.MeshBasicMaterial({ color: INK, depthTest: false, transparent: true, opacity: 0.55 })
+  const Z = PZ + 0.004
+  const bar = (X0, Y0m, X1, Y1m, t = 0.0014, m = lm) => { const o = new THREE.Mesh(new THREE.BoxGeometry(Math.max(Math.abs(X1 - X0) / 1000, t), Math.max(Math.abs(Y1m - Y0m) / 1000, t), 0.0004), m); o.position.set(SX((X0 + X1) / 2), SY((Y0m + Y1m) / 2), Z); o.renderOrder = 30; g3.add(o) }
+  let labels = [], shown = ''
+  const layer = document.getElementById('g-tags')
+  const els = []
+  function show(list) {
+    const key = list.map((i) => i.tag).join('|'); if (key === shown) return; shown = key
+    g3.clear(); labels = []
+    if (!list.length) return
+    bar(0, 0, 1118, 0, 0.003, dm); bar(0, 0, 0, 1422, 0.003, dm)                          // datums B and C
+    labels.push({ X: 1118 - 60, Y: -16, html: '<i>B</i> top edge', c: 'dat' }, { X: -22, Y: 1422 - 60, html: '<i>C</i> left edge', c: 'dat' }, { X: -22, Y: -16, html: '0', c: 'dat' })
+    const one = list.length === 1, seenY = new Set()
+    // several parts on one rail: a tape laid along the row from the left edge, a tick and a number at each part's left edge
+    const tape = {}
+    if (!one) for (const k of Object.keys(G.RAILS)) {
+      const row = list.filter((i) => i.kind === 'raildev' && i.rail === k).sort((a, b) => a.X0 - b.X0); if (!row.length) continue
+      const ty = Math.min(...row.map((i) => i.Yt)) - 34; let last = -99, lvl = 0
+      bar(0, ty, row[row.length - 1].X0, ty, 0.0022)
+      labels.push({ X: 0, Y: ty, html: '0', c: 'dat' })
+      for (const i of row) { lvl = i.X0 - last < 34 ? (lvl + 1) % 3 : 0; last = i.X0; bar(i.X0, ty - 4, i.X0, i.Yt, 0.001); labels.push({ X: i.X0, Y: ty - 12 - lvl * 15, html: mm(i.X0), c: `dim sm${i.anchor ? ' anc' : ''}` }); tape[i.tag] = 1 }
+    }
+    for (const i of list) {
+      if (tape[i.tag]) { const ky = h(i.Y); if (!seenY.has(ky)) { seenY.add(ky); bar(0, i.Y, G.RAILS[i.rail].x0, i.Y); labels.push({ X: 42, Y: i.Y, html: `↓ ${mm(i.Y)}`, c: 'dim' }) } continue }
+      if (i.kind === 'door') continue
+      const y = i.Y ?? i.Yt
+      if (one) {
+        bar(0, y, i.X0, y); bar(i.X0, 0, i.X0, y)
+        // the numbers sit beside the part (so they are in view when zoomed in on it) and again half way along each leader
+        labels.push({ X: i.X0 - 34, Y: y, html: `→ ${mm(i.X0)}`, c: 'dim' }, { X: i.X0, Y: y - 26, html: `↓ ${mm(y)}`, c: 'dim' })
+        if (i.cols) for (const c of i.cols) { bar(c, i.Yt - 16, c, i.Yb + 16, 0.0009); labels.push({ X: c, Y: i.Yb + 26, html: `⊕ ${mm(c)}`, c: 'chk' }) }
+        if (i.X0 > 260) labels.push({ X: i.X0 / 2, Y: y, html: `→ ${mm(i.X0)}`, c: 'dim sm' })
+        if (y > 260) labels.push({ X: i.X0, Y: y / 2, html: `↓ ${mm(y)}`, c: 'dim sm' })
+        if (i.kind !== 'raildev') { bar(i.X1, i.Yt, i.X1, i.Yb, 0.001); labels.push({ X: i.X1, Y: i.Yb + 12, html: `${mm(i.X1)} , ${mm(i.Yb)}`, c: 'chk' }) } else labels.push({ X: i.X1, Y: i.Yb + 12, html: `right edge ${mm(i.X1)}`, c: 'chk' })
+      } else {
+        if (i.kind === 'raildev') { bar(i.X0, i.Yt - 14, i.X0, i.Yt + 6); labels.push({ X: i.X0, Y: i.Yt - 22 - ((i.order ?? 0) % 2) * 16, html: mm(i.X0), c: 'dim sm' }) }
+        else { bar(i.X0, i.Yt - 10, i.X0, i.Yt + 10); labels.push({ X: i.X0, Y: i.Yt, html: i.kind === 'rail' ? `${mm(i.X0)} to ${mm(i.X1)}` : `${mm(i.X0)} , ${mm(i.Yt)}`, c: 'dim sm' }); if (i.kind === 'rail') labels[labels.length - 1].X = i.X0 + 90 }
+        const ky = h(y); if (!seenY.has(ky) && (i.kind === 'raildev' || i.kind === 'rail')) { seenY.add(ky); bar(0, y, i.kind === 'rail' ? i.X0 : G.RAILS[i.rail].x0, y); labels.push({ X: 40, Y: y, html: `↓ ${mm(y)}`, c: 'dim' }) }
+      }
+    }
+  }
+  function want() {
+    if (!VIEW.loc || VIEW.complete || wm.on) return []
+    let tab = 'steps'; try { tab = ui.name } catch { return [] }
+    const st = G.STEPS[cur], phaseOK = tab === 'locate' || ['P1', 'P2', 'P3'].includes(st.phase)
+    if (!phaseOK) return []
+    if (SEL.kind === 'dev') { const i = byTag(SEL.tag); return i && i.kind !== 'door' ? [i] : [] }
+    if (SEL.kind) return []
+    return itemsOf(tab === 'locate' && viewStep ? viewStep : st.id).filter((i) => i.kind !== 'door')
+  }
+  function update() {
+    show(want())
+    labels.forEach((l, n) => {
+      const e = els[n] ?? (els[n] = layer.appendChild(document.createElement('div')))
+      const q = lab.machine.localToWorld(V3(SX(l.X), SY(l.Y), Z)).project(lab.camera)
+      if (q.z > 1) { e.style.display = 'none'; return }
+      e.className = `g-dim ${l.c}`; e.innerHTML = l.html; e.style.display = 'block'; e.style.left = `${(q.x * 0.5 + 0.5) * innerWidth}px`; e.style.top = `${(-q.y * 0.5 + 0.5) * innerHeight}px`
+    })
+    for (let n = labels.length; n < els.length; n++) els[n].style.display = 'none'
+  }
+  VIEW.loc = store.get('loc') ?? true
+  function toggle(on) { VIEW.loc = on ?? !VIEW.loc; store.set('loc', VIEW.loc); document.querySelector('[data-loc]')?.classList.toggle('on', VIEW.loc) }
+  const css = document.createElement('style')
+  css.textContent = `
+    .locsvg { width:100%; height:auto; display:block; background:#fff; border:1px solid var(--line, #d9d9d4); border-radius:10px; margin:10px 0 }
+    .locsvg.door { max-height:420px } .locsvg.thumb { cursor:zoom-in } .g-dim.anc { opacity:.6 }
+    .locsvg .plate { fill:#f6f6f2; stroke:#8a8a84; stroke-width:2 } .locsvg .cut { fill:#fff } .locsvg .cut.hot { stroke:${INK}; stroke-width:4 }
+    .locsvg .duct { fill:#dcdcd6; stroke:none } .locsvg .rail { stroke:#9a9a94; stroke-width:8; stroke-dasharray:22 10 } .locsvg .plate ~ rect.plate, .locsvg rect.raildev, .locsvg rect.plate { }
+    .locsvg rect.raildev, .locsvg rect.plate:not(:first-child) { fill:#fff; stroke:#8a8a84; stroke-width:1.5; cursor:pointer }
+    .locsvg .hot { stroke:${INK} !important; stroke-width:3 !important } .locsvg rect.duct.hot { fill:#f3d3e8 } .locsvg rect.raildev.hot, .locsvg rect.plate.hot { fill:#fbe9f4 } .locsvg line.rail.hot { stroke-width:10 !important }
+    .locsvg .sel { fill:${INK} !important } .locsvg .tg { font-family:'JetBrains Mono', monospace; font-weight:700; fill:#222; pointer-events:none }
+    .locsvg .cl, .patsvg .ld { stroke:#b0127a; stroke-width:1.6; stroke-dasharray:16 5 3 5; fill:none } .patsvg .tk { stroke:#b0127a; stroke-width:2; fill:none } .patsvg .hc { fill:none; stroke:#b0127a; stroke-width:1.6 } .patsvg .ord { font-family:'JetBrains Mono', monospace; font-weight:700; fill:#b0127a } .patsvg { display:block; margin:6px 0 }
+    .lochole { border-top:1px dashed #d9b9cf; margin-top:10px; padding-top:8px } .lochole h4 { margin:0 0 4px; font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:#555 } .loct small.hl { color:#b0127a }
+    .locsvg .brk { stroke:#b0127a; stroke-width:3; stroke-dasharray:18 8 4 8; fill:none } .locsvg .datum { stroke:${INK}; stroke-width:7; fill:none } .locsvg .dflag rect { fill:${INK} } .locsvg .dflag rect + text { fill:#fff; font-weight:700 } .locsvg .dflag text { font-family:Inter, sans-serif; fill:${INK}; font-weight:700 } .locsvg .dflag circle { fill:${INK} }
+    .locsvg .ld { stroke:${INK}; stroke-width:1.6; stroke-dasharray:7 6; fill:none; opacity:.75 } .locsvg .tk { stroke:${INK}; stroke-width:2.4; fill:none } .locsvg .ord { font-family:'JetBrains Mono', monospace; font-weight:700; fill:${INK} }
+    .loct { width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:13.5px } .loct th { text-align:left; font-weight:600; font-size:12px; color:#666; padding:6px 6px; border-bottom:2px solid #ddd; vertical-align:bottom }
+    .loct td { padding:8px 6px; border-bottom:1px solid #e6e6e1; vertical-align:top; line-height:1.35 } .loct tr[data-dev] { cursor:pointer } .loct tr[data-dev]:hover { background:#faf3f8 } .loct tr.sel { background:#fbe9f4 }
+    .loct small, .loccard small, .locbig small { color:#777; font-size:11.5px; margin-left:4px } .loct td:first-child small { display:block; margin-left:0 } .loct b { font-family:'JetBrains Mono', monospace; font-size:15px }
+    .dm { display:inline-block; font:700 12px 'JetBrains Mono', monospace; font-style:normal; color:#fff; background:${INK}; border-radius:3px; padding:1px 5px }
+    .onrail { display:inline-block; font-weight:700; background:#eee; border-radius:5px; padding:1px 7px }
+    .fcf { display:inline-flex; border:1.5px solid #333; border-radius:2px; font:600 12px 'JetBrains Mono', monospace; vertical-align:middle; background:#fff } .fcf i { font-style:normal; padding:1px 5px; border-left:1.5px solid #333 } .fcf i:first-child { border-left:0 }
+    .locleg { background:#faf6f9; border:1px solid #ecd9e6; border-radius:10px; padding:10px 12px; margin:8px 0 } .locleg p { margin:5px 0; font-size:13.5px }
+    .loccard { border:1.5px solid ${INK}; border-radius:12px; padding:12px 14px; margin:10px 0 14px; background:#fff } .loccard h3 { margin-top:0 } .locbig { font-size:16px; line-height:1.5 } .locbig b, .loccard p b { font-family:'JetBrains Mono', monospace; font-size:18px }
+    .g-dim { position:absolute; transform:translate(-50%, -50%); font:700 13px 'JetBrains Mono', monospace; color:#fff; background:${INK}; padding:2px 6px; border-radius:4px; white-space:nowrap; box-shadow:0 1px 5px #0003 }
+    .g-dim.sm { font-size:11px; padding:1px 4px } .g-dim.chk { background:#fff; color:${INK}; border:1px solid ${INK}; font-size:11px } .g-dim.dat { background:#fff; color:${INK}; border:1.5px solid ${INK} } .g-dim.dat i { font-style:normal; background:${INK}; color:#fff; padding:0 4px; border-radius:2px; margin-right:3px }
+    #g-locbig { position:fixed; inset:0; z-index:60; background:#0008; display:none; padding:20px } #g-locbig.open { display:block } #g-locbig .in { background:#fff; border-radius:14px; height:100%; display:flex; flex-direction:column; overflow:hidden }
+    #g-locbig header { display:flex; gap:16px; align-items:center; padding:12px 18px; border-bottom:1px solid #ddd; font-size:14px } #g-locbig header span { color:#666; flex:1 } #g-locbig header button { font:600 14px Inter, sans-serif; padding:8px 14px; border-radius:8px; border:1px solid #bbb; background:#fff; cursor:pointer }
+    #g-locbig .locsvg { flex:1; min-height:0; border:0; margin:0; width:100%; height:100% }
+    body.big .loct { font-size:15px } body.big .g-dim { font-size:15px }
+    @media print { #g-locbig { display:none !important } .locpage { page-break-after:always } .locpage .locsvg { max-height:150mm; border:0 } .loct { font-size:10px } .loct b { font-size:11px } }`
+  document.head.appendChild(css)
+  return { ITEMS, DOOR_ITEMS, TOL, HOLES, byTag, itemsOf, card, stepBlock, tabHTML, bigOpen, csv, print, update, toggle, setStep: (s) => { viewStep = s } }
+})()
+
 // ------------------------------------------------------------------ the guide panel
 const endTxt = (e) => {
   const t = String(e.term ?? ''), field = t.endsWith(':field'), tt = t.replace(/:field$/, '')
@@ -2339,7 +2666,7 @@ function terminalRows(tag) {
 function endBlock(label, e, p, s, w) {
   const sp = p && !p.exit ? specFor(p.dev, p.pin) : null
   const et = p && !p.exit ? endType(p, s.awg, w?.kind) : null
-  const loc = p?.feeder ? 'From the plant supply, by the installer. Where it enters the enclosure is not on the drawings.' : p?.exit ? (p.door ? 'On the door: run along the left wall to the hinge, then across the door' : p.offplate === 'A/C' ? 'To the A/C terminal box on the left wall' : p.sub2 ? 'To VM1 on subplate 2 (left wall)' : 'Down out of the bottom duct to a gland in the floor: connected on site') : p?.where
+  const loc = p?.feeder ? 'From the plant supply, by the installer. Where it enters the enclosure is not on the drawings.' : p?.exit ? (p.door ? 'On the right door: forward from the duct below the drives to the centre post, then across the door from its hinge edge (route not on the drawings)' : p.offplate === 'A/C' ? 'To the A/C terminal box on the left wall' : p.sub2 ? 'To VM1 on subplate 2 (left wall)' : 'Down out of the bottom duct to a gland in the floor: connected on site') : p?.where
   return `<div class="endb"><div class="eh"><span class="ab">${label}</span><b>${endLink(e)}</b>${p?.conf && p.conf !== 'measured' ? `<span class="apx" title="Terminal position source">${esc(p.conf)}</span>` : ''}</div>
     ${loc ? `<div class="el">${esc(loc)}</div>` : ''}${et ? `<div class="el">End: ${esc(et.text)}</div>` : ''}${sp?.text ? `<div class="el sp">${esc(sp.text)}</div>` : ''}</div>`
 }
@@ -2358,7 +2685,7 @@ const ui = (() => {
     if (SEL.kind === 'dev') {
       const n = segs.filter((s) => segTouches(s, SEL.tag)).length
       return `<div class="chip dev"><b>${esc(SEL.tag)}</b><span class="ct">${esc(PN_OF[SEL.tag] ?? '')} · ${n} wire${n === 1 ? '' : 's'} land here</span><button class="x" data-clear title="Clear (Esc)">✕</button>
-        <div class="cb"><button data-go="wire" ${n ? '' : 'disabled'}>Wire it (${n})</button><button data-go="wires">Its wires</button><button data-go="parts">Part</button><button data-go="steps">Its step</button></div></div>`
+        <div class="cb"><button data-go="wire" ${n ? '' : 'disabled'}>Wire it (${n})</button><button data-go="wires">Its wires</button><button data-go="parts">Part</button><button data-go="steps">Its step</button>${LOC.byTag(SEL.tag) ? '<button data-go="locate">Locate</button>' : ''}</div></div>`
     }
     return ''
   }
@@ -2378,6 +2705,7 @@ const ui = (() => {
       <div class="stephead"><div class="num">${cur + 1}</div><div><h2>${esc(st.title)}</h2>${st.why ? `<p class="why">${esc(st.why)}</p>` : ''}</div></div>
       ${list.length ? `<section class="wirecta"><div><b>${list.length}</b> wires and cables in this step · <b>${nDone}</b> done</div><div class="prog sm"><div style="width:${list.length ? nDone / list.length * 100 : 0}%"></div></div><button class="btn big" data-wm="${st.id}">${ICON.wire}<span>${nDone ? 'Carry on wiring' : 'Start wiring'}, one wire at a time</span></button></section>` : ''}
       <section><h3>Do this <span class="cnt ${tDone === st.tasks.length && tDone ? 'ok' : ''}">${tDone} of ${st.tasks.length} done</span></h3>${tasks}</section>
+      ${LOC.stepBlock(st)}
       ${st.flags?.length ? `<section class="flags"><h3>${ICON.issues} Check with engineering first</h3>${st.flags.map((f) => `<p>${esc(f)}</p>`).join('')}</section>` : ''}
       ${devs.length ? `<section><h3>Fitted in this step <span class="hint">tap one to find it</span></h3><div class="devs">${devs.map((t) => devLink(t)).join('')}</div></section>` : ''}
       ${parts ? `<details class="fold"><summary>Parts and documents for this step <span class="cnt">${(st.parts ?? []).length}</span></summary>${parts}</details>` : ''}
@@ -2410,13 +2738,13 @@ const ui = (() => {
     const tr = terminalRows(d.tag)
     const lay = LAYOUTS[DEVICE_LAYOUT[d.tag]]
     const nDone = tr.filter((r) => wm.isDone(r.i)).length
-    return `<section class="selpart"><h3>${esc(d.tag)}</h3>${partCard(d.pn, d.tag)}${(d.also ?? []).map((pn) => partCard(pn)).join('')}
+    return `<section class="selpart"><h3>${esc(d.tag)}</h3>${LOC.card(d.tag)}${partCard(d.pn, d.tag)}${(d.also ?? []).map((pn) => partCard(pn)).join('')}
       ${d.note ? `<p class="note">${esc(d.note)}</p>` : ''}${d.xNote ? `<p class="note">${esc(d.xNote)}</p>` : ''}
       <p class="muted small">Body: ${d.depth ? `${d.depth} mm deep${d.rail ? ' above the rail' : ''}` : ''} ${d.depthNote ? `(${esc(d.depthNote)})` : ''}${lay ? ` · terminal positions ${esc(lay.conf)}: ${esc(lay.src)}` : ''}</p>
       ${tr.length ? `<h3>Terminations · ${nDone} of ${tr.length} done <button class="lnk" data-wmdev="${esc(d.tag)}">wire them one by one →</button></h3><table class="wt"><thead><tr><th>Term.</th><th>Marker</th><th>Goes to</th><th>✓</th></tr></thead><tbody>${tr.map((r) => `<tr data-wire="${r.i}" class="${highlight === r.i ? 'sel' : ''}" title="${esc(r.where ?? '')}"><td>${esc(r.term)}</td><td><span class="sw" style="background:${WC[r.kind]?.hex ?? '#888'}"></span><b>${esc(r.label || '—')}</b></td><td>${endLink(r.other)}</td><td>${wm.isDone(r.i) ? '✓' : ''}</td></tr>`).join('')}</tbody></table>` : ''}
       ${d.step ? `<button class="lnk" data-step="${stepIndex(d.step)}">Go to its install step →</button>` : ''}</section>`
   }
-  const devRec = (tag) => G.DEVICES.find((d) => d.tag === tag && (d.at !== 'fuse' || DEV[tag])) ??(tag === 'GB1' ? { tag: 'GB1', pn: 'D167-14', step: 'power' } : tag === 'RCP1' ? { tag: 'RCP1', pn: '1492-REC15', step: 'rail4', note: 'Sheet 3 gives RCP1 no position: placed between TB5 and CB5 on rail 4, centred at 932 mm, the only gap its 74 mm fits. One L/N/G terminal block at the top feeds both outlets: hot, neutral and ground land there, and the two sheet 6 jumpers are not fitted (see Design issues). Check the L/N/G marking on the device.' } : null)
+  const devRec = (tag) => G.DEVICES.find((d) => d.tag === tag && (d.at !== 'fuse' || DEV[tag])) ??(tag === 'GB1' ? { tag: 'GB1', pn: 'D167-14', step: 'power' } : tag === 'RCP1' ? { tag: 'RCP1', pn: '1492-REC15', step: 'rail4', note: 'Sheet 3 (rev20) draws RCP1 between TB4 and CB5 on rail 4, centred at 806 mm. One L/N/G terminal block at the top feeds both outlets: hot, neutral and ground land there, and the two sheet 6 jumpers are not fitted (see Design issues). Check the L/N/G marking on the device.' } : null)
   function partsHTML() {
     const q = (opts.q ?? '').toLowerCase()
     const rows = G.BOM.filter((b) => !q || `${b.pn} ${b.where} ${b.desc} ${b.mfr}`.toLowerCase().includes(q))
@@ -2478,7 +2806,7 @@ const ui = (() => {
   }
   function render() {
     // V9: the five views as large buttons in the top bar, and how far along the job is beside them
-    document.querySelector('#g-top .modes').innerHTML = [['steps', 'Build', 'build', 'Step by step: what to fit and what to check'], ['wire', 'Wire', 'wire', 'One wire at a time: marker, both ends, route, cut length'], ['parts', 'Parts', 'parts', 'Every part: number, documents, terminals'], ['wires', 'Wire list', 'list', 'Every wire: marker list, run sheet, cut list'], ['issues', 'Issues', 'issues', 'Questions for engineering']].map(([k, t, ic, tip]) => `<button data-tab="${k}" class="${k === tabName ? 'on' : ''}" title="${tip}">${ICON[ic]}<span>${t}</span></button>`).join('')
+    document.querySelector('#g-top .modes').innerHTML = [['steps', 'Build', 'build', 'Step by step: what to fit and what to check'], ['locate', 'Locate', 'locate', 'Where every item goes, measured from the top and left edges of the plate'], ['wire', 'Wire', 'wire', 'One wire at a time: marker, both ends, route, cut length'], ['parts', 'Parts', 'parts', 'Every part: number, documents, terminals'], ['wires', 'Wire list', 'list', 'Every wire: marker list, run sheet, cut list'], ['issues', 'Issues', 'issues', 'Questions for engineering']].map(([k, t, ic, tip]) => `<button data-tab="${k}" class="${k === tabName ? 'on' : ''}" title="${tip}">${ICON[ic]}<span>${t}</span></button>`).join('')
     {
       const dn = store.get('done') ?? {}, tAll = G.STEPS.reduce((t, s) => t + s.tasks.length, 0), tDone = G.STEPS.reduce((t, s) => t + s.tasks.filter((_, k) => dn[`${s.id}:${k}`]).length, 0)
       const wAll = WIRES.filter(Boolean).length, wDone = WIRES.reduce((t, w, i) => t + (w && wm.isDone(i) ? 1 : 0), 0)
@@ -2488,7 +2816,7 @@ const ui = (() => {
     const body = Pnl.querySelector('.body')
     const sc = body.scrollTop
     const done = VIEW.complete ? `<div class="flags" style="background:#eef6ee;border-color:#bfdcc3;margin-bottom:14px"><h3 style="color:var(--ok)">Completed panel</h3><p>Every part and all ${WIRES.filter(Boolean).length} wires in place. The doors and centre post are off, the duct covers are off, the drive covers are on as see-through glass and the 1769 doors are open, so every landing shows. Click any wire or part to trace it. Press <b>C</b> or any step to go back.</p><p class="muted small">Parts drawn from the maker's own 3D (STEP) model: ${Object.keys(G.MODELS ?? {}).length} models. The rest are built from their catalogue drawings (see Issues, modelling).</p></div>` : ''
-    body.innerHTML = done + (tabName === 'steps' ? stepsHTML() : tabName === 'wire' ? wireModeHTML() : tabName === 'parts' ? partsHTML() : tabName === 'wires' ? wiresHTML() : issuesHTML())
+    body.innerHTML = done + (tabName === 'steps' ? stepsHTML() : tabName === 'wire' ? wireModeHTML() : tabName === 'parts' ? partsHTML() : tabName === 'wires' ? wiresHTML() : tabName === 'locate' ? LOC.tabHTML() : issuesHTML())
     if (tabName === opts._lastTab && !opts.scrollSel) body.scrollTop = sc; else body.scrollTop = 0
     opts._lastTab = tabName
     const nav = Pnl.querySelector('.nav')
@@ -2515,6 +2843,7 @@ const ui = (() => {
       else wm.enter({ filter: G.STEPS[cur].wires ? G.STEPS[cur].id : wm.filter })
       return
     }
+    if (k === 'locate') LOC.setStep(SEL.kind === 'dev' && LOC.byTag(SEL.tag) ? LOC.byTag(SEL.tag).step : LOC.itemsOf(G.STEPS[cur].id).length ? G.STEPS[cur].id : null)
     if (k === 'steps' && SEL.kind) { const st = SEL.kind === 'wire' ? stepIndex(segs[SEL.i].step) : stepIndex(devRec(SEL.tag)?.step); if (st >= 0 && st !== cur) { showStep(st, { keepSel: true }); return } }
     render()
   }
@@ -2522,10 +2851,11 @@ const ui = (() => {
     // a pick in the 3D view keeps the tab and refreshes it for the new selection
     if (tabName === 'wire') { if (SEL.kind === 'wire') { const k = wm.list.indexOf(SEL.i); if (k >= 0) { wm.i = k; render() } else wm.enter({ wire: SEL.i }) } else if (SEL.kind === 'dev') wm.enter({ dev: SEL.tag }); else render(); return }
     if (tabName === 'issues' && SEL.kind) tabName = SEL.kind === 'wire' ? 'wires' : 'parts'
+    if (tabName === 'locate' && SEL.kind === 'dev' && LOC.byTag(SEL.tag)) LOC.setStep(LOC.byTag(SEL.tag).step)
     opts.scrollSel = true; render()
   }
   Pnl.addEventListener('click', (e) => {
-    const t = e.target.closest('button, tr[data-wire]'); if (!t) return
+    const t = e.target.closest('button, tr[data-wire], [data-dev], svg[data-locbig]'); if (!t) return
     if (t.dataset.tab) setTab(t.dataset.tab)
     else if (t.dataset.go) setTab(t.dataset.go)
     else if (t.hasAttribute('data-clear')) select(null, { fly: false })
@@ -2545,11 +2875,15 @@ const ui = (() => {
     else if (t.dataset.wire !== undefined) { const i = Number(t.dataset.wire); select({ kind: 'wire', i }, { from: 'ui' }); opts.scrollSel = false; render() }
     else if (t.hasAttribute('data-csv')) csv()
     else if (t.hasAttribute('data-print')) printSheet()
+    else if (t.hasAttribute('data-locbig')) LOC.bigOpen(t.dataset.locbig || null)
+    else if (t.hasAttribute('data-locprint')) LOC.print()
+    else if (t.hasAttribute('data-loccsv')) LOC.csv()
   })
   Pnl.addEventListener('change', (e) => {
     const t = e.target
     if (t.dataset.task) { const d = store.get('done') ?? {}; d[t.dataset.task] = t.checked; store.set('done', d); render() }
     if (t.hasAttribute('data-wstep')) { opts.step = t.value; render() }
+    if (t.hasAttribute('data-locstep')) { LOC.setStep(t.value); if (SEL.kind) select(null, { fly: false, from: 'ui' }); render() }
     if (t.hasAttribute('data-wmstep')) { wm.i = 0; if (t.value.startsWith('dev:')) wm.enter({ dev: t.value.slice(4) }); else wm.enter({ filter: t.value, dev: null }) }
   })
   Pnl.addEventListener('input', (e) => { if (e.target.hasAttribute('data-q')) { opts.q = e.target.value; opts.focusQ = true; render() } })
@@ -2608,14 +2942,15 @@ const ICON = {
   plus: IC('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M11 8v6M8 11h6"/>'), minus: IC('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5M8 11h6"/>'),
   colours: IC('<path d="M4 7c4-3 6 3 10 0s4-2 6-1M4 13c4-3 6 3 10 0s4-2 6-1M4 19c4-3 6 3 10 0s4-2 6-1"/>'), panel: IC('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/>'),
   build: IC('<path d="M14 6l4 4M3 21l3-1 11-11-2-2L4 18zM16 4l2-2 4 4-2 2"/>'), wire: IC('<path d="M4 18c0-8 16-4 16-12M4 18v3M20 6V3"/><circle cx="4" cy="18" r="1.5"/><circle cx="20" cy="6" r="1.5"/>'),
+  locate: IC('<circle cx="12" cy="12" r="6"/><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/>'),
   parts: IC('<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>'),
   list: IC('<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>'), issues: IC('<path d="M12 3l10 18H2zM12 10v5M12 18h.01"/>'), help: IC('<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>'),
 }
 const railBtn = (attr, icon, label, key, title) => `<button ${attr} title="${title}${key ? ` (${key})` : ''}">${ICON[icon]}<span>${label}</span></button>`
-document.getElementById('g-view').innerHTML = railBtn('data-complete', 'done', 'Finished', 'C', 'The finished panel: every part and wire in place, doors off, duct covers off') + railBtn('data-front', 'doors', 'Doors off', 'F', 'Take the doors and the front frame off for a clear view inside') + railBtn('data-reset', 'reset', 'Reset', 'R', 'Back to this step\'s view') + '<i></i>' + railBtn('data-zoom="0.62"', 'plus', 'Closer', '+', 'Zoom in') + railBtn('data-zoom="1.6"', 'minus', 'Further', '-', 'Zoom out') + '<i></i>' + railBtn('data-legend', 'colours', 'Colours', 'K', 'What each wire colour means; pick one to show only those wires') + railBtn('data-panel', 'panel', 'Wide view', 'P', 'Hide or show the instructions for a full-width view')
+document.getElementById('g-view').innerHTML = railBtn('data-complete', 'done', 'Finished', 'C', 'The finished panel: every part and wire in place, doors off, duct covers off') + railBtn('data-front', 'doors', 'Doors off', 'F', 'Take the doors and the front frame off for a clear view inside') + railBtn('data-reset', 'reset', 'Reset', 'R', 'Back to this step\'s view') + '<i></i>' + railBtn('data-zoom="0.62"', 'plus', 'Closer', '+', 'Zoom in') + railBtn('data-zoom="1.6"', 'minus', 'Further', '-', 'Zoom out') + '<i></i>' + railBtn('data-loc', 'locate', 'Dimensions', 'L', 'Show or hide the dimensions from the top and left edges of the plate while parts are being placed') + railBtn('data-legend', 'colours', 'Colours', 'K', 'What each wire colour means; pick one to show only those wires') + railBtn('data-panel', 'panel', 'Wide view', 'P', 'Hide or show the instructions for a full-width view')
 document.getElementById('g-sl').innerHTML = [...new Set([...G.SEGMENTS.map((s) => s.label).filter(Boolean), ...Object.keys(DEV), 'GB1'])].map((x) => `<option value="${esc(x)}">`).join('')
 const zoomBy = (f) => { syncView(); flyTo({ dist: clamp(lab.view.dist * f, 0.03, 2.2) }) }
-document.getElementById('g-view').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; if (b.dataset.zoom) zoomBy(Number(b.dataset.zoom)); if (b.hasAttribute('data-legend')) toggleLegend(); if (b.hasAttribute('data-panel')) togglePanel() })
+document.getElementById('g-view').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; if (b.dataset.zoom) zoomBy(Number(b.dataset.zoom)); if (b.hasAttribute('data-legend')) toggleLegend(); if (b.hasAttribute('data-panel')) togglePanel(); if (b.hasAttribute('data-loc')) LOC.toggle() })
 document.getElementById('g-top').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; if (b.hasAttribute('data-help')) showHelp(); if (b.hasAttribute('data-text')) { document.body.classList.toggle('big'); store.set('big', document.body.classList.contains('big')); b.classList.toggle('on', document.body.classList.contains('big')) } if (b.dataset.tab) ui.tab(b.dataset.tab) })
 if (store.get('big')) { document.body.classList.add('big'); document.querySelector('[data-text]')?.classList.add('on') }
 const OLD_VIEW_HTML = `<button data-complete title="The finished panel: every part and wire in place, doors and front off, duct covers off (C)">Completed panel <kbd>C</kbd></button><button data-front title="Take the doors and the whole front frame off for a clear view inside (F)">Remove front <kbd>F</kbd></button><button data-reset title="Back to this step's view (R)">Reset view <kbd>R</kbd></button><input id="g-search" placeholder="Find W29, CB4, TB4…" list="g-sl"><datalist id="g-sl">${[...new Set([...G.SEGMENTS.map((s) => s.label).filter(Boolean), ...Object.keys(DEV), 'GB1'])].map((x) => `<option value="${esc(x)}">`).join('')}</datalist>`
@@ -2678,6 +3013,7 @@ addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { if (document.getElementById('g-helpcard').classList.contains('open')) showHelp(false); else select(null, { fly: false }); return }
   if (e.key === 'h' || e.key === 'H' || e.key === '?') { showHelp(); return }
   if (e.key === 'k' || e.key === 'K') { toggleLegend(); return }
+  if (e.key === 'l' || e.key === 'L') { LOC.toggle(); return }
   if (e.key === '+' || e.key === '=') { zoomBy(0.62); return }
   if (e.key === '-' || e.key === '_') { zoomBy(1.6); return }
   if (e.key === 'p' || e.key === 'P') { togglePanel(); return }
@@ -2711,9 +3047,10 @@ if (!AUDIT && !qs.has('shot') && !store.get('helpSeen')) { showHelp(true); store
 if (qs.get('complete')) showComplete(true)
 if (qs.get('find')) find(qs.get('find'))
 // ?tab=wire|parts|wires|issues opens that view (with ?find, it shows the selected wire's card or the part's page)
-if (['wire', 'parts', 'wires', 'issues'].includes(qs.get('tab'))) ui.tab(qs.get('tab'))
+if (['wire', 'parts', 'wires', 'issues', 'locate'].includes(qs.get('tab'))) ui.tab(qs.get('tab'))
+if (qs.get('locbig')) LOC.bigOpen(G.STEPS[cur].id)            // ?locbig=1: the full-screen mark-out drawing of the current step (for pictures)
 if (qs.get('view')) { const v = qs.get('view').split(',').map(Number); if (v.length === 6 && v.every((x) => !isNaN(x))) setTimeout(() => flyTo({ az: v[0], el: v[1], dist: v[2], target: [v[3], v[4], v[5]] }), 50) }
-window.guide = { lab, showStep, WIRES, DEV, select, ui, wm, DUCT_SHARED, term, focusTag, toggleFront, traceRoute, SEL, showComplete, flyTo, soupOf, PZ, DUCT, G, THREE, SX, SY }
+window.guide = { LOC, lab, showStep, WIRES, DEV, select, ui, wm, DUCT_SHARED, term, focusTag, toggleFront, traceRoute, SEL, showComplete, flyTo, soupOf, PZ, DUCT, G, THREE, SX, SY }
 if (AUDIT) {
   const leave = (o) => { const pre = document.createElement('pre'); pre.id = 'g-audit'; pre.textContent = JSON.stringify(o); document.body.appendChild(pre); document.title = 'AUDIT DONE' }
   import(new URL('tools/audit.js', location.href).href).then((A) => {

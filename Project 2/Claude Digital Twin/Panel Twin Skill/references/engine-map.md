@@ -39,7 +39,7 @@ The example is one working guide, not a library. Its engine is general in how it
 
 ## `src/guide.js`, by section
 
-General (keep): frame and helpers; materials; vendor model loading and face decals; scene groups; ducts, rails and subplate (drawn from `layout.mjs`); `landing`, `finishLanding`, `leadOut`; the duct graph, `entry`, `route`, `wirePoints`; `roundCorners`; `sideBySide`, `directRun`; `buildConductor`, `buildCable`, `buildLink`, `buildFeeder`; `addFuse`; markers; steps and visibility; tags; selection and tracing; picking; wire-by-wire mode; the guide panel; the toolbar, colour key, help card; the `?audit`, `?shot`, `?complete`, `?find`, `?view` hooks at the end.
+General (keep): frame and helpers; materials; vendor model loading and face decals; scene groups; ducts, rails and subplate (drawn from `layout.mjs`); `landing`, `finishLanding`, `leadOut`; the duct graph, `entry`, `route`, `wirePoints`; `roundCorners`; `sideBySide`, `directRun`; `buildConductor`, `buildCable`, `buildLink`, `buildFeeder`; `addFuse`; markers; steps and visibility; tags; selection and tracing; picking; wire-by-wire mode; the guide panel; the toolbar, colour key, help card; the `LOCATE` block (positions read back from the model, the mark-out drawing, tables, the 3D dimension overlay, print and CSV); the `?audit`, `?shot`, `?complete`, `?find`, `?view`, `?tab`, `?locbig` hooks at the end.
 
 Specific to VFD 200 (replace, remove, or generalise):
 
@@ -63,6 +63,7 @@ Specific to VFD 200 (replace, remove, or generalise):
 | `const kindOf` | Wire colour class from sheet number, potential and device names. Entirely this job's |
 | `const TERM_SPEC` | Torque, wire range and strip length per part number, with citations |
 | `stepTags`, `ALL_SUB1` | Step group names matching `layout.mjs` |
+| `LOCATE` block: `PRINTED`, `HOLES`, `DOOR_ITEMS`, the class rule `it.cls` | What sheet 3 prints for this job's parts; this job's mounting holes with their citations; this job's door cutouts; which parts are critical fits. Empty the first three for a new panel (`references/locating.md`) |
 
 Work through this table with the new panel's parts in hand. Where the new panel has a part of a type the example already knows (a 1492-J4 strip, a PowerFlex 525, a 1769 module), reuse its block and check it against the new job's documents. Where it has a new type, write its layout, its model fit and, if needed, its builder, then look at it.
 

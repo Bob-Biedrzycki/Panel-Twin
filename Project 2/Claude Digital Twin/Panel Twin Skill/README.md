@@ -99,3 +99,9 @@ Claude starts a new guide from the worked example with `scripts/new_panel.mjs`, 
 - The example's drawings, photos and job data are CPME's (job 1082-01).
 
 Internal CPME use.
+
+## 1.1.0
+
+Adds locating (datums, baseline dimensions, mark-out drawings), mounting holes from makers' documents only, a proposed tolerance scheme, and the layout-sheet scale check. The worked example is now V15.0 from Draft rev20. See `CHANGELOG.md` and `references/locating.md`; what was and was not tested is in `REVIEW.md`.
+
+The repository copy of this bundle does not store the example's built guide (examples/vfd200/VFD200 Assembly Guide.html, a 14 MB build product): run `node examples/vfd200/build.mjs` once after copying the bundle from the repository. The installed copy has it.

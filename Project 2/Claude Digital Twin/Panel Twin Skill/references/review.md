@@ -52,6 +52,8 @@ A picture takes from 10 seconds to about 2 minutes, depending on the machine and
 
 The audit checks conductor ends that share a clamp, not two wires running side by side along a column. Where you add a wire beside another (a module's terminal column), look at that spot.
 
+**Locating.** Picture a mounting step (the tape along the rail and the "Where it goes" table), `--tab locate`, `--locbig` (the full-screen mark-out drawing of the step) and a plate-mounted part's card. Compare each plate-mounted part's numbers with what the layout sheet prints for it. A mounting hole on a card must have a citation you have opened.
+
 **How much to look at.** A new guide: every device, front and wire-entry side. A revision: the devices you changed, plus anything `diff_routes.mjs` shows moved; say that this is what you looked at.
 
 ## 3. Reading the drawings against the wire list

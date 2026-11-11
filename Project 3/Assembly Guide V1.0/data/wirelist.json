@@ -1,0 +1,2289 @@
+{
+ "source": "10006 VFD-RT00-03.pdf (Sharpe Engineering & Equipment, Westby Creamery, 10006 Intake Receiving VFD, initial release 06/24/26): schematic sheets B01-B04, C01, D01, N01 (PDF pages 5-11); terminal strips from layout sheets Z04 and Z05 (pages 15-16)",
+ "wires": [
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "Incoming feeder L1",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Plant feeder",
+    "term": "L1"
+   },
+   "to": {
+    "dev": "DISCB0101",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0100",
+   "note": "Drawn from the supply symbol \"480VAC @ 100 AMPS ±10%, 60 HZ, 3 PHASE (FLA: 77 AMPS)\" with no wire number, no size and no entry point."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "Incoming feeder L2",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Plant feeder",
+    "term": "L2"
+   },
+   "to": {
+    "dev": "DISCB0101",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0100",
+   "note": "Drawn from the supply symbol \"480VAC @ 100 AMPS ±10%, 60 HZ, 3 PHASE (FLA: 77 AMPS)\" with no wire number, no size and no entry point."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "Incoming feeder L3",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Plant feeder",
+    "term": "L3"
+   },
+   "to": {
+    "dev": "DISCB0101",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0100",
+   "note": "Drawn from the supply symbol \"480VAC @ 100 AMPS ±10%, 60 HZ, 3 PHASE (FLA: 77 AMPS)\" with no wire number, no size and no entry point."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "GND",
+   "color_if_shown": null,
+   "from": {
+    "dev": "Plant feeder",
+    "term": "ground conductor"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": "middle screw"
+   },
+   "sheet": 5,
+   "line": "B0101",
+   "note": "Drawn from the supply symbol \"480VAC @ 100 AMPS ±10%, 60 HZ, 3 PHASE (FLA: 77 AMPS)\" with no wire number, no size and no entry point. Drawn to a junction dot, and from the dot to the middle (third of five) screw of the bar tagged GNDB0100 (D167-14); the screws are not numbered. From the same dot a line runs down to the earth symbol tagged GNDB0103."
+  },
+  {
+   "wire": "B01021",
+   "awg": "1",
+   "potential": "B01021",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "DISCB0101",
+    "term": "L1 fuse load"
+   },
+   "to": {
+    "dev": "TBB0106",
+    "term": "L1 line"
+   },
+   "sheet": 5,
+   "line": "B0103",
+   "note": "Printed BK_BN_1AWG. From the load side of the DISCB0101 fuses (drawn as one device with the switch, \"90A\")."
+  },
+  {
+   "wire": "B01022",
+   "awg": "1",
+   "potential": "B01022",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "DISCB0101",
+    "term": "L2 fuse load"
+   },
+   "to": {
+    "dev": "TBB0106",
+    "term": "L2 line"
+   },
+   "sheet": 5,
+   "line": "B0103",
+   "note": "Printed BK_OG_1AWG. From the load side of the DISCB0101 fuses (drawn as one device with the switch, \"90A\")."
+  },
+  {
+   "wire": "B01023",
+   "awg": "1",
+   "potential": "B01023",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "DISCB0101",
+    "term": "L3 fuse load"
+   },
+   "to": {
+    "dev": "TBB0106",
+    "term": "L3 line"
+   },
+   "sheet": 5,
+   "line": "B0103",
+   "note": "Printed BK_YE_1AWG. From the load side of the DISCB0101 fuses (drawn as one device with the switch, \"90A\")."
+  },
+  {
+   "wire": "",
+   "awg": "1",
+   "potential": "B01021",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L1 load"
+   },
+   "to": {
+    "dev": "CBB0108",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0108",
+   "note": "Printed BK_BN_1AWG. No wire number of its own: it is on potential B01021. \"1AWG\" on a 20 A branch beside \"14AWG\" on the next phase."
+  },
+  {
+   "wire": "B01081",
+   "awg": "1",
+   "potential": "B01081",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "CBB0108",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "DRVB0200",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0108",
+   "note": "Printed BK_BN_1AWG on sheet B01 and BK_BN_14AWG on sheet B02."
+  },
+  {
+   "wire": "",
+   "awg": "1",
+   "potential": "B01022",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L2 load"
+   },
+   "to": {
+    "dev": "CBB0108",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0109",
+   "note": "Printed BK_OG_1AWG. No wire number of its own: it is on potential B01022. \"1AWG\" on a 20 A branch beside \"14AWG\" on the next phase."
+  },
+  {
+   "wire": "B01091",
+   "awg": "1",
+   "potential": "B01091",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "CBB0108",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "DRVB0200",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0109",
+   "note": "Printed BK_OG_1AWG on sheet B01 and BK_OG_14AWG on sheet B02."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01023",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L3 load"
+   },
+   "to": {
+    "dev": "CBB0108",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0110",
+   "note": "Printed BK_YE_14AWG. No wire number of its own: it is on potential B01023."
+  },
+  {
+   "wire": "B01101",
+   "awg": "14",
+   "potential": "B01101",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "CBB0108",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "DRVB0200",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0110",
+   "note": "Printed BK_YE_14AWG on sheet B01 and BK_YE_14AWG on sheet B02."
+  },
+  {
+   "wire": "",
+   "awg": "1",
+   "potential": "B01021",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L1 load"
+   },
+   "to": {
+    "dev": "CBB0112",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0112",
+   "note": "Printed BK_BN_1AWG. No wire number of its own: it is on potential B01021. \"1AWG\" on a 20 A branch beside \"14AWG\" on the next phase."
+  },
+  {
+   "wire": "B01121",
+   "awg": "1",
+   "potential": "B01121",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "CBB0112",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "DRVB0300",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0112",
+   "note": "Printed BK_BN_1AWG on sheet B01 and BK_BN_14AWG on sheet B03."
+  },
+  {
+   "wire": "",
+   "awg": "1",
+   "potential": "B01022",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L2 load"
+   },
+   "to": {
+    "dev": "CBB0112",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0113",
+   "note": "Printed BK_OG_1AWG. No wire number of its own: it is on potential B01022. \"1AWG\" on a 20 A branch beside \"14AWG\" on the next phase."
+  },
+  {
+   "wire": "B01131",
+   "awg": "1",
+   "potential": "B01131",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "CBB0112",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "DRVB0300",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0113",
+   "note": "Printed BK_OG_1AWG on sheet B01 and BK_OG_14AWG on sheet B03."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01023",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L3 load"
+   },
+   "to": {
+    "dev": "CBB0112",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0114",
+   "note": "Printed BK_YE_14AWG. No wire number of its own: it is on potential B01023."
+  },
+  {
+   "wire": "B01141",
+   "awg": "14",
+   "potential": "B01141",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "CBB0112",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "DRVB0300",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0114",
+   "note": "Printed BK_YE_14AWG on sheet B01 and BK_YE_14AWG on sheet B03."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01021",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L1 load"
+   },
+   "to": {
+    "dev": "CBB0116",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0116",
+   "note": "Printed BK_BN_14AWG. No wire number of its own: it is on potential B01021."
+  },
+  {
+   "wire": "B01161",
+   "awg": "14",
+   "potential": "B01161",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "CBB0116",
+    "term": "T1"
+   },
+   "to": {
+    "dev": "DRVB0400",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0116",
+   "note": "Printed BK_BN_14AWG on sheet B01 and BK_BN_14AWG on sheet B04."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01022",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L2 load"
+   },
+   "to": {
+    "dev": "CBB0116",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0117",
+   "note": "Printed BK_OG_14AWG. No wire number of its own: it is on potential B01022."
+  },
+  {
+   "wire": "B01171",
+   "awg": "14",
+   "potential": "B01171",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "CBB0116",
+    "term": "T2"
+   },
+   "to": {
+    "dev": "DRVB0400",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0117",
+   "note": "Printed BK_OG_14AWG on sheet B01 and BK_OG_14AWG on sheet B04."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01023",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L3 load"
+   },
+   "to": {
+    "dev": "CBB0116",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0118",
+   "note": "Printed BK_YE_14AWG. No wire number of its own: it is on potential B01023."
+  },
+  {
+   "wire": "B01181",
+   "awg": "14",
+   "potential": "B01181",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "CBB0116",
+    "term": "T3"
+   },
+   "to": {
+    "dev": "DRVB0400",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0118",
+   "note": "Printed BK_YE_14AWG on sheet B01 and BK_YE_14AWG on sheet B04."
+  },
+  {
+   "wire": "",
+   "awg": "1",
+   "potential": "B01021",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L1 load"
+   },
+   "to": {
+    "dev": "FUB0132",
+    "term": "pole 1 line"
+   },
+   "sheet": 5,
+   "line": "B0132",
+   "note": "Printed BK_BN_1AWG. FUB0132 (2A) on the schematic is FUB0125 on layout sheets Z02 and Z04."
+  },
+  {
+   "wire": "B01321",
+   "awg": "14",
+   "potential": "B01321",
+   "color_if_shown": "BK_BN",
+   "from": {
+    "dev": "FUB0132",
+    "term": "pole 1 load"
+   },
+   "to": {
+    "dev": "PWSB0132",
+    "term": "L1"
+   },
+   "sheet": 5,
+   "line": "B0132",
+   "note": "Printed BK_BN_14AWG. PWSB0132 on the schematic is PWSB0125 on the layout sheets."
+  },
+  {
+   "wire": "",
+   "awg": "12",
+   "potential": "B01022",
+   "color_if_shown": "BK",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L2 load"
+   },
+   "to": {
+    "dev": "FUB0132",
+    "term": "pole 2 line"
+   },
+   "sheet": 5,
+   "line": "B0133",
+   "note": "Printed BK_12AWG. FUB0132 (2A) on the schematic is FUB0125 on layout sheets Z02 and Z04."
+  },
+  {
+   "wire": "B01332",
+   "awg": "14",
+   "potential": "B01332",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "FUB0132",
+    "term": "pole 2 load"
+   },
+   "to": {
+    "dev": "PWSB0132",
+    "term": "L2"
+   },
+   "sheet": 5,
+   "line": "B0133",
+   "note": "Printed BK_OG_14AWG. PWSB0132 on the schematic is PWSB0125 on the layout sheets."
+  },
+  {
+   "wire": "",
+   "awg": "1",
+   "potential": "B01023",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L3 load"
+   },
+   "to": {
+    "dev": "FUB0132",
+    "term": "pole 3 line"
+   },
+   "sheet": 5,
+   "line": "B0134",
+   "note": "Printed BK_YE_1AWG. FUB0132 (2A) on the schematic is FUB0125 on layout sheets Z02 and Z04."
+  },
+  {
+   "wire": "B01342",
+   "awg": "14",
+   "potential": "B01342",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "FUB0132",
+    "term": "pole 3 load"
+   },
+   "to": {
+    "dev": "PWSB0132",
+    "term": "L3"
+   },
+   "sheet": 5,
+   "line": "B0134",
+   "note": "Printed BK_YE_14AWG. The number B01342 is printed between the L3 and GND terminals with a leader to this wire. PWSB0132 on the schematic is PWSB0125 on the layout sheets."
+  },
+  {
+   "wire": "",
+   "awg": "16",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "PWSB0132",
+    "term": "GND"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": ""
+   },
+   "sheet": 5,
+   "line": "B0135",
+   "note": "Printed GN_16AWG, to an earth symbol."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "+24 V DC",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "PWSB0132",
+    "term": "+"
+   },
+   "to": {
+    "dev": "CBB0133",
+    "term": "line"
+   },
+   "sheet": 5,
+   "line": "B0133",
+   "note": "Printed BU_14AWG. No wire number. The breaker terminals are not named on the drawing."
+  },
+  {
+   "wire": "B01331",
+   "awg": "14",
+   "potential": "B01331",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "CBB0133",
+    "term": "load"
+   },
+   "to": {
+    "dev": "TB24-1",
+    "term": "B01331"
+   },
+   "sheet": 5,
+   "line": "B0133",
+   "note": "Printed BU_14AWG. Continues on sheet D01 (line D0100), where two TB24-1 terminals carry B01331 and nothing is connected beyond them."
+  },
+  {
+   "wire": "B01341",
+   "awg": "14",
+   "potential": "B01341",
+   "color_if_shown": "BUWH",
+   "from": {
+    "dev": "PWSB0132",
+    "term": "-"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B01341"
+   },
+   "sheet": 5,
+   "line": "B0134",
+   "note": "Printed BUWH_14AWG."
+  },
+  {
+   "wire": "",
+   "awg": "16",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "PWSB0132",
+    "term": "-"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": ""
+   },
+   "sheet": 5,
+   "line": "B0134",
+   "note": "Printed GN_16AWG: the 24 V DC common is bonded to ground at the supply."
+  },
+  {
+   "wire": "B01341",
+   "awg": "14",
+   "potential": "B01341",
+   "color_if_shown": "BUWH",
+   "from": {
+    "dev": "TB1",
+    "term": "B01341"
+   },
+   "to": {
+    "dev": "TB24-1",
+    "term": "B01341"
+   },
+   "sheet": 10,
+   "line": "D0101",
+   "note": "Sheet B01 \"to D0100\"; sheet D01 \"from B0134\" above line D0100, printed BUWH_14AWG, to one TB24-1 terminal drawn between lines D0101 and D0102, with nothing connected beyond it."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01022",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L2 load"
+   },
+   "to": {
+    "dev": "FUB0137",
+    "term": "H1 fuse line"
+   },
+   "sheet": 5,
+   "line": "B0137",
+   "note": "Printed BK_OG_14AWG. Both primary fuses carry the one tag FUB0137 (2A)."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "FUB0137",
+    "term": "H1 fuse load"
+   },
+   "to": {
+    "dev": "TB0140",
+    "term": "H1"
+   },
+   "sheet": 5,
+   "line": "B0137",
+   "note": "Printed BK_OG_14AWG. No wire number."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01023",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L3 load"
+   },
+   "to": {
+    "dev": "FUB0137",
+    "term": "H4 fuse line"
+   },
+   "sheet": 5,
+   "line": "B0139",
+   "note": "Printed BK_YE_14AWG. Both primary fuses carry the one tag FUB0137 (2A)."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "FUB0137",
+    "term": "H4 fuse load"
+   },
+   "to": {
+    "dev": "TB0140",
+    "term": "H4"
+   },
+   "sheet": 5,
+   "line": "B0139",
+   "note": "Printed BK_YE_14AWG. No wire number."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB0140",
+    "term": "H2"
+   },
+   "to": {
+    "dev": "TB0140",
+    "term": "H3"
+   },
+   "sheet": 5,
+   "line": "B0140",
+   "note": "Drawn as a crossed link between H2 and H3 (the 480 V connection). No number, no size."
+  },
+  {
+   "wire": "B01372",
+   "awg": "8",
+   "potential": "B01372",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "TB0140",
+    "term": "X1"
+   },
+   "to": {
+    "dev": "FUB0142",
+    "term": "line"
+   },
+   "sheet": 5,
+   "line": "B0142",
+   "note": "Printed RD_8AWG; B01372 is printed under X1."
+  },
+  {
+   "wire": "B01421",
+   "awg": "8",
+   "potential": "B01421",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "FUB0142",
+    "term": "load"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "B01421"
+   },
+   "sheet": 5,
+   "line": "B0142",
+   "note": "Printed RD_8AWG on sheet B01; on sheet C01 the same potential continues as RD_14AWG."
+  },
+  {
+   "wire": "B01411",
+   "awg": "8",
+   "potential": "B01411",
+   "color_if_shown": "WH",
+   "from": {
+    "dev": "TB0140",
+    "term": "X2"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "B01411"
+   },
+   "sheet": 5,
+   "line": "B0144",
+   "note": "Printed WH_8AWG."
+  },
+  {
+   "wire": "",
+   "awg": "12",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "TB0140",
+    "term": "X2"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": ""
+   },
+   "sheet": 5,
+   "line": "B0141",
+   "note": "Printed GN_12AWG beside the number B01411: the 120 V neutral is bonded to ground at X2."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01022",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L2 load"
+   },
+   "to": {
+    "dev": "FUB0145",
+    "term": "pole 1 line"
+   },
+   "sheet": 5,
+   "line": "B0145",
+   "note": "Printed BK_OG_14AWG."
+  },
+  {
+   "wire": "B01451",
+   "awg": "14",
+   "potential": "B01451",
+   "color_if_shown": "BK_OG",
+   "from": {
+    "dev": "FUB0145",
+    "term": "pole 1 load"
+   },
+   "to": {
+    "dev": "ACB0145",
+    "term": "line 1"
+   },
+   "sheet": 5,
+   "line": "B0145",
+   "note": "Printed BK_OG_14AWG. ACB0145 (2000BTU) is drawn with a three-phase symbol and two supply conductors; its terminals are not named."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "B01023",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "TBB0106",
+    "term": "L3 load"
+   },
+   "to": {
+    "dev": "FUB0145",
+    "term": "pole 2 line"
+   },
+   "sheet": 5,
+   "line": "B0146",
+   "note": "Printed BK_YE_14AWG."
+  },
+  {
+   "wire": "B01461",
+   "awg": "14",
+   "potential": "B01461",
+   "color_if_shown": "BK_YE",
+   "from": {
+    "dev": "FUB0145",
+    "term": "pole 2 load"
+   },
+   "to": {
+    "dev": "ACB0145",
+    "term": "line 2"
+   },
+   "sheet": 5,
+   "line": "B0146",
+   "note": "Printed BK_YE_14AWG. ACB0145 (2000BTU) is drawn with a three-phase symbol and two supply conductors; its terminals are not named."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "ACB0145",
+    "term": "GND"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": ""
+   },
+   "sheet": 5,
+   "line": "B0148",
+   "note": "Printed GN_14AWG, to an earth symbol (drawn between lines B0147 and B0148)."
+  },
+  {
+   "wire": "",
+   "awg": "12",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "DRVB0200",
+    "term": "GND (left, line side)"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": ""
+   },
+   "sheet": 6,
+   "line": "B0203",
+   "note": "Printed GN_12AWG, to an earth symbol."
+  },
+  {
+   "wire": "B02001",
+   "awg": null,
+   "potential": "B02001",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0200",
+    "term": "U"
+   },
+   "to": {
+    "dev": "DISCB0200",
+    "term": "line"
+   },
+   "sheet": 6,
+   "line": "B0200",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0200. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "B02011",
+   "awg": null,
+   "potential": "B02011",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0200",
+    "term": "V"
+   },
+   "to": {
+    "dev": "DISCB0200",
+    "term": "line"
+   },
+   "sheet": 6,
+   "line": "B0201",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0200. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "B02021",
+   "awg": null,
+   "potential": "B02021",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0200",
+    "term": "W"
+   },
+   "to": {
+    "dev": "DISCB0200",
+    "term": "line"
+   },
+   "sheet": 6,
+   "line": "B0202",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0200. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "DRVB0200",
+    "term": "GND (right, motor side)"
+   },
+   "to": {
+    "dev": "MTRB0200",
+    "term": "ground"
+   },
+   "sheet": 6,
+   "line": "B0203",
+   "note": "Dashed (field wiring), printed GN_14AWG, straight to the motor."
+  },
+  {
+   "wire": "B02061",
+   "awg": "16",
+   "potential": "B02061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "DRVB0200",
+    "term": "1"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B02061"
+   },
+   "sheet": 6,
+   "line": "B0206",
+   "note": "Printed BU_16AWG. Terminal 1 (Stop). The sheet notes: remove the factory jumper between I/O terminals 01 and 11."
+  },
+  {
+   "wire": "B02061",
+   "awg": "16",
+   "potential": "B02061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "DRVB0200",
+    "term": "11"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B02061"
+   },
+   "sheet": 6,
+   "line": "B0214",
+   "note": "Printed BU_16AWG. Terminal 11 (+24 VDC)."
+  },
+  {
+   "wire": "B02061",
+   "awg": "16",
+   "potential": "B02061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "TB1",
+    "term": "B02061"
+   },
+   "to": {
+    "dev": "CRC0102",
+    "term": "14"
+   },
+   "sheet": 6,
+   "line": "B0214",
+   "note": "Printed BU_16AWG. Relay contact terminals: not numbered on this sheet.",
+   "inferred": true
+  },
+  {
+   "wire": "B02101",
+   "awg": "16",
+   "potential": "B02101",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "CRC0102",
+    "term": "11"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B02101"
+   },
+   "sheet": 6,
+   "line": "B0210",
+   "note": "Printed BU_16AWG. Relay contact terminals: not numbered on this sheet.",
+   "inferred": true
+  },
+  {
+   "wire": "B02101",
+   "awg": "16",
+   "potential": "B02101",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "TB1",
+    "term": "B02101"
+   },
+   "to": {
+    "dev": "DRVB0200",
+    "term": "5"
+   },
+   "sheet": 6,
+   "line": "B0210",
+   "note": "Printed BU_16AWG. Terminal 5 (Digital Input 1)."
+  },
+  {
+   "wire": "B01341",
+   "awg": "16",
+   "potential": "B01341",
+   "color_if_shown": "BUWH",
+   "from": {
+    "dev": "TB1",
+    "term": "B01341"
+   },
+   "to": {
+    "dev": "DRVB0200",
+    "term": "4"
+   },
+   "sheet": 6,
+   "line": "B0209",
+   "note": "Printed BUWH_16AWG, \"from B0135\". Terminal 4 (Digital Common). No TB1 terminal is drawn on this sheet; sheet B01 draws four TB1 terminals on B01341."
+  },
+  {
+   "wire": "",
+   "awg": "12",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "DRVB0300",
+    "term": "GND (left, line side)"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": ""
+   },
+   "sheet": 7,
+   "line": "B0303",
+   "note": "Printed GN_12AWG, to an earth symbol."
+  },
+  {
+   "wire": "B03001",
+   "awg": null,
+   "potential": "B03001",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0300",
+    "term": "U"
+   },
+   "to": {
+    "dev": "DISCB0300",
+    "term": "line"
+   },
+   "sheet": 7,
+   "line": "B0300",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0300. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "B03011",
+   "awg": null,
+   "potential": "B03011",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0300",
+    "term": "V"
+   },
+   "to": {
+    "dev": "DISCB0300",
+    "term": "line"
+   },
+   "sheet": 7,
+   "line": "B0301",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0300. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "B03021",
+   "awg": null,
+   "potential": "B03021",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0300",
+    "term": "W"
+   },
+   "to": {
+    "dev": "DISCB0300",
+    "term": "line"
+   },
+   "sheet": 7,
+   "line": "B0302",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0300. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "DRVB0300",
+    "term": "GND (right, motor side)"
+   },
+   "to": {
+    "dev": "MTRB0300",
+    "term": "ground"
+   },
+   "sheet": 7,
+   "line": "B0303",
+   "note": "Dashed (field wiring), printed GN_14AWG, straight to the motor."
+  },
+  {
+   "wire": "B03061",
+   "awg": "16",
+   "potential": "B03061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "DRVB0300",
+    "term": "1"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B03061"
+   },
+   "sheet": 7,
+   "line": "B0306",
+   "note": "Printed BU_16AWG. Terminal 1 (Stop). The sheet notes: remove the factory jumper between I/O terminals 01 and 11."
+  },
+  {
+   "wire": "B03061",
+   "awg": "16",
+   "potential": "B03061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "DRVB0300",
+    "term": "11"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B03061"
+   },
+   "sheet": 7,
+   "line": "B0314",
+   "note": "Printed BU_16AWG. Terminal 11 (+24 VDC)."
+  },
+  {
+   "wire": "B03061",
+   "awg": "16",
+   "potential": "B03061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "TB1",
+    "term": "B03061"
+   },
+   "to": {
+    "dev": "CRC0105",
+    "term": "14"
+   },
+   "sheet": 7,
+   "line": "B0314",
+   "note": "Printed BU_16AWG. Relay contact terminals: not numbered on this sheet.",
+   "inferred": true
+  },
+  {
+   "wire": "B03101",
+   "awg": "16",
+   "potential": "B03101",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "CRC0105",
+    "term": "11"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B03101"
+   },
+   "sheet": 7,
+   "line": "B0310",
+   "note": "Printed BU_16AWG. Relay contact terminals: not numbered on this sheet.",
+   "inferred": true
+  },
+  {
+   "wire": "B03101",
+   "awg": "16",
+   "potential": "B03101",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "TB1",
+    "term": "B03101"
+   },
+   "to": {
+    "dev": "DRVB0300",
+    "term": "5"
+   },
+   "sheet": 7,
+   "line": "B0310",
+   "note": "Printed BU_16AWG. Terminal 5 (Digital Input 1)."
+  },
+  {
+   "wire": "B01341",
+   "awg": "16",
+   "potential": "B01341",
+   "color_if_shown": "BUWH",
+   "from": {
+    "dev": "TB1",
+    "term": "B01341"
+   },
+   "to": {
+    "dev": "DRVB0300",
+    "term": "4"
+   },
+   "sheet": 7,
+   "line": "B0309",
+   "note": "Printed BUWH_16AWG, \"from B0136\". Terminal 4 (Digital Common). No TB1 terminal is drawn on this sheet; sheet B01 draws four TB1 terminals on B01341."
+  },
+  {
+   "wire": "",
+   "awg": "16",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "DRVB0400",
+    "term": "GND (left, line side)"
+   },
+   "to": {
+    "dev": "GND BAR",
+    "term": ""
+   },
+   "sheet": 8,
+   "line": "B0403",
+   "note": "Printed GN_16AWG, to an earth symbol."
+  },
+  {
+   "wire": "B04001",
+   "awg": null,
+   "potential": "B04001",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0400",
+    "term": "U"
+   },
+   "to": {
+    "dev": "DISCB0400",
+    "term": "line"
+   },
+   "sheet": 8,
+   "line": "B0400",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0400. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "B04011",
+   "awg": null,
+   "potential": "B04011",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0400",
+    "term": "V"
+   },
+   "to": {
+    "dev": "DISCB0400",
+    "term": "line"
+   },
+   "sheet": 8,
+   "line": "B0401",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0400. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "B04021",
+   "awg": null,
+   "potential": "B04021",
+   "color_if_shown": null,
+   "from": {
+    "dev": "DRVB0400",
+    "term": "W"
+   },
+   "to": {
+    "dev": "DISCB0400",
+    "term": "line"
+   },
+   "sheet": 8,
+   "line": "B0402",
+   "note": "Dashed (field wiring) to the auxiliary disconnect DISCB0400. No size on this segment; the motor side of the disconnect is printed 14AWG. \"Use minimum 1/2 inch rigid metal conduit for motor field wiring.\""
+  },
+  {
+   "wire": "",
+   "awg": "16",
+   "potential": "GND",
+   "color_if_shown": "GN",
+   "from": {
+    "dev": "DRVB0400",
+    "term": "GND (right, motor side)"
+   },
+   "to": {
+    "dev": "MTRB0400",
+    "term": "ground"
+   },
+   "sheet": 8,
+   "line": "B0403",
+   "note": "Dashed (field wiring), printed GN_16AWG, straight to the motor."
+  },
+  {
+   "wire": "B04061",
+   "awg": "16",
+   "potential": "B04061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "DRVB0400",
+    "term": "1"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B04061"
+   },
+   "sheet": 8,
+   "line": "B0406",
+   "note": "Printed BU_16AWG. Terminal 1 (Stop). The sheet notes: remove the factory jumper between I/O terminals 01 and 11."
+  },
+  {
+   "wire": "B04061",
+   "awg": "16",
+   "potential": "B04061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "DRVB0400",
+    "term": "11"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B04061"
+   },
+   "sheet": 8,
+   "line": "B0414",
+   "note": "Printed BU_16AWG. Terminal 11 (+24 VDC)."
+  },
+  {
+   "wire": "B04061",
+   "awg": "16",
+   "potential": "B04061",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "TB1",
+    "term": "B04061"
+   },
+   "to": {
+    "dev": "CRC0108",
+    "term": "14"
+   },
+   "sheet": 8,
+   "line": "B0414",
+   "note": "Printed BU_16AWG. Relay contact terminals: printed 11 (TB1 side) and 14."
+  },
+  {
+   "wire": "B04101",
+   "awg": "16",
+   "potential": "B04101",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "CRC0108",
+    "term": "11"
+   },
+   "to": {
+    "dev": "TB1",
+    "term": "B04101"
+   },
+   "sheet": 8,
+   "line": "B0410",
+   "note": "Printed BU_16AWG. Relay contact terminals: printed 11 (TB1 side) and 14."
+  },
+  {
+   "wire": "B04101",
+   "awg": "16",
+   "potential": "B04101",
+   "color_if_shown": "BU",
+   "from": {
+    "dev": "TB1",
+    "term": "B04101"
+   },
+   "to": {
+    "dev": "DRVB0400",
+    "term": "5"
+   },
+   "sheet": 8,
+   "line": "B0410",
+   "note": "Printed BU_16AWG. Terminal 5 (Digital Input 1)."
+  },
+  {
+   "wire": "B01341",
+   "awg": "16",
+   "potential": "B01341",
+   "color_if_shown": "BUWH",
+   "from": {
+    "dev": "TB1",
+    "term": "B01341"
+   },
+   "to": {
+    "dev": "DRVB0400",
+    "term": "4"
+   },
+   "sheet": 8,
+   "line": "B0409",
+   "note": "Printed BUWH_16AWG, \"from B0137\". Terminal 4 (Digital Common). No TB1 terminal is drawn on this sheet; sheet B01 draws four TB1 terminals on B01341."
+  },
+  {
+   "wire": "B01421",
+   "awg": "14",
+   "potential": "B01421",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "TB120-1",
+    "term": "B01421"
+   },
+   "to": {
+    "dev": "CBC0102",
+    "term": "line"
+   },
+   "sheet": 9,
+   "line": "C0102",
+   "note": "Printed RD_14AWG. Two TB120-1 terminals carry B01421 (lines C0101 and C0102), joined by the bus line."
+  },
+  {
+   "wire": "C01021",
+   "awg": "14",
+   "potential": "C01021",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "CBC0102",
+    "term": "load"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "C01022"
+   },
+   "sheet": 9,
+   "line": "C0102",
+   "note": "Printed RD_14AWG; the wire is numbered C01021 and the TB120-1 terminal it reaches is labelled C01022."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "C01022",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "TB120-1",
+    "term": "C01022"
+   },
+   "to": {
+    "dev": "CRAUX1",
+    "term": "contact"
+   },
+   "sheet": 9,
+   "line": "C0102",
+   "note": "Dashed (field wiring), printed RD_14AWG, from the TB120-1 terminal labelled C01022 to the pump's auxiliary disconnect contact CRAUX1."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "C01051",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "CRAUX1",
+    "term": "contact"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "C01051 (return)"
+   },
+   "sheet": 9,
+   "line": "C0102",
+   "note": "Dashed (field wiring), printed RD_14AWG, back to the TB120-1 terminal labelled C01051."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "C01051",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB120-1",
+    "term": "C01051 (return)"
+   },
+   "to": {
+    "dev": "CRC0102",
+    "term": "A1"
+   },
+   "sheet": 9,
+   "line": "C0102",
+   "note": "No size or colour printed on this segment."
+  },
+  {
+   "wire": "B01411",
+   "awg": "14",
+   "potential": "B01411",
+   "color_if_shown": "WH",
+   "from": {
+    "dev": "CRC0102",
+    "term": "A2"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "B01411"
+   },
+   "sheet": 9,
+   "line": "C0102",
+   "note": "Printed WH_14AWG."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "C01021",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "TB120-1",
+    "term": "C01021"
+   },
+   "to": {
+    "dev": "CRAUX2",
+    "term": "contact"
+   },
+   "sheet": 9,
+   "line": "C0105",
+   "note": "Dashed (field wiring), printed RD_14AWG, from the TB120-1 terminal labelled C01021 to the pump's auxiliary disconnect contact CRAUX2."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "C01081",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "CRAUX2",
+    "term": "contact"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "C01081 (return)"
+   },
+   "sheet": 9,
+   "line": "C0105",
+   "note": "Dashed (field wiring), printed RD_14AWG, back to the TB120-1 terminal labelled C01081."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "C01081",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB120-1",
+    "term": "C01081 (return)"
+   },
+   "to": {
+    "dev": "CRC0105",
+    "term": "A1"
+   },
+   "sheet": 9,
+   "line": "C0105",
+   "note": "No size or colour printed on this segment."
+  },
+  {
+   "wire": "B01411",
+   "awg": "14",
+   "potential": "B01411",
+   "color_if_shown": "WH",
+   "from": {
+    "dev": "CRC0105",
+    "term": "A2"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "B01411"
+   },
+   "sheet": 9,
+   "line": "C0105",
+   "note": "Printed WH_14AWG."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "C01021",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "TB120-1",
+    "term": "C01021"
+   },
+   "to": {
+    "dev": "CRAUX3",
+    "term": "contact"
+   },
+   "sheet": 9,
+   "line": "C0108",
+   "note": "Dashed (field wiring), printed RD_14AWG, from the TB120-1 terminal labelled C01021 to the pump's auxiliary disconnect contact CRAUX3."
+  },
+  {
+   "wire": "",
+   "awg": "14",
+   "potential": "C01021",
+   "color_if_shown": "RD",
+   "from": {
+    "dev": "CRAUX3",
+    "term": "contact"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "C01021 (return)"
+   },
+   "sheet": 9,
+   "line": "C0108",
+   "note": "Dashed (field wiring), printed RD_14AWG, back to the TB120-1 terminal labelled C01021. That is the label of the supply side too: as printed, this return is on the supply potential."
+  },
+  {
+   "wire": "",
+   "awg": null,
+   "potential": "C01021",
+   "color_if_shown": null,
+   "from": {
+    "dev": "TB120-1",
+    "term": "C01021 (return)"
+   },
+   "to": {
+    "dev": "CRC0108",
+    "term": "A1"
+   },
+   "sheet": 9,
+   "line": "C0108",
+   "note": "No size or colour printed on this segment."
+  },
+  {
+   "wire": "B01411",
+   "awg": "14",
+   "potential": "B01411",
+   "color_if_shown": "WH",
+   "from": {
+    "dev": "CRC0108",
+    "term": "A2"
+   },
+   "to": {
+    "dev": "TB120-1",
+    "term": "B01411"
+   },
+   "sheet": 9,
+   "line": "C0108",
+   "note": "Printed WH_14AWG."
+  }
+ ],
+ "cables": [
+  {
+   "cable": "CBLN0102",
+   "type": "Ethernet patch cord 1585J-M8HBJM-3 (Cat5e, RJ45 to RJ45, 3 m)",
+   "from": {
+    "dev": "DRVB0200",
+    "term": "ETHERNET"
+   },
+   "to": {
+    "dev": "N01 jack 1",
+    "term": "front"
+   },
+   "cores": [],
+   "sheet": 6,
+   "note": "Sheet B02 \"from N0102\"; sheet N01 draws it from one of three Panduit DIN-rail jack modules (no tags) to the drive. The potential is printed CBLN01021."
+  },
+  {
+   "cable": "CBLN0104",
+   "type": "Ethernet patch cord 1585J-M8HBJM-3 (Cat5e, RJ45 to RJ45, 3 m)",
+   "from": {
+    "dev": "DRVB0300",
+    "term": "ETHERNET"
+   },
+   "to": {
+    "dev": "N01 jack 2",
+    "term": "front"
+   },
+   "cores": [],
+   "sheet": 7,
+   "note": "Sheet B03 \"from N0104\"; sheet N01 draws it from one of three Panduit DIN-rail jack modules (no tags) to the drive. The potential is printed CBLN01041."
+  },
+  {
+   "cable": "CBLN0106",
+   "type": "Ethernet patch cord 1585J-M8HBJM-3 (Cat5e, RJ45 to RJ45, 3 m)",
+   "from": {
+    "dev": "DRVB0400",
+    "term": "ETHERNET"
+   },
+   "to": {
+    "dev": "N01 jack 3",
+    "term": "front"
+   },
+   "cores": [],
+   "sheet": 8,
+   "note": "Sheet B04 \"from N0106\"; sheet N01 draws it from one of three Panduit DIN-rail jack modules (no tags) to the drive. The potential is printed CBLN01061."
+  },
+  {
+   "cable": "",
+   "type": "Ethernet field cable (not specified)",
+   "from": {
+    "dev": "N01 jack 1",
+    "term": "field"
+   },
+   "to": {
+    "dev": "IDF-04",
+    "term": "port (not given)"
+   },
+   "cores": [],
+   "sheet": 11,
+   "note": "Sheet N01 draws a solid line (the legend's panel wiring) from the bottom of each jack module to the switch \"AUTOMATION NETWORK IDF-04 (NEW)\", new cream tank room, model TBD. No cable number or type."
+  },
+  {
+   "cable": "",
+   "type": "Ethernet field cable (not specified)",
+   "from": {
+    "dev": "N01 jack 2",
+    "term": "field"
+   },
+   "to": {
+    "dev": "IDF-04",
+    "term": "port (not given)"
+   },
+   "cores": [],
+   "sheet": 11,
+   "note": "Sheet N01 draws a solid line (the legend's panel wiring) from the bottom of each jack module to the switch \"AUTOMATION NETWORK IDF-04 (NEW)\", new cream tank room, model TBD. No cable number or type."
+  },
+  {
+   "cable": "",
+   "type": "Ethernet field cable (not specified)",
+   "from": {
+    "dev": "N01 jack 3",
+    "term": "field"
+   },
+   "to": {
+    "dev": "IDF-04",
+    "term": "port (not given)"
+   },
+   "cores": [],
+   "sheet": 11,
+   "note": "Sheet N01 draws a solid line (the legend's panel wiring) from the bottom of each jack module to the switch \"AUTOMATION NETWORK IDF-04 (NEW)\", new cream tank room, model TBD. No cable number or type."
+  }
+ ],
+ "links": [
+  {
+   "strip": "TB1",
+   "potential": "B02061",
+   "between": "the terminal on the drive terminal 1 line and the terminal on the terminal 11 line",
+   "printed": "BU_16AWG",
+   "sheet": 6,
+   "note": "A vertical line between two TB1 terminal circles of the same potential, with a wire size printed on it."
+  },
+  {
+   "strip": "TB1",
+   "potential": "B02061",
+   "between": "the two terminals on the terminal 11 line",
+   "printed": null,
+   "sheet": 6,
+   "note": "A line between two TB1 terminal circles, nothing printed on it."
+  },
+  {
+   "strip": "TB1",
+   "potential": "B03061",
+   "between": "the terminal on the drive terminal 1 line and the terminal on the terminal 11 line",
+   "printed": "BU_16AWG",
+   "sheet": 7,
+   "note": "A vertical line between two TB1 terminal circles of the same potential, with a wire size printed on it."
+  },
+  {
+   "strip": "TB1",
+   "potential": "B03061",
+   "between": "the two terminals on the terminal 11 line",
+   "printed": null,
+   "sheet": 7,
+   "note": "A line between two TB1 terminal circles, nothing printed on it."
+  },
+  {
+   "strip": "TB1",
+   "potential": "B04061",
+   "between": "the terminal on the drive terminal 1 line and the terminal on the terminal 11 line",
+   "printed": "BU_16AWG",
+   "sheet": 8,
+   "note": "A vertical line between two TB1 terminal circles of the same potential, with a wire size printed on it."
+  },
+  {
+   "strip": "TB1",
+   "potential": "B04061",
+   "between": "the two terminals on the terminal 11 line",
+   "printed": null,
+   "sheet": 8,
+   "note": "A line between two TB1 terminal circles, nothing printed on it."
+  },
+  {
+   "strip": "TB120-1",
+   "potential": "B01421",
+   "between": "the terminals at lines C0101 and C0102",
+   "printed": null,
+   "sheet": 9,
+   "note": "Bus line between two terminal circles."
+  },
+  {
+   "strip": "TB120-1",
+   "potential": "C01021",
+   "between": "the terminals labelled C01022 (C0102), C01021 (C0105) and C01021 (C0108)",
+   "printed": null,
+   "sheet": 9,
+   "note": "One vertical bus line joins the three supply-side terminals."
+  },
+  {
+   "strip": "TB120-1",
+   "potential": "B01411",
+   "between": "the three terminals at lines C0102, C0105 and C0108",
+   "printed": null,
+   "sheet": 9,
+   "note": "The neutral bus line."
+  },
+  {
+   "strip": "TB24-1",
+   "potential": "B01331",
+   "between": "the terminals at lines D0100 and D0101",
+   "printed": "BU_14AWG below them",
+   "sheet": 10,
+   "note": "Two terminal circles on the +24 V bus line."
+  },
+  {
+   "strip": "TB1",
+   "potential": "B01341",
+   "between": "the four terminals at lines B0134 to B0137",
+   "printed": null,
+   "sheet": 5,
+   "note": "One vertical bus line joins four TB1 terminal circles."
+  }
+ ],
+ "field_only": [
+  {
+   "wire": "B02002",
+   "awg": "14",
+   "color": "BK_BN",
+   "from": "DISCB0200 load",
+   "to": "MTRB0200",
+   "sheet": 6,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B02001). Not in this panel."
+  },
+  {
+   "wire": "B02012",
+   "awg": "14",
+   "color": "BK_OG",
+   "from": "DISCB0200 load",
+   "to": "MTRB0200",
+   "sheet": 6,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B02011). Not in this panel."
+  },
+  {
+   "wire": "B02022",
+   "awg": "14",
+   "color": "BK_YE",
+   "from": "DISCB0200 load",
+   "to": "MTRB0200",
+   "sheet": 6,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B02021). Not in this panel."
+  },
+  {
+   "wire": "B03002",
+   "awg": "14",
+   "color": "BK_BN",
+   "from": "DISCB0300 load",
+   "to": "MTRB0300",
+   "sheet": 7,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B03001). Not in this panel."
+  },
+  {
+   "wire": "B03012",
+   "awg": "14",
+   "color": "BK_OG",
+   "from": "DISCB0300 load",
+   "to": "MTRB0300",
+   "sheet": 7,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B03011). Not in this panel."
+  },
+  {
+   "wire": "B03022",
+   "awg": "14",
+   "color": "BK_YE",
+   "from": "DISCB0300 load",
+   "to": "MTRB0300",
+   "sheet": 7,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B03021). Not in this panel."
+  },
+  {
+   "wire": "B04002",
+   "awg": "14",
+   "color": "BK_BN",
+   "from": "DISCB0400 load",
+   "to": "MTRB0400",
+   "sheet": 8,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B04001). Not in this panel."
+  },
+  {
+   "wire": "B04012",
+   "awg": "14",
+   "color": "BK_OG",
+   "from": "DISCB0400 load",
+   "to": "MTRB0400",
+   "sheet": 8,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B04011). Not in this panel."
+  },
+  {
+   "wire": "B04022",
+   "awg": "14",
+   "color": "BK_YE",
+   "from": "DISCB0400 load",
+   "to": "MTRB0400",
+   "sheet": 8,
+   "note": "Field wiring from the auxiliary disconnect to the motor (continues B04021). Not in this panel."
+  }
+ ],
+ "stubs": [
+  {
+   "dev": "DRVB0200",
+   "term": "S1",
+   "sheet": 6,
+   "line": "B0209",
+   "note": "A short orange line leaves S1 (Safety 1) on the left of the drive and ends in open space: no wire number, no size, no destination. Nothing is drawn at S+. The sheet notes \"* Remove safe-off jumper\"."
+  },
+  {
+   "dev": "DRVB0200",
+   "term": "S2",
+   "sheet": 6,
+   "line": "B0210",
+   "note": "A short orange line leaves S2 (Safety 2) on the left of the drive and ends in open space: no wire number, no size, no destination. Nothing is drawn at S+. The sheet notes \"* Remove safe-off jumper\"."
+  },
+  {
+   "dev": "DRVB0300",
+   "term": "S1",
+   "sheet": 7,
+   "line": "B0309",
+   "note": "A short orange line leaves S1 (Safety 1) on the left of the drive and ends in open space: no wire number, no size, no destination. Nothing is drawn at S+. The sheet notes \"* Remove safe-off jumper\"."
+  },
+  {
+   "dev": "DRVB0300",
+   "term": "S2",
+   "sheet": 7,
+   "line": "B0310",
+   "note": "A short orange line leaves S2 (Safety 2) on the left of the drive and ends in open space: no wire number, no size, no destination. Nothing is drawn at S+. The sheet notes \"* Remove safe-off jumper\"."
+  },
+  {
+   "dev": "DRVB0400",
+   "term": "S1",
+   "sheet": 8,
+   "line": "B0409",
+   "note": "A short orange line leaves S1 (Safety 1) on the left of the drive and ends in open space: no wire number, no size, no destination. Nothing is drawn at S+. The sheet notes \"* Remove safe-off jumper\"."
+  },
+  {
+   "dev": "DRVB0400",
+   "term": "S2",
+   "sheet": 8,
+   "line": "B0410",
+   "note": "A short orange line leaves S2 (Safety 2) on the left of the drive and ends in open space: no wire number, no size, no destination. Nothing is drawn at S+. The sheet notes \"* Remove safe-off jumper\"."
+  }
+ ],
+ "terminals": [
+  {
+   "strip": "TB120-1",
+   "position": 1,
+   "label": "B01421",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 2,
+   "label": "B01421",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 3,
+   "label": "B01421",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 4,
+   "label": "B01421",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 5,
+   "label": "C01021",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 6,
+   "label": "C01021",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 7,
+   "label": "C01021",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 8,
+   "label": "C01022",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 9,
+   "label": "C01051",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 10,
+   "label": "C01081",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 11,
+   "label": "B01411",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 12,
+   "label": "B01411",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 13,
+   "label": "B01411",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 14,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 15,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 16,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB120-1",
+   "position": 17,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB1",
+   "position": 1,
+   "label": "B02061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 2,
+   "label": "B02061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 3,
+   "label": "B02061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 4,
+   "label": "B02101",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 5,
+   "label": "B03061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 6,
+   "label": "B03061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 7,
+   "label": "B03061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 8,
+   "label": "B03101",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 9,
+   "label": "B04061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 10,
+   "label": "B04061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 11,
+   "label": "B04061",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 12,
+   "label": "B04101",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 13,
+   "label": "B01341",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 14,
+   "label": "B01341",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 15,
+   "label": "B01341",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 16,
+   "label": "B01341",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 17,
+   "label": "B01341",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 18,
+   "label": "B01341",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 19,
+   "label": "B01341",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB1",
+   "position": 20,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB1",
+   "position": 21,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB1",
+   "position": 22,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB1",
+   "position": 23,
+   "label": "GND",
+   "jumper_drawn": false,
+   "pn": "1492-JG4"
+  },
+  {
+   "strip": "TB24-1",
+   "position": 1,
+   "label": "B01331",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB24-1",
+   "position": 2,
+   "label": "B01331",
+   "jumper_drawn": true,
+   "pn": "1492-J4"
+  },
+  {
+   "strip": "TB24-1",
+   "position": 3,
+   "label": "B01341",
+   "jumper_drawn": false,
+   "pn": "1492-J4"
+  }
+ ],
+ "devices": "see src/layout.mjs (DEVICES): tags as printed on the layout sheets; the schematic tags FUB0132 and PWSB0132 are FUB0125 and PWSB0125 there",
+ "unreadable": []
+}

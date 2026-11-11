@@ -1,0 +1,313 @@
+[
+  {
+    "tags": ["DRV1", "DRV2"],
+    "part": "25B-D024N104",
+    "manufacturer": "Rockwell Automation (Allen-Bradley) PowerFlex 525",
+    "docs": [
+      {"title": "PowerFlex 520-Series Adjustable Frequency AC Drive User Manual", "doc_number": "520-UM001", "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/520-um001_-en-e.pdf", "kind": "user manual", "verified": false, "key_install_facts": "Not read. literature.rockwellautomation.com returns HTTP 403 to the fetch tool."},
+      {"title": "PowerFlex 520-Series User Manual (configurator mirror on Rockwell domain)", "doc_number": "520-UM001", "url": "https://configurator.rockwellautomation.com/api/Doc/520-um001_-en-e.pdf", "kind": "user manual", "verified": false, "key_install_facts": "URL resolves (not 404) but the file is over the 10 MB fetch limit, so not read. No separate frame-D installation instruction found; installation content is in 520-UM001 (a 520-QS001 quick start also exists, not fetched)."}
+    ]
+  },
+  {
+    "tags": ["CB1", "CB2"],
+    "part": "140MT-F9E-C32",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "140MT-F9E/F9N/F9T Motor Protection Circuit Breakers Installation Instructions", "doc_number": "140MT-IN025A-EN-P (Feb 2024, per search result)", "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/in/140mt-in025_-en-p.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read. Publication number from search result only; Rockwell literature URL blocked (403); configurator mirror 404."},
+      {"title": "Cut Sheet 140MT-F9E-C32", "doc_number": "", "url": "https://configurator.rockwellautomation.com/api/Product/140MT-F9E-C32/cutsheet", "kind": "product page", "verified": true, "key_install_facts": "No install data on the cut sheet; links Technical Data 140-TD005 (configurator copy 404)."}
+    ]
+  },
+  {
+    "tags": ["CB4"],
+    "part": "WAGO 787-1668",
+    "manufacturer": "WAGO",
+    "docs": [
+      {"title": "Data Sheet 787-1668/000-080 (8-ch ECB, IO-Link variant - NOT the base 787-1668)", "doc_number": "787-1668/000-080_EN, version 09.02.2026", "url": "https://pimassetsprdst.blob.core.windows.net/assets/apc_Original/27/88/130812788.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "WAGO-generated datasheet, but hosted on a third-party PIM blob, not wago.com. p2: Input(+) Push-in CAGE CLAMP, WAGO 831 series, solid/fine-stranded 0.5-10 mm2 / 20-8 AWG, strip 13-15 mm; Input(-)/output/signaling CAGE CLAMP WAGO 721 series, solid 0.08-2.5 mm2 / 28-12 AWG. p4 lists Product Manual Electronic Circuit Breaker V1.1.0 26.08.2019 (5.4 MB). Confirm the base 787-1668 uses the same connectors."},
+      {"title": "WAGO product page 787-1668", "doc_number": "", "url": "https://www.wago.com/global/overvoltage-protection/electronic-circuit-breaker-epsitron/p/787-1668", "kind": "product page", "verified": true, "key_install_facts": "Page title: 8-channel, 24 VDC, adjustable 2-10 A, communication capability, 10 mm2. Download links are JS-rendered and were not visible; the manual URL was not found."}
+    ]
+  },
+  {
+    "tags": ["PWS1"],
+    "part": "WAGO 2787-2347",
+    "manufacturer": "WAGO",
+    "docs": [
+      {"title": "Data Sheet 2787-2347 Power supply Pro 2, 3-phase, 24 VDC, 20 A", "doc_number": "2787-2347_EN, version 10.02.2026", "url": "https://pimassetsprdst.blob.core.windows.net/assets/apc_Original/49/28/130814928.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "WAGO-generated datasheet, but hosted on a third-party PIM blob, not wago.com (canonical https://www.wago.com/2787-2347). p1: 3x400-500 VAC input, no neutral. p2: input/signaling CAGE CLAMP WAGO 721 series, solid 0.08-2.5 mm2 / 28-12 AWG, ferrule insulated 0.25-1.5 mm2, strip 8-9 mm; output is Push-in CAGE CLAMP (values not read). p3: DIN-35 rail, height with connector 169 mm, 1400 g, natural convection when horizontally mounted, derating 'see instruction leaflet'. p4-5 list Product Manual V1.1.0 15.02.2022 (8.4 MB) and Instruction Leaflet V1.1.0 26.04.2021; their direct URLs were not found."}
+    ]
+  },
+  {
+    "tags": ["E-STOP"],
+    "part": "800H-FRXJTQH2RA5",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "30 mm Push Button Specifications Technical Data", "doc_number": "800-TD009L-EN-P (Sept 2025)", "url": "https://configurator.rockwellautomation.com/api/Doc/800-td009_-en-p.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "p3: wire gauge/terminal screw torque #18-14 AWG (#18-10 MaxDuty) / 6-8 lb-in (contact blocks). Mounting hole size and panel thickness not extracted."},
+      {"title": "Cut Sheet 800H-FRXJTQH2RA5", "doc_number": "", "url": "https://configurator.rockwellautomation.com/api/Product/800H-FRXJTQH2RA5/cutsheet", "kind": "product page", "verified": true, "key_install_facts": "800H 2-position push-pull/twist release, illuminated. No install data. An 800H installation instruction (IN) was not found."}
+    ]
+  },
+  {
+    "tags": ["Terminals"],
+    "part": "1492-J4, 1492-J6, 1492-JD4, 1492-EAJ35, 1492-EBJ3",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "Terminal Block Specifications Technical Data", "doc_number": "1492-TD015A-EN-P", "url": "https://configurator.rockwellautomation.com/api/Doc/1492-td015_-en-p.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "PDF p2 (printed p3): 1492-J4: #22-10 AWG (CSA), 4 mm2 IEC, strip 10 mm (0.39 in), torque 9.0 lb-in (1.0 N-m), 6.1 mm wide; 1492-J6: #22-8 AWG, 6 mm2, strip 12 mm (0.47 in), torque 14.2 lb-in (1.6 N-m), 8.1 mm wide. PDF p5 (printed p6): 1492-JD4: #26-10 AWG / 0.5-4 mm2, strip 8 mm (0.315 in), torque 4.5 lb-in (0.5 N-m). Table columns were read from extracted text; check against the PDF before relying on them. EAJ35/EBJ3 pages not checked."},
+      {"title": "1492 IEC terminal block installation instructions (listed on the 1492-J4-V and 1492-J4M product pages)", "doc_number": "1492-IN186", "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/in/1492-in186_-en-p.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read (Rockwell literature URL returns 403; configurator copy 404). Not confirmed to cover plain J4/J6/JD4."}
+    ]
+  },
+  {
+    "tags": ["PDB1"],
+    "part": "1492-PDC-3A200-S0108",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "Power Distribution Blocks Technical Data", "doc_number": "1492-TD019A-EN-P (May 2026)", "url": "https://configurator.rockwellautomation.com/api/Doc/1492-td019_-en-p.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "p7 row 1492-PDC-3A200-S0108 (3-pole, 200 A, Al): line side 1 wire, 3/0-#8 AWG at 18.30-22.37 N-m and #10-14 at 5.08-6.21 N-m; load side 8 wires, 2-#8 at 5.08-6.21 N-m and #10-14 at 4.07-4.97 N-m; mounting torque not to exceed 30 lb-in (3.4 N-m). The pairing of torque and wire range was read from extracted table text; check against the PDF."},
+      {"title": "Cut Sheet 1492-PDC-3A200-S0108", "doc_number": "", "url": "https://configurator.rockwellautomation.com/api/Product/1492-PDC-3A200-S0108/cutsheet", "kind": "product page", "verified": true, "key_install_facts": "Covered, 3 pole, aluminum, 200 A, screw, 8 load / 1 line wire. No install data."}
+    ]
+  },
+  {
+    "tags": ["RCP1"],
+    "part": "1492-REC15",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "Cut Sheet 1492 DIN Rail Receptacle 1492-REC15", "doc_number": "", "url": "https://configurator.rockwellautomation.com/api/Product/1492-REC15/cutsheet", "kind": "product page", "verified": true, "key_install_facts": "15 A standard duplex only. No installation instruction found."}
+    ]
+  },
+  {
+    "tags": ["Q1", "FU1 holder"],
+    "part": "1494U-D100 / 1494U-F100",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "Bulletin 1494U Universal Disconnect Switch Installation Instructions (30-100 A)", "doc_number": "1494U-IN001", "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/in/1494u-in001_-mu-p.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read. Publication number from the 1494U product page (search snippet). The URL suffix (-mu-p vs -en-p) is a guess, and the literature site returns 403. 1494U-IN007 is the 200 A version and 1494U-IN006 the 400 A version, so neither applies to D100. No separate doc found for 1494U-F100."}
+    ]
+  },
+  {
+    "tags": ["PLC1"],
+    "part": "1769-L30ER, 1769-ECR, 1769-OW16, 1769-PB2",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "Compact 16-Point AC/DC Relay Output Module Installation Instructions (1769-OW16)", "doc_number": "1769-IN062A-EN-P (Dec 2001)", "url": "https://configurator.rockwellautomation.com/api/Doc/1769-in062_-en-p.pdf", "kind": "installation", "verified": true, "key_install_facts": "p5: 50 mm (2 in) clearance on all sides; panel mount 2 screws/module, M4 or #8 panhead. p6: hole spacing 35 mm single-wide. p7: DIN rail 35x7.5 or 35x15 mm. p9: terminal block retaining screws 0.46 N-m (4.1 lb-in). p10: terminal screws 0.68 N-m (6 lb-in); solid Cu 90C #14-22 AWG, stranded #16-22 AWG, max 2 wires per terminal; 6.35 mm spade lug. p14: 118 x 87 x 52.5 mm (138 mm high with tabs). Old revision (2001); check for a newer one."},
+      {"title": "CompactLogix 5370 L1/L3 Controllers Dimensions (excerpt of 1769-TD005C)", "doc_number": "1769-TD005C-EN-P p.15 (Dec 2011)", "url": "https://configurator.rockwellautomation.com/api/Doc/compactlogix%20l1%20and%20l3%20dims.pdf", "kind": "dimensions", "verified": true, "key_install_facts": "L3: 132 mm / 118 mm height, 55 mm width, 105 mm depth (values read from the drawing text)."},
+      {"title": "CompactLogix 5370 Controllers User Manual (Ch. 4 Install the L3 controller: mounting, spacing, grounding, power)", "doc_number": "1769-UM021", "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/um/1769-um021_-en-p.pdf", "kind": "user manual", "verified": false, "key_install_facts": "Not read (403). No standalone 1769-IN for 1769-L30ER found."},
+      {"title": "Compact I/O End Cap/Terminator Installation Instructions (1769-ECR)", "doc_number": "1769-IN015", "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/in/1769-in015_-en-p.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read. Publication number from the product page (search snippet); configurator copy 404."},
+      {"title": "Cut Sheet 1769-PB2", "doc_number": "", "url": "https://configurator.rockwellautomation.com/api/Product/1769-pb2/cutsheet", "kind": "product page", "verified": false, "key_install_facts": "Seen in search results only. No 1769-PB2 installation instruction found."}
+    ]
+  },
+  {
+    "tags": ["HMI1"],
+    "part": "2711P-T10C21D8S",
+    "manufacturer": "Rockwell Automation (Allen-Bradley)",
+    "docs": [
+      {"title": "PanelView Plus 7 Standard Terminals User Manual (installation and panel cutout)", "doc_number": "2711P-UM007", "url": "https://configurator.rockwellautomation.com/api/Doc/2711p-um007_-en-p.pdf", "kind": "user manual", "verified": false, "key_install_facts": "URL resolves (not 404) but the file is over the 10 MB fetch limit, so not read. Cutout dimensions not extracted."},
+      {"title": "PanelView Plus 7 Standard Mounting Levers Installation Instructions (2711P-RMCS)", "doc_number": "2711P-IN032", "url": "https://literature.rockwellautomation.com/idc/groups/literature/documents/in/2711p-in032_-en-p.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read (403; configurator copy 404). Publication number from search result."}
+    ]
+  },
+  {
+    "tags": ["NS1"],
+    "part": "Phoenix Contact 1085219 FL SWITCH 1116N",
+    "manufacturer": "Phoenix Contact",
+    "docs": [
+      {"title": "FL SWITCH 1116N product page", "doc_number": "1085219", "url": "https://www.phoenixcontact.com/en-us/products/industrial-ethernet-switch-fl-switch-1116n-1085219", "kind": "product page", "verified": false, "key_install_facts": "phoenixcontact.com returns 403 to the fetch tool. FL SWITCH 1000N user manual (sec. 5.6 covers the 1116N) exists per search; URL not found."}
+    ]
+  },
+  {
+    "tags": ["CPL1", "CPL2", "CPL3"],
+    "part": "ifm AL1920",
+    "manufacturer": "ifm electronic",
+    "docs": [
+      {"title": "Device manual IO-Link master with EtherNet/IP interface CabinetLine 8 ports IP 20 AL1920, firmware 3.1.x", "doc_number": "80284064/03 10/2021", "url": "https://media.ifm.com/dam/01a0a1fe-5d8c-759f-9719-fe146dbfca7e/Original/80284064_EN.pdf?contentdisposition=inline", "kind": "user manual", "verified": true, "key_install_facts": "p13 Install: disconnect power; operate only on a grounded DIN rail; install in a cabinet rated IP 54 or higher; fix vertically on a 35 mm rail; leave space above, below and to the sides for air circulation (no figure given). p14: for UL use AWG 26-12 cable rated at least 75 C. p17: UA max current 4 A. Technical data from p94."},
+      {"title": "AL1920 data sheet (EN-US)", "doc_number": "AL1920-00", "url": "https://media.ifm.com/dam/010cc92c-6a7a-499c-9641-7c1303c2c496/Original/AL1920-00_EN-US.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "p1: 20-30 VDC, 300-3900 mA. p2: DIN rail TH35 (EN 60715), 319.2 g. p3: supplied with 9 cage clamps; X31 supply pins 1-2 GND, 3-4 +24 V; X01-X08 class A ports; RJ45 X21/X22 EtherNet/IP, X23 IoT."}
+    ]
+  },
+  {
+    "tags": ["SC"],
+    "part": "ifm DP2200",
+    "manufacturer": "ifm electronic",
+    "docs": [
+      {"title": "DP2200 Evaluation system and display for analog signals data sheet", "doc_number": "DP2200-02 EN-US 06.02.2025", "url": "https://media.ifm.com/dam/cd7243d3-b41b-4736-8ec7-3ffecc84e7f3/Original/DP2200-02_EN-US.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "p1: 18-30 VDC. p2: 63 x 30 x 24 mm, IP67, -25 to 60 C. p3: optional mounting clip accessory; plug M12 A-coded 4-pin (1 L+, 2 OUT2 analog, 3 L-, 4 OUT1 IO-Link); socket M12 5-pin (2 = 4-20 mA input). Operating instructions not found on ifm.com."}
+    ]
+  },
+  {
+    "tags": ["SC"],
+    "part": "ifm EIO104",
+    "manufacturer": "ifm electronic",
+    "docs": [
+      {"title": "EIO104 product page", "doc_number": "", "url": "https://www.ifm.com/us/en/product/EIO104", "kind": "product page", "verified": false, "key_install_facts": "Not fetched. Operating instructions 80298783/00 (08/2021) exist per search, but only on third-party mirrors; no ifm URL found."}
+    ]
+  },
+  {
+    "tags": ["FU2"],
+    "part": "Eaton Bussmann CHCC1DU holder + FNQ-R-6 fuse",
+    "manufacturer": "Eaton (Bussmann series)",
+    "docs": [
+      {"title": "LIMITRON FNQ-R Class CC time-delay fuses data sheet", "doc_number": "Bussmann data sheet 1014", "url": "https://www.eaton.com/content/dam/eaton/products/electrical-circuit-protection/fuses/bussmann-series-branch-circuit-fuses/class-cc/bus-ele-ds-1014-fnq-r.pdf", "kind": "datasheet", "verified": false, "key_install_facts": "Fetch timed out (eaton.com). No eaton.com CHCC1DU spec sheet URL found."}
+    ]
+  },
+  {
+    "tags": ["FU1"],
+    "part": "Eaton Bussmann LPJ-70SP",
+    "manufacturer": "Eaton (Bussmann series)",
+    "docs": [
+      {"title": "Low-Peak LPJ Class J 70-600 A data sheet", "doc_number": "Bussmann data sheet 1007 (July 2023)", "url": "https://www.eaton.com/content/dam/eaton/products/electrical-circuit-protection/fuses/data-sheets/bus-ele-ds-1007-lpj-70-600.pdf", "kind": "datasheet", "verified": false, "key_install_facts": "Fetch timed out (eaton.com)."}
+    ]
+  },
+  {
+    "tags": ["CB5", "CB3"],
+    "part": "Eaton FAZ-C2-1-NA-SP / FAZ-D2-3-NA",
+    "manufacturer": "Eaton",
+    "docs": [
+      {"title": "Eaton product page FAZ-C2/1-NA-SP", "doc_number": "", "url": "https://www.eaton.com/us/en-us/skuPage.FAZ-C2%7B%7D1-NA-SP.html", "kind": "product page", "verified": false, "key_install_facts": "Fetch timed out. No FAZ-NA instruction leaflet found on eaton.com. An AutomationDirect leaflet (faz_na_ma.pdf) was fetched, but it held only the warning text with no wire or torque data."}
+    ]
+  },
+  {
+    "tags": ["SI1", "SI2", "SI3", "SI4", "SI5", "SI6"],
+    "part": "GLG-1xmA-1xmA 4-20 mA isolator",
+    "manufacturer": "Unknown - unbranded generic (not Eaton Bussmann)",
+    "docs": [],
+    "note": "Marketplace listings (Fruugo and others) sell 'Signal Isolator ... GLG' as 'Brand: Unbranded'. It is a generic Chinese DIN-rail 1-in/1-out isolator: DC 24V +/-10%, 2000 VAC isolation, EMC to GB/T 18268. No manufacturer identified and no manufacturer documentation found."
+  },
+  {
+    "tags": ["GB1", "GB2"],
+    "part": "ILSCO D167-14",
+    "manufacturer": "ILSCO (nVent)",
+    "docs": [
+      {"title": "Copper Neutral Bars Type D167 catalog page", "doc_number": "D167.pdf (page C-235)", "url": "https://media.ilsco.com/document/catalogpage/D167.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "D167-14 row: 14 taps; main 4-14 AWG, tap 6-14 AWG; L 6-23/32 in, max wire height 3/4 in, W 11/32 in; #10 bolt; mounting holes 13/64 in; first mounting hole at 2.566 in (7th hole) from bar end; 1.98 in between the 2 mounting holes. UL recognized 600 V; UL 486A/B, file E6207. Torque not listed."}
+    ]
+  },
+  {
+    "tags": ["DIN bracket"],
+    "part": "AutomationDirect DN-ASB2-10",
+    "manufacturer": "AutomationDirect",
+    "docs": [
+      {"title": "DN-ASB2-10 Cut Sheet", "doc_number": "", "url": "https://cdn.automationdirect.com/static/specs/cutsheet/DN-ASB2-10_cutsheet.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "Angled DIN rail support bracket, 50 mm, zinc plated steel, pack of 10, for 35 mm DIN rail, M6 mounting screws included. 2D drawing: https://cdn.automationdirect.com/static/drawings/DN-ASB2-10.pdf (not fetched)."}
+    ]
+  },
+  {
+    "tags": ["T1"],
+    "part": "SolaHD E750WB",
+    "manufacturer": "SolaHD (Emerson)",
+    "docs": [],
+    "note": "No solahd.com or emerson.com document found in 1 search. Distributor says SBE encapsulated 0.75 kVA, 240/480 V primary, 120 V secondary, wire leads, FB2X secondary fuse holder included."
+  },
+  {
+    "tags": ["Lug1"],
+    "part": "Burndy K3A26U2N",
+    "manufacturer": "Burndy (Hubbell)",
+    "docs": [
+      {"title": "K3A26U2N AL Universal Terminal, 3-Conductor, 2-Hole spec sheet", "doc_number": "BRDY_MX-K3A26U2N-SPEC-EN", "url": "https://hubbellcdn.com/specsheet/BRDY_MX-K3A26U2N-SPEC-EN.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "Hosted on hubbellcdn.com (Burndy parent Hubbell), not burndy.com. p1: 3 conductors, #14-2/0 AWG Cu or Al stranded; 2 holes, 1/2 in stud, 1.75 in spacing, hole 9/16 in (14 mm); 3 slot screws; recommended install torque 50 lb-in; 3.75 in L x 1.97 in W x 1.79 in H; UL 486A-486B, CSA."}
+    ]
+  },
+  {
+    "tags": ["NS2"],
+    "part": "Moxa NAT-102",
+    "manufacturer": "Moxa",
+    "docs": [
+      {"title": "NAT-102 Series Quick Installation Guide", "doc_number": "P/N 1802001024010, v1.0 Nov 2021", "url": "https://www.moxa.com/getmedia/71c8b241-a153-4ca6-ad3d-8f945ee60a21/moxa-nat-102-series-qig-v1.0.pdf", "kind": "installation", "verified": true, "key_install_facts": "p4-5: DIN rail kit pre-fitted, EN 60715 rail, hook upper lip then snap in; wall mount via plates with M3 screws. p7: ground screw M4 with cable lug; power terminal block J1 16-28 AWG, strip 8-9 mm, spring (wire locker) type; 12-48 VDC LPS supply. Moxa support lists a newer QIG v1.1 (2023-08-28), not fetched."},
+      {"title": "NAT-102 Series User's Manual v1.0", "doc_number": "", "url": "https://www.moxa.com/getmedia/d9db5048-feeb-4982-a6d5-0bda891c13e1/moxa-nat-102-series-manual-v1.0.pdf", "kind": "user manual", "verified": false, "key_install_facts": "Not fetched."}
+    ]
+  },
+  {
+    "tags": ["PDB2", "PDB3"],
+    "part": "Phoenix PTFIX 6/12X2,5 BU, PTFIX 6/18X2,5 BUWH, PTFIX-NS35A",
+    "manufacturer": "Phoenix Contact",
+    "docs": [],
+    "note": "phoenixcontact.com returns 403. No order numbers confirmed for the non-NS35 BU/BUWH variants (3273090 is the -NS35 BU version). The PTFIX-NS35A rail adapter appears to be 7707057 (German retailer). Not found."
+  },
+  {
+    "tags": ["Duct"],
+    "part": "Panduit F2X2WH6, F3X2WH6, C2WH6, C3WH6",
+    "manufacturer": "Panduit",
+    "docs": [
+      {"title": "Panduct Type F Narrow Slot Wiring Duct product page", "doc_number": "", "url": "https://www.panduit.com/en/products/wire-routing-management/wiring-duct/wiring-duct/f2x2wh6.html", "kind": "product page", "verified": false, "key_install_facts": "Page fetched but content is JS template placeholders only. No spec sheet PDF URL found."}
+    ]
+  },
+  {
+    "tags": ["Rail"],
+    "part": "RS PRO 467-416",
+    "manufacturer": "RS PRO (RS Components)",
+    "docs": [
+      {"title": "RS PRO Steel Slotted DIN Rail, 1 m x 35 mm x 7.5 mm product page", "doc_number": "467-416", "url": "https://uk.rs-online.com/web/p/din-rails/0467416", "kind": "product page", "verified": false, "key_install_facts": "Not fetched. Search snippet: electro-galvanised steel, TS35, 18 mm slot length."}
+    ]
+  },
+  {
+    "tags": ["VM1"],
+    "part": "Festo VTUX-A-P-IOL... valve terminal",
+    "manufacturer": "Festo",
+    "docs": [
+      {"title": "VTUX-A-P Valve terminal Operating instruction", "doc_number": "8200070 (2023-09)", "url": "https://media.festo.com/assets/attachment-files/449e31dbdf2a020d5c5d32006afbe8878ba4a07bd47f9b8ecc4f0b961ddf163c88017861c85aa0e698c707586a5bbaa6fb7d27cf3639f5c154cf8d5d93e9ea9d/VTUX-A-P_operating-instr_2023-09_8200072g1.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read. The search-result URL had a signed token that expired 2026-10-29; get it fresh from the Festo support portal."},
+      {"title": "VABX-A-P-EL-E12-IOL/-IOS manifold sub-base (IO-Link) Operating instruction", "doc_number": "8200115 (2023-09)", "url": "https://www.festo.com/net/sk_sk/SupportPortal/Files/761053/VABX-A-P-EL-E12-IOL_-IOS_operating-instr_2023-09_8200117g1.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read (festo.com returns 403 to the fetch tool)."}
+    ]
+  },
+  {
+    "tags": ["Filter regs"],
+    "part": "Festo MS4-LFR, MS6-LFR",
+    "manufacturer": "Festo",
+    "docs": [
+      {"title": "MS4-LFR-...-B Filter regulator operating instructions", "doc_number": "8181874 (2023-02b)", "url": "https://www.festo.com/net/en_gb/SupportPortal/Files/741762/MS4-LFR-_-B_operating-instr_2023-02b_8181874g1.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read (403)."},
+      {"title": "MS6-LFR-...-B Filter regulator operating instructions", "doc_number": "8131654 (2021-04)", "url": "https://www.festo.com/net/zh_corp/SupportPortal/Files/734974/MS6-LFR-_-B_operating-instr_2021-04_8131654g1.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not read (403). Per search snippets, the MS6 clearances differ by edition (20/30 mm in 2023 vs 60/100 mm in 2024-11d doc 8206754). Confirm against the exact part number."},
+      {"title": "Filter regulators MS-LFR, MS series (catalog datasheet)", "doc_number": "2013 edition", "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2013/EN/MS-LFR_EN.PDF", "kind": "datasheet", "verified": true, "key_install_facts": "Title confirmed only; 2013 edition, likely outdated. No install facts extracted."}
+    ]
+  },
+  {
+    "tags": ["Enclosure"],
+    "part": "Saginaw SCE-60XEL4918SSST",
+    "manufacturer": "Saginaw Control & Engineering",
+    "docs": [
+      {"title": "SCE-60XEL4918SSST Cut Sheet (AutomationDirect)", "doc_number": "", "url": "https://cdn.automationdirect.com/static/specs/cutsheet/SCE-60XEL4918SSST_cutsheet.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "Enviroline disconnect enclosure, slope top, NEMA 3R/4/4X/12/13, IP66, right flange, 60x49x18 in, freestanding, 304 SS #4 brush, 2-door, 4 concealed hinges per door, 3-point padlocking handle, no integral feet, subpanel purchased separately, UL E69392."},
+      {"title": "SCE-60XEL4918SSST drawing", "doc_number": "", "url": "https://cdn.automationdirect.com/static/drawings/SCE-60XEL4918SSST.pdf", "kind": "dimensions", "verified": true, "key_install_facts": "Saginaw drawing: usable depth 16.72 in, door openings 22.56 in and 58.50 in, overall 64.80 in high including slope, cutout provisions for mounting a standard floor kit to the bottom, subpanel not included. Other dimensions shown but not attributed here. No saginawcontrol.com installation instruction found."}
+    ]
+  },
+  {
+    "tags": ["A/C"],
+    "part": "Saginaw SCE-AC1000B120VSS",
+    "manufacturer": "Saginaw Control & Engineering",
+    "docs": [
+      {"title": "SCE-AC1000B120VSS Cut Sheet (AutomationDirect)", "doc_number": "", "url": "https://cdn.automationdirect.com/static/specs/cutsheet/SCE-AC1000B120VSS_cutsheet.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "Enviro-Therm 1000 BTU/h, 115 VAC 60 Hz, 2.9 A, side mount, 18.9 x 10.00 x 7.5 in, 304 SS, IP56, for Type 3R/4/4X/12; includes washable filter, mounting template and hardware; UL E498756."},
+      {"title": "SCE-AC1000B120VSS 2D drawing (Saginaw)", "doc_number": "", "url": "https://cdn.automationdirect.com/static/drawings/2d/SCE-AC1000B120VSS.pdf", "kind": "dimensions", "verified": true, "key_install_facts": "Drawing has a 'MOUNTING PATTERN' view with internal air inlet/outlet and electrical connection openings and a .312 (x7) hole callout; dimension values in the text include 8.07, 8.83, 4.42, 6.30, 5.51. The cutout size cannot be assigned from extracted text, so read it off the drawing. No Saginaw installation manual found."}
+    ]
+  },
+  {
+    "tags": ["Subplate 2"],
+    "part": "Saginaw SCE-16P14",
+    "manufacturer": "Saginaw Control & Engineering",
+    "docs": [
+      {"title": "SCE-16P14 Cut Sheet (AutomationDirect)", "doc_number": "", "url": "https://cdn.automationdirect.com/static/specs/cutsheet/SCE-16P14_cutsheet.pdf", "kind": "datasheet", "verified": true, "key_install_facts": "Subpanel 15 x 13 in, 14 ga carbon steel, white powder coat, for SCE-1614xELJxxx / SCE-1614xxCHxNFxx / SCE-1614SC / SCE-16C16ELJxx enclosures. It is not a subpanel for the 60x49 XEL enclosure; check which enclosure Subplate 2 goes in."}
+    ]
+  },
+  {
+    "tags": ["Field"],
+    "part": "ifm PM1708",
+    "manufacturer": "ifm electronic",
+    "docs": [
+      {"title": "PM1708 Flush pressure sensor data sheet", "doc_number": "PM1708-01 EN-GB", "url": "https://media.ifm.com/dam/7e6970f7-c0e9-46d6-bfd6-598550a2cc8e/Original/PM1708-01_EN-GB.pdf", "kind": "datasheet", "verified": false, "key_install_facts": "Not fetched (low priority)."}
+    ]
+  },
+  {
+    "tags": ["Field"],
+    "part": "ifm LDL201",
+    "manufacturer": "ifm electronic",
+    "docs": [
+      {"title": "LDL201 data sheet (German)", "doc_number": "LDL201-01 DE-DE", "url": "https://media.ifm.com/dam/d4e4def5-da88-458c-ad97-7188f1288dcd/Original/LDL201-01_DE-DE.pdf", "kind": "datasheet", "verified": false, "key_install_facts": "Not fetched; the English version URL was not found."}
+    ]
+  },
+  {
+    "tags": ["Field"],
+    "part": "ifm SUH401, ifm TD2947",
+    "manufacturer": "ifm electronic",
+    "docs": [
+      {"title": "TD2947 product page", "doc_number": "", "url": "https://www.ifm.com/us/en/product/TD2947", "kind": "product page", "verified": false, "key_install_facts": "Not fetched. SUH401: nothing found."}
+    ]
+  },
+  {
+    "tags": ["Field"],
+    "part": "Rosemount 8721, Rosemount 1056",
+    "manufacturer": "Emerson (Rosemount)",
+    "docs": [
+      {"title": "Rosemount 8700 series sensor Quick Install Guide (covers 8721), Rev DG Oct 2025", "doc_number": "00825-0100-4727 (URL file name says 4891)", "url": "https://www.emerson.com/is/content/emerson/en/measurement-instrumentation/technical/products/flow-magnetic/documents/doc-rosemount-00825-0100-4891.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not fetched."},
+      {"title": "Rosemount 1056 Quick Start Guide", "doc_number": "00825-0100-3156", "url": "https://www.emerson.com/documents/automation/quick-start-guide-rosemount-1056-four-wire-dual-input-intelligent-transmitter-en-5957128.pdf", "kind": "installation", "verified": false, "key_install_facts": "Not fetched."}
+    ]
+  },
+  {
+    "tags": ["Field"],
+    "part": "Baldor CEM3713T",
+    "manufacturer": "ABB (Baldor-Reliance)",
+    "docs": [],
+    "note": "Not searched (low priority)."
+  }
+]
